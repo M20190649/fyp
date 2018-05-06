@@ -6,6 +6,19 @@ E.~{Al Nuaimi}, H.~{Al Neyadi}, N.~Mohamed, and J.~Al-Jaroodi.
 \newblock {\em Journal of Internet Services and Applications}, 6(1):1--15,
   2015.
 
+\bibitem{Alarabi2014}
+L.~Alarabi, A.~Eldawy, R.~Alghamdi, and M.~F. Mokbel.
+\newblock {TAREEG : A MapReduce-Based Web Service for Extracting Spatial Data
+  from OpenStreetMap *}.
+\newblock pages 0--3, 2014.
+
+\bibitem{Alexander2015}
+L.~Alexander, S.~Jiang, M.~Murga, and M.~C. Gonz{\'{a}}lez.
+\newblock {Origin-destination trips by purpose and time of day inferred from
+  mobile phone data}.
+\newblock {\em Transportation Research Part C: Emerging Technologies},
+  58:240--250, 2015.
+
 \bibitem{Attard2015}
 M.~Attard, P.~{Von Brockdorff}, and F.~Bezzina.
 \newblock {The External Costs of Passenger and Commercial Vehicles Use in
@@ -30,6 +43,11 @@ S.~{\c{C}}olak, L.~P. Alexander, B.~G. Alvim, S.~R. Mehndiratta, and M.~C.
 {Directorate General for Mobility and Transport}.
 \newblock {Urban mobility}, 2018.
 
+\bibitem{Eldawy}
+A.~Eldawy.
+\newblock {SpatialHadoop : A MapReduce Framework for Spatial Data ∗}.
+\newblock 1.
+
 \bibitem{Gonzalez2008}
 M.~C. Gonzalez, C.~A. Hidalgo, and A.-L. Barabasi.
 \newblock {Understanding individual human mobility patterns}.
@@ -47,6 +65,24 @@ S.~Hoteit, S.~Secci, S.~Sobolevsky, C.~Ratti, and G.~Pujolle.
 \newblock {Estimating human trajectories and hotspots through mobile phone
   data}.
 \newblock {\em Computer Networks}, 64:296--307, 2014.
+
+\bibitem{Iqbal2014}
+M.~S. Iqbal, C.~F. Choudhury, P.~Wang, and M.~C. Gonz{\'{a}}lez.
+\newblock {Development of origin-destination matrices using mobile phone call
+  data}.
+\newblock {\em Transportation Research Part C: Emerging Technologies},
+  40:63--74, 2014.
+
+\bibitem{Jarv2012}
+O.~J{\"{a}}rv, R.~Ahas, E.~Saluveer, B.~Derudder, and F.~Witlox.
+\newblock {Mobile Phones in a Traffic Flow: A Geographical Perspective to
+  Evening Rush Hour Traffic Analysis Using Call Detail Records}.
+\newblock {\em PLoS ONE}, 7(11), 2012.
+
+\bibitem{Kurien2012}
+A.~M. Kurien, G.~Noel, K.~Djouani, B.~J. {Van Wyk}, and A.~Mellouk.
+\newblock {A subscriber classification approach for mobile cellular networks}.
+\newblock {\em Simulation Modelling Practice and Theory}, 25:17--35, 2012.
 
 \bibitem{Laurila2012}
 J.~K. Laurila, D.~Gatica-Perez, I.~Aad, J.~Blom, O.~Bornet, T.-M.-T. Do,
@@ -74,6 +110,11 @@ A.~B. Nkoro and Y.~A. Vershinin.
 \newblock {\em 2014 17th IEEE International Conference on Intelligent
   Transportation Systems, ITSC 2014}, (January 2017):514--519, 2014.
 
+\bibitem{Shin}
+H.~Shin, J.~Vaidya, V.~Atluri, and S.~Choi.
+\newblock {Ensuring Privacy and Security for LBS through Trajectory
+  Partitioning}.
+
 \bibitem{Sommer2013}
 M.~Sommer, S.~Tomforde, and J.~H{\"{a}}hner.
 \newblock {Using a Neural Network for Forecasting in an Organic Traffic Control
@@ -88,5 +129,10 @@ J.~L. Toole, S.~Colak, B.~Sturt, L.~P. Alexander, A.~Evsukoff, and M.~C.
   resources}.
 \newblock {\em Transportation Research Part C: Emerging Technologies},
   58:162--177, 2015.
+
+\bibitem{Wu2014}
+H.~Wu, T.~Zhang, and J.~Gong.
+\newblock {GeoComputation for Geospatial Big Data}.
+\newblock {\em Transactions in GIS}, 18(S1):1--2, 2014.
 
 \end{thebibliography}
