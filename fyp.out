@@ -1,29 +1,31 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Economic development and urbanization and their impact on transport}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.1}{Economic development and urbanization impact on transport}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{Addressing Traffic congestion}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Traffic management systems}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{Traffic information and management systems}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.4}{Traveller centric traffic flow probing}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.5}{Application of mobile traces analytics}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.6}{Aims and objectives}{chapter.1}% 7
 \BOOKMARK [1][-]{section.1.7}{Dissertation outline}{chapter.1}% 8
 \BOOKMARK [0][-]{chapter.2}{Problem definition}{}% 9
-\BOOKMARK [1][-]{section.2.1}{Research Questions}{chapter.2}% 10
-\BOOKMARK [0][-]{chapter.3}{Background and Literature Review}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Mobile location data sources}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.2}{Actual sources and choice of data sample structure}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.3}{Mobile position inference}{chapter.3}% 14
-\BOOKMARK [2][-]{subsection.3.3.1}{Big Data, the cloud and large scale real time stream processing}{section.3.3}% 15
-\BOOKMARK [2][-]{subsection.3.3.2}{Origin and destination matrices computation}{section.3.3}% 16
-\BOOKMARK [2][-]{subsection.3.3.3}{Graph databases and Parallel graph processing}{section.3.3}% 17
-\BOOKMARK [1][-]{section.3.4}{Model fitting to human mobility}{chapter.3}% 18
-\BOOKMARK [2][-]{subsection.3.4.1}{Data Anonymization}{section.3.4}% 19
-\BOOKMARK [0][-]{chapter.4}{Methodology}{}% 20
-\BOOKMARK [1][-]{section.4.1}{Section Name}{chapter.4}% 21
-\BOOKMARK [0][-]{chapter.5}{Evaluation and Results}{}% 22
-\BOOKMARK [1][-]{section.5.1}{Section Name}{chapter.5}% 23
-\BOOKMARK [0][-]{chapter.6}{Future Work}{}% 24
-\BOOKMARK [1][-]{section.6.1}{Section Name}{chapter.6}% 25
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 26
-\BOOKMARK [0][-]{appendix.A}{This chapter is in the appendix}{}% 27
-\BOOKMARK [1][-]{section.A.1}{These are some details}{appendix.A}% 28
-\BOOKMARK [0][-]{section.A.1}{References}{}% 29
+\BOOKMARK [1][-]{section.2.1}{Problem statement}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Research Questions}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Background and Literature Review}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Mobile location data sources}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.1.1}{Data format and sample structure used in literature}{section.3.1}% 14
+\BOOKMARK [2][-]{subsection.3.1.2}{Mobile position inference from Floating cellular data}{section.3.1}% 15
+\BOOKMARK [1][-]{section.3.2}{Data Anonymization}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Big Data, the cloud and large scale real time stream processing}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.4}{Origin and destination matrices computation}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.5}{Graph databases and Parallel graph processing}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.6}{Model fitting to human mobility}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.7}{Prediction methods}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Methodology}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Collection of Mobile data}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Evaluation and Results}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Section Name}{chapter.5}% 25
+\BOOKMARK [0][-]{chapter.6}{Future Work}{}% 26
+\BOOKMARK [1][-]{section.6.1}{Section Name}{chapter.6}% 27
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 28
+\BOOKMARK [0][-]{appendix.A}{This chapter is in the appendix}{}% 29
+\BOOKMARK [1][-]{section.A.1}{These are some details}{appendix.A}% 30
+\BOOKMARK [0][-]{section.A.1}{References}{}% 31

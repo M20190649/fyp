@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Ahas2011}
+R.~Ahas, M.~Tiru, E.~Saluveer, and C.~Demunter.
+\newblock {Mobile telephones and mobile positioning data as source for
+  statistics : Estonian experiences}.
+\newblock {\em Presentation for NTTS}, 2011.
+
 \bibitem{AlNuaimi2015}
 E.~{Al Nuaimi}, H.~{Al Neyadi}, N.~Mohamed, and J.~Al-Jaroodi.
 \newblock {Applications of big data to smart cities}.
@@ -25,12 +31,26 @@ M.~Attard, P.~{Von Brockdorff}, and F.~Bezzina.
   Malta}.
 \newblock 2015.
 
+\bibitem{Calabrese2011}
+C.~Calabrese, F.~Giusy, D.~Lorenzo, L.~Liu, C.~Ratti, F.~Calabrese, and G.~D.
+  Lorenzo.
+\newblock {Estimating Origin-Destination flows using opportunistically
+  collected mobile phone location data from one million users in Boston
+  Metropolitan Area Terms of Use Estimating Origin-Destination flows using
+  opportunistically collected mobile phone location da}.
+\newblock {\em IEEE Pervasive Computing}, 10(4):36--44, 2011.
+
 \bibitem{Calabrese2013}
 F.~Calabrese, M.~Diao, G.~{Di Lorenzo}, J.~Ferreira, and C.~Ratti.
 \newblock {Understanding individual mobility patterns from urban sensing data:
   A mobile phone trace example}.
 \newblock {\em Transportation Research Part C: Emerging Technologies},
   26:301--313, 2013.
+
+\bibitem{CambridgeSystematicsInc.2005}
+{Cambridge Systematics Inc.} and {Battelle Memorial Institute}.
+\newblock {An Initial Assessment of Freight Bottlenecks on Highways}.
+\newblock (October):191, 2005.
 
 \bibitem{Colak2015}
 S.~{\c{C}}olak, L.~P. Alexander, B.~G. Alvim, S.~R. Mehndiratta, and M.~C.
@@ -92,23 +112,27 @@ J.~K. Laurila, D.~Gatica-Perez, I.~Aad, J.~Blom, O.~Bornet, T.-M.-T. Do,
   in Conjunction with the 10th International Conference on Pervasive
   Computing}, pages 1--8, 2012.
 
+\bibitem{Leduc2008}
+G.~Leduc.
+\newblock {Road Traffic Data : Collection Methods and Applications}.
+\newblock {\em EUR Number: Technical Note: JRC 47967}, JRC 47967:55, 2008.
+
 \bibitem{Liu2014}
 J.~Liu, F.~Liu, and N.~Ansari.
 \newblock {Monitoring and analyzing big traffic data of a large-scale cellular
   network with Hadoop}.
 \newblock {\em IEEE Network}, 28(4):32--39, 2014.
 
-\bibitem{Marino2017}
-F.~Marino, F.~Leccese, and S.~Pizzuti.
-\newblock {Adaptive Street Lighting Predictive Control}.
-\newblock {\em Energy Procedia}, 111(September 2016):790--799, 2017.
+\bibitem{Naess2012}
+P.~Naess, M.~S. Nicolaisen, and A.~Strand.
+\newblock {Traffic Forecasts Ignoring Induced Demand: a Shaky Fundament for
+  Cost-Benefit Analyses}.
+\newblock {\em European Journal of Transport and Infrastructure Research},
+  12(3):291--309, 2012.
 
-\bibitem{Nkoro2014}
-A.~B. Nkoro and Y.~A. Vershinin.
-\newblock {Current and future trends in applications of Intelligent Transport
-  Systems on cars and infrastructure}.
-\newblock {\em 2014 17th IEEE International Conference on Intelligent
-  Transportation Systems, ITSC 2014}, (January 2017):514--519, 2014.
+\bibitem{Schrank.2015}
+D.~Schrank., B.~Eisele., T.~Lomax., and J.~Bak.
+\newblock {2015 Urban Mobility Scorecard}, 2015.
 
 \bibitem{Shin}
 H.~Shin, J.~Vaidya, V.~Atluri, and S.~Choi.
@@ -122,6 +146,11 @@ M.~Sommer, S.~Tomforde, and J.~H{\"{a}}hner.
 \newblock In {\em Presented as part of the 2013 Workshop on Embedded
   Self-Organizing Systems}. {USENIX}, 2013.
 
+\bibitem{Steenbruggen2015}
+J.~Steenbruggen, E.~Tranos, and P.~Nijkamp.
+\newblock {Data from mobile phone operators: A tool for smarter cities?}
+\newblock {\em Telecommunications Policy}, 39(3-4):335--346, 2015.
+
 \bibitem{Toole2015}
 J.~L. Toole, S.~Colak, B.~Sturt, L.~P. Alexander, A.~Evsukoff, and M.~C.
   Gonz{\'{a}}lez.
@@ -130,9 +159,28 @@ J.~L. Toole, S.~Colak, B.~Sturt, L.~P. Alexander, A.~Evsukoff, and M.~C.
 \newblock {\em Transportation Research Part C: Emerging Technologies},
   58:162--177, 2015.
 
+\bibitem{Wang2012}
+M.-h. Wang and S.~D. Schrock.
+\newblock {Feasibility of Using Cellular Telephone Data to Determine the
+  Truckshed of Intermodal Facilities}.
+\newblock {\em Cell}, (August 2009), 2012.
+
+\bibitem{Wang2013}
+M.~H. Wang, S.~D. Schrock, N.~{Vander Broek}, and T.~Mulinazzi.
+\newblock {Estimating Dynamic Origin-Destination Data and Travel Demand Using
+  Cell Phone Network Data}.
+\newblock {\em International Journal of Intelligent Transportation Systems
+  Research}, 11(2):76--86, 2013.
+
 \bibitem{Wu2014}
 H.~Wu, T.~Zhang, and J.~Gong.
 \newblock {GeoComputation for Geospatial Big Data}.
 \newblock {\em Transactions in GIS}, 18(S1):1--2, 2014.
+
+\bibitem{Zheng2011}
+Y.~Zheng and X.~Xie.
+\newblock {Learning travel recommendations from user-generated GPS traces}.
+\newblock {\em ACM Transactions on Intelligent Systems and Technology},
+  2(1):1--29, 2011.
 
 \end{thebibliography}
