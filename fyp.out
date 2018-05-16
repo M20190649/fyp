@@ -13,14 +13,14 @@
 \BOOKMARK [1][-]{section.3.1}{Mobile location data sources}{chapter.3}% 13
 \BOOKMARK [2][-]{subsection.3.1.1}{Data format and sample structure used in literature}{section.3.1}% 14
 \BOOKMARK [2][-]{subsection.3.1.2}{Mobile position inference from Floating cellular data}{section.3.1}% 15
-\BOOKMARK [1][-]{section.3.2}{Data Anonymization}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Privacy and data anonymization}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.3}{Big Data, the cloud and large scale real time stream processing}{chapter.3}% 17
 \BOOKMARK [1][-]{section.3.4}{Origin and destination matrices computation}{chapter.3}% 18
 \BOOKMARK [1][-]{section.3.5}{Graph databases and Parallel graph processing}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.6}{Model fitting to human mobility}{chapter.3}% 20
 \BOOKMARK [1][-]{section.3.7}{Prediction methods}{chapter.3}% 21
 \BOOKMARK [0][-]{chapter.4}{Methodology}{}% 22
-\BOOKMARK [1][-]{section.4.1}{Collection of Mobile data}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.1}{Mobile data collection and structure}{chapter.4}% 23
 \BOOKMARK [0][-]{chapter.5}{Evaluation and Results}{}% 24
 \BOOKMARK [1][-]{section.5.1}{Section Name}{chapter.5}% 25
 \BOOKMARK [0][-]{chapter.6}{Future Work}{}% 26
