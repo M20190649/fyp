@@ -153,12 +153,9 @@ Research will be done in a direction outlined by the questions below:
 
 
 
-
 \chapter{Background and Literature Review} \label{background}
 
-
 This chapter will go over mainstream techniques and approaches that make use of mobile data for traffic flow detection and prediction.
-
 
 \section{Mobile location data sources} \label{background_mobile_location_data_sources} 
 
@@ -328,21 +325,128 @@ Prediction of traffic results have to take in consideration where the model is b
 
 \chapter{Methodology}
 
+As outlined in the problem statement this research has to extract meaningful features from mobile data usage that would serve as the basis to build a traffic flow model. Before getting direction on what algorithm to use in order to map raw data and translate it into traffic flow metrics a thorough exercise of familiarization with the data was due. A feasibility check had to be carried out on whether it was possible that by devising an algorithm a direct relationship is established between data and traffic flow. If data would have proven to be too sparse both temporally and spatially a decision would needed to have been taken to either augment the dataset with other features such video streams with ANPR, call data records, past datasets, incident reports and anything related to road transport which would convey information on human mobility patterns. In this chapter we will elaborate how we investigated the possible approaches and how we decided to dig deeper with some chosen techniques rather than others depending on level of confidence.
 
 \section{Mobile data collection and structure}
 
-Describe data set
-How much can the data be aqcuired in real time?
-Past research depend a lot on CDRs. This study will make use of mobile data usage. Why?
-Network attach vs actual datasession.
-Asimuth
+The dataset was made available from GO Plc Malta. The dataset recorded ranges from October 2016 to September 2017 which is a full year of data. Number of distinct cells amount to several thousands but distinct cell locations amount to only a few hundreds since a cell tower shares antennas for different technologies (Exact numbers cannot be disclosed due to commercial reasons).
 
-EDR/CDR records are generally buffered to file on the network element. Files are closed periodically, generally every 1 or 5 minutes. Files are then collected and processed by the mediation platform, which parses, enhances, and extracts all of the necessary information from these records. New files are then sent towards billing and other entities as per required. It normally takes around 10 minutes for an EDR/CDR to be within the data-warehouse, hence available for further processing.
+As stated by the provider of the dataset, EDR/CDR records are generally buffered to file on the network element. Files are closed periodically, generally every 1 to 5 minutes. Files are then collected and processed by the mediation platform, which parses, enhances, and extracts all of the necessary information from these records. New files are then sent towards billing and other entities as per required. It normally takes around 10 minutes for an EDR/CDR to be within the data-warehouse, hence available for further processing. However mobile operator stated that polling frequency can be increased as needed.
 
-Quote mobile penetration data reports. MCA
+Unique data usage users amount approximately to 108 thousand for the month of October 2016. This month was chosen because it has heavy traffic because schools start in their full sway and university students start to travel with their cars adding to the load of traffic. This sample would be roughly representing half of the provider's subscriber base which is just over 100 thousand. This figure was derived from all the distinct users that make call or use data. Therefore the number of data users that are in the sample is roughly half of the whole set of users. One must take note however that all these data users in this study might not necessarily contribute in a directly proportional manner to the number of vehicles on the move at a certain point in time. There might be static users, users who are just passengers in the car, users that have more than one device and user that make use of other means of transport. All these facts must be taken in consideration when setting up the proposed solution and evaluating results.
+
+%TODO - Here to correlate with MCA data on data usage and subscriber base.
+
+\begin{table}[h]
+	\centering
+	\resizebox{\textwidth}{!}{
+
+\begin{tabular}{|l|p{5cm}|c|}
+	\hline 
+	\textbf{Data item} & \textbf{Description} & \textbf{Example value} \\ 
+	\hline 
+	 A\_NUM & user hashed identifier. & 5a8bd7889fb3051b10f249a5554c803a \\ 
+	\hline 
+	TIMESTAMP & date and time of usage. & 2017-01-01 00:00:00.000 \\ 
+	\hline 
+	SOURCE & Type of Record. Data or Voice. & DATA \\ 
+	\hline 
+	CELL\_ID & Cell identifier & 3073 \\ 
+	\hline 
+	TOWN & Cell town & Paola \\ 
+	\hline 
+	DURATION & Duration of call or data session in seconds & 60 \\ 
+	\hline 
+	VOLUME & Volume of data used in session in kilobytes. 
+	Applicable only for records of data usage. & 324.34 \\ 
+	\hline 
+	LONGITUDE & longitutidnal coordinate & 14.50664 \\ 
+	\hline 
+	LATITUDE & latitude coordinate & 35.87 \\ 
+	\hline 
+	RAT\_TYPE & Network technology & LTE \\ 
+	\hline 
+\end{tabular} }
+\caption{Data Dictionary of mobile usage raw dataset} 
+\end{table}
 
 
-%Refer to C:\Users\maurice.saliba\Google Drive\MASTERS\COURSES\THESIS\PROPOSAL\body_01.tex methodology document
+\section{Dataset preliminary analysis}
+
+Total number of records of any given type for the month of october 2016 was 125 million. 78\% of these records are data usage records. This at face value gives an indication that there is a four fold higher frequency of location records of data usage type then with calling data records. This evidently gives an edge on other research that used calling data records as their data source since the polling of users location is less sparse.
+
+%TODO - number of sessions per hour for data users
+%TODO - usage of data during the day and durng the night
+%TODO - distribution of data usage (variance) per hour
+%TODO - distribution o f
+
+
+\section{Algorithm Selection}
+
+One of he most challenging tasks involved in this study was to assign vehicular traffic to the road network depending on surrounding cell tower traffic in a time series.
+
+The first approach that we tried to investigate is to relate the cell tower data by snapping it to the road infrastructure mesh depending from which direction the vehicle is coming. Various APIs are available to retrieve nearest road from an input geographical location. We had no prior knowledge on how cell tower transmission is configured. There are many settings which might determine the range of the cell tower including frequency, rated power, height of tower etc. Therefore the range of the cell towers was not known. A method to roughly estimate range was to calculate the average distance from the nearest \textit{k} neighbouring towers for all cell towers. However from samples taken from the dataset available of the cell towers across Malta the variance seemed quite high ranging from an inter-distance of 150m in urbanized areas to several kilometres in rural areas (Cell tower locations map for all the country not being shown since it is sensitive commercial data). Further to this from the analytical perspective it was decided to plot the cell towers' on the map and check if their distribution pattern would make it feasible to snap a data record cell tower location to the nearest road or area polygon. Thus here it was taken as an assumption that the area around cell towers will be be given service with equal range from each tower. Allowance for overlapping was also taken in consideration. It is evident from figure \ref{fig:cell_towers_distribution} that a lot of roads would be included in the range of a cell tower so it would have been difficult to devise an algorithm to derive trajectories and traffic flow counts from cell tower location data. Given that there are a lot of unknowns including how handover procedure is handled in specific areas and the actual range of cell towers the solution path of snapping to nearest roads depending on EDR coordinates was discarded. Such an approach would might have made it too impractical to assign traffic to traffic junctions, roads or polygon areas and the probability of inaccurate results was high.
+
+\begin{figure}[h]	
+	\includegraphics[scale=0.75]{cell_towers_distribution}
+	\centering
+	\caption{Cell tower range distribution. Red dots are cell tower locations and dotted line is the estimated range.}
+	\label{fig:cell_towers_distribution}
+\end{figure}
+
+Another approach would have been to simulate traffic by inputting statistical information on travel patterns retrieved parameters from the dataset. Another input to the simulation based traffic model would have been an OD matrix that will be discussed in section \ref{clustering}. Toledo et al. \cite{Toledo2004} mentions that OD flows are an important input to simulation models but an accurate OD matrix is difficult to acquire. An example of such implementation can be found in \cite{Hirai2015}. In this study electronic toll collection data is used to form an initial OD-Matrix. This OD matrix is further optimized by optimizing a model that gets observed detector data and a simulation based on current OD, computes the least cost difference and optimizes the OD matrix depending on result. This process is iterated until an acceptable coefficient of determination is achieved. Simulation models generally give two types of outputs namely a visual simulation of traffic flow on a map and textual statistical output that can include metrics such as traffic delays, gap distances, speed and overall trip distance travelled by vehicles.
+
+While macroscopic traffic simulators seem promising for motorways environments they are found to be less suitable for urban scenarios \cite{Bazghandi2012}. Urban environments have a lot of conflicting traffic flows caused by the numerous junctions and small roads that feed and attract traffic from the road network. Also such simulators require accurate OD matrices which cannot be achievable from our dataset. In our research we also tried to focus on the macroscopic level since we had a dataset that have ample coverage at our disposition especially in urban areas.    
+
+%TODO - read and add notes from Macroscopic Traffic Flow Model Calibration Using Different Optimization Algorithms
+
+
+
+\section{Main activity hubs extraction and displacement error removal through clustering}\label{clustering}
+
+Clustering is a machine learning unsupervised technique used to classify entities which have similar features. The clustering is done depending on the algorithm and hyper-parameters that control the grouping process. Two clustering techniques that were checked for their appropriateness to this research were k-means and DBSCAN. k-means algorithm is highly popular especially for first analysis of datasets because it is simple to implement and highly efficient. The main drawback of k-means clustering is the fact that you need to select the number of clusters you need to find a priori. Then a number of centroids equal to the number of targeted clusters are randomly chosen. The algorithm starts to find the nearest neighbours based on a distance metric until finally the clusters are formed. This process is done iteratively until the ideal set of centroids with the least root mean square error are found. Also something important to note is that clusters tend to be spherical in nature. This would be highly visible of 2D clusters are plotted on a graph.
+
+DBSCAN (density based spatial clustering of applications) has an edge on k-means and is mostly suited to our research since it does not need to set the number of clusters that we are after for each user, it finds clusters of non-spherical nature and leaves noisy elements out of the computed clusters. DBSCAN has three main hyper parameters to set namely minimum points, radius and distance metric. The algorithm is more sensitive to density rather than to aggregate distance of surrounding points. Basically the algorithm finds core points that have the required minimum points in its neighbourhood dictated by the distance metric. The points that are in this cluster but are not core points are referred to as boundary points. If core points' clusters overlap each other they form one single cluster hence the non-spehrical shape of the cluster.
+
+
+This makes it a preferred candidate for clustering since our aim is to find dense clusters of activity and random locations visited by users are of no interest and need to be filtered out. 
+
+%TODO- DBScan - check C:\Users\maurice.saliba\Google Drive\MASTERS\COURSES\SEMESTER ONE\MACHINE LEARNING\EBOOKS\SebastianRatschka
+
+%TODO - compare dbscan to k means -> ChakrabortyNKNagwaniLopamudraDey2011
+
+%TODO - what is the Distribution of the first two clusters on the whole data set.
+
+%TODO - Top two activity locations extraction. What about the third one? Get distribution per user and possible filtering on distribution. Assuming that the top two activity locations for each user are the home and work location.
+
+Given the nature of the data it was important 
+
+%TODO - read Dynamic clustering and propagation of congestion in heterogeneously congested urban traffic networks
+
+
+
+\section{OD Matrix Trip Generation}
+
+Routing retrieval vs snapping to grid
+
+duration of steps
+heuristics
+
+Individual commuting patterns.
+irregular commuting patterns filtered out from analyzed dataset.
+
+\section{Traffic flow aggregation through spatial binning}
+
+
+\section{Dimensionality Reduction}
+
+\section{Traffic flow modelling and prediction}
+
+
+
+
+
+
 
 
 
@@ -358,7 +462,7 @@ All the three areas required to be evaluated need to have a uniform way how to p
 
 \chapter{Future Work}
 \section{Section Name}
-to statisitically model route trip choice for OD matrix coordinates by eventually checking registration of users along the route taken and estimating likely route taken.
+%TODO - to statisitically model route trip choice for OD matrix coordinates by eventually checking registration of users along the route taken and estimating likely route taken.
 
 \chapter{Conclusion}
  The approach taken is systematic so that the research passes through gradual stages in such a way that we build on top of previous analyses and prototypes. Targets of this research include extraction of behavioural patterns of traffic encountered on the level of the isolated individual, subset of individuals, locality, specific time events and specific traffic hotspots. As described at the outset the main aim is not to trace the mobility of users but rather to predict estimated traffic congestion points and computation of duration for a travelling path given a starting point and a destination. Ideally if the users are highly predictable and stick to a regular travelling pattern they might be automatically notified when they are actually going to travel, how much its going to take them in terms of duration and suggestions are given to take different alternative routes which are less costly in terms of business. 

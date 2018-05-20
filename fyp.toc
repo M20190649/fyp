@@ -21,11 +21,18 @@
 \contentsline {section}{\numberline {3.7}Prediction methods}{29}{section.3.7}
 \contentsline {chapter}{\numberline {4.}Methodology}{30}{chapter.4}
 \contentsline {section}{\numberline {4.1}Mobile data collection and structure}{30}{section.4.1}
-\contentsline {chapter}{\numberline {5.}Evaluation and Results}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section Name}{31}{section.5.1}
-\contentsline {chapter}{\numberline {6.}Future Work}{32}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section Name}{32}{section.6.1}
-\contentsline {chapter}{\numberline {7.}Conclusion}{33}{chapter.7}
-\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{34}{appendix.A}
-\contentsline {section}{\numberline {A.1}These are some details}{34}{section.A.1}
-\contentsline {chapter}{References}{35}{section.A.1}
+\contentsline {section}{\numberline {4.2}Dataset preliminary analysis}{31}{section.4.2}
+\contentsline {section}{\numberline {4.3}Algorithm Selection}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}Main activity hubs extraction and displacement error removal through clustering}{34}{section.4.4}
+\contentsline {section}{\numberline {4.5}OD Matrix Trip Generation}{35}{section.4.5}
+\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{36}{section.4.6}
+\contentsline {section}{\numberline {4.7}Dimensionality Reduction}{36}{section.4.7}
+\contentsline {section}{\numberline {4.8}Traffic flow modelling and prediction}{36}{section.4.8}
+\contentsline {chapter}{\numberline {5.}Evaluation and Results}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section Name}{37}{section.5.1}
+\contentsline {chapter}{\numberline {6.}Future Work}{38}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section Name}{38}{section.6.1}
+\contentsline {chapter}{\numberline {7.}Conclusion}{39}{chapter.7}
+\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{40}{appendix.A}
+\contentsline {section}{\numberline {A.1}These are some details}{40}{section.A.1}
+\contentsline {chapter}{References}{41}{section.A.1}

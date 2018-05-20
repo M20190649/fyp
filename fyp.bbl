@@ -31,6 +31,13 @@ M.~Attard, P.~{Von Brockdorff}, and F.~Bezzina.
   Malta}.
 \newblock 2015.
 
+\bibitem{Bazghandi2012}
+A.~Bazghandi.
+\newblock {Techniques, Advantages and Problems of Agent Based Modeling for
+  Traffic Simulation}.
+\newblock {\em International Journal of Computer Science Issues},
+  9(1):115--119, 2012.
+
 \bibitem{Calabrese2011}
 C.~Calabrese, F.~Giusy, D.~Lorenzo, L.~Liu, C.~Ratti, F.~Calabrese, and G.~D.
   Lorenzo.
@@ -72,6 +79,12 @@ A.~Eldawy.
 M.~C. Gonzalez, C.~A. Hidalgo, and A.-L. Barabasi.
 \newblock {Understanding individual human mobility patterns}.
 \newblock {\em Nature}, 453(7196):779--782, 2008.
+
+\bibitem{Hirai2015}
+S.~Hirai, J.~Xing, R.~Horiguchi, T.~Shiraishi, and M.~Kobayashi.
+\newblock {Development of a Network Traffic Simulator for the Entire
+  Inter-urban Expressway Network in Japan}.
+\newblock {\em Transportation Research Procedia}, 6(June 2014):285--296, 2015.
 
 \bibitem{Hoteit2016}
 S.~Hoteit, G.~Chen, A.~Viana, and M.~Fiore.
@@ -150,6 +163,13 @@ M.~Sommer, S.~Tomforde, and J.~H{\"{a}}hner.
 J.~Steenbruggen, E.~Tranos, and P.~Nijkamp.
 \newblock {Data from mobile phone operators: A tool for smarter cities?}
 \newblock {\em Telecommunications Policy}, 39(3-4):335--346, 2015.
+
+\bibitem{Toledo2004}
+T.~Toledo, M.~Ben-Akiva, D.~Darda, M.~Jha, and H.~Koutsopoulos.
+\newblock {Calibration of Microscopic Traffic Simulation Models with Aggregate
+  Data}.
+\newblock {\em Transportation Research Record: Journal of the Transportation
+  Research Board}, 1876:10--19, 2004.
 
 \bibitem{Toole2015}
 J.~L. Toole, S.~Colak, B.~Sturt, L.~P. Alexander, A.~Evsukoff, and M.~C.
