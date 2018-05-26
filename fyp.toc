@@ -23,16 +23,23 @@
 \contentsline {section}{\numberline {4.1}Mobile data collection and structure}{30}{section.4.1}
 \contentsline {section}{\numberline {4.2}Dataset preliminary analysis}{31}{section.4.2}
 \contentsline {section}{\numberline {4.3}Algorithm Selection}{32}{section.4.3}
-\contentsline {section}{\numberline {4.4}Main activity hubs extraction and displacement error removal through clustering}{34}{section.4.4}
-\contentsline {section}{\numberline {4.5}OD Matrix Trip Generation}{35}{section.4.5}
-\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{36}{section.4.6}
-\contentsline {section}{\numberline {4.7}Dimensionality Reduction}{36}{section.4.7}
-\contentsline {section}{\numberline {4.8}Traffic flow modelling and prediction}{36}{section.4.8}
-\contentsline {chapter}{\numberline {5.}Evaluation and Results}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section Name}{37}{section.5.1}
-\contentsline {chapter}{\numberline {6.}Future Work}{38}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section Name}{38}{section.6.1}
-\contentsline {chapter}{\numberline {7.}Conclusion}{39}{chapter.7}
-\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{40}{appendix.A}
-\contentsline {section}{\numberline {A.1}These are some details}{40}{section.A.1}
-\contentsline {chapter}{References}{41}{section.A.1}
+\contentsline {subsection}{\numberline {4.3.1}Trajectory interpolation through cell tower data}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Traffic simulation from OD matrix}{33}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Traffic detection by trip generation assigned traffic}{35}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Main activity hubs extraction and displacement error removal through clustering}{35}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}K-means clustering}{36}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}DBSCAN clustering}{36}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}OD Matrix trip Generation}{38}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}OD Matrix computation}{38}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Trip generation, route choice and traffic assignment}{38}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{40}{section.4.6}
+\contentsline {section}{\numberline {4.7}Traffic flow modelling and prediction}{40}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Dimensionality Reduction}{40}{subsection.4.7.1}
+\contentsline {chapter}{\numberline {5.}Evaluation and Results}{41}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section Name}{41}{section.5.1}
+\contentsline {chapter}{\numberline {6.}Future Work}{42}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section Name}{42}{section.6.1}
+\contentsline {chapter}{\numberline {7.}Conclusion}{43}{chapter.7}
+\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{44}{appendix.A}
+\contentsline {section}{\numberline {A.1}These are some details}{44}{section.A.1}
+\contentsline {chapter}{References}{45}{section.A.1}
