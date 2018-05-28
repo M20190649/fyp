@@ -13,6 +13,19 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
 \usepackage{lmodern,textcomp}
+\usepackage{algcompatible}
+\usepackage{algorithm}
+\usepackage{enumitem}
+\usepackage{varwidth}
+\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
 
 %%this environment is useful if you have code snippets
 \newenvironment{code}
@@ -429,8 +442,6 @@ DBSCAN was the preferred candidate for clustering since our aim is to find dense
 
 \section{OD Matrix trip Generation}
 
-
-
  
 
 \subsection{OD Matrix computation}
@@ -454,6 +465,152 @@ In OSM jargon the route consists in steps that contain manoeuvres. These manoeuv
  
 
 %TODO - mention how to redistoirubte delay heuristically on steps depending on traffic flow contained in the grid cell where the step was located.
+
+\begin{algorithm}
+	\caption{Experimental Overview}\label{algorithm:overview}
+	\begin{algorithmic}[1]
+		
+		\item[]
+		
+		\BState \emph{\textbf{A. Filter Data}}:
+		\Indent	
+			\State $\textit{data\_mobile\_usage} \gets \text{filter data usage records from raw \textit{dataset}}$
+		\EndIndent
+		
+		\item[]
+		
+		\BState \emph{\textbf{B. Main activity locations clustering}}:
+		\Indent
+		\State $\textit{data\_users\_clusters} \gets \text{run DBSCAN on \textit{data\_mobile\_usage}}$
+		\State $\textit{data\_users\_top\_2\_clusters} \gets \text{filter top two user clusters from \textit{data\_user\_clusters}}$
+		\State $\textit{data\_users\_top\_2\_clusters\_geo\_data\_points} \gets
+				\text{get \textit{data\_users\_top\_2\_clusters} left spatial join \textit{data\_mobile\_usage}}$						
+		\EndIndent
+		
+		\item[]
+		
+		\BState \emph{\textbf{C. OD Matrix generation}}:
+		\Indent
+		\State $\textit{data\_users\_top\_2\_clusters\_geo\_data\_points\_sorted} \gets \text{sort by user and datetime } \textit{data\_users\_top\_2\_clusters\_geo\_data\_points}$
+		\For{\textbf{each} user group \textit{ug} in $\textit{data\_users\_top\_2\_clusters\_geo\_data\_points\_sorted}$}
+			\For{\textbf{each} user record \textit{ur} in \textit{ug}}
+				\If {\textit{$ur_t$} cluster id  $\neq$ \textit{$ur_{t-1}$} cluster id (where \textit{t} is timestamp)} 
+					\State \textit{$ur_{t-1}$} $\text{departure flag} \gets \text{true}$
+					\State \textit{$ur_{t-1}$} $\text{destination coordinates} \gets$ \textit{$ur_t$} $\text{location coordinates}$
+					\State \textit{$ur_{t}$} $\text{ actual trip duration} \gets$ \textit{$ur_{t-1}$} $\text{timestamp - }$ \textit{$ur_{t}$} $\text{timestamp}$
+				\EndIf
+			\EndFor
+		\EndFor
+		\State $\textit{data\_users\_departures\_arrivals} \gets \text{store final resulting dataset}$
+		\EndIndent
+		
+		\item[]	
+		
+		\BState \emph{\textbf{D. OD Matrix based trip generation}}:
+		\Indent		
+			\For{\textbf{each} user departure arrival record \textit{udar} in $\textit{data\_user\_departures\_arrivals}$ }
+				\If { \textit{udar departure flag} $=$ true}
+				\State $\textit{udar route} \gets \text{derive OSRM route from } \textit{udar origin,destination coordinates}$ 
+			
+				\State $\textit{udar OSM route duration} \gets  \text{derive OSRM route duration from}$ \par
+					\algorithmicindent \textit{udar origin, destination coordinates}
+				\State $\textit{udar trip delay} \gets  \text{udar actual trip duration - udar OSM route duration}$						
+				
+				\EndIf
+			\EndFor	
+			\State $\textit{data\_users\_trips} \gets \text{store final resulting dataset}$
+			\State $\textit{data\_users\_trips\_steps} \gets \text{new empty dataset}$
+			
+			\For{\textbf{each} user trip record \textit{utr} in \textit{data\_users\_trips} }
+		
+			    \For{\textbf{each} user trip step \textit{uts} in \textit{utr route}}			    
+					\State $\textit{data\_users\_trips\_steps} \gets$ \par
+						\hskip\algorithmicindent \text{add new record with step coordinates and timestamp details}
+				 
+				\EndFor	
+			\EndFor			
+		\EndIndent			
+		
+		\item[]
+		
+		\BState \emph{\textbf{E. Traffic flow spatial binning}}:
+		
+		\Indent	
+	 		
+	 		\State $\textit{data\_bin\_traffic\_flow\_time\_series} \gets$ \par 
+	 					\text{count traffic flow group by bin id and step timestamp from } \textit{data\_users\_trips\_steps}	
+			 	
+		\EndIndent		
+		
+		\algstore{myalg}
+			\end{algorithmic}
+	\end{algorithm}
+
+
+\begin{algorithm}[!t]            
+	\begin{algorithmic} [1]                   % enter the algorithmic environment
+		\algrestore{myalg}
+		
+		\BState \emph{\textbf{F. Traffic flow prediction}}:
+	    \Indent
+		
+			\State $\textit{ data\_distinct\_time\_window\_end }  \gets$  $\text{get distinct time window ends from}$ \par
+						$\textit{data\_bin\_traffic\_flow\_time\_series}$
+			\State $\textit{ data\_distinct\_bin\_ids }  \gets$  $\text{get distinct bin ids from } \textit{data\_bin\_traffic\_flow\_time\_series}$ 
+			\State $\textit{ data\_distinct\_time\_window\_ends\_bin\_ids } 	\gets$ $\textit{ data\_distinct\_time\_window\_end } \text{cross join} \textit{ data\_distinct\_bind\_ids }$
+			\State $\textit{ data\_sparse\_bin\_count\_time\_series} 	\gets$ \par 
+						$\textit{ data\_distinct\_time\_window\_end\_bind\_ids} \text{ left join }  \textit{data\_bin\_traffic\_flow\_time\_series}$ 
+			\State $\textit{ data\_time\_windows\_bin\_count} \gets$ \par
+			 $\text{two dimensional pivot on } \textit{ data\_sparse\_bin\_count\_time\_series}$ $\text{by bin\_ids}$	
+			 
+			\State $\textit{ data\_bin\_count} \gets$ $\textit{ data\_time\_windows\_bin\_count}$
+			
+			
+			\State $\textit{ sample\_locations} \gets$ $\textit{ location\_array[a,b,c,d]}$
+			\State $\textit{ window\_frames} \gets$ $\textit{ window\_frames\_array[30 min,60 min,180 min,1 day]}$
+			
+			\item[]
+			
+			\For{\textbf{each} each bin for location \textit{bin-loc} in  \textit{sample\_locations}}
+				\For{\textbf{each} global prediction at \textit{t-ahead} time ahead in \textit{window\_frames}}
+					\For{\textbf{each} each record with bin counts \textit{bin-count-record}  for time \textit{t} in \textit{ data\_bin\_count}}						
+						\State $\textit{ t-ahead-bin-loc-count} \gets$ $ \text{get bin count for }\textit{ bin-loc } \text{at time} \textit{ t-ahead}$	
+						\State $\textit{bin-count-record-with-label} \gets$ \par $ \text{attach} \textit{ t-ahead-bin-loc-count}  \text{ to } \textit{bin-count-record}$				
+					\EndFor
+				\EndFor
+			\EndFor
+			
+			\item[]
+			
+			\State $\textit{data\_labelled\_points} \gets \text{store final resulting dataset}$
+			
+			\State $\textit{ data\_labelled\_points\_reduced} \gets$ \par 
+					take first 1000 components of PCA dimensionality reduction of \par 
+					\textit{ data\_labelled\_points}
+			
+			\State $\textit{data\_training} 	\gets$  $ \text{split } \textit{data\_labelled\_points\_reduced} \text{ and get 60\% of data }$
+			\State $\textit{data\_testing} 	    \gets$  $ \text{split } \textit{data\_labelled\_points\_reduced} \text{ and get 40\% of data }$
+			
+			\State $\textit{multilayer\_perceptron\_classifier\_model} 	\gets$  $\text{fit model on } \textit{ data\_training}$	
+			\State $\textit{multilayer\_perceptron\_classifier\_prediction\_result} 	\gets$  $\text{run model on } \textit{ data\_testing}$	
+			\State \text{report result metrics}
+					
+			
+		\EndIndent 	
+		
+	
+	%	2. $\textit{ data_window_timestamps_bin_ids } \gets$
+		
+		
+	%	2. Select all from cross product df where there is no record in df_od_trip_steps_bin_count with same bind_id,window_start,window_end and add 0 count.
+	%	3. 3. Do union of (2) and df_od_trip_steps_bin_count.
+		
+
+	\end{algorithmic}
+\end{algorithm}
+
+\newpage{}
+
 
 \section{Traffic flow aggregation through spatial binning}
 
