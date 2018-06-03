@@ -17,6 +17,7 @@
 \usepackage{algorithm}
 \usepackage{enumitem}
 \usepackage{varwidth}
+\usepackage{mathtools}
 \usepackage[noend]{algpseudocode}
 
 \makeatletter
@@ -26,6 +27,8 @@
 \algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
 \algtext*{Indent}
 \algtext*{EndIndent}
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
 
 %%this environment is useful if you have code snippets
 \newenvironment{code}
@@ -86,9 +89,9 @@ A mobile phone usage dataset from a telecommunications provider in Malta is used
 
 \mainmatter
 
-\chapter{Introduction}
+\chapter{Introduction} \label{chapter:introduction}
 
-\section{Economic development and urbanization impact on transport}
+\section{Economic development and urbanization impact on transport} \label{section:introduction:economic_development}
 
 Land transport is a societal reality that is required for displacement of people for work, 
 leisure and other purposes. Transport is important as well to deliver goods and services. Land transportation has undoubtedly evolved with a fast pace and late technology advancements are making vehicular transportation more efficient, less polluting, faster, safer and more comfortable. There are many land transport modes which include bus, rail and private car as the most generally used.
@@ -99,7 +102,7 @@ In the US traffic congestion is similarly a cause of concern. Interesting but wo
 
 Traffic delays impact direly also the shipment industry. Travel costs increase when travel time increases.  Pick-up and delivery times are more approximative. Transport companies need to take costly measures in order to make up for this and the increase in cost is more often than not passed to the consumer  \cite{Schrank.2015} \cite{CambridgeSystematicsInc.2005}.
 
-\section{Addressing Traffic congestion}
+\section{Addressing Traffic congestion} \label{section:introduction:addressing_traffic_congestion}
 
 Car users and even public transport users (since buses cannot avoid traffic although use of it alleviates it) tend to get rather frustrated from lost time on the road. This time is deducted from a healthy lifestyle or from productivity hours. 
 
@@ -112,19 +115,21 @@ Other measures to tackle traffic problems is by enforcing traffic laws. This wou
 Investment in the transport infrastructure to expand capacity is difficult to directly justify with a simple cost benefit analysis model. Increase in road capacity might seem a simple straightforward solution to alleviate traffic.  However infrastructure alterations might not necessarily equate to easing of traffic. Such costly changes might just spatially shift the problem elsewhere or not lead to the expected result. Forecasting of the gains made by road capacity increase or any other transport system changes may be distorted if induced traffic is not taken in consideration. Induced traffic may result from changes in route choice, peak hour traffic, modal split, overall transport volume, land use and quality of public transport services \cite{Naess2012}. When formulating return on investment functions induced traffic should not be ignored.
 
 
-\section{Traffic information and management systems}
+\section{Traffic information and management systems}\label{section:introduction:traffic_information_and_management_systems}
 
 Traffic management would primarily consist of a systematic approach to monitor accurately, with wide coverage what is the traffic status in the road network. In order that this information is kept relevant it needs to be constantly updated and gathered in a reliable fashion. Once such information is acquired intelligent traffic management systems architectures can be designed around static data and traffic control is based  on constant input feed stream processing. Obviously the latter is more challenging in terms of computational resources and design but is more reactive to abnormal situations such as accidents or unusual weather conditions since it is modelled on a running sample \cite{Toole2015}. Traffic related data stream processing might entail heavy real time processing of high variety data coming from multiple sources. Modern approaches such as big data based information systems become essential in order to create automated control systems that alleviate the load on the transport network.
 
 Traffic information Systems may be based on mobile data as main source of information. These type of systems would require that mobile data collection and its processing has wide coverage, is reliable and accurate and updated with high frequency \cite{Leduc2008}. Less coverage is to be expected in rural areas where base stations are highly dispersed when compared to urban areas. Mobile vehicle geolocation cannot be used for traffic flow counts on lanes as it can be done with inductive loops. Frequency of updates refers to collection of data that probes the traffic situation (counts) and also to the amount of fresh updates users get from the traffic information systems in real time.
 
-\section{Traveller centric traffic flow probing}
+\section{Traveller centric traffic flow probing} \label{section:introduction:traveller_centric_traffic_flow_probing}
+
+%TODO - give some notes on floating car data
 
 Obviously the dynamics of traffic flow is determined by the travel needs of the masses. The daily commutes of every individual impacts those of others. The interaction at large scale of all the vehicles in a time series is difficult to model and then predict how traffic is affected along the course of the day. Traffic sensors, cameras and induction loops are all sources of information that can be lead to both detect high traffic intensity or even forecast it beforehand.  However the coverage these techniques offer is limited. Camera feeds and inductive-loop detectors cannot be installed in every road of the transport infrastructure. Crowd-sourced information that gives information on mobility traces enables new approaches how to make the road infrastructure management, both inter-towns and intra-cities, smarter. Vehicles and people that are on the move become traffic measurement mediums.
 
 Long before the information era started, spatio-temporal data on human mobility was collected in various forms and modalities. There are various reasons that raise interest in the scientific community for gathering such information. One of the methods used to gather such information is to do straightforward surveys\cite{Calabrese2013,Colak2015}. However these are expensive in terms of manual work needed to carry out and a lot of human resources are needed to gather information. Besides they could only give a snapshot of reality at a given point in time.  Generally these type of surveys are done every five to ten years \cite{Toole2015}. The data made available would be too static and increasing the frequency of survey taking would directly require more human resources assigned to the process. Given that telecommunications came into the picture and there was a wide adoption of its services at the turn of the millennium one could gather data more frequently in vaster amounts and in an automated fashion from mobile devices. The sample domain got even wider. A limitation which comes with mobile phone data is the lack of background known on the travellers. Surveys gather such information and make stratified sampling possible in order to have a more representative sample \cite{Colak2015}.
 
-\section{Application of mobile traces analytics}
+\section{Application of mobile traces analytics} \label{section:introduction:application_mobile_traces}
 
 Primarily mobile traces would lead to location based services that have a wide application spectrum that go beyond solving mobility issues \cite{Hoteit2014,Calabrese2013,Gonzalez2008,Hoteit2016}. An individual's location and its relation with that of others within the context of the continuum of time is invaluable in many ways. This formidable datasource however poses a challenge. Location data, which usually comes in large amounts, has to be harvested, ingested efficiently and ideally processed in real time for the required final purpose which is value added location based services.
 
@@ -136,7 +141,7 @@ Mobile device geolocation data surely proved to be useful to setup a platform to
 
 In this dissertation we will focus on the topic of measuring traffic flow and predict how traffic increase along time by using mobile data usage. A combination of data mining and machine learning techniques will be used to devise a data processing pipeline. This pipeline will consume raw event data records containing cell tower locations and date time and then it zooms into the main areas of activity of users, plots routes between these areas and collects spatial grid aggregate data from daily trips done along these routes from thousands of users. The dataset which is produced from this pipeline is used to train and validate a predictive model using artificial neural networks.
 
-\section{Aims and objectives}
+\section{Aims and objectives} \label{section:introduction:aims_objectives}
 
 The problem to be tackled by this research will be traffic congestion detection and also its prediction within a specific time window. Traffic congestion can be measured through aggregate functions exercised on areas with well defined geo-fences. Traffic hotspots' data is more static unlike the location of mobile users which is less accurately traceable. The trip trajectory of an individual when compared with traffic congestion at a given point is far more non-deterministic \cite{Jarv2012}. Data aggregation of multiple users against time will produce more accurate results when predicting waiting times at a traffic hotspot then when trying to predict the trip for a given time interval and specific mobile user.
 
@@ -144,7 +149,7 @@ Traffic congestion analysis is tightly linked to a long list of factors. These f
 
 We propose a systematic approach how to address the problem often stated in literature related to mobility patterns \cite{Calabrese2013,Toole2015,Hoteit2014,Alexander2015}. We are aiming to devise an accurate metric of traffic congestion and be able to forecast traffic through a model trained and tested with available mobile usage data. The real challenges resides in achieving granularity when modelling traffic given that mobile usage records' geolocation dataset is sparse and reveals the position of users with a considerable margin of error \cite{Hoteit2014,Gonzalez2008}.
 
-\section{Dissertation outline}
+\section{Dissertation outline} \label{section:introduction:dissertation_outline}
 This dissertation started with a section that introduces the reader to the vehicular traffic problematic nature. It continues by expanding the socio-economic impact of traffic and how it can be addressed with modern technology. At the outset it is mentioned how mobile data usage has great potential to monitor traffic conditions and to predict it across time. The following chapter "problem definition" will discuss how the problem at hand of measuring traffic and predicting from mobile usage data is not trivial. It will show where the main challenges reside in order to arrive to a viable solution. Background on traffic flow detection and prediction and an overview of related literature will be given in chapter \ref{background} "Background and literature review". The proposed method to showcase selected implementations of certain concepts inspired by literature will be elaborated in the "Methodology" chapter.  Validity and versatility of the created model will be evaluated in the "Evaluation and Results" chapter. Finally the "Conclusion and Future works" chapter will summarize what has been achieved in this work and to what extent.  In this chapter shortcomings of the proposed solution will be discussed and possible improvements and prospects for the future will be listed.
 
 
@@ -205,7 +210,7 @@ Two different examples of tools have been found to be employed to aggregate loca
 
 The method that makes use of mobile data connectivity with base stations is commonly referred to as floating car data or more specifically floating cellular data (FCD) for sensor data originating mainly from cellular networks. A specific technique to actually determine a user's location is based on triangulation as done by the Airsage solution \cite{Hoteit2014}. Proprietary algorithms process data received from mobile service providers and outputs refined location information to customers. It was reported that in testing carried out by Geostat Inc. Airsage got accurate classification of congested traffic 91\% of the time  \cite{Wang2012}. No technical background was made available how these algorithms get a more precise location of mobile users and this is most likely attributed to the fact that algorithms are patented.  It is stated that Airsage location computation accuracy is within 200 to 300 metres in \cite{Colak2015}. \cite{Calabrese2013} states that the degree of precision reported by AirSage is an average of 320m and median of 220m. As already aforementioned AirSage has been used in \cite{Hoteit2014} as well. In comparison \cite{Gonzalez2008} simplistically mentions that 30\% (average is \(3km^{2}\)) of the towers are placed in a density of 1 tower per square km. This roughly would mean that at most an unprocessed location retrieved from cellular location data would have a maximum error of around 500m. 
 
-Therefore antenna/mobile tower location to which the mobile users connect with, may not be useful for all intents and purposes since it might be hundreds of metres away from the actual position. In our research we cannot make use of Airsage datasets. Such solutions must be already in accordance with local mobile network operators and currently there are no such agreements with the local providers. Therefore in this research some effort had to be dedicated to devise a simple triangulation or clustering method that can achieve more accurate mobile user location than the actual cell tower location. Since the grouping of multiple mobile users within a grid of location cells would prove to be more efficient in accurately measuring levels of traffic an essential topic to treat in traffic congestion research is spatial binning. Spatial binning basically provide geographical aggregate statistics.  MapReduce frameworks such as Spatial Hadoop exist so the expensive temporal geospatial analytics are done within an acceptable time window \cite{Wu2014,Eldawy}. Such tools would even provide the possibility of doing spatial joins that can correlate spatial features extracted from sources such as OpenStreetMaps with mobility data from a mobile usage dataset \cite{Alarabi2014}.
+Therefore antenna/mobile tower location to which the mobile users connect with, may not be useful for all intents and purposes since it might be hundreds of metres away from the actual position. In our research we cannot make use of Airsage datasets. Such solutions must be already in accordance with local mobile network operators and currently there are no such agreements with the local providers. Therefore in this research some effort had to be dedicated to devise a simple triangulation or clustering method that can achieve more accurate mobile user location than the actual cell tower location. Since the grouping of multiple mobile users within a grid of location cells would prove to be more efficient in accurately measuring levels of traffic an essential topic to treat in traffic congestion research is spatial binning. Spatial binning basically provide geographical aggregate statistics.  MapReduce frameworks such as Spatial Hadoop exist so the expensive temporal geospatial analytics are done within an acceptable time window \cite{Wu2014,eldawy2015spatialhadoop}. Such tools would even provide the possibility of doing spatial joins that can correlate spatial features extracted from sources such as OpenStreetMaps with mobility data from a mobile usage dataset \cite{Alarabi2014}.
 
 
 \section{Privacy and data anonymization} \label{data_anonymization} 
@@ -335,11 +340,11 @@ Prediction of traffic results have to take in consideration where the model is b
 
 
 
-\chapter{Methodology}
+\chapter{Methodology} \label{chapter:methodology}
 
 As outlined in the problem statement this research has to extract meaningful features from mobile data usage that would serve as the basis to build a traffic flow model. Before getting direction on what algorithm to use in order to map raw data and translate it into traffic flow metrics a thorough exercise of familiarization with the data was due. A feasibility check had to be carried out on whether it was possible that by devising an algorithm a direct relationship is established between data and traffic flow. If data would have proven to be too sparse both temporally and spatially a decision would needed to have been taken to either augment the dataset with other features such video streams with ANPR, call data records, past datasets, incident reports and anything related to road transport which would convey information on human mobility patterns. In this chapter we will elaborate how we investigated the possible approaches and how we decided to dig deeper with some chosen techniques rather than others depending on level of confidence.
 
-\section{Mobile data collection and structure}
+\section{Mobile data collection and structure} \label{section:methodology:mobile_data_collection_structure}
 
 The dataset was made available from GO Plc Malta. The dataset recorded ranges from October 2016 to September 2017 which is a full year of data. Number of distinct cells amount to several thousands but distinct cell locations amount to only a few hundreds since a cell tower shares antennas for different technologies (Exact numbers cannot be disclosed due to commercial reasons).
 
@@ -350,6 +355,7 @@ Unique data usage users amount approximately to 108 thousand for the month of Oc
 %TODO - Here to correlate with MCA data on data usage and subscriber base.
 
 \begin{table}[h]
+    \label{table:dataset_01}
 	\centering
 	\resizebox{\textwidth}{!}{
 
@@ -383,7 +389,7 @@ Unique data usage users amount approximately to 108 thousand for the month of Oc
 \end{table}
 
 
-\section{Dataset preliminary analysis}
+\section{Dataset preliminary analysis} \label{section:methodology:data_set_preliminary_analysis}
 
 Total number of records of any given type for the month of october 2016 was 125 million. 78\% of these records are data usage records. This at face value gives an indication that there is a four fold higher frequency of location records of data usage type then with calling data records. This evidently gives an edge on other research that used calling data records as their data source since the polling of users location is less sparse.
 
@@ -393,11 +399,11 @@ Total number of records of any given type for the month of october 2016 was 125 
 %TODO - distribution o f
 
 
-\section{Algorithm Selection}
+\section{Algorithm Selection} \label{section:methodology:algorithm_selection}
 
 One of he most challenging tasks involved in this study was to assign vehicular traffic to the road network depending on surrounding cell tower traffic in a time series.
 
-\subsection{Trajectory interpolation through cell tower data}
+\subsection{Trajectory interpolation through cell tower data} \label{subsection:methodology:trajectory_interpolation}
 The first approach that we tried to investigate was to relate the cell tower data by snapping it to the road infrastructure mesh depending from which direction the vehicle is coming. Various APIs are available to retrieve nearest road from an input geographical location. We had no prior knowledge on how cell tower transmission is configured. There are many settings which might determine the range of the cell tower including frequency, rated power, height of tower etc. Therefore the transmission range of the cell towers was an unknown. A method to roughly estimate range was to calculate the average distance from the nearest \textit{k} neighbouring towers for all cell towers. However from a sample taken from the dataset available of the cell towers across Malta the variance seemed quite high, ranging from an inter-distance of 150m in urbanized areas to several kilometres in rural areas (Cell tower locations map for all the country not being shown since it is sensitive commercial data). Further to this from the analytical perspective it was decided to plot the cell towers' on the map and check if their distribution pattern would make it feasible to snap a data record cell tower location to the nearest road or area polygon. Thus here it was taken as an assumption that the area around cell towers will be be given service with equal range from each tower. Allowance for overlapping was also taken in consideration. It is evident from figure \ref{fig:cell_towers_distribution} that a lot of roads would be included in the range of a cell tower so it would have been difficult to devise an algorithm to derive trajectories and traffic flow counts from cell tower location data. Given that there are a lot of unknowns including how handover procedure is handled in specific areas and the actual range of cell towers, the solution path of snapping to nearest roads depending on EDR coordinates was discarded. Such an approach would might have made it too impractical to assign traffic to junctions, roads or polygon areas and the probability of inaccurate results was high.
 
 \begin{figure}[h]	
@@ -407,27 +413,27 @@ The first approach that we tried to investigate was to relate the cell tower dat
 	\label{fig:cell_towers_distribution}
 \end{figure}
 
-\subsection{Traffic simulation from OD matrix}
+\subsection{Traffic simulation from OD matrix} \label{subsection:methodology:traffic_simulation_ODMatrix}
 Another approach would have been to simulate traffic by inputting statistical information on travel patterns retrieved parameters from the dataset. Another input to the simulation based traffic model would have been an OD matrix that will be discussed in section \ref{clustering}. Toledo et al. \cite{Toledo2004} mentions that OD flows are an important input to simulation models but an accurate OD matrix is difficult to acquire. An example of such implementation can be found in \cite{Hirai2015}. In this study electronic toll collection data is used to form an initial OD-Matrix. This OD matrix is further optimized by optimizing a model that gets observed detector data and a simulation based on current OD, computes the least cost difference and optimizes the OD matrix depending on result. This process is iterated until an acceptable coefficient of determination is achieved. Simulation models generally give two types of outputs namely a visual simulation of traffic flow on a map and textual statistical output that can include metrics such as traffic delays, gap distances, speed and overall trip distance travelled by vehicles.
 
 While macroscopic traffic simulators seem promising for motorways environments they are found to be less suitable for urban scenarios \cite{Bazghandi2012}. Urban environments have a lot of conflicting traffic flows caused by the numerous junctions and small roads that feed and attract traffic from the road network. Also such simulators require accurate OD matrices which cannot be achievable from our dataset. In our research we also tried to focus on the macroscopic level since we had a dataset that have ample coverage at our disposition especially in urban areas.    
 
 %TODO - read and add notes from Macroscopic Traffic Flow Model Calibration Using Different Optimization Algorithms
 
-\subsection{Traffic detection by trip generation assigned traffic}
+\subsection{Traffic detection by trip generation assigned traffic} \label{subsection:methodology:trip_generation}
 The method chosen to detect traffic on the road network was to first generate an OD matrix that contains main stay locations for users in a time series. Then a trip is generated between each main location for each user. The trip would include turn by turn directions with longitude and latitude coordinates. Traffic load assignment is then assigned to junctions and turns depending on the time retrieved from OSM (Open Street Maps) data. The major challenge here would prove to be the traffic assignment given that there is an interaction of a lot of vehicles at a given point in time with a complex structure of roads and unexpected events such as weather, accidents and road blockages for whatever reason. 
 
 
-\section{Main activity hubs extraction and displacement error removal through clustering}\label{clustering}
+\section{Main activity hubs extraction and displacement error removal through clustering} \label{section:methodology:clustering}
 
 One of the main steps of the proposed algorithm is to derive main areas of activity from the mobile data usage of subscribers. One possible way to do this from the described dataset is by clustering. Clustering is used also to remove noise caused by displacement through frequent oscillations by finding a centroid of activity. Removal of displacement error through triangulation has been ruled out. There are missing dataset features that are needed to get a more accurate location with this process such as strength of signal from every cell tower that the user connects to. Moreover triangulation does not have the aggregation nature that clustering has. Grouping of similar locations have to be implemented on top of triangulation. Triangulation would be more suited to remove noise or displacement error caused by cell tower oscillations or handovers. These are caused either because the signal from a tower is weaker from another that can provide better service or there is momentary offloading causing a user to switch his connection to another tower with less load. In section \ref{OD_Matrices} we have seen how certain authors employed various techniques to smooth sudden location change of mobile users because they often switch cell towers in short time windows. 
  
 Clustering is a machine learning unsupervised technique used to classify entities which have similar features. Clustering is done depending on the chosen algorithm and calibration hyper-parameters that control the grouping process. Two clustering techniques that were checked for their appropriateness to this research were k-means and DBSCAN. 
 
-\subsection{K-means clustering}
+\subsection{K-means clustering} \label{subsection:methodology:kmeans_clustering}
 k-means algorithm is highly popular especially for first analysis of datasets because it is simple to implement and highly efficient. The main drawback of k-means clustering is the fact that you need to select the number of clusters you need to find a priori. Then a number of expected centroids equal to the number of targeted clusters are randomly chosen. The algorithm starts to find the nearest neighbours based on a distance metric until finally the clusters are formed. This process can be done iteratively until the ideal set of centroids with the least root mean square error are found. Also something important to note is that clusters tend to be spherical in nature. This would be highly visible if 2D clusters are plotted on a graph.
 
-\subsection{DBSCAN clustering}
+\subsection{DBSCAN clustering}  \label{subsection:methodology:dbscan_clustering}
 DBSCAN (density based spatial clustering of applications) has an edge on k-means and is mostly suited to our research since it does not need to set the number of clusters that we are after for each user at the outset. Moreover it finds clusters of non-spherical nature and leaves noisy elements out of the computed clusters \cite{ChakrabortyNKNagwaniLopamudraDey2011}. DBSCAN has three main hyper parameters to set namely minimum points,  $\epsilon$ (radius of area within which density is measured)  and a distance metric. The algorithm is more sensitive to density rather than to aggregate distance of surrounding points. Basically the algorithm finds core points that have the required minimum points in its neighbourhood dictated by the distance metric. Other non core points that are within core points' radius range (i.e. they are not surrounded with the minimum number of points) are referred to as boundary points. If clusters formed by the core points overlap each other they form one single cluster, hence the non-spherical shape of the clusters. 
 
 DBSCAN was the preferred candidate for clustering since our aim is to find dense clusters of mobile data usage activity and random locations visited by users are of no interest and need to be filtered out. The curse of dimensionality does not apply here since there are only two dimensions with the same scale.  The values of hyper-parameters were 500m for radius, minimum required points was set to 3 and euclidean distance was chosen as the distance metric. The mean distance between a sample of cell tower locations taken randomly from the whole dataset was calculated to be 350m. The radius was chosen to be 500m to allow for overlapping but not include too many cell towers accept for the shouldering ones. By choosing an excessive $\epsilon$ the centroid location coordinates was being too inaccurate and was clustering a wide range of subscribers' activity. With a smaller $\epsilon$ minimal clustering was being attained since cell tower location areas will not overlap. The OPTICS algorithm which does away with the $\epsilon$ parameter iterates until it finds the optimal $\epsilon$ and orders its clusters in a hierarchical result. However this algorithm is more computationally expensive and we opted to use the non-generalized DBSCAN version of the algorithm. The implementation used\footnote{https://github.com/scalanlp/nak} was integrated into Apache Spark processes that output clusters of usage patterns for every user. The output of the implementation we used was in the form of coordinates that outlined the rectangular boundaries of the cluster. The final geographic coordinates that would denote the main activity clusters would be those of the centroid. Therefore the centroid for each rectangular cluster had to be determined with readily available libraries\footnote{https://github.com/Esri/spatial-framework-for-hadoop, https://github.com/Esri/geometry-api-java} within Apache Hive.   
@@ -440,14 +446,14 @@ DBSCAN was the preferred candidate for clustering since our aim is to find dense
 
 
 
-\section{OD Matrix trip Generation}
+\section{OD Matrix trip Generation}  \label{section:odmatrix_trip_generation}
 
+To simplify and present in a summarized way a high-level overview is given in the form of pseudo-code in algorithm \ref{algorithm:overview}. The main modules of the algorithm will be discussed in detail in the following subsections.
  
-
-\subsection{OD Matrix computation}
+\subsection{OD Matrix computation}   \label{subsection:odmatrix_computation}
 In our research we decided to focus on two main areas of activity per user. Inclusion of more areas of activity is left for future studies. Basically it is assumed that most of the trips happen between home and work and vice versa (see section \ref{OD_Matrices}). First we retrieved the top two clusters per user through DBSCAN. We considered these top two clusters as the origin and destination of trips including returns. Then the user EDRs that have geographical coordinates located in the two main activity cluster areas are filtered into a new dataset through the spatial join technique. This process finally left us with a dataset containing all data usage records that have a location in either of the top two clusters for any user in a times series. This resulting dataset is substantially the OD matrix.
 
-\subsection{Trip generation, route choice and traffic assignment}
+\subsection{Trip generation, route choice and traffic assignment} \label{subsection:trip_generation}
 
 OD matrices on their own would not give information how traffic flow is distributed on the roads. We needed to detect when trips happen by recording change of cluster location events. This was done by ordering OD matrix entries by user and timestamp. The dataset was then scanned and when location of activity of a given record is found to be different from the previous record the previous record is tagged as a departure and the current one is set as an arrival. The computations done depending on previous and current rows while scanning a dataset were made by using Apache Hive window analytical functions \footnote{https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics}. 
 
@@ -467,7 +473,8 @@ In OSM jargon the route consists in steps that contain manoeuvres. These manoeuv
 %TODO - mention how to redistoirubte delay heuristically on steps depending on traffic flow contained in the grid cell where the step was located.
 
 \begin{algorithm}
-	\caption{Experimental Overview}\label{algorithm:overview}
+	\caption{Experimental Overview}
+	\label{algorithm:overview}
 	\begin{algorithmic}[1]
 		
 		\item[]
@@ -547,8 +554,8 @@ In OSM jargon the route consists in steps that contain manoeuvres. These manoeuv
 	\end{algorithm}
 
 
-\begin{algorithm}[!t]            
-	\begin{algorithmic} [1]                   % enter the algorithmic environment
+\begin{algorithm}           
+	\begin{algorithmic} [1]                 % enter the algorithmic environment
 		\algrestore{myalg}
 		
 		\BState \emph{\textbf{F. Traffic flow prediction}}:
@@ -596,36 +603,126 @@ In OSM jargon the route consists in steps that contain manoeuvres. These manoeuv
 			\State \text{report result metrics}
 					
 			
-		\EndIndent 	
-		
-	
-	%	2. $\textit{ data_window_timestamps_bin_ids } \gets$
-		
-		
-	%	2. Select all from cross product df where there is no record in df_od_trip_steps_bin_count with same bind_id,window_start,window_end and add 0 count.
-	%	3. 3. Do union of (2) and df_od_trip_steps_bin_count.
-		
+		\EndIndent 			
 
 	\end{algorithmic}
 \end{algorithm}
 
-\newpage{}
 
 
-\section{Traffic flow aggregation through spatial binning}
 
-To get aggregate statistics on traffic distribution hadoop spatial binning was used \cite{Eldawy}. A user defined function running in Hive on top of hdfs will count by spatial bin traffic flow. Spatial Hadoop is highly efficient because it uses MapReduce \footnote{https://hortonworks.com/apache/mapreduce} and a 2-level spatial index. MapReduce executes tasks with a level of parallelism and computation is distributed. Spatial Hadoop uses a special algorithm to partition data in hadoop and maintain a spatial index for fast querying and fast spatial joins \cite{Eldawy}.
+\section{Traffic flow aggregation through spatial binning} \label{section:spatial_binning}
+
+To get aggregate statistics on traffic distribution hadoop spatial binning was used as proposed in (Eldawy et al,2015) \cite{eldawy2015spatialhadoop}. Hive abstracts a lot of java api calls to get data from distributed file systems managed by hadoop \footnote{https://en.wikipedia.org/wiki/Apache\_Hive}. Hive has a specific SQL dialect HiveQL(HQL) that can retrieve data from hdfs (hadoop disributed file system) without implemented the mapreduce calls.
+
+Spatial Hadoop is highly efficient because it uses MapReduce \footnote{https://hortonworks.com/apache/mapreduce} and a 2-level spatial index. MapReduce executes tasks with a level of parallelism and computation is distributed. Spatial Hadoop uses a special algorithm to partition data in hadoop and maintains a spatial index for fast querying and fast spatial joins \cite{eldawy2015spatialhadoop}. 
+
+A Hive user defined function from esri (esri is the company that owns the ArcGIS solution) is used within the HQL syntax to count traffic flow by spatial bin\footnote{https://github.com/Esri/spatial-framework-for-hadoop}. A spatial bin is a computational geometry that can be used to numerically describe features in a specific region. In our case we used 0.0005 degrees bins to count traffic flow 'steps' derived from OSM routes. 0.0005 degrees bins approximately equate to 50 by 50 metres bins since dimensions are not precise when computing the geometrical bin. A geometrical bin dimensions are not strictly universal and vary according to position and tends to be more of an elongated rectangle near the poles and squarish near the equator given that latitudes get narrower for bins near the poles due to the fact that the earth is not a perfect sphere but an oblate spheroid\footnote{http://www.longitudestore.com/how-big-is-one-gps-degree.html}. Not withstanding this the bins in the saptial area under study are of the same size since Malta does not realtively cover a wide area. We chose $50m^2$ spatial bins to aggregate traffic flow data in order not to have too much wide geometries that can aggregate traffic coming from two roads. Smaller bins than 50 metres square make aggregations less meaningful since aggregation is more near to data points rather than grouping polygons. 
+
+The centroid for each bin is then calculated in order to attain the central coordinates of the polygon delineating the bin. The aggregation is not only done spatially but also within intervals of 5 minutes each. This is thought to be granular enough and not too big to describe traffic flow temporally. Prediction of traffic could then be more practical in terms of time windows ahead relative to the prediction to be done. A larger time window would not permit finer prediction in a time series. For example a non-sliding 10 minute time window which would allow predictions 10 minutes ahead, 20 minutes ahead and so forth. We did not use a sliding window so that we have less data points for training since training of neural networks would be more costly in terms of computation and would have made analysis more time consuming and complex. Having a sliding window would make it more flexible to decouple the averaging window size from the time ahead distance. The prediction time ahead parameter would not need to be a multiple of the averaging window. 
+
+  
+
+
 
 
 \section{Traffic flow modelling and prediction}
 
+%TODO - steps for predicive modelling -> https://www.mathworks.com/discovery/predictive-modeling.html
+
+The main concept that traffic flow in all areas impact how traffic in a specific given area will be in the immediate future determined how the prediction model has been structured. More specifically traffic flow at any particular bin $b_i$ at time $t$ influences traffic at bin $b_j$ at time $t + n$. The traffic intensity impact is exerted collectively with other traffic flow count from other bins. The computation of traffic in a location based on traffic in the past cannot be achieved by deriving a function based on a mathematical approach. Black box predictive modelling was obtained by training a neural network. There were various steps needed to fit a neural network model used to predict the traffic flow. Our aim was to select a sample of locations and predict their traffic. In the following subsections it will be explained how data was processed prior training of the model, how the model hyperparameters were chosen, how the model was eventually trained and then how the model was validated.
+
+
+%TODO - remove outliers by histogram -> check SPARK:FLATTEN OD TRIPS
+
+\subsection{Preprocessing data for the prediction model} \label{subsection:Preprocessing data for the prediction model}
+The first data mining exercise was to build a dataset where each record contains all Malta traffic flow count for every 5 minutes for the month of October 2016 (see table \ref{table:dataset_02}). This dataset was then ordered by time. This dataset was to be derived from the generated dataset in subsection \ref{subsection:trip_generation}. The latter dataset contained aggregated traffic flow for each user in a time series with 5 minutes buckets. The final resulting from preprocessing would be used to train and validate the artificial neural network (ANN). The features selected to build the model are the traffic flow at every location defined by the boundaries of a bin. These bins were explained in section \ref{section:spatial_binning}.
+
+
+\begin{table}[h]	
+	\centering
+	\resizebox{\textwidth}{!}{
+		
+\begin{tabular}{|l|l|l|l|l|l|}
+	\hline 
+
+\textbf{\Large{bin id}} & \textbf{{\Large longitude}} & \textbf{{\Large latitude}} & \textbf{{\Large time window start}} & \textbf{{\Large time window end}} & \textbf{{\Large traffic flow count}} \\ \hline
+4611467925420319675 & 14.4320000001052 & 35.905499999918 & 2016-10-01T00:00:00.000Z & 2016-10-01T00:05:00.000Z & 12 \\ \hline
+4611467846458306816 & 14.489500000100501 & 35.918499999953397 & 2016-10-01T00:00:00.000Z & 2016-10-01T00:05:00.000Z & 2 \\ \hline
+4611468259490374713 & 14.506000000011101 & 35.850499999983199 & 2016-10-01T00:00:00.000Z & 2016-10-01T00:05:00.000Z & 3 \\ \hline
+4611468311119383155 & 14.485500000027001 & 35.841999999986903 & 2016-10-01T00:00:00.000Z & 2016-10-01T00:05:00.000Z & 2 \\ \hline
+
+	\hline 
+\end{tabular} }
+\caption{Traffic flow count by bin for every 5 minute window.} 
+\label{table:dataset_02}
+\end{table}
+
+
+This dataset had traffic flow count for each bin across time. Traffic counts of zero were not yet present before preprocessing. Therefore the main features of this dataset would be bin id, traffic flow count and time window start and end timestamps. In order to generate a dataset with records that give a snapshot of all traffic count of Malta for every 5 minutes further processing was done. First all distinct bin ids where extracted and these amounted to 4134. Then all the possible time windows in the month of October were generated. These amounted to 8928 (31 (days) multiplied by 24 (hours)  multiplied by 12 since an hour has twelve five minute time windows). By performing a cross product between all time series values and all possible bin ids a new dataset with all possible bin id and time window combinations is created. A left join is done between aggregated traffic flow with the latter produced dataset with records that comprehensively describe traffic flow for every 5 minute window for the whole region under study. This data structure was not suitable for the neural network training. We needed a data structure where each row contains all traffic flow for all Malta. To achieve this a two dimensional pivot was used to transform data and traffic per bin. In the resulting dataset the traffic count per bin is stored column-wise (see table \ref{table:dataset_03}). 
+
+
+\begin{table}[h]	
+	\centering
+	\resizebox{\textwidth}{!}{
+		
+		\begin{tabular}{|l|l|l|l|l|l|}
+			\hline 
+			
+			\textbf{\large{time window timestamp}} & \textbf{{\large bin id 1}} & \textbf{{\large bin id 2}} & \textbf{{\large bin id 3}} & \textbf{{\large ...}} & \textbf{{\large bin id 4134}} \\ \hline
+			2016-10-01T00:00:00.000Z & 0 & 0 & 2 & ... & 0 \\ \hline
+			2016-10-01T00:05:00.000Z & 0 & 1 & 1 & ... & 1 \\ \hline
+			2016-10-01T00:10:00.000Z & 0 & 0 & 0 & ... & 0 \\ \hline
+			2016-10-01T00:15:00.000Z & 1 & 0 & 0 & ... & 0 \\ \hline
+			
+			\hline 
+	\end{tabular} }
+	\caption{Sparse traffic flow matrix} 
+	\label{table:dataset_03}
+\end{table}
+
+After all the feature data have been organized in a format that can be used as input data to the model a label for each data row had to be assigned. ANN is a machine learning of supervised learning type which requires output that can be mapped from input data. The output is in our case classification of the level of traffic for a sample location (bin) of which we need to determine the traffic at time $t + 5n$. The output label was not chosen to be the traffic count but a logarithmic function of it (see equation \ref{equation:logarithmic_function}).
+
+\begin{equation} \label{equation:logarithmic_function}
+y=\ceil[\big]{log(x+1)/log(max_x + 1)} * b \\
+\end{equation}
+
+Where $x$ is the actual traffic flow count, $y$ is the final classification label and $b$ is the number of classification levels (bins). 
+Basically if traffic output was classified linearly in a set of bins the model would have ended up with most of the label outputs to be of the low traffic count class. With logarithmic binning the skewness towards low counts of traffic is highly decreased. The use of logarithmic function would squeeze values in the low traffic flow label bin and widen the range for high level traffic. We used two configurations for traffic classification. Experimentation with the ANN training and validation was done with both four bins and eight bins to see which configuration would perform better and has minimum error rate. The assigning of the label consisted first of classifying the traffic count of the bin location for every 5 minute window for which prediction modelling is to be carried out.  Then the resulting classification is assigned to the $t - 5n$ record. Therefore after this operation, table \ref{table:dataset_03} would have another column with future classification of traffic count for a given bin location. Four datasets were prepared for training. These datasets were differentiated by the label assigned. The classification label for each dataset record would be retrieved from time $t+5n$ ahead through window analytical functions for $n$ with values of 3, 12, 36 and 288 which reflect time windows ahead of 15 minutes, 1hour, 3 hours and 1 day respectively.   
+
+%TODO - plot histogram of traffic counts.  
+
+%TODO - Traffic may be in decline and on the incline 
+
+%TODO - ANN topoloy
+
+%TODO - setting the learning rate
+
+
+%TODO - not to overfit the model
 \subsection{Dimensionality Reduction}
+The dataset acquired from the original data usage mobile is huge. The features that describe the data amount to 4134 as already demonstrated in subsection \ref{subsection:Preprocessing data for the prediction model}. The computational complexity depends on how quickly the model converges. However for each iteration to reduce the cost and undergo gradient descent the magnitude of the computations to be performed depends on the number of training examples multiplied by the number of features multiplied by in turn by the number of neurons in each hidden layer. The number of hidden layers is chosen depending on how much complex the problem is but tends to fall victim of overfitting the model. As mentioned in \cite{Jain1996} and other literature on ANN design parameters such as number of neurons and number of hidden layers need trial and error to get a better architecture. Therefore it is important to optimize computation times in order to for experimentation not to be too much time consuming and so that final model is practical in term of getting a prediction after an acceptable amount of time.
+
+One way how to lower computation time is reduce the number of features. This entails mapping an n-dimensional space to a smaller dimensional space reducing the number of features in the process. In \cite{Yang2004} experimentation is done by keeping 95\% and 99\% of the total variance. We kept 1000 components that explained 98\% of the total variance. As explained in the formula below \ref{equation:principal_components}
+
+
+\begin{equation} \label{equation:principal_components}
+ \mathop{\text{min}}_k \Bigg\{ k : \frac{{\Sigma }_{i=1}^{k} \lambda_i}{{\Sigma }_{i=1}^{n}\lambda_i} \geq r \Bigg\}
+\end{equation}
+
+we selected k to be 1000 so that the preserved variance ratio $r$ is 98\%. In equation \ref{equation:principal_components} eigenvalues $\lambda_i$ are ordered in decreasing variance. $n$ represents the original dimensionality of the reduced dataset.
+
+%
+%TODO - some notes on selecting features.  
+
+
+\subsection{Artificial Neural Network calibration}
 
 
 
 
 
-
+\section{Visualizations of results through mapping}
 
 
 
@@ -646,6 +743,10 @@ All the three areas required to be evaluated need to have a uniform way how to p
 %TODO - parallel DBSCAN
 
 %TODO - more activity hubs/clusters used to form trips.
+
+%TODO - sliding window.
+
+%TODO - what other features could have been added.
 
 \chapter{Conclusion}
  The approach taken is systematic so that the research passes through gradual stages in such a way that we build on top of previous analyses and prototypes. Targets of this research include extraction of behavioural patterns of traffic encountered on the level of the isolated individual, subset of individuals, locality, specific time events and specific traffic hotspots. As described at the outset the main aim is not to trace the mobility of users but rather to predict estimated traffic congestion points and computation of duration for a travelling path given a starting point and a destination. Ideally if the users are highly predictable and stick to a regular travelling pattern they might be automatically notified when they are actually going to travel, how much its going to take them in terms of duration and suggestions are given to take different alternative routes which are less costly in terms of business. 

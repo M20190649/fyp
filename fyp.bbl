@@ -77,10 +77,11 @@ S.~{\c{C}}olak, L.~P. Alexander, B.~G. Alvim, S.~R. Mehndiratta, and M.~C.
 {Directorate General for Mobility and Transport}.
 \newblock {Urban mobility}, 2018.
 
-\bibitem{Eldawy}
-A.~Eldawy.
-\newblock {SpatialHadoop : A MapReduce Framework for Spatial Data ∗}.
-\newblock 1.
+\bibitem{eldawy2015spatialhadoop}
+A.~Eldawy and M.~F. Mokbel.
+\newblock Spatialhadoop: A mapreduce framework for spatial data.
+\newblock In {\em Data Engineering (ICDE), 2015 IEEE 31st International
+  Conference on}, pages 1352--1363. IEEE, 2015.
 
 \bibitem{Gonzalez2008}
 M.~C. Gonzalez, C.~A. Hidalgo, and A.-L. Barabasi.
@@ -112,6 +113,11 @@ M.~S. Iqbal, C.~F. Choudhury, P.~Wang, and M.~C. Gonz{\'{a}}lez.
   data}.
 \newblock {\em Transportation Research Part C: Emerging Technologies},
   40:63--74, 2014.
+
+\bibitem{Jain1996}
+A.~K. Jain and J.~Mao.
+\newblock {Artificial Neural Network: A Tutorial}.
+\newblock {\em Communications}, 29:31--44, 1996.
 
 \bibitem{Jarv2012}
 O.~J{\"{a}}rv, R.~Ahas, E.~Saluveer, B.~Derudder, and F.~Witlox.
@@ -203,6 +209,12 @@ M.~H. Wang, S.~D. Schrock, N.~{Vander Broek}, and T.~Mulinazzi.
 H.~Wu, T.~Zhang, and J.~Gong.
 \newblock {GeoComputation for Geospatial Big Data}.
 \newblock {\em Transactions in GIS}, 18(S1):1--2, 2014.
+
+\bibitem{Yang2004}
+K.~Yang and C.~Shahabi.
+\newblock {A PCA-based similarity measure for multivariate time series}.
+\newblock {\em Proceedings of the 2nd ACM international workshop on Multimedia
+  databases - MMDB '04}, page~65, 2004.
 
 \bibitem{Zheng2011}
 Y.~Zheng and X.~Xie.

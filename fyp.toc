@@ -32,14 +32,17 @@
 \contentsline {section}{\numberline {4.5}OD Matrix trip Generation}{38}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}OD Matrix computation}{38}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Trip generation, route choice and traffic assignment}{38}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{42}{section.4.6}
+\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{40}{section.4.6}
 \contentsline {section}{\numberline {4.7}Traffic flow modelling and prediction}{43}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Dimensionality Reduction}{43}{subsection.4.7.1}
-\contentsline {chapter}{\numberline {5.}Evaluation and Results}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section Name}{44}{section.5.1}
-\contentsline {chapter}{\numberline {6.}Future Work}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section Name}{45}{section.6.1}
-\contentsline {chapter}{\numberline {7.}Conclusion}{46}{chapter.7}
-\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{47}{appendix.A}
-\contentsline {section}{\numberline {A.1}These are some details}{47}{section.A.1}
-\contentsline {chapter}{References}{48}{section.A.1}
+\contentsline {subsection}{\numberline {4.7.1}Preprocessing data for the prediction model}{44}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Dimensionality Reduction}{46}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Artificial Neural Network calibration}{47}{subsection.4.7.3}
+\contentsline {section}{\numberline {4.8}Visualizations of results through mapping}{47}{section.4.8}
+\contentsline {chapter}{\numberline {5.}Evaluation and Results}{48}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section Name}{48}{section.5.1}
+\contentsline {chapter}{\numberline {6.}Future Work}{49}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section Name}{49}{section.6.1}
+\contentsline {chapter}{\numberline {7.}Conclusion}{50}{chapter.7}
+\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{51}{appendix.A}
+\contentsline {section}{\numberline {A.1}These are some details}{51}{section.A.1}
+\contentsline {chapter}{References}{52}{section.A.1}

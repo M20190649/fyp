@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: fyp.aux
 The style file: abbrv.bst
 Database file #1: references.bib
-Repeated entry---line 249 of file references.bib
+Repeated entry---line 250 of file references.bib
  : @article{Iqbal2014
  :                   ,
 I'm skipping whatever remains of this entry
@@ -9,8 +9,6 @@ Warning--empty journal in Alarabi2014
 Warning--empty journal in Attard2015
 Warning--empty journal in CambridgeSystematicsInc.2005
 Warning--there's a number but no volume in CambridgeSystematicsInc.2005
-Warning--empty journal in Eldawy
-Warning--empty year in Eldawy
 Warning--there's a number but no volume in Hoteit2016
 Warning--empty journal in Shin
 Warning--empty year in Shin
