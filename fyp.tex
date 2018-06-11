@@ -220,6 +220,8 @@ Mobile subscribers location is highly sensitive so anonymization has to come int
 
 Another way to guarantee privacy is limiting data retention. To safeguard privacy travel paths of a specific mobile user is kept for not more than 1 day in \cite{Hoteit2014} and 2 days in \cite{Calabrese2013}. It is the norm to assign a hashed anonymous identifier to each mobile user in such method as well.
 
+%TODO - re-identification - https://iapp.org/news/a/looking-to-comply-with-gdpr-heres-a-primer-on-anonymization-and-pseudonymization/
+
 
 \section{Big Data, the cloud and large scale real time stream processing} \label{background_big_data}
 
@@ -302,7 +304,7 @@ Some techniques were used to lessen the margin of error. Since most of the time 
 
 An issue have been raised in \cite{Calabrese2013} about detecting a lot of trips in very short distance which do not tally with statistical data given by surveys. This is explained as being caused by fluctuating random connections with towers which spatially misplace the user when in reality he is not actually physically moving. This issue was tackled by mathematically creating so called by \cite{Calabrese2013} 'virtual locations' (a mass/group of traced positions in a given radius of Airsage resolution) and actually recording a movement when user moves from a virtual location to the other. Calabrese limits static location detection to the home location and the process how to manage to get each user's location is similar to that expounded in \cite{Hoteit2016}. In a novel style this work studies the relationship between total trip length calculated from mobile phone location data and vehicle kilometres travelled (VKT) and urban features such as entropic type, population density, intersection density, average distance to non-work destinations, distance to subway stations and highway exits. These urban features were derived from US Census of 2000 and activity travel surveys.
 
-Estimation of load error is proportional to concentration if users in a given block \cite{Hoteit2014}. When error is less than 1 km a probability of 80.78\% of being within commonly travelled territory contrasts with a probability of 19.22\% when user goes outside of it. From the opposite perspective the probability of being inside radius of gyration given error is high is 40.25\% and that of being outside is 59.75\%.
+Estimation of load error is proportional to concentration if users in a given block \cite{Hoteit2014}. When error is less than 1 km a probability of 80.78\% of being within commonly travelled territory contrasts with a probability of 19.22\% when user travels outside of it. From the opposite perspective the probability of being inside radius of gyration given error is high at 40.25\% and that of being outside is 59.75\%.
 
 \cite{Calabrese2013} boasts of 49.40\% of mobility variation can be explained for individual mobile users and 56.48\% for vehicle associated mobility in terms of trip length.    
 
@@ -636,7 +638,9 @@ The main concept that traffic flow in all areas impact how traffic in a specific
 %TODO - remove outliers by histogram -> check SPARK:FLATTEN OD TRIPS
 
 \subsection{Preprocessing data for the prediction model} \label{subsection:Preprocessing data for the prediction model}
-The first data mining exercise was to build a dataset where each record contains all Malta traffic flow count for every 5 minutes for the month of October 2016 (see table \ref{table:dataset_02}). This dataset was then ordered by time. This dataset was to be derived from the generated dataset in subsection \ref{subsection:trip_generation}. The latter dataset contained aggregated traffic flow for each user in a time series with 5 minutes buckets. The final resulting from preprocessing would be used to train and validate the artificial neural network (ANN). The features selected to build the model are the traffic flow at every location defined by the boundaries of a bin. These bins were explained in section \ref{section:spatial_binning}.
+The first data mining exercise was to build a dataset where each record contains all Malta traffic flow count for every 5 minutes for the month of October 2016 (see table \ref{table:dataset_02}). This dataset was then ordered by time. This dataset was to be derived from the generated dataset in subsection \ref{subsection:trip_generation} which has aggregated traffic flow for each user in a time series with 5 minutes bins. The final resulting dataset from preprocessing would be used to train and validate the artificial neural network (ANN). The features selected to build the model are the traffic flow at every location defined by the boundaries of a spatial bin. The aggregation process of traffic counts within specific spatial bins was explained in section \ref{section:spatial_binning}.
+
+We used two configurations for traffic classification. Experimentation with the ANN training and validation was done primarily with four labels. Experimentation was also done with eight labels to test how it would perform in comparison. Classification of traffic was done in 4 labels since traffic is labelled similarly in available traffic applications such as Google Maps Traffic \footnote{https://www.google.com/maps} and Tomtom navigation software \footnote{https://mydrive.tomtom.com}. The assigning of the label consisted first of classifying the traffic count of the bin location for every 5 minute window for which prediction modelling is to be carried out.  Then the resulting classification is assigned to the $t - 5n$ record. Therefore after this operation, table \ref{table:dataset_03} would have another column with future classification of traffic count for a given bin location. Four datasets were prepared for training. These datasets were differentiated by the label assigned. The classification label for each dataset record would be retrieved from time $t+5n$ ahead through window analytical functions for $n$ with values of 3, 6, 12 and 288 which given the 5 minute coverage of each record they reflect time windows ahead of 15 minutes, 30 minutes, 1 hour and 1 day respectively.
 
 
 \begin{table}[h]	
@@ -654,12 +658,12 @@ The first data mining exercise was to build a dataset where each record contains
 
 	\hline 
 \end{tabular} }
-\caption{Traffic flow count by bin for every 5 minute window.} 
+\caption{A sample of traffic flow count by bin for every 5 minute window.} 
 \label{table:dataset_02}
 \end{table}
 
 
-This dataset had traffic flow count for each bin across time. Traffic counts of zero were not yet present before preprocessing. Therefore the main features of this dataset would be bin id, traffic flow count and time window start and end timestamps. In order to generate a dataset with records that give a snapshot of all traffic count of Malta for every 5 minutes further processing was done. First all distinct bin ids where extracted and these amounted to 4134. Then all the possible time windows in the month of October were generated. These amounted to 8928 (31 (days) multiplied by 24 (hours)  multiplied by 12 since an hour has twelve five minute time windows). By performing a cross product between all time series values and all possible bin ids a new dataset with all possible bin id and time window combinations is created. A left join is done between aggregated traffic flow with the latter produced dataset with records that comprehensively describe traffic flow for every 5 minute window for the whole region under study. This data structure was not suitable for the neural network training. We needed a data structure where each row contains all traffic flow for all Malta. To achieve this a two dimensional pivot was used to transform data and traffic per bin. In the resulting dataset the traffic count per bin is stored column-wise (see table \ref{table:dataset_03}). 
+This dataset had traffic flow count for each bin with 5 minute temporal resolution. Traffic counts of zero were not yet present before preprocessing. Therefore the main features of this dataset would be bin id, traffic flow count and time window start and end timestamps. In order to generate a dataset with records that give a snapshot of all traffic count of Malta for every 5 minutes further processing was needed. First all distinct bin ids where extracted and these amounted to 4134. Then all the possible time windows in the month of October were generated and these amounted to 8928. By performing a cross product between all time series values and all possible bin ids a new dataset with all possible bin id and time window combinations is created. A left join between the original aggregated traffic flow with the latter produced dataset resulted in a new dataset with records that comprehensively describe traffic flow for every 5 minute window for the whole region under study. This data structure was not suitable for the neural network training and further reorganization was necessary. We needed a data structure where each row contains all traffic flow for all Malta. To achieve this a two dimensional pivot was used to transform data and traffic per bin. In the resulting dataset the traffic count per bin is stored column-wise (The pivot operation attained data with format as shown in table \ref{table:dataset_03} from data with format as illustrated in  \ref{table:dataset_02} ). 
 
 
 \begin{table}[h]	
@@ -681,16 +685,43 @@ This dataset had traffic flow count for each bin across time. Traffic counts of 
 	\label{table:dataset_03}
 \end{table}
 
-After all the feature data have been organized in a format that can be used as input data to the model a label for each data row had to be assigned. ANN is a machine learning of supervised learning type which requires output that can be mapped from input data. The output is in our case classification of the level of traffic for a sample location (bin) of which we need to determine the traffic at time $t + 5n$. The output label was not chosen to be the traffic count but a logarithmic function of it (see equation \ref{equation:logarithmic_function}).
+After all the feature data have been organized in a format that can be used as input data for the model a label for each data row had to be assigned. ANN is a supervised machine learning type which requires output that can be mapped from input data during the training phase. The output is in our case classification of the level of traffic for a sample location (spatial bin) for which we need to determine the traffic at time $t + 5n$. The output label was not chosen to be the traffic count but a logarithmic function thereof (see Eq. \ref{equation:logarithmic_step_function}).
 
-\begin{equation} \label{equation:logarithmic_function}
-y=\ceil[\big]{log(x+1)/log(max_x + 1)} * b \\
+\begin{equation} \label{equation:logarithmic_step_function}
+y=\lfloor{log(x+1)/log(max_x/n + 1) * b}\rfloor + 1  \\
 \end{equation}
 
-Where $x$ is the actual traffic flow count, $y$ is the final classification label and $b$ is the number of classification levels (bins). 
-Basically if traffic output was classified linearly in a set of bins the model would have ended up with most of the label outputs to be of the low traffic count class. With logarithmic binning the skewness towards low counts of traffic is highly decreased. The use of logarithmic function would squeeze values in the low traffic flow label bin and widen the range for high level traffic. We used two configurations for traffic classification. Experimentation with the ANN training and validation was done with both four bins and eight bins to see which configuration would perform better and has minimum error rate. The assigning of the label consisted first of classifying the traffic count of the bin location for every 5 minute window for which prediction modelling is to be carried out.  Then the resulting classification is assigned to the $t - 5n$ record. Therefore after this operation, table \ref{table:dataset_03} would have another column with future classification of traffic count for a given bin location. Four datasets were prepared for training. These datasets were differentiated by the label assigned. The classification label for each dataset record would be retrieved from time $t+5n$ ahead through window analytical functions for $n$ with values of 3, 12, 36 and 288 which reflect time windows ahead of 15 minutes, 1hour, 3 hours and 1 day respectively.   
+Where $x$ is the actual traffic flow count, $y$ is the final classification label, $n$ is the step size coefficient (the higher it is the smaller the steps)and $b$ is the number of classification levels (bins). 
 
-%TODO - plot histogram of traffic counts.  
+\begin{figure}[h]	
+	\includegraphics[scale=0.75]{traffic_count_cumm_distribution.jpg}
+	\centering
+	\caption{Traffic count cumulative distribution. }
+	\label{fig:traffic_count_distribution_distribution}
+\end{figure}
+
+
+If a step function with equally spaced intervals was used to classify traffic count, the function label outputs would almost all fall under the first class without meaningful differentiation (see fig. \ref{fig:traffic_count_distribution_distribution}). The skewness towards low counts of traffic is highly decreased with logarithmic binning. The use of logarithmic 'step' function defined in equation \ref{equation:logarithmic_step_function} squeezes indicators in the low traffic flow label bin and widens the range for high level traffic. Note how in figure \ref{fig:label_classification_of_traffic_count_zoom_in} the logarithmic step function with n=2.36 manages to classify  low traffic counts that happen to have high frequency more evenly. Traffic count labelling was done with step size coefficient of 2.36 in our experimentation and proved also to give better results for prediction evaluation.
+
+ 
+\begin{figure}[h]	
+	\includegraphics[scale=0.50]{steps_function.jpg}
+	\centering
+	\caption{Traffic count logarithmic step function. }
+	\label{fig:label_classification_of_traffic_count}
+\end{figure}
+
+\begin{figure}[h]	
+	\includegraphics[scale=0.50]{steps_function_zoom_in.jpg}
+	\centering
+	\caption{Traffic count logarithmic step function. Lower traffic count mapping. }
+	\label{fig:label_classification_of_traffic_count_zoom_in}
+\end{figure}
+
+
+   
+
+ 
 
 %TODO - Traffic may be in decline and on the incline 
 
@@ -699,26 +730,57 @@ Basically if traffic output was classified linearly in a set of bins the model w
 %TODO - setting the learning rate
 
 
-%TODO - not to overfit the model
-\subsection{Dimensionality Reduction}
-The dataset acquired from the original data usage mobile is huge. The features that describe the data amount to 4134 as already demonstrated in subsection \ref{subsection:Preprocessing data for the prediction model}. The computational complexity depends on how quickly the model converges. However for each iteration to reduce the cost and undergo gradient descent the magnitude of the computations to be performed depends on the number of training examples multiplied by the number of features multiplied by in turn by the number of neurons in each hidden layer. The number of hidden layers is chosen depending on how much complex the problem is but tends to fall victim of overfitting the model. As mentioned in \cite{Jain1996} and other literature on ANN design parameters such as number of neurons and number of hidden layers need trial and error to get a better architecture. Therefore it is important to optimize computation times in order to for experimentation not to be too much time consuming and so that final model is practical in term of getting a prediction after an acceptable amount of time.
 
-One way how to lower computation time is reduce the number of features. This entails mapping an n-dimensional space to a smaller dimensional space reducing the number of features in the process. In \cite{Yang2004} experimentation is done by keeping 95\% and 99\% of the total variance. We kept 1000 components that explained 98\% of the total variance. As explained in the formula below \ref{equation:principal_components}
+\subsection{Dimensionality Reduction}
+The dataset acquired from the original data usage mobile is huge. The features that describe the data amount to 4134 as already aforementioned in subsection \ref{subsection:Preprocessing data for the prediction model}. The computational complexity depends on how quickly the model converges. However for each iteration to reduce the cost and undergo gradient descent the magnitude of the computations to be performed depends on the number of training examples multiplied by the number of features multiplied by in turn by the number of neurons in each hidden layer. The number of hidden layers is chosen depending on how much complex the problem is but tends to fall victim of overfitting the model. As mentioned in \cite{Jain1996} and other literature on ANN design parameters such as number of neurons and number of hidden layers need trial and error to get a better architecture. Therefore it is important to optimize computation times in order that experimentation is less time consuming. Also the final model is practical in terms of getting a prediction after an acceptable amount of time.
+
+One way how to lower computation time is to reduce the number of features. This entails mapping an n-dimensional space to a smaller dimensional space which reduces the number of features in the process. As mentioned in \cite{Raschka} by reducing dimensionality in data there is less risk of overfitting and thus model can generalize better to testing data.  In \cite{Yang2004} experimentation is done by keeping 95\% and 99\% of the total variance. We chose to keep 324 components that explained 90\% of the total variance. By trial and error it was found that similar results are attained by using 90\% and 98\% of the variance. Original data features showed to be highly correlated so a high degree of compression was possible through PCA. As explained in the formula below \ref{equation:principal_components}
 
 
 \begin{equation} \label{equation:principal_components}
  \mathop{\text{min}}_k \Bigg\{ k : \frac{{\Sigma }_{i=1}^{k} \lambda_i}{{\Sigma }_{i=1}^{n}\lambda_i} \geq r \Bigg\}
 \end{equation}
 
-we selected k to be 1000 so that the preserved variance ratio $r$ is 98\%. In equation \ref{equation:principal_components} eigenvalues $\lambda_i$ are ordered in decreasing variance. $n$ represents the original dimensionality of the reduced dataset.
+we selected k to be 10 so that the preserved variance ratio $r$ is 90\%. In equation \ref{equation:principal_components} eigenvalues $\lambda_i$ are ordered in decreasing variance. $n$ represents the original dimensionality of the reduced dataset. In figure \ref{fig:cumulative_variance_pca} it can be observed that the first 10 components already have more than 60\% of the data.
+
+\begin{figure}[h]	
+	\includegraphics[scale=0.50]{cumulative_variance_pca.jpg}
+	\centering
+	\caption{First components contain a high percentage of the variance. }
+	\label{fig:cumulative_variance_pca}
+\end{figure}
+
 
 %
-%TODO - some notes on selecting features.  
+%TODO - some notes on selecting features. 
+
+%TODO - need to compute results with 324 components to get 90% variance 
 
 
-\subsection{Artificial Neural Network calibration}
+\subsection{Prediction through Multilayer Perceptron Classifier (MLP)}
 
 
+What topolgy was chosen? Grid search.
+PCA made it possible to experiment with more hyperparameter values. 
+
+more hidden layers more robust to special events. People leaving there home or work with a different pattern for some specific reason
+
+randomly split 60\% training and 40\% testing the model.
+
+Maximum iterations were set to 100.
+
+Not overfit model by using weekdays only.
+
+To do test with weekdays only
+
+\begin{figure}[h]	
+	\includegraphics[scale=0.50]{ann_topology.jpg}
+	\centering
+	\caption{Multilayer perceptron classifier topology }
+	\label{fig:ann_topology}
+\end{figure}
+
+ 
 
 
 

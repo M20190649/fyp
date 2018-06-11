@@ -4,6 +4,11 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Truncated levy flight human motion modelling. Reproduced from \cite {Gonzalez2008}}}{26}{figure.3.1}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Cell tower range distribution. Red dots are cell tower locations and dotted line is the estimated range.}}{34}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Traffic count cumulative distribution. }}{46}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Traffic count logarithmic step function. }}{47}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Traffic count logarithmic step function. Lower traffic count mapping. }}{47}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces First components contain a high percentage of the variance. }}{49}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Multilayer perceptron classifier topology }}{50}{figure.4.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

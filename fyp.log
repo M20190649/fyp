@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  3 JUN 2018 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  12 JUN 2018 00:16
 entering extended mode
 **./fyp.tex
 (fyp.tex
@@ -758,14 +758,14 @@ Underfull \hbox (badness 10000) in alignment at lines 174--174
 ] [13] [14] [15] [16] [17] [18] [19] [20] [21]
 
 LaTeX Warning: Reference `label_random_walkabel' on page 22 undefined on input 
-line 263.
+line 265.
 
 [22] [23] [24]
-<images/truncated_power_law.jpg, id=584, 344.78813pt x 333.49594pt>
+<images/truncated_power_law.jpg, id=594, 344.78813pt x 333.49594pt>
 File: images/truncated_power_law.jpg Graphic file (type jpg)
 
 <use images/truncated_power_law.jpg>
-Package pdftex.def Info: images/truncated_power_law.jpg used on input line 294.
+Package pdftex.def Info: images/truncated_power_law.jpg used on input line 296.
 
 (pdftex.def)             Requested size: 258.59045pt x 250.12134pt.
 
@@ -777,11 +777,11 @@ e.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.304 
+l.306 
        <./images/truncated_power_law.jpg>] [27] [28] [29]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in alignment at lines 343--343
+Underfull \hbox (badness 10000) in alignment at lines 345--345
 []
  []
 
@@ -796,178 +796,257 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.408 
+l.410 
       ]
-<images/cell_towers_distribution.png, id=647, 482.80376pt x 323.2075pt>
+<images/cell_towers_distribution.png, id=657, 482.80376pt x 323.2075pt>
 File: images/cell_towers_distribution.png Graphic file (type png)
 
 <use images/cell_towers_distribution.png>
 Package pdftex.def Info: images/cell_towers_distribution.png used on input line
- 410.
+ 412.
 (pdftex.def)             Requested size: 362.10193pt x 242.40503pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `clustering' on page 33 undefined on input line 417.
+LaTeX Warning: Reference `clustering' on page 33 undefined on input line 419.
 
 [33] [34pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.425 
+l.427 
        <./images/cell_towers_distribution.png>] [35] [36]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 439.
+(Font)              <10> on input line 441.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 439.
+(Font)              <7> on input line 441.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 439.
+(Font)              <5> on input line 441.
  [37]
-Overfull \hbox (10.84427pt too wide) in paragraph at lines 458--458
+Overfull \hbox (10.84427pt too wide) in paragraph at lines 460--460
 [][][]\OT1/lmr/m/n/10 https://cwiki.apache.org/confluence/display/Hive/Language
 Manual+WindowingAndAnalytics| 
  []
 
 [38] [39]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 476.
+put line 478.
 
-Overfull \hbox (18.38298pt too wide) in paragraph at lines 492--493
+Overfull \hbox (18.38298pt too wide) in paragraph at lines 494--495
 [] $[] \OMS/lmsy/m/n/12   []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--495
+Underfull \hbox (badness 10000) in paragraph at lines 495--497
 [] $[] \OMS/lmsy/m/n/12  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
 [] $[] \OMS/lmsy/m/n/12  
  []
 
 
-Overfull \hbox (34.48232pt too wide) in paragraph at lines 520--521
+Overfull \hbox (34.48232pt too wide) in paragraph at lines 522--523
 [] $[] \OMS/lmsy/m/n/12   [][]$ 
  []
 
 
-Overfull \hbox (19.79933pt too wide) in paragraph at lines 524--525
+Overfull \hbox (19.79933pt too wide) in paragraph at lines 526--527
 [] $[] \OMS/lmsy/m/n/12   []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 [][]
  []
 
 
-Overfull \hbox (35.15453pt too wide) in paragraph at lines 566--567
+Overfull \hbox (35.15453pt too wide) in paragraph at lines 568--569
 [] $[] \OMS/lmsy/m/n/12  $ $[][]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
 [] $[] \OMS/lmsy/m/n/12  $
  []
 
 
-Overfull \hbox (35.39581pt too wide) in paragraph at lines 569--570
+Overfull \hbox (35.39581pt too wide) in paragraph at lines 571--572
 []$[][][]$ 
  []
 
 
-Overfull \hbox (8.4082pt too wide) in paragraph at lines 584--585
+Overfull \hbox (8.4082pt too wide) in paragraph at lines 586--587
 [] $[] \OMS/lmsy/m/n/12  $ $[][][][]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
 [] $[] \OMS/lmsy/m/n/12  $
  []
 
-[40] [41] [42] [43] [44pdfTeX warning (ext4): destination with the same identif
-ier (name{table.4.2}) has been already used, duplicate ignored
+[40] [41] [42] [43] [44]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[45pdfTeX warning (ext4): destination with the same identifier (name{table.4.2}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.663 
-      ] [45pdfTeX warning (ext4): destination with the same identifier (name{ta
-ble.4.3}) has been already used, duplicate ignored
+l.689 
+      ]
+<images/traffic_count_cumm_distribution.jpg, id=759, 358.33875pt x 214.55156pt>
+File: images/traffic_count_cumm_distribution.jpg Graphic file (type jpg)
+<use images/traffic_count_cumm_distribution.jpg>
+Package pdftex.def Info: images/traffic_count_cumm_distribution.jpg used on inp
+ut line 697.
+(pdftex.def)             Requested size: 268.7534pt x 160.91327pt.
+ [46pdfTeX warning (ext4): destination with the same identifier (name{table.4.3
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.692 
-      ] [46] [47]
+l.705 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.705 
+       <./images/traffic_count_cumm_distribution.jpg>]
+<images/steps_function.jpg, id=768, 510.40688pt x 325.96782pt>
+File: images/steps_function.jpg Graphic file (type jpg)
+
+<use images/steps_function.jpg>
+Package pdftex.def Info: images/steps_function.jpg used on input line 708.
+(pdftex.def)             Requested size: 255.2028pt x 162.9835pt.
+
+<images/steps_function_zoom_in.jpg, id=769, 511.15968pt x 322.20375pt>
+File: images/steps_function_zoom_in.jpg Graphic file (type jpg)
+
+<use images/steps_function_zoom_in.jpg>
+Package pdftex.def Info: images/steps_function_zoom_in.jpg used on input line 7
+15.
+(pdftex.def)             Requested size: 255.57921pt x 161.10147pt.
+ [47pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.736 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.736 
+       <./images/steps_function.jpg> <./images/steps_function_zoom_in.jpg>]
+
+LaTeX Warning: Citation `Raschka' on page 48 undefined on input line 737.
+
+[48] <images/cumulative_variance_pca.jpg, id=788, 510.40688pt x 274.02374pt>
+File: images/cumulative_variance_pca.jpg Graphic file (type jpg)
+
+<use images/cumulative_variance_pca.jpg>
+Package pdftex.def Info: images/cumulative_variance_pca.jpg used on input line 
+747.
+(pdftex.def)             Requested size: 255.2028pt x 137.01154pt.
+
+<images/ann_topology.jpg, id=789, 497.60907pt x 417.05812pt>
+File: images/ann_topology.jpg Graphic file (type jpg)
+
+<use images/ann_topology.jpg>
+Package pdftex.def Info: images/ann_topology.jpg used on input line 777.
+(pdftex.def)             Requested size: 248.80392pt x 208.52855pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.796 \chapter
+              {Evaluation and Results} <./images/cumulative_variance_pca.jpg>]
+[50pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.796 \chapter
+              {Evaluation and Results} <./images/ann_topology.jpg>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in alignment at lines 733--733
+Underfull \hbox (badness 10000) in alignment at lines 796--796
 []
  []
 
 
-LaTeX Warning: Reference `methodology' on page 48 undefined on input line 735.
+LaTeX Warning: Reference `methodology' on page 51 undefined on input line 798.
 
-[48
+[51
 
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in alignment at lines 738--738
+Underfull \hbox (badness 10000) in alignment at lines 801--801
 []
  []
 
-[49
+[52
 
 ]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in alignment at lines 750--750
+Underfull \hbox (badness 10000) in alignment at lines 813--813
 []
  []
 
-[50
+[53
 
 ]
 Appendix A.
 
-Underfull \hbox (badness 10000) in alignment at lines 755--755
+Underfull \hbox (badness 10000) in alignment at lines 818--818
 []
  []
 
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 758
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 821
 .
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [51
+) [54
 
-] (fyp.bbl [52
+] (fyp.bbl [55
 
 
 ]
-[53] [54])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 768.
- [55]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 768.
+[56] [57])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 831.
+ [58]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 831.
  (fyp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 768.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 768.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 831.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 831.
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 15E186904E34CBFEAC5DAD13AEFCCEF0;3786.
+(rerunfilecheck)             Checksum: 5DD32AF95904611F2C8C05551B524B61;3808.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 768.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 831.
  ) 
 Here is how much of TeX's memory you used:
- 9438 strings out of 493323
- 139906 string characters out of 3139038
- 250362 words of memory out of 3000000
- 12614 multiletter control sequences out of 15000+200000
+ 9479 strings out of 493323
+ 141045 string characters out of 3139038
+ 249752 words of memory out of 3000000
+ 12640 multiletter control sequences out of 15000+200000
  79579 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,11n,47p,2128b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -988,9 +1067,9 @@ nts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
 rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/lm/lmtt10.pfb>
-Output written on fyp.pdf (63 pages, 667756 bytes).
+Output written on fyp.pdf (66 pages, 976518 bytes).
 PDF statistics:
- 891 PDF objects out of 1000 (max. 8388607)
- 178 named destinations out of 1000 (max. 500000)
- 400 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 930 PDF objects out of 1000 (max. 8388607)
+ 188 named destinations out of 1000 (max. 500000)
+ 425 words of extra memory for PDF output out of 10000 (max. 10000000)
 
