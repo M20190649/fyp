@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  12 JUN 2018 00:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  13 JUN 2018 00:43
 entering extended mode
 **./fyp.tex
 (fyp.tex
@@ -956,97 +956,96 @@ File: images/cumulative_variance_pca.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/cumulative_variance_pca.jpg used on input line 
 747.
 (pdftex.def)             Requested size: 255.2028pt x 137.01154pt.
+ [49pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+5}) has been already used, duplicate ignored
 
-<images/ann_topology.jpg, id=789, 497.60907pt x 417.05812pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.764 
+       <./images/cumulative_variance_pca.jpg>]
+<images/ann_topology.jpg, id=795, 583.42969pt x 490.08093pt>
 File: images/ann_topology.jpg Graphic file (type jpg)
 
 <use images/ann_topology.jpg>
-Package pdftex.def Info: images/ann_topology.jpg used on input line 777.
-(pdftex.def)             Requested size: 248.80392pt x 208.52855pt.
+Package pdftex.def Info: images/ann_topology.jpg used on input line 772.
+(pdftex.def)             Requested size: 291.71413pt x 245.03987pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[49pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
-}) has been already used, duplicate ignored
+[50] [51pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.4.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.796 \chapter
-              {Evaluation and Results} <./images/cumulative_variance_pca.jpg>]
-[50pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.796 \chapter
+l.799 \chapter
               {Evaluation and Results} <./images/ann_topology.jpg>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in alignment at lines 796--796
+Underfull \hbox (badness 10000) in alignment at lines 799--799
 []
  []
 
 
-LaTeX Warning: Reference `methodology' on page 51 undefined on input line 798.
-
-[51
-
-]
-Chapter 6.
-
-Underfull \hbox (badness 10000) in alignment at lines 801--801
-[]
- []
+LaTeX Warning: Reference `methodology' on page 52 undefined on input line 801.
 
 [52
 
 ]
-Chapter 7.
+Chapter 6.
 
-Underfull \hbox (badness 10000) in alignment at lines 813--813
+Underfull \hbox (badness 10000) in alignment at lines 804--804
 []
  []
 
 [53
 
 ]
-Appendix A.
+Chapter 7.
 
-Underfull \hbox (badness 10000) in alignment at lines 818--818
+Underfull \hbox (badness 10000) in alignment at lines 816--816
 []
  []
 
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 821
+[54
+
+]
+Appendix A.
+
+Underfull \hbox (badness 10000) in alignment at lines 821--821
+[]
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 824
 .
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [54
+) [55
 
-] (fyp.bbl [55
+] (fyp.bbl [56
 
 
 ]
-[56] [57])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 831.
- [58]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 831.
+[57] [58])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 834.
+ [59]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 834.
  (fyp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 831.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 831.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 834.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 834.
 Package rerunfilecheck Info: File `fyp.out' has not changed.
 (rerunfilecheck)             Checksum: 5DD32AF95904611F2C8C05551B524B61;3808.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 831.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 834.
  ) 
 Here is how much of TeX's memory you used:
- 9479 strings out of 493323
- 141045 string characters out of 3139038
- 249752 words of memory out of 3000000
- 12640 multiletter control sequences out of 15000+200000
+ 9482 strings out of 493323
+ 141097 string characters out of 3139038
+ 249794 words of memory out of 3000000
+ 12641 multiletter control sequences out of 15000+200000
  79579 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,11n,47p,2128b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1067,9 +1066,9 @@ nts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
 rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/lm/lmtt10.pfb>
-Output written on fyp.pdf (66 pages, 976518 bytes).
+Output written on fyp.pdf (67 pages, 1035788 bytes).
 PDF statistics:
- 930 PDF objects out of 1000 (max. 8388607)
- 188 named destinations out of 1000 (max. 500000)
+ 938 PDF objects out of 1000 (max. 8388607)
+ 190 named destinations out of 1000 (max. 500000)
  425 words of extra memory for PDF output out of 10000 (max. 10000000)
 

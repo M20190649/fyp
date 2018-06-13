@@ -760,18 +760,13 @@ we selected k to be 10 so that the preserved variance ratio $r$ is 90\%. In equa
 \subsection{Prediction through Multilayer Perceptron Classifier (MLP)}
 
 
-What topolgy was chosen? Grid search.
-PCA made it possible to experiment with more hyperparameter values. 
+Next step in the data processing pipeline consisted in predicting traffic in the relative future to a given point in time. This prediction had to be based on data that is harvested some time ahead. All the dataset which was available was in the past so we simulated prediction of traffic flow by trying to forecast traffic at a certain point in time which is ahead of a given timestamp. As already explained in subsection \ref{subsection:Preprocessing data for the prediction model} the multi-step time series prediction was evaluated with a variable amount of steps ahead. Each step was already defined to be 5 minutes long. The experimentation was done with 3,6,12 and 288 steps that reflect 15 minutes, 30 minutes, 1 hour and 1 day. These particular prediction time intervals were selected because practically an individual would need to know traffic in certain locations just before he leaves home. Traffic after 3 hours might be irrelevant for example for a traveller that just leaves home especially in Malta where the study was carried out. Even transport authorities might not find useful such information which is given much more in advance for management purposes. Individual users leaving at 7.00 am in the morning would contribute information for traffic status at 10.00 am where traffic flow would have eased by then. Therefore we opted to analyse and predict the impact of traffic at 15 minutes, 30 minutes, 1 hour and 1 day before.
 
-more hidden layers more robust to special events. People leaving there home or work with a different pattern for some specific reason
+%TODO - add references to paragraph below
+One of the first decisions was to choose what type of approach of machine learning to take in order to build a model. The problem at hand is complex in terms of number of features and the relation they have with each other. MLP is a highly non-linear model that can adapt to problems with high complexity. This approach is stated to have the universal approximation property which underlines how an ANN of MLP type can represent any bounded continuous function to a given arbitrary degree of accuracy \cite{hornik1990universal}. However it is known to be a black box where it is difficult to control how learning is achieved during the training stage.
 
-randomly split 60\% training and 40\% testing the model.
+The topology choice was determined after some trial and error (grid search) with different datasets that were prepared with different first PCA components, prediction multi-steps ahead, and number of possible classes. The input and output layers size (number of neurons) is dictated by the number of input PCA extracted features and output classes which are the possible traffic levels indicated by model. Two hidden layers were added to the overall topology. The final configuration consisted of 324 neurons for both the input layer and for the second hidden layer, 400 neurons for the first hidden layer and 4 neurons for the output layer which defined the output classes. 
 
-Maximum iterations were set to 100.
-
-Not overfit model by using weekdays only.
-
-To do test with weekdays only
 
 \begin{figure}[h]	
 	\includegraphics[scale=0.50]{ann_topology.jpg}
@@ -779,6 +774,14 @@ To do test with weekdays only
 	\caption{Multilayer perceptron classifier topology }
 	\label{fig:ann_topology}
 \end{figure}
+ 
+
+%TODO - why are more hidden layers needed
+
+The available labelled data points dataset was split into 60\% training and 40\% training. Maximum iterations parameter was set to 200 which after several runs showed that it allowed the model to converge without any issues. The first phase of setting up the model was the training part where the weights settle to a final value that allows minimal error in its classification. Finally after training with a batch of data a traffic flow prediction model is created for a particular spatial bin.
+
+%TODO - test with weekdays only
+
 
  
 

@@ -94,6 +94,12 @@ S.~Hirai, J.~Xing, R.~Horiguchi, T.~Shiraishi, and M.~Kobayashi.
   Inter-urban Expressway Network in Japan}.
 \newblock {\em Transportation Research Procedia}, 6(June 2014):285--296, 2015.
 
+\bibitem{hornik1990universal}
+K.~Hornik, M.~Stinchcombe, and H.~White.
+\newblock Universal approximation of an unknown mapping and its derivatives
+  using multilayer feedforward networks.
+\newblock {\em Neural networks}, 3(5):551--560, 1990.
+
 \bibitem{Hoteit2016}
 S.~Hoteit, G.~Chen, A.~Viana, and M.~Fiore.
 \newblock {Filling the gaps: On the Completion of Sparse Call Detail Records
