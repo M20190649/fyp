@@ -21,28 +21,27 @@
 \contentsline {section}{\numberline {3.7}Prediction methods}{29}{section.3.7}
 \contentsline {chapter}{\numberline {4.}Methodology}{30}{chapter.4}
 \contentsline {section}{\numberline {4.1}Mobile data collection and structure}{30}{section.4.1}
-\contentsline {section}{\numberline {4.2}Dataset preliminary analysis}{31}{section.4.2}
-\contentsline {section}{\numberline {4.3}Algorithm Selection}{32}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Trajectory interpolation through cell tower data}{32}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Traffic simulation from OD matrix}{33}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Traffic detection by trip generation assigned traffic}{35}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Main activity hubs extraction and displacement error removal through clustering}{35}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}K-means clustering}{36}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}DBSCAN clustering}{36}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}OD Matrix trip Generation}{38}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}OD Matrix computation}{38}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Trip generation, route choice and traffic assignment}{38}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{40}{section.4.6}
-\contentsline {section}{\numberline {4.7}Traffic flow modelling and prediction}{43}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Preprocessing data for the prediction model}{44}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Dimensionality Reduction}{48}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Prediction through Multilayer Perceptron Classifier (MLP)}{49}{subsection.4.7.3}
-\contentsline {section}{\numberline {4.8}Visualizations of results through mapping}{50}{section.4.8}
-\contentsline {chapter}{\numberline {5.}Evaluation and Results}{52}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section Name}{52}{section.5.1}
-\contentsline {chapter}{\numberline {6.}Future Work}{53}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section Name}{53}{section.6.1}
-\contentsline {chapter}{\numberline {7.}Conclusion}{54}{chapter.7}
-\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{55}{appendix.A}
-\contentsline {section}{\numberline {A.1}These are some details}{55}{section.A.1}
-\contentsline {chapter}{References}{56}{section.A.1}
+\contentsline {section}{\numberline {4.2}Dataset preliminary analysis}{32}{section.4.2}
+\contentsline {section}{\numberline {4.3}Algorithm Selection}{34}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Trajectory interpolation through cell tower data}{34}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Traffic simulation from OD matrix}{36}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Traffic detection by trip generation assigned traffic}{37}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Main activity hubs extraction and displacement error removal through clustering}{38}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}K-means clustering}{39}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}DBSCAN clustering}{39}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}OD Matrix trip Generation}{41}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}OD Matrix computation}{41}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Trip generation, route choice and traffic assignment}{42}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{44}{section.4.6}
+\contentsline {section}{\numberline {4.7}Traffic flow modelling and prediction}{48}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Preprocessing data for the prediction model}{48}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Dimensionality Reduction}{52}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Prediction through Multilayer Perceptron Classifier (MLPC)}{53}{subsection.4.7.3}
+\contentsline {chapter}{\numberline {5.}Evaluation and Results}{57}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section Name}{57}{section.5.1}
+\contentsline {chapter}{\numberline {6.}Future Work}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Section Name}{59}{section.6.1}
+\contentsline {chapter}{\numberline {7.}Conclusion}{60}{chapter.7}
+\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{61}{appendix.A}
+\contentsline {section}{\numberline {A.1}These are some details}{61}{section.A.1}
+\contentsline {chapter}{References}{62}{section.A.1}
