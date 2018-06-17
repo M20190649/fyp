@@ -25,7 +25,7 @@
 \BOOKMARK [1][-]{section.4.3}{Algorithm Selection}{chapter.4}% 25
 \BOOKMARK [2][-]{subsection.4.3.1}{Trajectory interpolation through cell tower data}{section.4.3}% 26
 \BOOKMARK [2][-]{subsection.4.3.2}{Traffic simulation from OD matrix}{section.4.3}% 27
-\BOOKMARK [2][-]{subsection.4.3.3}{Traffic detection by trip generation assigned traffic}{section.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.3.3}{Traffic flow detection by trip generation assigned traffic}{section.4.3}% 28
 \BOOKMARK [1][-]{section.4.4}{Main activity hubs extraction and displacement error removal through clustering}{chapter.4}% 29
 \BOOKMARK [2][-]{subsection.4.4.1}{K-means clustering}{section.4.4}% 30
 \BOOKMARK [2][-]{subsection.4.4.2}{DBSCAN clustering}{section.4.4}% 31

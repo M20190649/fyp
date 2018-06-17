@@ -7,13 +7,19 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 80\% of the records are below the 5 minute threshold.}}{35}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Cell tower range distribution. Red dots are cell tower locations and dotted line is the estimated range.}}{36}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces DBSCAN clustering to find main user activity hubs. (Sample illustration)}}{40}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Trip delay patterns per day week.)}}{43}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Trip delay patterns are different between weekdays and weekends)}}{44}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Traffic count cumulative distribution. }}{51}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Traffic count logarithmic step function. }}{51}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Traffic count logarithmic step function. Lower traffic count mapping. }}{52}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance }}{53}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Multilayer perceptron classifier topology }}{55}{figure.4.11}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Trip delay patterns per day week. To note how Saturdays and Sundays which are outlined by the last and first two peaks respectively have unique traffic delay patterns.}}{44}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Trip distribution as reported in Transport Malta 2010 National Survey \cite {malta2011national}.}}{45}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Cumulative distribution of trip delay. This figure shows how negative trip delay instances are a very small percentage. Cutoffs of -5 and 45 minutes were chosen to select the trips for the learning model. }}{46}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Trip delay probability distribution presents a heavy tail on the right. }}{46}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Average trip delay patterns are different between weekdays and weekends. Peaking of average trip delay on weekdays happen at 6:00 a.m and 7:00 a.m. and 4:00 p.m. and 5:00 p.m. Peaks for weekend days happen later in the day.}}{49}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Traffic flow count through spatial and temporal binning. }}{51}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Traffic flow count categorization through a colour coding. Traffic flow count intensity is represented with a colour scheme ranging from dark green (low recorded traffic) to dark red (heavy traffic). The range stretches on 11 quantiles.}}{52}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Traffic flow count through spatial and temporal binning. }}{53}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Traffic count cumulative distribution for a chosen location. }}{56}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Traffic count logarithmic step function. }}{57}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Traffic count logarithmic step function. Lower traffic count mapping. }}{57}{figure.4.15}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance }}{59}{figure.4.16}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Multilayer perceptron classifier topology }}{61}{figure.4.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

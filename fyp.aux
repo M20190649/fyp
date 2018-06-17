@@ -19,6 +19,7 @@
 \citation{Laurila2012}
 \citation{Hoteit2014}
 \citation{Gonzalez2008}
+\citation{malta2011national}
 \citation{EUTransportDirectorate2018}
 \citation{Colak2015}
 \citation{Attard2015}
@@ -77,7 +78,7 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {3.}Background and Literature Review}{12}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{background}{{3}{12}{Background and Literature Review}{chapter.3}{}}
+\newlabel{chapter:background}{{3}{12}{Background and Literature Review}{chapter.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Mobile location data sources}{12}{section.3.1}}
 \newlabel{background_mobile_location_data_sources}{{3.1}{12}{Mobile location data sources}{section.3.1}{}}
 \citation{Calabrese2013}
@@ -239,19 +240,19 @@
 \@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Basic summary statistics of main EDR dataset after removing 1 hour duration EDRs.}}{34}{table.4.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Algorithm Selection}{34}{section.4.3}}
 \newlabel{section:methodology:algorithm_selection}{{4.3}{34}{Algorithm Selection}{section.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Trajectory interpolation through cell tower data}{34}{subsection.4.3.1}}
-\newlabel{subsection:methodology:trajectory_interpolation}{{4.3.1}{34}{Trajectory interpolation through cell tower data}{subsection.4.3.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 80\% of the records are below the 5 minute threshold.}}{35}{figure.4.2}}
 \newlabel{fig:data_session_duration}{{4.2}{35}{80\% of the records are below the 5 minute threshold}{figure.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Trajectory interpolation through cell tower data}{35}{subsection.4.3.1}}
+\newlabel{subsection:methodology:trajectory_interpolation}{{4.3.1}{35}{Trajectory interpolation through cell tower data}{subsection.4.3.1}{}}
 \citation{Toledo2004}
 \citation{Hirai2015}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Cell tower range distribution. Red dots are cell tower locations and dotted line is the estimated range.}}{36}{figure.4.3}}
 \newlabel{fig:cell_towers_distribution}{{4.3}{36}{Cell tower range distribution. Red dots are cell tower locations and dotted line is the estimated range}{figure.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Traffic simulation from OD matrix}{36}{subsection.4.3.2}}
-\newlabel{subsection:methodology:traffic_simulation_ODMatrix}{{4.3.2}{36}{Traffic simulation from OD matrix}{subsection.4.3.2}{}}
 \citation{Bazghandi2012}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Traffic detection by trip generation assigned traffic}{37}{subsection.4.3.3}}
-\newlabel{subsection:methodology:trip_generation}{{4.3.3}{37}{Traffic detection by trip generation assigned traffic}{subsection.4.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Traffic simulation from OD matrix}{37}{subsection.4.3.2}}
+\newlabel{subsection:methodology:traffic_simulation_ODMatrix}{{4.3.2}{37}{Traffic simulation from OD matrix}{subsection.4.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Traffic flow detection by trip generation assigned\\ traffic}{38}{subsection.4.3.3}}
+\newlabel{subsection:methodology:trip_generation}{{4.3.3}{38}{Traffic flow detection by trip generation assigned\\ traffic}{subsection.4.3.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Main activity hubs extraction and displacement error removal through clustering}{38}{section.4.4}}
 \newlabel{section:methodology:clustering}{{4.4}{38}{Main activity hubs extraction and displacement error removal through clustering}{section.4.4}{}}
 \citation{ChakrabortyNKNagwaniLopamudraDey2011}
@@ -265,61 +266,77 @@
 \newlabel{section:odmatrix_trip_generation}{{4.5}{41}{OD Matrix trip Generation}{section.4.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}OD Matrix computation}{41}{subsection.4.5.1}}
 \newlabel{subsection:odmatrix_computation}{{4.5.1}{41}{OD Matrix computation}{subsection.4.5.1}{}}
-\citation{Toole2015}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Trip generation, route choice and traffic assignment}{42}{subsection.4.5.2}}
 \newlabel{subsection:trip_generation}{{4.5.2}{42}{Trip generation, route choice and traffic assignment}{subsection.4.5.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Trip delay patterns per day week.)}}{43}{figure.4.5}}
-\newlabel{fig:trip_delay_per_day_week}{{4.5}{43}{Trip delay patterns per day week.)}{figure.4.5}{}}
+\citation{Toole2015}
+\citation{malta2011national}
+\citation{malta2011national}
+\citation{malta2011national}
+\citation{malta2011national}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Trip delay patterns per day week. To note how Saturdays and Sundays which are outlined by the last and first two peaks respectively have unique traffic delay patterns.}}{44}{figure.4.5}}
+\newlabel{fig:trip_distribution}{{4.5}{44}{Trip delay patterns per day week. To note how Saturdays and Sundays which are outlined by the last and first two peaks respectively have unique traffic delay patterns}{figure.4.5}{}}
 \citation{eldawy2015spatialhadoop}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Trip distribution as reported in Transport Malta 2010 National Survey \cite  {malta2011national}.}}{45}{figure.4.6}}
+\newlabel{fig:trip_distribution_nso}{{4.6}{45}{Trip distribution as reported in Transport Malta 2010 National Survey \cite {malta2011national}}{figure.4.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Cumulative distribution of trip delay. This figure shows how negative trip delay instances are a very small percentage. Cutoffs of -5 and 45 minutes were chosen to select the trips for the learning model. }}{46}{figure.4.7}}
+\newlabel{fig:trip_delay_cum_distribution}{{4.7}{46}{Cumulative distribution of trip delay. This figure shows how negative trip delay instances are a very small percentage. Cutoffs of -5 and 45 minutes were chosen to select the trips for the learning model}{figure.4.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Trip delay probability distribution presents a heavy tail on the right. }}{46}{figure.4.8}}
+\newlabel{fig:trip_delay_cum_distribution_heavy_tail}{{4.8}{46}{Trip delay probability distribution presents a heavy tail on the right}{figure.4.8}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Experimental Overview}}{47}{algorithm.1}}
+\newlabel{algorithm:overview}{{1}{47}{Trip generation, route choice and traffic assignment}{algorithm.1}{}}
 \citation{eldawy2015spatialhadoop}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Trip delay patterns are different between weekdays and weekends)}}{44}{figure.4.6}}
-\newlabel{fig:trip_delay_weekdays_vs_weekends}{{4.6}{44}{Trip delay patterns are different between weekdays and weekends)}{figure.4.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{44}{section.4.6}}
-\newlabel{section:spatial_binning}{{4.6}{44}{Traffic flow aggregation through spatial binning}{section.4.6}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Experimental Overview}}{45}{algorithm.1}}
-\newlabel{algorithm:overview}{{1}{45}{Trip generation, route choice and traffic assignment}{algorithm.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Traffic flow modelling and prediction}{48}{section.4.7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Preprocessing data for the prediction model}{48}{subsection.4.7.1}}
-\newlabel{subsection:Preprocessing data for the prediction model}{{4.7.1}{48}{Preprocessing data for the prediction model}{subsection.4.7.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces A sample of traffic flow count by bin for every 5 minute window.}}{49}{table.4.4}}
-\newlabel{table:dataset_02}{{4.4}{49}{A sample of traffic flow count by bin for every 5 minute window}{table.4.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Sparse traffic flow matrix}}{50}{table.4.5}}
-\newlabel{table:dataset_03}{{4.5}{50}{Sparse traffic flow matrix}{table.4.5}{}}
-\newlabel{equation:logarithmic_step_function}{{4.1}{50}{Preprocessing data for the prediction model}{equation.4.7.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Average trip delay patterns are different between weekdays and weekends. Peaking of average trip delay on weekdays happen at 6:00 a.m and 7:00 a.m. and 4:00 p.m. and 5:00 p.m. Peaks for weekend days happen later in the day.}}{49}{figure.4.9}}
+\newlabel{fig:trip_delay_weekdays_vs_weekends}{{4.9}{49}{Average trip delay patterns are different between weekdays and weekends. Peaking of average trip delay on weekdays happen at 6:00 a.m and 7:00 a.m. and 4:00 p.m. and 5:00 p.m. Peaks for weekend days happen later in the day}{figure.4.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{49}{section.4.6}}
+\newlabel{section:spatial_binning}{{4.6}{49}{Traffic flow aggregation through spatial binning}{section.4.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Traffic flow count through spatial and temporal binning. }}{51}{figure.4.10}}
+\newlabel{fig:spatial_binning_traffic_count}{{4.10}{51}{Traffic flow count through spatial and temporal binning}{figure.4.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Traffic flow count categorization through a colour coding. Traffic flow count intensity is represented with a colour scheme ranging from dark green (low recorded traffic) to dark red (heavy traffic). The range stretches on 11 quantiles.}}{52}{figure.4.11}}
+\newlabel{fig:traffic_count_color_coded_categorization}{{4.11}{52}{Traffic flow count categorization through a colour coding. Traffic flow count intensity is represented with a colour scheme ranging from dark green (low recorded traffic) to dark red (heavy traffic). The range stretches on 11 quantiles}{figure.4.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Traffic flow modelling and prediction}{52}{section.4.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Traffic flow count through spatial and temporal binning. }}{53}{figure.4.12}}
+\newlabel{fig:traffic_month_average}{{4.12}{53}{Traffic flow count through spatial and temporal binning}{figure.4.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}Preprocessing data for the prediction model}{54}{subsection.4.7.1}}
+\newlabel{subsection:Preprocessing data for the prediction model}{{4.7.1}{54}{Preprocessing data for the prediction model}{subsection.4.7.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces A sample of traffic flow count by bin for every 5 minute window.}}{55}{table.4.4}}
+\newlabel{table:dataset_02}{{4.4}{55}{A sample of traffic flow count by bin for every 5 minute window}{table.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Sparse traffic flow matrix}}{55}{table.4.5}}
+\newlabel{table:dataset_03}{{4.5}{55}{Sparse traffic flow matrix}{table.4.5}{}}
+\newlabel{equation:logarithmic_step_function}{{4.1}{56}{Preprocessing data for the prediction model}{equation.4.7.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Traffic count cumulative distribution for a chosen location. }}{56}{figure.4.13}}
+\newlabel{fig:traffic_count_distribution_distribution}{{4.13}{56}{Traffic count cumulative distribution for a chosen location}{figure.4.13}{}}
 \citation{Jain1996}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Traffic count cumulative distribution. }}{51}{figure.4.7}}
-\newlabel{fig:traffic_count_distribution_distribution}{{4.7}{51}{Traffic count cumulative distribution}{figure.4.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Traffic count logarithmic step function. }}{51}{figure.4.8}}
-\newlabel{fig:label_classification_of_traffic_count}{{4.8}{51}{Traffic count logarithmic step function}{figure.4.8}{}}
-\citation{Raschka}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Traffic count logarithmic step function. }}{57}{figure.4.14}}
+\newlabel{fig:label_classification_of_traffic_count}{{4.14}{57}{Traffic count logarithmic step function}{figure.4.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces Traffic count logarithmic step function. Lower traffic count mapping. }}{57}{figure.4.15}}
+\newlabel{fig:label_classification_of_traffic_count_zoom_in}{{4.15}{57}{Traffic count logarithmic step function. Lower traffic count mapping}{figure.4.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Dimensionality Reduction}{57}{subsection.4.7.2}}
+\citation{raschka2015python}
 \citation{Yang2004}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Traffic count logarithmic step function. Lower traffic count mapping. }}{52}{figure.4.9}}
-\newlabel{fig:label_classification_of_traffic_count_zoom_in}{{4.9}{52}{Traffic count logarithmic step function. Lower traffic count mapping}{figure.4.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}Dimensionality Reduction}{52}{subsection.4.7.2}}
-\newlabel{equation:principal_components}{{4.2}{53}{Dimensionality Reduction}{equation.4.7.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance }}{53}{figure.4.10}}
-\newlabel{fig:cumulative_variance_pca}{{4.10}{53}{First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance}{figure.4.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.3}Prediction through Multilayer Perceptron Classifier (MLPC)}{53}{subsection.4.7.3}}
+\newlabel{equation:principal_components}{{4.2}{58}{Dimensionality Reduction}{equation.4.7.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance }}{59}{figure.4.16}}
+\newlabel{fig:cumulative_variance_pca}{{4.16}{59}{First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance}{figure.4.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.3}Prediction through Multilayer Perceptron Classifier (MLPC)}{59}{subsection.4.7.3}}
 \citation{hornik1990universal}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Multilayer perceptron classifier topology }}{55}{figure.4.11}}
-\newlabel{fig:ann_topology}{{4.11}{55}{Multilayer perceptron classifier topology}{figure.4.11}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5.}Evaluation and Results}{57}{chapter.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Multilayer perceptron classifier topology }}{61}{figure.4.17}}
+\newlabel{fig:ann_topology}{{4.17}{61}{Multilayer perceptron classifier topology}{figure.4.17}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5.}Evaluation and Results}{62}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:evaluation_and_results}{{5}{57}{Evaluation and Results}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section Name}{57}{section.5.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6.}Future Work}{59}{chapter.6}}
+\newlabel{chapter:evaluation_and_results}{{5}{62}{Evaluation and Results}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Section Name}{62}{section.5.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6.}Future Work}{64}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter:future_work}{{6}{59}{Future Work}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section Name}{59}{section.6.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7.}Conclusion}{60}{chapter.7}}
+\newlabel{chapter:future_work}{{6}{64}{Future Work}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Section Name}{64}{section.6.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7.}Conclusion}{65}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{61}{appendix.A}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{66}{appendix.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}These are some details}{61}{section.A.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}These are some details}{66}{section.A.1}}
 \bibstyle{abbrv}
 \bibdata{references}
 \bibcite{Ahas2011}{1}
@@ -332,7 +349,7 @@
 \bibcite{Calabrese2013}{8}
 \bibcite{CambridgeSystematicsInc.2005}{9}
 \bibcite{ChakrabortyNKNagwaniLopamudraDey2011}{10}
-\@writefile{toc}{\contentsline {chapter}{References}{62}{section.A.1}}
+\@writefile{toc}{\contentsline {chapter}{References}{67}{section.A.1}}
 \bibcite{Colak2015}{11}
 \bibcite{EUTransportDirectorate2018}{12}
 \bibcite{eldawy2015spatialhadoop}{13}
@@ -348,15 +365,17 @@
 \bibcite{Laurila2012}{23}
 \bibcite{Leduc2008}{24}
 \bibcite{Liu2014}{25}
-\bibcite{Naess2012}{26}
-\bibcite{Schrank.2015}{27}
-\bibcite{Shin}{28}
-\bibcite{Sommer2013}{29}
-\bibcite{Steenbruggen2015}{30}
-\bibcite{Toledo2004}{31}
-\bibcite{Toole2015}{32}
-\bibcite{Wang2012}{33}
-\bibcite{Wang2013}{34}
-\bibcite{Wu2014}{35}
-\bibcite{Yang2004}{36}
-\bibcite{Zheng2011}{37}
+\bibcite{malta2011national}{26}
+\bibcite{Naess2012}{27}
+\bibcite{raschka2015python}{28}
+\bibcite{Schrank.2015}{29}
+\bibcite{Shin}{30}
+\bibcite{Sommer2013}{31}
+\bibcite{Steenbruggen2015}{32}
+\bibcite{Toledo2004}{33}
+\bibcite{Toole2015}{34}
+\bibcite{Wang2012}{35}
+\bibcite{Wang2013}{36}
+\bibcite{Wu2014}{37}
+\bibcite{Yang2004}{38}
+\bibcite{Zheng2011}{39}
