@@ -34,6 +34,9 @@
 \newenvironment{code}
 {\footnotesize\verbatim}{\endverbatim\normalfont}
 
+
+
+
 \graphicspath{ {images/} }
 
 %%the following environments are useful to present proofs in your thesis
@@ -54,7 +57,6 @@
 \setlength{\headheight}{15pt}
 %\overfullrule=15pt
 
-
 \begin{document}
 
 
@@ -62,7 +64,8 @@
 \title{Pin Pointing Pain Points: Vehicular traffic flow intensity detection and prediction through mobile data usage.}
 \author{Maurice Saliba}
 \date{28-06-2018}
-\supervisor{to insert}
+\supervisor{Dr Charlie Abela}
+\cosupervisor{Dr Colin Layfield}
 \department{Faculty of ICT}
 \universitycrestpath{crest}
 \submitdate{28-06-2018} 
@@ -76,7 +79,7 @@ your acknowledgments
        
 \begin{abstract}
 Multi-modal originated vehicular traffic flow data can be obtained with various techniques. To what extent this data is reliable, complete, timely and readily available requires a thorough analysis of past work and currently available solutions. A novel approach consisting of an ensemble of machine learning and data-mining techniques is being proposed. 
-A mobile phone usage dataset from a telecommunications provider in Malta is used first to carry out basic traffic analytics. Then an origin-destination (OD) matrix based on the largest two clusters of activity per user will be computed to infer user trips between these clusters across time. Routes for these trips are retrieved with open source routing tools and obtained data pertaining to way nodes along these routes further enrich trip information. Spatial binning is then used to deduce the aggregate distribution of traffic load on the traffic network.  The OD matrix and grid network load are subsequently used to build a Neural Network predictive model. Several previous works \cite{Laurila2012,Hoteit2014} that carried out invaluable research in this field lacked on-line data in quality and quantity. They were at times compelled to devise corrective measures and carry out simulations to cater for such shortcomings. Having the luxury to avail of mobile call and data historical records will make it more possible to fine tune a better predictive model and evaluate it. Industry standard visualization tools were used to portray AI generated traffic patterns together with flow intensity projected in the geospatial dimension. 
+An anonymized mobile phone usage dataset from a telecommunications provider in Malta is used first to carry out basic traffic analytics. Then an origin-destination (OD) matrix based on the largest two clusters of activity per user will be computed to infer user trips between these clusters across time. Routes for these trips are retrieved with open source routing tools and obtained data pertaining to way nodes along these routes further enrich trip information. Spatial binning is then used to deduce the aggregate distribution of traffic load on the traffic network.  The OD matrix and grid network load are subsequently used to build a Neural Network predictive model. Several previous works \cite{Laurila2012,Hoteit2014} that carried out invaluable research in this field lacked on-line data in quality and quantity. They were at times compelled to devise corrective measures and carry out simulations to cater for such shortcomings. Having the luxury to avail of mobile call and data historical records will make it more possible to fine tune a better predictive model and evaluate it. Industry standard visualization tools were used to portray AI generated traffic patterns together with flow intensity projected in the geospatial dimension. 
 \end{abstract}
 
 \tableofcontents
@@ -154,13 +157,13 @@ This dissertation started with a section that introduces the reader to the vehic
 
 
 
-\chapter{Problem definition}
 
-\section{Problem statement}
+
+\section{Problem definition}
 From this research it is required to demonstrate that it is possible to attain an accurate measure of traffic and predict traffic for different amounts of time ahead. It is required to prove that this can be possibly done by constructing a predictive model and make use of inference techniques that base themselves on data usage records collected from the mobile cellular network. As we will expand in chapter \ref{background}, the trajectory path plotted by the mobile antenna through which users are given service is far from being a true picture of the actual path of the user.  An algorithm must be devised to deduce the actual path travelled by the user for his most common trips. The predictive model must possibly predict the traffic in a reasonable amount of time since a prediction that take a long time to compute will become futile in its purpose.
 
 
-\section{Research Questions}
+\subsection{Research Questions}
 
 Research will be done in a direction outlined by the questions below:
 \begin{enumerate}
@@ -348,7 +351,7 @@ One of the main objectives was to extract meaningful features from mobile data u
 
 \section{Mobile data collection and structure} \label{section:methodology:mobile_data_collection_structure}
 
-The dataset was provided by GO Plc Malta which is one of the main data providers. The dataset recorded ranges from October 2016 to September 2017 which is a full year of data. However it was decided to concentrate only on the month of October 2016 so that analysis and model learning is faster by working on prototypes tested on a sample of the data. Results were considered to be satisfactory even though it is known that for certain machine learning  algorithms training with more data would probably give better results. Number of distinct cells amount to several thousands but distinct cell locations amount to only a few hundreds since a cell tower shares antennas for different technologies. Precise figures cannot be disclosed due to commercial sensitivity.
+The anonymized dataset was provided by GO Plc Malta which is one of the main data providers. The dataset recorded ranges from October 2016 to September 2017 which is a full year of data. However it was decided to concentrate only on the month of October 2016 so that analysis and model learning is faster by working on prototypes tested on a sample of the data. Results were considered to be satisfactory even though it is known that for certain machine learning  algorithms training with more data would probably give better results. Number of distinct cells amount to several thousands but distinct cell locations amount to only a few hundreds since a cell tower shares antennas for different technologies. Precise figures cannot be disclosed due to commercial sensitivity.
 
 As stated by the provider of the dataset, EDR/CDR records are generally buffered to file on the network element. Files are closed periodically, generally every 1 to 5 minutes. Files are then collected and processed by the mediation platform, which parses, enhances, and extracts all of the necessary information from these records. New files are then sent towards billing and other entities as per required. It normally takes around 10 minutes for an EDR/CDR to be within the data-warehouse, hence available for further processing. However mobile operator engineers stated that polling frequency can be increased as needed. A smaller polling interval would allow to have predictions closer to reality.
 
@@ -931,7 +934,7 @@ The topology choice was determined after carrying out a grid search configured w
 
 %TODO - why are more hidden layers needed
 
-The available labelled data points dataset was split into 60\% training and 40\% training. The model with maximum iterations parameter set to 200 showed that after a set of runs it converged consistently. The first phase of setting up the model consisted of the training part where the weights settle to a final value that lead to a minimal error in its classification within the parameter of tolerance set in the configuration. Training outputs a model which is then fit on the testing data. In the testing phase the prediction efficacy of the model built during training is checked by retrieving certain metrics.
+The available labelled data points dataset was split into 60\% training and 40\% training. The model with maximum iterations parameter set to 200 showed that after a set of runs it converged consistently. The first phase of setting up the model consisted of the training part where the weights settle to a final value that lead to a minimal error in its classification within the parameter of tolerance set in the configuration. Training outputs a model which is then fitted on the testing data. In the testing phase the prediction efficacy of the model built during training is checked by retrieving certain metrics.
 
 %TODO - maybe add visualization section
 
@@ -939,7 +942,7 @@ The available labelled data points dataset was split into 60\% training and 40\%
 
 
 \chapter{Evaluation and Results} \label{chapter:evaluation_and_results}
-\section{Section Name}
+\section{Introduction}
 
 
 %TODO - Structure
@@ -947,6 +950,9 @@ The available labelled data points dataset was split into 60\% training and 40\%
 %TODO - evaluate trip delay 
 %TODO - evaluate traffic flow count
 %TODO - evaluate traffic flow prediction (through metrics)
+
+ 
+
 
 
 Mobile users averaged location calculation, estimated path trajectory and predicted traffic congestion points are basically the targets aimed for in this research project which have to be evaluated. The pivotal point here is to have a ground truth to be able to evaluate properly the obtained results. As already aforementioned in section \ref{methodology} this ground truth can be gathered from tailor made applications that collect GPS data from voluntary users. Other data sources to contrast with are actual travel diaries taken by users and traffic counts compiled from video camera captures.

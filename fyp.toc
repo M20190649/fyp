@@ -6,42 +6,41 @@
 \contentsline {section}{\numberline {1.5}Application of mobile traces analytics}{6}{section.1.5}
 \contentsline {section}{\numberline {1.6}Aims and objectives}{7}{section.1.6}
 \contentsline {section}{\numberline {1.7}Dissertation outline}{8}{section.1.7}
-\contentsline {chapter}{\numberline {2.}Problem definition}{10}{chapter.2}
-\contentsline {section}{\numberline {2.1}Problem statement}{10}{section.2.1}
-\contentsline {section}{\numberline {2.2}Research Questions}{10}{section.2.2}
-\contentsline {chapter}{\numberline {3.}Background and Literature Review}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Mobile location data sources}{12}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Data format and sample structure used in literature}{14}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Mobile position inference from Floating cellular data}{16}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Privacy and data anonymization}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Big Data, the cloud and large scale real time stream processing}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Origin and destination matrices computation}{19}{section.3.4}
-\contentsline {section}{\numberline {3.5}Graph databases and Parallel graph processing}{23}{section.3.5}
-\contentsline {section}{\numberline {3.6}Model fitting to human mobility}{24}{section.3.6}
-\contentsline {section}{\numberline {3.7}Prediction methods}{29}{section.3.7}
-\contentsline {chapter}{\numberline {4.}Methodology}{30}{chapter.4}
-\contentsline {section}{\numberline {4.1}Mobile data collection and structure}{30}{section.4.1}
-\contentsline {section}{\numberline {4.2}Dataset preliminary analysis}{32}{section.4.2}
-\contentsline {section}{\numberline {4.3}Algorithm Selection}{34}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Trajectory interpolation through cell tower data}{35}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Traffic simulation from OD matrix}{37}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Traffic flow detection by trip generation assigned\\ traffic}{38}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Main activity hubs extraction and displacement error removal through clustering}{38}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}K-means clustering}{39}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}DBSCAN clustering}{39}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}OD Matrix trip Generation}{41}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}OD Matrix computation}{41}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Trip generation, route choice and traffic assignment}{42}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}Traffic flow aggregation through spatial binning}{49}{section.4.6}
-\contentsline {section}{\numberline {4.7}Traffic flow modelling and prediction}{52}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Preprocessing data for the prediction model}{54}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Dimensionality Reduction}{57}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Prediction through Multilayer Perceptron Classifier (MLPC)}{59}{subsection.4.7.3}
-\contentsline {chapter}{\numberline {5.}Evaluation and Results}{62}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section Name}{62}{section.5.1}
-\contentsline {chapter}{\numberline {6.}Future Work}{64}{chapter.6}
-\contentsline {section}{\numberline {6.1}Section Name}{64}{section.6.1}
-\contentsline {chapter}{\numberline {7.}Conclusion}{65}{chapter.7}
-\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{66}{appendix.A}
-\contentsline {section}{\numberline {A.1}These are some details}{66}{section.A.1}
-\contentsline {chapter}{References}{67}{section.A.1}
+\contentsline {section}{\numberline {1.8}Problem definition}{9}{section.1.8}
+\contentsline {subsection}{\numberline {1.8.1}Research Questions}{9}{subsection.1.8.1}
+\contentsline {chapter}{\numberline {2.}Background and Literature Review}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Mobile location data sources}{11}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Data format and sample structure used in literature}{13}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Mobile position inference from Floating cellular data}{15}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Privacy and data anonymization}{16}{section.2.2}
+\contentsline {section}{\numberline {2.3}Big Data, the cloud and large scale real time stream processing}{17}{section.2.3}
+\contentsline {section}{\numberline {2.4}Origin and destination matrices computation}{18}{section.2.4}
+\contentsline {section}{\numberline {2.5}Graph databases and Parallel graph processing}{22}{section.2.5}
+\contentsline {section}{\numberline {2.6}Model fitting to human mobility}{23}{section.2.6}
+\contentsline {section}{\numberline {2.7}Prediction methods}{28}{section.2.7}
+\contentsline {chapter}{\numberline {3.}Methodology}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Mobile data collection and structure}{29}{section.3.1}
+\contentsline {section}{\numberline {3.2}Dataset preliminary analysis}{31}{section.3.2}
+\contentsline {section}{\numberline {3.3}Algorithm Selection}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Trajectory interpolation through cell tower data}{34}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Traffic simulation from OD matrix}{36}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Traffic flow detection by trip generation assigned\\ traffic}{37}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Main activity hubs extraction and displacement error removal through clustering}{37}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}K-means clustering}{38}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}DBSCAN clustering}{38}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}OD Matrix trip Generation}{40}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}OD Matrix computation}{40}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Trip generation, route choice and traffic assignment}{41}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Traffic flow aggregation through spatial binning}{48}{section.3.6}
+\contentsline {section}{\numberline {3.7}Traffic flow modelling and prediction}{51}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Preprocessing data for the prediction model}{53}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Dimensionality Reduction}{56}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Prediction through Multilayer Perceptron Classifier (MLPC)}{58}{subsection.3.7.3}
+\contentsline {chapter}{\numberline {4.}Evaluation and Results}{61}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{61}{section.4.1}
+\contentsline {chapter}{\numberline {5.}Future Work}{63}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section Name}{63}{section.5.1}
+\contentsline {chapter}{\numberline {6.}Conclusion}{64}{chapter.6}
+\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{65}{appendix.A}
+\contentsline {section}{\numberline {A.1}These are some details}{65}{section.A.1}
+\contentsline {chapter}{References}{66}{section.A.1}

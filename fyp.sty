@@ -81,11 +81,12 @@ includeheadfoot, headsep=1cm, footskip=1cm, centering
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 %  Macro and Variable Definitions
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-%Define macros \department, \supervisor, \universitycrestpath and
+%Define macros \department, \supervisor, \cosupervisor, \universitycrestpath and
 %\submitdate for the title page and declaration.
 %\author, \title, \date are already defined in the report document class.
 \def\department#1{\gdef\@department{#1}}
 \def\supervisor#1{\gdef\@supervisor{#1}}
+\def\cosupervisor#1{\gdef\@cosupervisor{#1}}
 \def\universitycrestpath#1{\gdef\@universitycrestpath{#1}}
 \def\submitdate#1{\gdef\@submitdate{#1}}
 \def\coursecode#1{\gdef\@coursecode{#1}}
@@ -221,7 +222,7 @@ includeheadfoot, headsep=1cm, footskip=1cm, centering
 %  declaration form on the following page.
 %
 %  Requires values for the macros:
-%  \title, \author, \date, \supervisor, \department, \universitycrestpath.
+%  \title, \author, \date, \supervisor, \cosupervisor, \department, \universitycrestpath.
 %:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 \renewcommand\maketitle{%
   \begin{titlepage}
@@ -229,7 +230,7 @@ includeheadfoot, headsep=1cm, footskip=1cm, centering
   \let\footnoterule\relax
   \let \footnote \thanks
   %\vfil\null
-  %\vspace*{-40\p@}
+  %\vspace*{-30\p@}
   \vfill
   \begin{center}%
     {\Huge\bfseries \@title \par}%
@@ -239,7 +240,13 @@ includeheadfoot, headsep=1cm, footskip=1cm, centering
       {\bfseries \@author \par}}
       \vspace*{30\p@}
     {\large Supervisor: \@supervisor
-      \vspace*{80\p@}
+      \vspace*{5\p@}
+    }
+	
+	{\large 
+		\vspace*{5\p@}
+		Co-supervisor: \@cosupervisor 
+      \vspace*{30\p@}
     }
 
     \begin{minipage}{\textwidth}
@@ -274,6 +281,7 @@ includeheadfoot, headsep=1cm, footskip=1cm, centering
   \global\let\@author\@empty
   \global\let\@date\@empty
   \global\let\@supervisor\@empty
+  \global\let\@cosupervisor\@empty
   \global\let\@department\@empty
   \global\let\@universitycrestpath\@empty
   \global\let\@submitdate\@empty
@@ -282,6 +290,7 @@ includeheadfoot, headsep=1cm, footskip=1cm, centering
   \global\let\author\relax
   \global\let\date\relax
   \global\let\supervisor\relax
+  \global\let\cosupervisor\relax
   \global\let\department\relax
   \global\let\universitycrestpath\relax
   \global\let\submitdate\relax
