@@ -38,9 +38,12 @@
 \BOOKMARK [2][-]{subsection.3.7.3}{Prediction through Multilayer Perceptron Classifier \(MLPC\)}{section.3.7}% 38
 \BOOKMARK [0][-]{chapter.4}{Evaluation and Results}{}% 39
 \BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 40
-\BOOKMARK [0][-]{chapter.5}{Future Work}{}% 41
-\BOOKMARK [1][-]{section.5.1}{Section Name}{chapter.5}% 42
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 43
-\BOOKMARK [0][-]{appendix.A}{This chapter is in the appendix}{}% 44
-\BOOKMARK [1][-]{section.A.1}{These are some details}{appendix.A}% 45
-\BOOKMARK [0][-]{section.A.1}{References}{}% 46
+\BOOKMARK [1][-]{section.4.2}{Trip counts per hour evaluation}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.3}{Trip delay average per hour evaluation}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.4}{Traffic flow count prediction for a selection of locations evaluation}{chapter.4}% 43
+\BOOKMARK [0][-]{chapter.5}{Future Work}{}% 44
+\BOOKMARK [1][-]{section.5.1}{Section Name}{chapter.5}% 45
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 46
+\BOOKMARK [0][-]{appendix.A}{This chapter is in the appendix}{}% 47
+\BOOKMARK [1][-]{section.A.1}{These are some details}{appendix.A}% 48
+\BOOKMARK [0][-]{section.A.1}{References}{}% 49

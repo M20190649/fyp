@@ -31,16 +31,19 @@
 \contentsline {section}{\numberline {3.5}OD Matrix trip Generation}{40}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}OD Matrix computation}{40}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Trip generation, route choice and traffic assignment}{41}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Traffic flow aggregation through spatial binning}{48}{section.3.6}
+\contentsline {section}{\numberline {3.6}Traffic flow aggregation through spatial binning}{45}{section.3.6}
 \contentsline {section}{\numberline {3.7}Traffic flow modelling and prediction}{51}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Preprocessing data for the prediction model}{53}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.1}Preprocessing data for the prediction model}{52}{subsection.3.7.1}
 \contentsline {subsection}{\numberline {3.7.2}Dimensionality Reduction}{56}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Prediction through Multilayer Perceptron Classifier (MLPC)}{58}{subsection.3.7.3}
-\contentsline {chapter}{\numberline {4.}Evaluation and Results}{61}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{61}{section.4.1}
-\contentsline {chapter}{\numberline {5.}Future Work}{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}Section Name}{63}{section.5.1}
-\contentsline {chapter}{\numberline {6.}Conclusion}{64}{chapter.6}
-\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{65}{appendix.A}
-\contentsline {section}{\numberline {A.1}These are some details}{65}{section.A.1}
-\contentsline {chapter}{References}{66}{section.A.1}
+\contentsline {subsection}{\numberline {3.7.3}Prediction through Multilayer Perceptron Classifier (MLPC)}{57}{subsection.3.7.3}
+\contentsline {chapter}{\numberline {4.}Evaluation and Results}{60}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{60}{section.4.1}
+\contentsline {section}{\numberline {4.2}Trip counts per hour evaluation}{61}{section.4.2}
+\contentsline {section}{\numberline {4.3}Trip delay average per hour evaluation}{64}{section.4.3}
+\contentsline {section}{\numberline {4.4}Traffic flow count prediction for a selection of locations evaluation}{68}{section.4.4}
+\contentsline {chapter}{\numberline {5.}Future Work}{70}{chapter.5}
+\contentsline {section}{\numberline {5.1}Section Name}{70}{section.5.1}
+\contentsline {chapter}{\numberline {6.}Conclusion}{71}{chapter.6}
+\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{72}{appendix.A}
+\contentsline {section}{\numberline {A.1}These are some details}{72}{section.A.1}
+\contentsline {chapter}{References}{73}{section.A.1}

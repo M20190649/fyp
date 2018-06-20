@@ -20,6 +20,11 @@
 \usepackage{mathtools}
 \usepackage[noend]{algpseudocode}
 
+
+\usepackage{multirow}
+
+
+
 \makeatletter
 \def\BState{\State\hskip-\ALG@thistlm}
 \makeatother
@@ -511,7 +516,7 @@ The method chosen to detect traffic on the road network was to first generate an
 
 \section{Main activity hubs extraction and displacement error removal through clustering} \label{section:methodology:clustering}
 
-One of the main steps of the proposed algorithm is to derive main areas of activity from the mobile data usage of subscribers. One possible way to do this from the described dataset is by clustering. Clustering is also used to remove noise caused by displacement through frequent oscillations by finding a centroid of activity. Removal of displacement error through triangulation has been ruled out. There are missing dataset features that are needed to get a more accurate location with this process such as strength of signal from every cell tower that the user connects to. Moreover simple geometrical triangulation does not have the aggregation characteristics that clustering has. Grouping of similar locations have to be implemented on top of triangulation. Triangulation is more suited to remove noise or displacement error caused by cell tower oscillations or handovers. These are caused either because the signal from a tower is weaker from another that can provide better service or there is momentary offloading causing a user to switch his connection to another tower with less load. In section \ref{OD_Matrices} we have seen how certain authors employed various techniques to smooth sudden location change of mobile users because they often switch cell towers in very short time intervals that cannot be attributed to movement. 
+One of the main steps of the proposed algorithm is to derive main areas of activity from the mobile data usage of subscribers. One possible way to do this from the described dataset is by clustering. Clustering is also used to remove noise caused by displacement through frequent oscillations by finding a centroid of activity. Removal of displacement error through triangulation has been ruled out. There are missing dataset features that are needed to get a more accurate location with this process such as strength of signal from every cell tower that the user connects to. Moreover simple geometrical triangulation does not have the aggregation characteristics that clustering has. Grouping of similar locations have to be implemented on top of triangulation. Triangulation is more suited to remove noise or displacement error caused by cell tower oscillations or handovers. These are caused either because the signal from a tower is weaker from another that can provide better service or there is momentary offloading causing a user to switch his connection to another tower with less load. In section \ref{section:OD_Matrices} it was discussed how certain authors employed various techniques to smooth sudden location change of mobile users because they often switch cell towers in very short time intervals that cannot be attributed to movement. 
  
 Clustering is a machine learning unsupervised technique used to classify entities which have similar features. Clustering is done depending on the chosen algorithm and calibration hyper-parameters that control the grouping process. Two clustering techniques that were checked for their appropriateness to this research were k-means and DBSCAN. 
 
@@ -522,7 +527,7 @@ k-means algorithm is highly popular especially for first analysis of datasets be
 DBSCAN (density based spatial clustering of applications) has an edge on k-means and is mostly suited to our research since it does not need to set the number of clusters that we are after for each user at the outset. Moreover it finds clusters of non-spherical nature and leaves noisy elements out of the computed clusters \cite{ChakrabortyNKNagwaniLopamudraDey2011}. DBSCAN has three main hyper parameters to set namely minimum points,  $\epsilon$ (radius of area within which density is measured)  and a distance metric. The algorithm is more sensitive to density rather than to aggregate distance of surrounding points. Basically the algorithm finds core points that have the required minimum points in its neighbourhood dictated by the distance metric. Other non core points that are within core points' radius range (i.e. they are not surrounded with the minimum number of points) are referred to as boundary points. If clusters formed by the core points overlap each other they form one single cluster, hence the non-spherical shape of the clusters.
 
 
-\begin{figure}[h]	
+\begin{figure}[!]	
 	\includegraphics[scale=0.60]{clustering.jpg}
 	\centering
 	\caption{DBSCAN clustering to find main user activity hubs. (Sample illustration)}
@@ -530,9 +535,9 @@ DBSCAN (density based spatial clustering of applications) has an edge on k-means
 \end{figure}
  
 
-DBSCAN was the preferred candidate for clustering since our aim is to find dense clusters of mobile data usage activity and random locations visited by users are of no interest and need to be filtered out. The curse of dimensionality does not apply here since there are only two dimensions with the same scale.  The values of hyper-parameters were 500m for radius, minimum required points was set to 3 and euclidean distance was chosen as the distance metric. The mean distance between a sample of cell tower locations taken randomly from the whole dataset was calculated to be 350m. The radius was chosen to be 500m to allow for overlapping but not include too many cell towers accept for the shouldering ones. By choosing an excessive $\epsilon$ the centroid location coordinates was being too inaccurate and was clustering a wide range of subscribers' activity. With a smaller $\epsilon$ minimal clustering was being attained since cell tower location areas will not overlap. The OPTICS algorithm which does away with the $\epsilon$ parameter iterates until it finds the optimal $\epsilon$ and orders its clusters in a hierarchical result. However this algorithm is more computationally expensive and we opted to use the non-generalized DBSCAN version of the algorithm. The implementation used\footnote{https://github.com/scalanlp/nak} was integrated into Apache Spark processes that output clusters of usage patterns for every user. The output of the implementation we used was in the form of coordinates that outlined the rectangular boundaries of the cluster. The final geographic coordinates that would denote the main activity clusters would be those of the centroid. Therefore the centroid for each rectangular cluster had to be determined with readily available libraries (esri was the used library)\footnote{https://github.com/Esri/spatial-framework-for-hadoop, https://github.com/Esri/geometry-api-java} within Apache Hive.   
+DBSCAN was the preferred candidate for clustering since the aim was to find dense clusters of mobile data usage activity and random locations visited by users are of no interest and need to be filtered out. The curse of dimensionality does not apply here since there are only two dimensions with the same scale.  The values of hyper-parameters were 500m for radius, minimum required points was set to 3 and euclidean distance was chosen as the distance metric. The mean distance between a sample of cell tower locations taken randomly from the whole dataset was calculated to be 350m. The radius was chosen to be 500m to allow for overlapping but not include too many cell towers accept for the shouldering ones. By choosing an excessive $\epsilon$ the centroid location coordinates was being too inaccurate and was clustering a wide range of subscribers' activity. With a smaller $\epsilon$ minimal clustering was being attained since cell tower location areas will not overlap. The OPTICS algorithm which does away with the $\epsilon$ parameter iterates until it finds the optimal $\epsilon$ and orders its clusters in a hierarchical result. However this algorithm is more computationally expensive and we opted to use the non-generalized DBSCAN version of the algorithm. The implementation used\footnote{https://github.com/scalanlp/nak} was integrated into Apache Spark processes that output clusters of usage patterns for every user. The output of the implementation we used was in the form of coordinates that outlined the rectangular boundaries of the cluster. The final geographic coordinates that would denote the main activity clusters would be those of the centroid. Therefore the centroid for each rectangular cluster had to be determined with readily available libraries (esri was the used library)\footnote{https://github.com/Esri/spatial-framework-for-hadoop, https://github.com/Esri/geometry-api-java} within Apache Hive.   
 
-%TODO - what is the Distribution of the first two clusters on the whole data set.
+%TODO - IMPORTANT - what is the Distribution of the first two clusters on the whole data set.
 
 %TODO - Top two activity locations extraction. What about the third one? Get distribution per user and possible filtering on distribution. Assuming that the top two activity locations for each user are the home and work location.
 
@@ -560,21 +565,6 @@ There is a caveat on the accuracy of the actual duration of the trip. Records of
 
 As similarly done in Toole et al. \cite{Toole2015} routes between origins and destinations were inferred from OSM. A route was assigned for each entry in the OD matrix together with duration information from the trip. The user's routing choice was assumed to be the fastest one given by the Open Source Routing Machine\footnote{http://project-osrm.org/} (OSRM). It is always considered to be static and user does not change route depending on traffic or due to  unexpected events on the road network such as accidents or blockages caused by various other reasons. This is a limitation of our research and introduces inevitable bias. It should be noted however that in the urban scenario in Malta the different routes to take towards work and back are limited due to the small scale of the road network infrastructure. 
 
-When determining the daily users' routes between different origins and destinations done there are two sets of important information that are derived. These are namely trip count and trip delay per route. Distributions for both were further derived given that information such as trip departure timestamp is available for every route. One can notice how the trip distribution derived from mobile usage EDRs (see figure \ref{fig:trip_distribution}) generated OD Matrix is strikingly similar with the trip distribution as reported in a National Travel survey done in 2010 \cite{malta2011national} (see figure \ref{fig:trip_distribution_nso}). The figure reported in  \cite{malta2011national} does not include Saturday and Sunday trip distributions.
-
-\begin{figure}[h]	
-	\includegraphics[scale=0.50]{Trip_delay_per_day_week.jpg}
-	\centering
-	\caption{Trip delay patterns per day week. To note how Saturdays and Sundays which are outlined by the last and first two peaks respectively have unique traffic delay patterns.}
-	\label{fig:trip_distribution}
-\end{figure}
-
-\begin{figure}[h]	
-	\includegraphics[scale=0.60]{Transport_malta_trip_distribution.jpg}
-	\centering
-	\caption{Trip distribution as reported in Transport Malta 2010 National Survey \cite{malta2011national}.}
-	\label{fig:trip_distribution_nso}
-\end{figure}
 
 \begin{figure}[hp]	
 	\includegraphics[scale=0.60]{Trip_delay_cumm_distribution.jpg}
@@ -583,7 +573,7 @@ When determining the daily users' routes between different origins and destinati
 	\label{fig:trip_delay_cum_distribution}
 \end{figure}
 
-\begin{figure}[hp]	
+\begin{figure}[!]	
 	\includegraphics[scale=0.60]{trip_delay_cumm_distribution_total.jpg}
 	\centering
 	\caption{Trip delay probability distribution presents a heavy tail on the right.  }
@@ -753,7 +743,7 @@ Another used tool was Spatial Hadoop which is highly efficient to process geoloc
 
 A Hive user defined function (UDF) from esri (esri is the company that owns the ArcGIS solution) is used within the Hive query language (HQL) syntax to count traffic flow by spatial bin\footnote{https://github.com/Esri/spatial-framework-for-hadoop}. A spatial bin is a computational geometry that can be used to numerically describe features in a specific region. In our case we used 0.0005 degrees bins to count traffic flow 'steps' derived from OSM routes. 0.0005 degrees bins approximately equate to 50 by 50 metres bins. We are stating that dimensions are not precise when computing the geometrical bin because dimensions are not strictly universal and vary according to map position. These tend to be more of an elongated rectangle near the poles and squarish near the equator. This happens because latitudes get narrower for bins near the poles due to the fact that the earth is not a perfect sphere but an oblate spheroid\footnote{http://www.longitudestore.com/how-big-is-one-gps-degree.html}. Not withstanding this the bins in the spatial area under investigation are of the same size since Malta does not relatively cover a wide area. We chose $50m^2$ spatial bins to aggregate traffic flow data in order not to have too much wide geometries that can aggregate traffic coming from two roads. Smaller bins than 50 metres square make aggregations less meaningful since aggregation is more near to data points rather than grouping polygons. 
 
-\begin{figure}[h]	
+\begin{figure}[!]	
 	\includegraphics[scale=0.6]{concentric_map.jpg}
 	\centering
 	\caption{Traffic flow count through spatial and temporal binning. }
@@ -762,7 +752,7 @@ A Hive user defined function (UDF) from esri (esri is the company that owns the 
 
 The centroid for each bin was calculated in order to attain the central coordinates of the polygon delineating the bin. Aggregation was not only done spatially but also temporally within intervals of 5 minutes each. This choice of interval size is quite subjective in nature but it has been decided that it is both granular enough and not too wide to describe traffic flow temporally. Prediction of traffic could then be more practical in terms of time windows ahead relative to the prediction to be done. A larger time window would not permit finer prediction in a time series. For example a non-sliding 10 minute time window which would allow predictions 10 minutes ahead, 20 minutes ahead and so forth. We did not use a sliding window so that we have less data points for training since training of neural networks would be more costly in terms of computation and would have made analysis more time consuming and complex. Having a sliding window would make it more flexible to decouple the averaging window size from the time ahead distance. The prediction time ahead parameter would not need to be a multiple of the averaging window.
 
-\begin{figure}[h]	
+\begin{figure}[!]	
 	\includegraphics[scale=0.5]{traffic_count_color_coded_categorization.jpg}
 	\centering
 	\caption{Traffic flow count categorization through a colour coding. Traffic flow count intensity is represented with a colour scheme ranging from dark green (low recorded traffic) to dark red (heavy traffic). The range stretches on 11 quantiles.}
@@ -924,7 +914,7 @@ The Spark 2.3.0 implementation that was used makes use of back-propagation to le
 The topology choice was determined after carrying out a grid search configured with a set of different hyperparameters. Different configurations for architecture structure were tried out and evaluated until the best performing architecture was chosen. The input and output layers size (number of neurons) are respectively dictated by the number of input PCA extracted features and output classes which are the possible traffic levels indicated by model. Two hidden layers were added to the overall topology. The final configuration after testing different possible architectures consisted of 324 neurons for both the input layer and for the second hidden layer, 400 neurons for the first hidden layer and 4 neurons for the output layer which defined the output classes (see figure \ref{fig:ann_topology}). All architecture layers are fully connected to the successive layer. 
 
 
-\begin{figure}[h]	
+\begin{figure}[!]	
 	\includegraphics[scale=0.50]{ann_topology.jpg}
 	\centering
 	\caption{Multilayer perceptron classifier topology }
@@ -951,14 +941,154 @@ The available labelled data points dataset was split into 60\% training and 40\%
 %TODO - evaluate traffic flow count
 %TODO - evaluate traffic flow prediction (through metrics)
 
+In the systematic approach that was devised to get vehicular traffic related information and to build a prediction model from mobile usage data several stages were involved. Stages in this machine learning pipeline are highly dependent on previous stages' results mainly because each stage feeds its output as input to the next stage. 
+
+Therefore inaccurate results error introduction in early stages would trickle down the pipeline. For example interpretation of error ratio at the prediction stage which is the last stage must be primarily  done in the context of results observed in preceding stages. If traffic counts are not accurately measured the training data itself would not lead to predictions that can be put to practical use. Evaluation plan needs to include evaluation of the following main algorithm operations:
+
+\begin{itemize}
+	%\item Clustering of main activity hubs 
+	\item Trip counts per hour for weekdays and weekdays
+	\item Trip delay average per hour for weekdays and weekends
+	\item Traffic flow count in a selection of locations
+	\item Traffic count prediction for a selection of locations
+\end{itemize}
+
+%\section{DBSCAN Clustering evaluation}
+
+%Clustering was used to retrieve the top two main mobile usage activity locations for users. Ground truth was not available to test how  accurately the resulting main locations for each user were matching the actual ones. DBSCAN clustering as stated in subsection  \ref{subsection:methodology:dbscan_clustering} detects high density cores and then expands clusters. 
+
+\section{Trip counts per hour evaluation}
+
+After determining the daily users' routes between different origins and destinations done there are two sets of important information that are derived. These are namely trip count and trip delay per route. Distributions for both were further derived given that information such as trip departure timestamp is available for every route. 
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.5]{Trip_delay_per_day_week.jpg}
+	\centering
+	\caption{OD matrix generated trip count patterns per day week. To note how Saturdays and Sundays which are outlined by the last and first two peaks respectively have unique traffic delay patterns.}
+	\label{fig:trip_distribution}
+\end{figure}
+
+
+One can notice how the trip count distribution per hour derived from mobile usage EDRs (see figure \ref{fig:trip_distribution}) generated OD Matrix is strikingly similar with the trip distribution as reported in a National Household Travel survey (NHTS) done in 2010 \cite{malta2011national} (see figure \ref{fig:trip_distribution_nso}). 
+
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.6]{Transport_malta_trip_distribution.jpg}
+	\centering
+	\caption{Car trip distribution as reported in Transport Malta 2010 National Survey \cite{malta2011national}.}
+	\label{fig:trip_distribution_nso}
+\end{figure}
+
+As illustrated in plot \ref{fig:trip_count_correlation} trip count peaks for both reported distributions are observed at 7:00 a.m. and 5:00 p.m. NHTS was taken on a Wednesday and has no car trip distribution for Saturdays and Sundays. Since plot shown in \ref{fig:trip_distribution} show that weekdays' trip count distribution is similar in shape the average was taken on all weekdays of the whole month. However it should be noted that trip counts on a Monday are distinctively slightly higher than the other weekdays \ref{fig:trip_distribution}. 
+
+
+\begin{table}[!]	
+	\centering
+	\resizebox{\textwidth}{!}{
+		
+		\begin{tabular}{|l|l|l|l|l|l|}
+			\hline
+			\multicolumn{3}{|c|}{\large{\textbf{Linear regression statistics}}}\\
+			\hline
+			\textbf{Pearson correlation coefficient (r)} & \textbf{ Degrees of freedom} & \textbf{ p-value}  \\ \hline
+			0.94 & 22 &  $1.13628e-11^*$ \\ 
+			\hline			
+			
+	\end{tabular} }
+	\caption{NHTS and OD trip distributions proved to be highly correlated. $ ^* p < 0.001$  } 
+	\label{table:trip_dsitribution_statistical_analysis}
+\end{table}
+
+The dynamics of the plot show how there is a sudden decrease of trips per hour after 7:00 a.m. that continues till 11:00 a.m. when trips start to rise again to gradually ramp up. The gradient suddenly increases again at 3:00 p.m. The increase and decrease of trip rate around the 5:00 a.m. peak is smoother than then the one observed in the morning peak for both distributions as we (see figure \ref{fig:trip_count_correlation}). 
+
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.6]{Trip_count_correlation.jpg}
+	\centering
+	\caption{Comparison between OD average trip distribution over a month and Transport Malta 2010 survey results (\cite{malta2011national})}
+	\label{fig:trip_count_correlation}
+\end{figure}
+
+
+NHTS \cite{malta2011national} reports 11\% in car trips from 1998 to 2010 and as shown in plot in figure the distribution again shows resemblance. Both the relationship between HTS datasets gathered in 1998 and 2010 and the relationship of these to the existent OD generated trip dataset demonstrate that trip distribution increases evenly with a specific scale factor across the hours as years go by.
+
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.5]{Trip_distribution_line_fit_plot.jpg}
+	\centering
+	\caption{Linear relationship between OD average trip distribution over a month and Transport Malta 2010 survey results \cite{malta2011national}}
+	\label{fig:trip_count_correlation_model}
+\end{figure}
+
+A linear regression model was devised to express the scaling up from trip distribution in 2010 and the one registered in 2016 in this study. A correlation statistical analysis would have sufficed to establish a linear relationship. There is definitely no causality relationship between these two variables. However a regression model was fitted to the data to express how scaling up can be done from a survey based dataset to the OD generated one (see figure \ref{fig:trip_count_correlation_model}) . Results are reported in table \ref{table:trip_dsitribution_statistical_analysis} and these show that there is a significant positive relationship between trip distributions.
+
+
+\section{Trip delay average per hour evaluation}
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.5]{trip_delay_mosta_marsa.jpg}
+	\centering
+	\caption{Expected trip delay 7 day distribution retrieved with Google distance matrix API for Mosta to Marsa route. Note how Sunday and Saturday delay pattern is different from the one observed for weekdays.}
+	\label{fig:trip_delay_mosta_marsa}
+\end{figure}
+
+Evaluation of average global trip delay results computed from OD and OSRM generated trips (OD-OSRM) proved to be challenging because ground truth data could not be found in literature of similar research type and local transport authorities reports. In the NHTS (2010) \cite{malta2011national} in addition to trip count statistics it is mentioned that a detailed matrix with trip information including departure and finish time was compiled. Correspondence with Transport Malta to attain such data or similar information proved to be futile up to the date of completion of this work. 
+
+
+\begin{figure}[h]	
+	\includegraphics[scale=0.7]{trip_delay_comparison.jpg}
+	\centering
+	\caption{DMAPI expected average trip delay comparison with OD-OSRM computed average trip delays}
+	\label{fig:trip_delay_google_vs_mine}
+\end{figure}
+
+
+At the end of April 2018 Google maps made available traffic information overlay on its maps. In addition to this Google Cloud distance matrix API  (DMAPI) exposed a web service that gives duration and duration in traffic of trips that are defined with origin and destination for Malta as well.
+
+\begin{table}[!]	
+	\includegraphics[scale=0.7]{trip_delay_correlation_DMAPI_vs_MINE.jpg}
+	\centering
+	\caption{Correlation statistics between DMAPI routes' average trip delay and DMAPI routes' correlation with OD-OSRM computed trip delay. Note that correlation is being done between data retrieved in June for DMAPI and data retreived in October for OD-OSRM}
+	\label{table:trip_delay_google_vs_mine}
+\end{table}
+
+
+The trip delay model built through the OD matrix is a basic statistical one that gives average trip delay per hour. Google distance metric API gives estimated duration information (with traffic and without) by specific route. In order to compare the estimations of our model with the Google one for the local traffic a data-mining process that scraped a data set of trip delay through the DMAPI web service was carried out. Seven whole days of data from June 2018 was scraped by retrieving duration information for every quarter of an hour (see fig. \ref{fig:trip_delay_mosta_marsa} for an example). Estimated trip delay is calculated by subtracting estimated trip duration from trip duration in traffic. Average trip delay was then computed per hour. This process was done for four different routes namely Mosta to Marsa, Mellieha to Swieqi (MS), Birkirkara to Sliema (BS) and Valletta to Mgarr (VM) and the overall trip delay average was calculated on these routes' data. These routes were chosen for two reasons. First these were chosen because they represent routes that are really varied in type in what is direction and areas covered by the trip in Malta. The second reason why they were chosen was because the average time of the selected route trips which is retrieved from Google API (24 minutes) approximates the global trip average time which is reported for a car trip in \cite{malta2011national} (20 minutes). To be noted however that from 2010 trip delay likely increased due to further load of traffic on the road infrastructure.
+
+Correlation results showed that there is a strong linear relationship between the routes' trip delay pattern which were investigated with the DMAPI. Correlation between DMAPI and OD-OSRM trip delay estimation is less but still considerable. Between DMAPI average overall trip delay and OD-OSRM non shifted expected trip delay data there is a correlation of 0.69 \ref{table:trip_delay_google_vs_mine}.
+
+When comparing trip expected delays one can notice some distinctive features that differentiate OD-OSRM trip delay plot and the DMAPI ones. Trip delays are higher in OD-OSRM data than for DMAPI. Also pattern for plots based on DMAPI retrieved trip delay data tend to have delays peaking distinctively higher in the morning rather than in the afternoon. Also OD-OSRM trip delay morning peak comes 1 hour earlier. The fact that more trip delay is observed for the OD-OSRM dataset can be attributed to the fact that in October there is much more traffic. It is known that in Malta October is one of the most chaotic months for traffic because schools and colleges would have just started. In June the University of Malta semester is almost closing (no more lectures are being held) and primary and secondary students leave school just after noon. Government departmental workers start to work till mid day in mid June as well. The earlier peak observed in the OD-OSRM data can be explained in the light that in October to cope with the heavy delays on the roads commuters leave earlier to avoid traffic congestion. When shifting the OD-OSRM data by one hour (see dotted line in fig. \ref{fig:trip_delay_google_vs_mine} ) a higher correlation of 0.78 is observed with (DMAPI) overall average trip delay.
+
+The fact that data has different seasonality is a serious limitation in the evaluation of the OD-OSRM trip delay model with DMAPI data as ground truth. Given that at the time of writing results could not be recomputed for OD-OSRM for June it was attempted to get DMAPI webservice estimations data for October 2018. DMAPI does not give responses for data queries that request past data. However it can give expected trip duration data in the future even if is queried from months ahead. The data retrieved for 7 days in October 2018 with DMAPI from four months in advance was exactly the same as the one retrieved for the same route in June. Therefore there was not the possibility to evaluate our model with DMAPI data from the same month which was expected to a have a more similar pattern. Still within the perspective of knowing how traffic in June and October is different and the strong correlations between the trip delay estimation models there is a good confidence level in relying on the OD-OSRM trip delay estimation data.	
+
+\section{Traffic flow count prediction for a selection of locations evaluation}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{example-image-a.pdf} 
+		\caption{Generic} \label{fig:timing1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{example-image-b.pdf} 
+		\caption{Competitors} \label{fig:timing2}
+	\end{subfigure}
+	
+	\vspace{1cm}
+	\begin{subfigure}[t]{\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{example-image-c.pdf} 
+		\caption{Price regulation} \label{fig:timing3}
+	\end{subfigure}
+	\caption{Some general caption of all the figures. In (\subref{fig:timing1}) you can see a  green square....}
+\end{figure}
  
 
 
 
-Mobile users averaged location calculation, estimated path trajectory and predicted traffic congestion points are basically the targets aimed for in this research project which have to be evaluated. The pivotal point here is to have a ground truth to be able to evaluate properly the obtained results. As already aforementioned in section \ref{methodology} this ground truth can be gathered from tailor made applications that collect GPS data from voluntary users. Other data sources to contrast with are actual travel diaries taken by users and traffic counts compiled from video camera captures.
-All the three areas required to be evaluated need to have a uniform way how to positively assess as a good prediction or bad prediction. A way how to do is is to break down the used geographical map in a grid of arbitrarily placed cells with a specific stipulated resolution which should not be neither too big and nor too small. A root mean square cost or a cross-entropy cost function may be used in order to calculate how off-mark is the prediction when testing. A confusion matrix would be useful to visualize in a tabular fashion were the models are getting it wrong in terms of particular grid cells. Metrics used for evaluation could include an F-Measure which is a summary statistic of precision and recall and is parametrized in such a way to give different importance to precision and recall as required.
-
-Finally after training with a batch of data a traffic flow prediction model is created for each particular spatial bin in the chosen sample. The different locations chosen where
 
 %TODO - test with weekdays only
 
@@ -980,10 +1110,31 @@ Finally after training with a batch of data a traffic flow prediction model is c
 
 %TODO - nueral netwrok trained on routes truip delays
 
+%TODO - check trip delay model in June and compare with October - compare overall with google api
+
+%TODO - analyze validity of OD matrix to model estimated trip delay by specific routes 
+
 \chapter{Conclusion}
+ 
+ 
+ %trip count nso vs trip count od matrix -> survey resolution is far less than one offered in OD matrix
+ 
+%TODO - scaling of results - IMPORTNT - can be taken from linear regression model
+
+%TODO - sample bias in Transport malta trip count - survey is taking during the afternoon when people who travel at night might not be there - during the night trip count is very low - it is state in NHTS that most respondents generally round off to the nearest 5 minutes
+
+%TODO - NHTS car trip count was taken on one particular day - ours was taken on the whole month - plot is smoother.
+
+%TODO - google cloud api cannot give historical records on delays. Prediciton of delay for very far away is not based on historical records.
+
+%TODO - controexamination between google distance matrix api and OD matrix trip delay results.
+
+
+ 
+ 
  The approach taken is systematic so that the research passes through gradual stages in such a way that we build on top of previous analyses and prototypes. Targets of this research include extraction of behavioural patterns of traffic encountered on the level of the isolated individual, subset of individuals, locality, specific time events and specific traffic hotspots. As described at the outset the main aim is not to trace the mobility of users but rather to predict estimated traffic congestion points and computation of duration for a travelling path given a starting point and a destination. Ideally if the users are highly predictable and stick to a regular travelling pattern they might be automatically notified when they are actually going to travel, how much its going to take them in terms of duration and suggestions are given to take different alternative routes which are less costly in terms of business. 
  
- %TODO - scaling of results - IMPORTNT
+
 
 \appendix
 
