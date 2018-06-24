@@ -113,6 +113,12 @@ S.~Hoteit, S.~Secci, S.~Sobolevsky, C.~Ratti, and G.~Pujolle.
   data}.
 \newblock {\em Computer Networks}, 64:296--307, 2014.
 
+\bibitem{huang2017research}
+F.~Huang, Q.~Zhu, J.~Zhou, J.~Tao, X.~Zhou, D.~Jin, X.~Tan, and L.~Wang.
+\newblock Research on the parallelization of the dbscan clustering algorithm
+  for spatial data mining based on the spark platform.
+\newblock {\em Remote Sensing}, 9(12):1301, 2017.
+
 \bibitem{Iqbal2014}
 M.~S. Iqbal, C.~F. Choudhury, P.~Wang, and M.~C. Gonz{\'{a}}lez.
 \newblock {Development of origin-destination matrices using mobile phone call
@@ -165,6 +171,11 @@ P.~Naess, M.~S. Nicolaisen, and A.~Strand.
   Cost-Benefit Analyses}.
 \newblock {\em European Journal of Transport and Infrastructure Research},
   12(3):291--309, 2012.
+
+\bibitem{Pace2017}
+N.~Pace.
+\newblock {Investigating the Potential of Big Data in the Management of Traffic
+  in Malta}, 2017.
 
 \bibitem{raschka2015python}
 S.~Raschka.

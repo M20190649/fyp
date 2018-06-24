@@ -21,7 +21,9 @@
 \usepackage[noend]{algpseudocode}
 
 
-\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
 
 
 
@@ -79,7 +81,17 @@
 
 
 \begin{acknowledgements}
-your acknowledgments
+
+I would first like to thank my supervisor Dr. Charlie and Co-supervisor Dr.Colin Layfield who taught me amongst many other things one important approach and they kept persisting on it - \textit{To let the data speak for itself}. Discussing with them gradual achievements and caveats made it possible to foster insight.
+
+This dissertation would not have been possible without the assistance of GO p.l.c through Mr. Joe Attard in order to get the anonymized mobile usage dataset and to get the high end technological resources needed for highly intensive processing. My colleagues at GO were also of great support and inspiration especially when I discussed with them certain technical aspects of the project.
+
+On a personal note I would like to thank my wife Andrea for her great support, love and constant encouragement. I would like to thank also my parents Benny and Carmen and the rest of my family especially my nephew Kyle and niece Shirley who proved to be a useful forced distraction when needed. I cannot not mention my close friends who did their best to make me look forward to strive towards completion by constantly sending me pictures of them having beers and a great night out without me. 
+
+Last but not least I would like to thank all the academic and non-academic staff of the department of artificial intelligence. It was a great academic journey that enriched my experience and perspective towards the world of science.
+
+
+
 \end{acknowledgements}
        
 \begin{abstract}
@@ -346,7 +358,7 @@ In \cite{Hoteit2016} the hypothesis that an individual tends to be found with hi
 
 Prediction of traffic results have to take in consideration where the model is being used for forecasting. \cite{Sommer2013} states for example that it is easier to predict traffic in highways rather than in urban areas since traffic tends to be smoother.
 
-
+%TODO - important
 
 
 
@@ -535,7 +547,7 @@ DBSCAN (density based spatial clustering of applications) has an edge on k-means
 \end{figure}
  
 
-DBSCAN was the preferred candidate for clustering since the aim was to find dense clusters of mobile data usage activity and random locations visited by users are of no interest and need to be filtered out. The curse of dimensionality does not apply here since there are only two dimensions with the same scale.  The values of hyper-parameters were 500m for radius, minimum required points was set to 3 and euclidean distance was chosen as the distance metric. The mean distance between a sample of cell tower locations taken randomly from the whole dataset was calculated to be 350m. The radius was chosen to be 500m to allow for overlapping but not include too many cell towers accept for the shouldering ones. By choosing an excessive $\epsilon$ the centroid location coordinates was being too inaccurate and was clustering a wide range of subscribers' activity. With a smaller $\epsilon$ minimal clustering was being attained since cell tower location areas will not overlap. The OPTICS algorithm which does away with the $\epsilon$ parameter iterates until it finds the optimal $\epsilon$ and orders its clusters in a hierarchical result. However this algorithm is more computationally expensive and we opted to use the non-generalized DBSCAN version of the algorithm. The implementation used\footnote{https://github.com/scalanlp/nak} was integrated into Apache Spark processes that output clusters of usage patterns for every user. The output of the implementation we used was in the form of coordinates that outlined the rectangular boundaries of the cluster. The final geographic coordinates that would denote the main activity clusters would be those of the centroid. Therefore the centroid for each rectangular cluster had to be determined with readily available libraries (esri was the used library)\footnote{https://github.com/Esri/spatial-framework-for-hadoop, https://github.com/Esri/geometry-api-java} within Apache Hive.   
+DBSCAN was the preferred candidate for clustering since the aim was to find dense clusters of mobile data usage activity and random locations visited by users are of no interest and need to be filtered out. The curse of dimensionality does not apply here since there are only two dimensions with the same scale.  The values of hyper-parameters were 500m for radius, minimum required points was set to 3 and euclidean distance was chosen as the distance metric. The mean distance between a sample of cell tower locations taken randomly from the whole dataset was calculated to be 350m. The radius was chosen to be 500m to allow for overlapping but not include too many cell towers accept for the shouldering ones. By choosing an excessive $\epsilon$ the centroid location coordinates was being too inaccurate and was clustering a wide range of subscribers' activity. With a smaller $\epsilon$ minimal clustering (every cell tower will be start to be considered a cluster) was being attained since cell tower location areas will not overlap. The OPTICS algorithm which does away with the $\epsilon$ parameter iterates until it finds the optimal $\epsilon$ and orders its clusters in a hierarchical result. However this algorithm is more computationally expensive and we opted to use the non-generalized DBSCAN version of the algorithm. The implementation used\footnote{https://github.com/scalanlp/nak} was integrated into Apache Spark processes that output clusters of usage patterns for every user. The output of the implementation we used was in the form of coordinates that outlined the rectangular boundaries of the cluster. The final geographic coordinates that would denote the main activity clusters would be those of the centroid. Therefore the centroid for each rectangular cluster had to be determined with readily available libraries (esri was the used library)\footnote{https://github.com/Esri/spatial-framework-for-hadoop, https://github.com/Esri/geometry-api-java} within Apache Hive.   
 
 %TODO - IMPORTANT - what is the Distribution of the first two clusters on the whole data set.
 
@@ -563,7 +575,7 @@ There is a caveat on the accuracy of the actual duration of the trip. Records of
 
 %TODO - frequency of mobile usage records and space in between. 
 
-As similarly done in Toole et al. \cite{Toole2015} routes between origins and destinations were inferred from OSM. A route was assigned for each entry in the OD matrix together with duration information from the trip. The user's routing choice was assumed to be the fastest one given by the Open Source Routing Machine\footnote{http://project-osrm.org/} (OSRM). It is always considered to be static and user does not change route depending on traffic or due to  unexpected events on the road network such as accidents or blockages caused by various other reasons. This is a limitation of our research and introduces inevitable bias. It should be noted however that in the urban scenario in Malta the different routes to take towards work and back are limited due to the small scale of the road network infrastructure. 
+As similarly done in Toole et al. \cite{Toole2015} routes between origins and destinations were inferred from OSM. A route was assigned for each entry in the OD matrix together with duration information from the trip. The user's routing choice was assumed to be the fastest one given by the Open Source Routing Machine\footnote{http://project-osrm.org/docs/v5.15.2/api/\#route-service} (OSRM). OSRM api provides the possibility to request alternative routes. However in the approach taken the route selection was always considered to be static and user does not change route depending on traffic or due to  unexpected events on the road network such as accidents or blockages caused by various other reasons. The fastest route is attributed to each trip done by each user. This may not always be the case since route selection can differ depending on traffic perception and arbitrary route selection made by users. This is a limitation of this research and introduces inevitable bias. It should be noted however that in the urban scenario in Malta the different routes to take towards work and back are limited due to the small scale of the road network infrastructure. In other words there are few possible routes from which users can choose from or that enable detouring, making it highly probable that the fastest path is the preferred choice. In section \ref{section:traffic_flow_evaluation} it is discussed how to measure a level of confidence in the traffic assignment model.
 
 
 \begin{figure}[hp]	
@@ -773,7 +785,7 @@ Another illustration (see figure \ref{fig:traffic_count_color_coded_categorizati
 
 
 
-\section{Traffic flow modelling and prediction}
+\section{Traffic flow modelling and prediction} \label{section:traffic_flow_modelling_and_prediction}
 
 %TODO - steps for predicive modelling -> https://www.mathworks.com/discovery/predictive-modeling.html
 
@@ -1023,7 +1035,7 @@ NHTS \cite{malta2011national} reports 11\% in car trips from 1998 to 2010 and as
 A linear regression model was devised to express the scaling up from trip distribution in 2010 and the one registered in 2016 in this study. A correlation statistical analysis would have sufficed to establish a linear relationship. There is definitely no causality relationship between these two variables. However a regression model was fitted to the data to express how scaling up can be done from a survey based dataset to the OD generated one (see figure \ref{fig:trip_count_correlation_model}) . Results are reported in table \ref{table:trip_dsitribution_statistical_analysis} and these show that there is a significant positive relationship between trip distributions.
 
 
-\section{Trip delay average per hour evaluation}
+\section{Trip average delay per hour evaluation} \label{section:trip_average_delay_evaluation}
 
 \begin{figure}[!]	
 	\includegraphics[scale=0.5]{trip_delay_mosta_marsa.jpg}
@@ -1061,65 +1073,243 @@ When comparing trip expected delays one can notice some distinctive features tha
 
 The fact that data has different seasonality is a serious limitation in the evaluation of the OD-OSRM trip delay model with DMAPI data as ground truth. Given that at the time of writing results could not be recomputed for OD-OSRM for June it was attempted to get DMAPI webservice estimations data for October 2018. DMAPI does not give responses for data queries that request past data. However it can give expected trip duration data in the future even if is queried from months ahead. The data retrieved for 7 days in October 2018 with DMAPI from four months in advance was exactly the same as the one retrieved for the same route in June. Therefore there was not the possibility to evaluate our model with DMAPI data from the same month which was expected to a have a more similar pattern. Still within the perspective of knowing how traffic in June and October is different and the strong correlations between the trip delay estimation models there is a good confidence level in relying on the OD-OSRM trip delay estimation data.	
 
-\section{Traffic flow count prediction for a selection of locations evaluation}
+\section{Traffic flow count evaluation} \label{section:traffic_flow_evaluation}
 
-\begin{figure}
+Route information was retrieved from OSRM with the OD matrix as input. Thus with a matrix of origins and destinations each trip done by any user was assigned a route (refer to method discussed in \ref{subsection:trip_generation}). The fastest route was retrieved from the OSRM and alternative routes were not considered. This is decisive together with OD matrix computation to characterize the model of how traffic assignment is done to the road infrastructure. The average OD-OSRM computed traffic flow count was compared with average actual traffic flow counts at the same locations at the same exact date and time in order to analyse how accurately the traffic assignment distributes traffic flow with fastest route as default selection.
+
+
+
+%---------------------------------- TRAFFIC FLOW COUNT NIGEL PACE VS MINE -------------------
+\begin{figure}[!] \label{fig:kappara_north_traffic_flow_line_chart}
 	\centering
-	\begin{subfigure}[t]{0.45\textwidth}
+	\begin{subfigure}{0.6\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{example-image-a.pdf} 
-		\caption{Generic} \label{fig:timing1}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[t]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{example-image-b.pdf} 
-		\caption{Competitors} \label{fig:timing2}
+		\includegraphics[width=\linewidth]{traffic_flow_count_KN_MINE.jpg} 
+		\caption{\scriptsize{Traffic flow Count Kappara North - OD-OSRM}} 
+		\label{fig:traffic_flow_count_KN_MINE}
 	\end{subfigure}
 	
 	\vspace{1cm}
-	\begin{subfigure}[t]{\textwidth}
+	\begin{subfigure}{0.6\textwidth}
 		\centering
-		\includegraphics[width=\linewidth]{example-image-c.pdf} 
-		\caption{Price regulation} \label{fig:timing3}
+		\includegraphics[width=\linewidth]{traffic_flow_count_KN_Nigel_pace.jpg} 
+		\caption{\scriptsize{Traffic flow Count Kappara North - video stream count}}
+		\label{fig:traffic_flow_count_KN_NP}
 	\end{subfigure}
-	\caption{Some general caption of all the figures. In (\subref{fig:timing1}) you can see a  green square....}
+	
+	\caption{Kappara North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
 \end{figure}
- 
+
+\begin{figure}[!] \label{fig:kappara_south_traffic_flow_line_chart}
+	\centering
+	\begin{subfigure}{0.6\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_KS_MINE.jpg} 
+		\caption{\scriptsize{Traffic flow Count Kappara South - OD-OSRM}} 
+		\label{fig:traffic_flow_count_KS_MINE}
+	\end{subfigure}
+	
+	\vspace{1cm}
+	\begin{subfigure}{0.6\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_KS_Nigel_pace.jpg} 
+		\caption{\scriptsize{Traffic flow count Kappara South - video stream}}
+		\label{fig:traffic_flow_count_KS_NP}
+	\end{subfigure}
+	\caption{Kappara South Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite{Pace2017}}
+\end{figure}
 
 
+\begin{figure}[!] \label{fig:marsa_north_traffic_flow_line_chart}
+	\centering
+	\begin{subfigure}{0.7\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_MN_MINE.jpg} 
+		\caption{\scriptsize{Traffic flow count Marsa North - OD-OSRM}} 
+		\label{fig:traffic_flow_count_MN_MINE}
+	\end{subfigure}
+	
+	\vspace{1cm}
+	\begin{subfigure}{0.7\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_MN_Nigel_pace.jpg} 
+		\caption{\scriptsize{Traffic flow count Marsa North - video stream}}
+		\label{fig:traffic_flow_count_MN_NP}
+	\end{subfigure}
+	\caption{Marsa North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
+\end{figure}
+
+\begin{figure}[!] \label{fig:marsa_south_traffic_flow_line_chart}
+	\centering
+	\begin{subfigure}{0.7\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_MS_MINE.jpg} 
+		\caption{\scriptsize{Traffic flow count Marsa South - OD-OSRM}} 
+		\label{fig:traffic_flow_count_MS_MINE}
+	\end{subfigure}
+	
+	\vspace{1cm}
+	\begin{subfigure}{0.7\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_MS_Nigel_pace.jpg} 
+		\caption{\scriptsize{Traffic flow count Marsa South - video stream}}
+		\label{fig:traffic_flow_count_MS_NP}
+	\end{subfigure}
+	
+	\caption{Marsa South Traffic flow from OD-OSRM and video stream counts comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
+\end{figure}
+
+%-----------------------------------------------------------------------------------------------------
+
+The ground truth to be used is acquired from work done by Nigel Pace in his dissertation submitted in 2017 \cite{Pace2017}. Directional Traffic flow counts were manually gathered from web camera recorded streams from four locations. These were gathered from Kappara and Marsa roadways for traffic which is both northbound and southbound. The Marsa roadway is referred to as the Marsa-Hamrun bypass which is the road leading to and from the Santa Venera tunnels. These roads are known for heavy traffic load and congestion in Malta. The Kappara roadways get and feed traffic to the old Kappara roundabout which today has been replaced by a flyover. The dates for the data collection were from Monday 17th of October to Friday 21st of October. Data for the day of Tuesday the 18th of October was missing from the dataset and there was no particular reason specified why this it was missing. The traffic flow count consisted of an average traffic flow count per minute taken over intervals of 15 minutes. This resulted into 44 samples for data gathered from 6.00 a.m to 8.45 a.m. for every day. An daily average for every quarter of an hour was then taken for both the actual data and the one generated with OD-OSRM.   
+
+
+%---------------------------------- TRAFFIC FLOW COUNT LINE PLOTS -------------------
+
+\begin{figure}[!] \label{fig:kappara_traffic_flow_count_plot}
+	\centering
+	\begin{subfigure}{0.8\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_KN_line_plot.jpg} 
+		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Kappara North}} \label{fig:traffic_flow_count_KN_lineplot}
+	\end{subfigure}
+	
+	\vspace{1cm}
+	\begin{subfigure}{0.8\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_KS_line_plot.jpg} 
+		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Kappara South}}
+		\label{fig:traffic_flow_count_KS_lineplot}
+	\end{subfigure}
+        \caption{OD-OSRM and video stream traffic flow Count linear plot for Kappara traffic flow points.}
+\end{figure}
+
+\begin{figure}[!] \label{fig:marsa_traffic_flow_count_plots}
+	\centering
+	\begin{subfigure}{0.8\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_MN_line_plot.jpg} 
+		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Marsa North}} \label{fig:traffic_flow_count_MN_lineplot}
+	\end{subfigure}
+	
+	\vspace{1cm}
+	\begin{subfigure}{0.8\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{traffic_flow_count_MS_line_plot.jpg} 
+		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Marsa South}}
+		\label{fig:traffic_flow_count_MS_lineplot}
+	\end{subfigure}	
+	\caption{OD-OSRM and video stream traffic flow Count linear plot for Marsa traffic flow points.}
+\end{figure}
+
+%-----------------------------------------------------------------------------------------
+
+A simple linear regression model was fitted for each location to analyse the type of relationship between the OD-OSRM traffic flow counts and actual traffic flow count data used from \cite{Pace2017}. There is no implied cause and impact relationship. It was attempted to determine whether a true actual traffic flow count can be determined with a linear regression model from OD-OSRM traffic flow data. The resulting models are evaluated to determine how the independent variables which are location OD-OSRM traffic flow counts explain the variance of actual traffic flow. The null hypothesis here is that there is no significant functional mapping of actual traffic counts by OD-OSRM traffic counts for any specific road section.
+
+
+\begin{table}[!]	
+	\includegraphics[scale=0.4]{traffic_flow_counts_correlation_results.jpg}
+	\centering
+	\caption{Correlation statistics for linear regression models. OD-OSRM traffic flow count is the predictor variable and video stream traffic count is the dependent variable. $^*$Results are all significant with $p < 0.05$.}
+	\label{table:traffic_flow_correlation_results}
+\end{table}
+
+Results include Pearson's correlation coefficient, $R^2$ which indicates the explained variance and p-value which shows that all results are statistically significant. Degrees of freedom value was 43 for each directional flow under study since there was one independent variable and 44 sample data points were available for each traffic flow point under examination. These results are shown in table \ref{table:traffic_flow_correlation_results}. From the results' table one can conclude that there is a strong correlation between OD-OSRM and actual traffic flow counts for both Kappara carriage ways. The strong correlation is well illustrated with line plot shown in fig. \ref{fig:kappara_traffic_flow_count_plot}. Line charts presented in fig. \ref{fig:kappara_north_traffic_flow_line_chart} and fig. \ref{fig:kappara_south_traffic_flow_line_chart} that illustrate traffic count for both Kappara carriageways show that traffic fluctuation patterns are very similar. On the contrary there is a weak negative correlation for Marsa traffic flow points (see table \ref{table:traffic_flow_correlation_results} and line plots in fig. \ref{fig:marsa_traffic_flow_count_plots}). In fact if one analyses traffic flow charts in fig. \ref{fig:marsa_north_traffic_flow_line_chart} and fig. \ref{fig:marsa_south_traffic_flow_line_chart}  one can see that while actual traffic flow count starts high at 6.00 a.m. and gradually slows down up to 9.00 a.m. in OD-OSRM traffic flow charts shows that traffic increases constantly and peaks at 7.30 a.m. and then it starts to decrease for the subsequent later average samples. Traffic flow in Marsa traffic points does not necessarily mean that traffic flow is slowing down because there is less traffic load. Traffic slows down because of increase in traffic congestion \cite{Pace2017}.
+
+Therefore an explanation why there is strong correlation with Kappara traffic flows but a weak negative one with Marsa located traffic flows can be based on the fact that traffic tends to be slower in Marsa traffic flow points when compared with Kappara traffic flow points. OD-OSRM measurements are based on trips that have been detected but if actual vehicular traffic slows down due to congestion the OD-OSRM traffic flow count does not reflect actual traffic counts. Therefore two conclusions are derived from this. A first conclusion is that reliable regression models can be trained on actual traffic data for traffic flow road sections which do not experience heavy traffic slow down.  Secondly the regression model mapped traffic flow counts give a reliable account of what flow capacity is 'expected' to be serviced at any given time from a given road section in order that traffic flows smoothly. 
+
+\section{Traffic flow count prediction for a selection of locations evaluation}
+
+In section \ref{section:traffic_flow_modelling_and_prediction} an approach how to predict traffic flow count for specific road sections was presented. The model proposed is an MLPC that as a function takes the traffic flow count from each recorded location as input and predicts an approximative traffic flow count for a specific location/road section for a date time in the immediate relative future. The traffic flow counts are binned in specific labels through a logarithm based function. Traffic flow count is represented with 4 bins which are equivalent to the model's classes. These classes range from class one to class four with class one being the lowest indicator of traffic flow count and class four being the highest. The MLPC model was devised by dedicating 60\% of the data for training and 40\% of the data for testing. Since Neural networks require a lot of data to train properly no data was dedicated for validating the models when searching the optimal hyper  parameters such as neural network topology layout and PCA first k components. A trial and error approach was used to check how the model would perform when changing such hyperparameters. Testing was done only for the application phase to evaluate how the model would perform with real-world data. 
+
+Collected performance metrics include accuracy and weighted precision, recall and f1-score. Accuracy gives a very basic picture of how the model is performing. However it does not give clear information how the model is performing across all traffic flow count classes. The locations chosen from the available dataset possesses the property of unbalanced classes. For example if a given location has 95\% of classes of type one a model which always predicts class one will be 95\% accurate on testing. Weighted precision and weighted recall further describe the performance of the model. When having a high precision and a low recall the model is more appropriate for exactness in classification (false positives are kept at a minimum at the cost of a high number of false negatives). A high recall and low precision model is better in identifying  a higher percentage of classes correctly but can output a relatively high number of false positives in the process.   
+
+In machine learning sometimes high recall is more important then high precision or the other way round and in most of the times there is a trade-off. The more you tune the model to have one of these metrics better the more you risk to get a lower performance on the other metric.  The ideal is to have both high recall and high precision. In the case of this study recall for high level of traffic classes is very important since knowledge of high traffic count is important and noise would be acceptable. Weighted f1-score was used to portray a balanced measure between recall and precision.
+
+\begin{table}[t!]	
+	\includegraphics[scale=0.75]{classification_metrics_result.jpg}
+	\centering
+	\caption{Classification evaluation metrics for 4 traffic flow road sections with 4 label classification and PCA set to extract 324 first components. Testing was done with 4 sizes of prediction time window ahead for each prediction location.}
+	\label{table:classification_mertrics}
+\end{table}
+
+Table \ref{table:classification_mertrics} shows evaluation results described by metrics just discussed. It can be seen that models trained to predict for smaller time ahead intervals generally perform better than models that are trained with a lengthier prediction time interval for the same location.  Models all have proven to have highest recall and precision for class one traffic flow counts. It appears from table that the best overall classification metric scores were attained for Hamrun-Valletta roadway. However on examination of the confusion matrix (shown in fig. \ref{fig:confusion_matrix_hamrun_valletta_15min}) for classification results per label one can see that the model performed very badly for high traffic flow count classes. There are not evaluation metrics results for class four and for class two and three the precision and recall metrics are very low.In fact when computing the f1-score for class wo and class three both results to be low at 0.14 and 0.0 respectively. In contrast predictive overall results for Marsa road that leads to Aldo Moro are less promising than those for Hamrun-Valletta arterial road. Still the predictive efficacy results are very good especially when examined in the perspective of the confusion matrix shown in fig. \ref{fig:confusion_matrix_marsa_aldo_moro_15min}. Class four classified as class one or class two cases are very few and even if almost half of class four test values were predicted as class three in practice this would still make the model useful and offer guidance to describe the level of high traffic flow counts.
+
+
+\begin{figure}[h]	
+	\includegraphics[scale=0.5]{confusion_matrix_hamrun_valletta_342_4bin_15min.jpg}
+	\centering
+	\caption{Confusion matrix for hamrun-valleta road traffic flow count for 15 minutes ahead prediction interval.}
+	\label{fig:confusion_matrix_hamrun_valletta_15min}
+\end{figure}
+
+\begin{figure}[h]	
+	\includegraphics[scale=0.5]{confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg}
+	\centering
+	\caption{Confusion matrix for marsa to aldo moro road traffic flow count for 15 minutes ahead prediction interval.}
+	\label{fig:confusion_matrix_marsa_aldo_moro_15min}
+\end{figure}
+
+
+
+
+%TODO - test with smaller PCA
 
 
 %TODO - test with weekdays only
 
 \chapter{Future Work} \label{chapter:future_work}
-\section{Section Name}
-%TODO - to statisitically model route trip choice for OD matrix coordinates by eventually checking registration of users along the route taken and estimating likely route taken.
 
-%TODO - parallel DBSCAN
+\section{Future improvements}
 
-%TODO - more activity hubs/clusters used to form trips.
 
-%TODO - sliding window.
 
-%TODO - what other features could have been added. 
+\subsection{Use of alternative data sources for ground truth}
+The challenge in such projects is to find ground truth to properly evaluate findings and achieved results. One way to achieve this is to develop or use off the shelf software that collects GPS points and collaborate with a group of people to gather the data. The resulting sample of data would be ideal to carry out correlations with experimental outcomes.
 
-%TODO - prediction of other features related to traffic such as polution. 
+\subsection{Clustering optimization}
+DBSCAN was used to find density based clusters to extract most common origin and destination locations for users. As discussed in section \ref{section:methodology:clustering} $\epsilon$ was set to 500m. The OPTICS is an algorithm which is similar to DBSCAN which does not require $\epsilon$ parameter as an input and is more efficient to find meaningful clusters for data with varying density. Clusters in this research that had a weak density might have not been captured with a radius of 500m. DBSCAN was computationally expensive and consumed a lot of time in the experimentation phase. An optimization for the performance of the proecessig of the whole pipeline would be running DBSCAN on data in parallel in a distributed manner. An implementation based on the Spark platform is proposed in \cite{huang2017research}.
 
-%TODO - use snap to road apis for route choice detection. https://developers.google.com/maps/documentation/roads/snap
+\subsection{Route selection}
+One limitation in this dissertation was to assume that users take always the fastest route and do not detour for whatever reason along the trip. Traffic assignment therefore is static and does not adapt to the traffic events on the road infrastructure. This would not give optimal results when gathering real-time and historical analytical statistics on routes, trips and distributed traffic load on the road infrastructure. Other methods must be combined with the proposed solution to rectify route selection and give a more realistic picture of traffic flow based on actual user route taking. One way how to improve correct route selection rate is by further polling mobile usage data during a user trip and snap the user to the nearest road route with snap to road software such as Roads API from Google\footnote{https://developers.google.com/maps/documentation/roads/snap}. This type of software takes a set of coordinates as input and returns a similar set of data that most likely define the route outlined by the set of data. Route selection would not be necessarily computed for each user every time a user trip is detected. A statistical model is built to learn what are most likely routes taken by each user in a given date and time context. This model then in the application phase can be used to analyse traffic load which is related to the predicted routes.
 
-%TODO - nueral netwrok trained on routes truip delays
+\subsection{Efficient traffic flow count noise filtering}
+An averaging moving filter would remove noise from the traffic flow count and improve results by applying a smoothing function. When getting a sliding average more data points can be used for prediction. In our approach to reduce computation costs average with binning size of 5 minute each was calculated but this would reduce a 60 data point resolution to 12 data points in an hour. When building a machine learning model that predicts traffic flow count a fixed interval was used to get the future classification label (refer to section \ref{section:traffic_flow_modelling_and_prediction}). This fixed interval had to be a multiple of the 5 minute window and there was no flexibility for more granular tuning. Having less data points for the reasons just mentioned provided less data for training to the MLPC.
 
-%TODO - check trip delay model in June and compare with October - compare overall with google api
+\subsection{Evaluate trip average delay by correlating with data with same seasonality}
+Evaluation for \ref{section:trip_average_delay_evaluation} was done by comparing results based on a June dataset with data retrieved through DMAPI and an October mobile data usage dataset. This evaluation although it gave promising results should be repeated with seasonality of datasets removed from the equation to compare like with like. Malta traffic in October is very different from Malta traffic in June. 
 
-%TODO - analyze validity of OD matrix to model estimated trip delay by specific routes 
+
+
+\section{Future research and potential projects}
+
+\subsection{Machine learning for trip delay prediction}
+
+In this research machine learning was used to train an MLPC with all locations' traffic flow count as data features. All the traffic flow count would be mapped by a built model to a level of traffic representing the future traffic flow count for a specific location. A similar predictive model can be built to predict estimated trip delay for every given route for any given required time. A comprehensive used routes database that exists in Malta for all users based on the OD matrix has to be compiled. Than statisictical information on trip delays per 5 minutes for same routes are aggregated. One should investigate the possibility of using routes' trip delays as training input features to a machine learning model. The final predicted classification would be a trip delay class for certain give routes. The model basically would be a function that maps trip delays for a set of routes to a classification of trip delay for a given route.
+
+
+\subsection{Analysis of more activity hubs and how they affect traffic flow}
+
+In order to keep this study simple and not increase the evaluation combinations only two main clusters' location were retrieved per user. These two clusters were considered as being the home and work locations. However the main relevant assumption was that most trips were made between these two main clusters. This is not representative for all trips made and would incur phantom trip delays that could only be explained by stops at locations frequently visited by users that are not one of the main activity clusters. A fact that heavily impacts daily traffic in Malta are extra trips that their destinations are concentrated around schools. School run trips can be detected by extracting the third most common location that is located within a school geofencing boundary and by time boxing with school starting and finishing hours. A lot of trips have been discarded with the used methodology because they had excessive delays. Many of these trips can be retained to better explain the traffic dynamics if trips are further divided with the insertion of a third location.
+
+\subsection{Use of other datasets to increase traffic flow model accuracy }
+
+Other datasources such as social media and ANPR video streams could be used to further dynamically assign traffic to the road network. From social network feeds one can extract for example accidents location and time. This data could be used to analyse the accident impact on traffic flow and can be used as an input feature for machine learning models. Also correlation between weather and traffic flow can be done by using available weather APIs.
+
+
 
 \chapter{Conclusion}
  
+ The approach taken is systematic so that the research passes through gradual stages in such a way that we build on top of previous analyses and prototypes. Targets of this research include extraction of behavioural patterns of traffic encountered on the level of the isolated individual, subset of individuals, locality, specific time events and specific traffic hotspots. As described at the outset the main aim is not to trace the mobility of users but rather to predict estimated traffic congestion points and computation of duration for a travelling path given a starting point and a destination. Ideally if the users are highly predictable and stick to a regular travelling pattern they might be automatically notified when they are actually going to travel, how much its going to take them in terms of duration and suggestions are given to take different alternative routes which are less costly in terms of business.
+ 
+ %TODO - https://news.transport.gov.mt/traffic-counts-in-santa-venera-2/
+
+ 
+ %TODO - traffic assignment 
  
  %trip count nso vs trip count od matrix -> survey resolution is far less than one offered in OD matrix
  
-%TODO - scaling of results - IMPORTNT - can be taken from linear regression model
+%TODO - scaling of results - IMPORTNT - can be taken from linear regression model - If a road section model correlation is proved to be high and result are statistically significant
 
 %TODO - sample bias in Transport malta trip count - survey is taking during the afternoon when people who travel at night might not be there - during the night trip count is very low - it is state in NHTS that most respondents generally round off to the nearest 5 minutes
 
@@ -1132,10 +1322,6 @@ The fact that data has different seasonality is a serious limitation in the eval
 
  
  
- The approach taken is systematic so that the research passes through gradual stages in such a way that we build on top of previous analyses and prototypes. Targets of this research include extraction of behavioural patterns of traffic encountered on the level of the isolated individual, subset of individuals, locality, specific time events and specific traffic hotspots. As described at the outset the main aim is not to trace the mobility of users but rather to predict estimated traffic congestion points and computation of duration for a travelling path given a starting point and a destination. Ideally if the users are highly predictable and stick to a regular travelling pattern they might be automatically notified when they are actually going to travel, how much its going to take them in terms of duration and suggestions are given to take different alternative routes which are less costly in terms of business. 
- 
-
-
 \appendix
 
 \chapter{This chapter is in the appendix}

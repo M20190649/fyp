@@ -1,14 +1,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Data Dictionary of mobile usage raw dataset}}{31}{table.3.1}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Basic summary statistics of main EDR dataset.}}{32}{table.3.2}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Basic summary statistics of main EDR dataset after removing 1 hour duration EDRs.}}{33}{table.3.3}
-\contentsline {table}{\numberline {3.4}{\ignorespaces A sample of traffic flow count by bin for every 5 minute window.}}{53}{table.3.4}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Sparse traffic flow matrix}}{54}{table.3.5}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Data Dictionary of mobile usage raw dataset\relax }}{31}{table.caption.5}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Basic summary statistics of main EDR dataset.\relax }}{32}{table.caption.6}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Basic summary statistics of main EDR dataset after removing 1 hour duration EDRs.\relax }}{33}{table.caption.8}
+\contentsline {table}{\numberline {3.4}{\ignorespaces A sample of traffic flow count by bin for every 5 minute window.\relax }}{53}{table.caption.18}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Sparse traffic flow matrix\relax }}{54}{table.caption.19}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces NHTS and OD trip distributions proved to be highly correlated. $ ^* p < 0.001$ }}{62}{table.4.1}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Correlation statistics between DMAPI routes' average trip delay and DMAPI routes' correlation with OD-OSRM computed trip delay. Note that correlation is being done between data retrieved in June for DMAPI and data retreived in October for OD-OSRM}}{66}{table.4.2}
+\contentsline {table}{\numberline {4.1}{\ignorespaces NHTS and OD trip distributions proved to be highly correlated. $ ^* p < 0.001$ \relax }}{63}{table.caption.27}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Correlation statistics between DMAPI routes' average trip delay and DMAPI routes' correlation with OD-OSRM computed trip delay. Note that correlation is being done between data retrieved in June for DMAPI and data retreived in October for OD-OSRM\relax }}{67}{table.caption.32}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Correlation statistics for linear regression models. OD-OSRM traffic flow count is the predictor variable and video stream traffic count is the dependent variable. $^*$Results are all significant with $p < 0.05$.\relax }}{76}{table.caption.39}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Classification evaluation metrics for 4 traffic flow road sections with 4 label classification and PCA set to extract 324 first components. Testing was done with 4 sizes of prediction time window ahead for each prediction location.\relax }}{79}{table.caption.40}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

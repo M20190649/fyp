@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  20 JUN 2018 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  25 JUN 2018 00:57
 entering extended mode
 **./fyp.tex
 (fyp.tex
@@ -506,44 +506,60 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 Package: algpseudocode 
 
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
-\multirow@colwidth=\skip69
-\multirow@cntb=\count129
-\multirow@dima=\skip70
-\bigstrutjot=\dimen138
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen138
+\captionmargin@=\dimen139
+\captionwidth=\dimen140
+\caption@tempdima=\dimen141
+\caption@indent=\dimen142
+\caption@parindent=\dimen143
+\caption@hangindent=\dimen144
 )
-\c@definition=\count130
-\c@example=\count131
-\c@proposition=\count132
-\c@lemma=\count133
-\c@corollary=\count134
-\c@theorem=\count135
+\c@ContinuedFloat=\count129
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+\c@subfigure=\count130
+\c@subtable=\count131
+)
+\c@definition=\count132
+\c@example=\count133
+\c@proposition=\count134
+\c@lemma=\count135
+\c@corollary=\count136
+\c@theorem=\count137
  (fyp.aux)
 \openout1 = `fyp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 67.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 65.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 67.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -588,16 +604,16 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
-\scratchdimen=\dimen139
+\scratchcounter=\count138
+\scratchdimen=\dimen145
 \scratchbox=\box32
-\nofMPsegments=\count137
-\nofMParguments=\count138
+\nofMPsegments=\count139
+\nofMParguments=\count140
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count139
-\MPscratchDim=\dimen140
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
+\MPscratchCnt=\count141
+\MPscratchDim=\dimen146
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
 \everyMPtoPDFconversion=\toks35
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -613,7 +629,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 65.
+Package hyperref Info: Link coloring OFF on input line 67.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -621,76 +637,78 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count142
+\c@section@level=\count144
 )
-LaTeX Info: Redefining \ref on input line 65.
-LaTeX Info: Redefining \pageref on input line 65.
-LaTeX Info: Redefining \nameref on input line 65.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
 
 (fyp.out) (fyp.out)
 \@outlinefile=\write3
 \openout3 = `fyp.out'.
 
- <crest.pdf, id=198, 302.26929pt x 413.97762pt>
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ <crest.pdf, id=238, 302.26929pt x 413.97762pt>
 File: crest.pdf Graphic file (type pdf)
 
 <use crest.pdf>
-Package pdftex.def Info: crest.pdf used on input line 79.
+Package pdftex.def Info: crest.pdf used on input line 81.
 (pdftex.def)             Requested size: 62.32074pt x 85.35826pt.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 79.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 81.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 79.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 81.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 79.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 81.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 79.
+(Font)              <12> on input line 81.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 79.
+(Font)              <8> on input line 81.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 79.
-LaTeX Font Info:    Try loading font information for U+msa on input line 79.
+(Font)              <6> on input line 81.
+LaTeX Font Info:    Try loading font information for U+msa on input line 81.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 79.
+LaTeX Font Info:    Try loading font information for U+msb on input line 81.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./crest.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 79.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 81.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 79--79
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 81--81
   $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
 
  []
 
@@ -733,17 +751,17 @@ n week-days and week-
 ]
 Chapter 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 100.
+(Font)              <24.88> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 100.
+(Font)              <20.74> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 100.
+(Font)              <17.28> on input line 112.
 
-Underfull \hbox (badness 10000) in alignment at lines 100--100
+Underfull \hbox (badness 10000) in alignment at lines 112--112
 []
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 107.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 119.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -753,16 +771,16 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ] [2] [3] [4] [5]
 [6] [7]
 
-LaTeX Warning: Reference `background' on page 8 undefined on input line 161.
+LaTeX Warning: Reference `background' on page 8 undefined on input line 173.
 
 [8]
 
-LaTeX Warning: Reference `background' on page 9 undefined on input line 168.
+LaTeX Warning: Reference `background' on page 9 undefined on input line 180.
 
 [9] [10]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in alignment at lines 182--182
+Underfull \hbox (badness 10000) in alignment at lines 194--194
 []
  []
 
@@ -771,377 +789,271 @@ Underfull \hbox (badness 10000) in alignment at lines 182--182
 ] [12] [13] [14] [15] [16] [17] [18] [19] [20]
 
 LaTeX Warning: Reference `label_random_walkabel' on page 21 undefined on input 
-line 273.
+line 285.
 
 [21] [22] [23]
-<images/truncated_power_law.jpg, id=664, 344.78813pt x 333.49594pt>
+<images/truncated_power_law.jpg, id=758, 344.78813pt x 333.49594pt>
 File: images/truncated_power_law.jpg Graphic file (type jpg)
 
 <use images/truncated_power_law.jpg>
-Package pdftex.def Info: images/truncated_power_law.jpg used on input line 304.
+Package pdftex.def Info: images/truncated_power_law.jpg used on input line 316.
 
 (pdftex.def)             Requested size: 258.59045pt x 250.12134pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24] [25pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.2.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.314 
-       <./images/truncated_power_law.jpg>] [26] [27] [28]
+[24] [25 <./images/truncated_power_law.jpg>] [26] [27] [28]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in alignment at lines 353--353
+Underfull \hbox (badness 10000) in alignment at lines 365--365
 []
  []
 
 [29
 
-] [30] [31pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.3.1}) has been already used, duplicate ignored
+]
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.407 
-      ]
-<images/data_session_duration_bin_count.jpg, id=729, 427.5975pt x 223.58531pt>
+Package caption Warning: \label without proper reference on input line 380.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:dataset_01' on page 30 undefined on input line 
+375.
+
+[30]
+
+Package caption Warning: \label without proper reference on input line 422.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:summary statistics' on page 31 undefined on inp
+ut line 418.
+
+[31]
+<images/data_session_duration_bin_count.jpg, id=824, 427.5975pt x 223.58531pt>
 File: images/data_session_duration_bin_count.jpg Graphic file (type jpg)
 
 <use images/data_session_duration_bin_count.jpg>
 Package pdftex.def Info: images/data_session_duration_bin_count.jpg used on inp
-ut line 437.
+ut line 449.
 (pdftex.def)             Requested size: 320.69733pt x 167.68855pt.
- [32pdfTeX warning (ext4): destination with the same identifier (name{table.3.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.444 
-      ] <images/data_session_duration.jpg, id=735, 588.69937pt x 327.47343pt>
+ [32]
+<images/data_session_duration.jpg, id=830, 588.69937pt x 327.47343pt>
 File: images/data_session_duration.jpg Graphic file (type jpg)
 
 <use images/data_session_duration.jpg>
-Package pdftex.def Info: images/data_session_duration.jpg used on input line 47
-4.
+Package pdftex.def Info: images/data_session_duration.jpg used on input line 48
+6.
 (pdftex.def)             Requested size: 441.52344pt x 245.60448pt.
 
-Overfull \hbox (20.42255pt too wide) in paragraph at lines 474--476
+Overfull \hbox (20.42255pt too wide) in paragraph at lines 486--488
  [][] 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 497.
+(Font)              <10> on input line 509.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 497.
+(Font)              <7> on input line 509.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 497.
+(Font)              <5> on input line 509.
 
-Overfull \hbox (37.77298pt too wide) in paragraph at lines 497--497
+Overfull \hbox (37.77298pt too wide) in paragraph at lines 509--509
 [][][]\OT1/lmr/m/n/10 Google Snap to Road is an ex-am-ple - https://developers.
 google.com/maps/documentation/roads/snap| 
  []
 
-[33pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.498 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.3
-.3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.498 
-       <./images/data_session_duration_bin_count.jpg>] [34pdfTeX warning (ext4)
-: destination with the same identifier (name{figure.3.2}) has been already used
-, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.498 
-       <./images/data_session_duration.jpg>]
-<images/cell_towers_distribution.png, id=750, 482.80376pt x 323.2075pt>
+[33 <./images/data_session_duration_bin_count.jpg>] [34 <./images/data_session_
+duration.jpg>]
+<images/cell_towers_distribution.png, id=845, 482.80376pt x 323.2075pt>
 File: images/cell_towers_distribution.png Graphic file (type png)
 
 <use images/cell_towers_distribution.png>
 Package pdftex.def Info: images/cell_towers_distribution.png used on input line
- 500.
+ 512.
 (pdftex.def)             Requested size: 362.10193pt x 242.40503pt.
- [35pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.508 
-       <./images/cell_towers_distribution.png>]
+ [35 <./images/cell_towers_distribution.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 513.
+(hyperref)                removing `\\' on input line 525.
 
 [36] [37] [38]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 530.
+               Default added (so using `!tbp') on input line 542.
 
-<images/clustering.jpg, id=779, 633.11531pt x 373.395pt>
+<images/clustering.jpg, id=874, 633.11531pt x 373.395pt>
 File: images/clustering.jpg Graphic file (type jpg)
 
 <use images/clustering.jpg>
-Package pdftex.def Info: images/clustering.jpg used on input line 531.
+Package pdftex.def Info: images/clustering.jpg used on input line 543.
 (pdftex.def)             Requested size: 379.87212pt x 224.03873pt.
- [39pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.539 
-       <./images/clustering.jpg>] [40]
-Overfull \hbox (10.84427pt too wide) in paragraph at lines 558--558
+ [39 <./images/clustering.jpg>] [40]
+Overfull \hbox (10.84427pt too wide) in paragraph at lines 570--570
 [][][]\OT1/lmr/m/n/10 https://cwiki.apache.org/confluence/display/Hive/Language
 Manual+WindowingAndAnalytics| 
  []
 
 [41]
-<images/Trip_delay_cumm_distribution.jpg, id=805, 625.58719pt x 411.03563pt>
+<images/Trip_delay_cumm_distribution.jpg, id=901, 625.58719pt x 411.03563pt>
 File: images/Trip_delay_cumm_distribution.jpg Graphic file (type jpg)
 
 <use images/Trip_delay_cumm_distribution.jpg>
 Package pdftex.def Info: images/Trip_delay_cumm_distribution.jpg used on input 
-line 570.
+line 582.
 (pdftex.def)             Requested size: 375.35521pt x 246.62328pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 576.
+               Default added (so using `!tbp') on input line 588.
 
 
-<images/trip_delay_cumm_distribution_total.jpg, id=806, 517.18219pt x 302.63063
+<images/trip_delay_cumm_distribution_total.jpg, id=902, 517.18219pt x 302.63063
 pt>
 File: images/trip_delay_cumm_distribution_total.jpg Graphic file (type jpg)
  <use images/trip_delay_cumm_distribution_total.jpg>
 Package pdftex.def Info: images/trip_delay_cumm_distribution_total.jpg used on 
-input line 577.
+input line 589.
 (pdftex.def)             Requested size: 310.3117pt x 181.57977pt.
- [42pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-5}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.584 
-       <./images/Trip_delay_cumm_distribution.jpg>]
-<images/Trip_delay.jpg, id=813, 651.93562pt x 472.01344pt>
+ [42] [43 <./images/Trip_delay_cumm_distribution.jpg> <./images/trip_delay_cumm
+_distribution_total.jpg>] <images/Trip_delay.jpg, id=913, 651.93562pt x 472.013
+44pt>
 File: images/Trip_delay.jpg Graphic file (type jpg)
 
 <use images/Trip_delay.jpg>
-Package pdftex.def Info: images/Trip_delay.jpg used on input line 586.
+Package pdftex.def Info: images/Trip_delay.jpg used on input line 598.
 (pdftex.def)             Requested size: 391.16438pt x 283.21025pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.593 
-       <./images/trip_delay_cumm_distribution_total.jpg>] [44pdfTeX warning (ex
-t4): destination with the same identifier (name{figure.3.7}) has been already u
-sed, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.595 
-       <./images/Trip_delay.jpg>]
+ [44 <./images/Trip_delay.jpg>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 600.
+put line 612.
 
-Overfull \hbox (18.38298pt too wide) in paragraph at lines 616--617
+Overfull \hbox (18.38298pt too wide) in paragraph at lines 628--629
 [] $[] \OMS/lmsy/m/n/12   []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--619
+Underfull \hbox (badness 10000) in paragraph at lines 629--631
 [] $[] \OMS/lmsy/m/n/12  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 625--626
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 [] $[] \OMS/lmsy/m/n/12  
  []
 
 
-Overfull \hbox (34.48232pt too wide) in paragraph at lines 644--645
+Overfull \hbox (34.48232pt too wide) in paragraph at lines 656--657
 [] $[] \OMS/lmsy/m/n/12   [][]$ 
  []
 
 
-Overfull \hbox (19.79933pt too wide) in paragraph at lines 648--649
+Overfull \hbox (19.79933pt too wide) in paragraph at lines 660--661
 [] $[] \OMS/lmsy/m/n/12   []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--673
+Underfull \hbox (badness 10000) in paragraph at lines 684--685
 [][]
  []
 
 
-Overfull \hbox (35.15453pt too wide) in paragraph at lines 690--691
+Overfull \hbox (35.15453pt too wide) in paragraph at lines 702--703
 [] $[] \OMS/lmsy/m/n/12  $ $[][]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--692
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
 [] $[] \OMS/lmsy/m/n/12  $
  []
 
 
-Overfull \hbox (35.39581pt too wide) in paragraph at lines 693--694
+Overfull \hbox (35.39581pt too wide) in paragraph at lines 705--706
 []$[][][]$ 
  []
 
 
-Overfull \hbox (8.4082pt too wide) in paragraph at lines 708--709
+Overfull \hbox (8.4082pt too wide) in paragraph at lines 720--721
 [] $[] \OMS/lmsy/m/n/12  $ $[][][][]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--727
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
 [] $[] \OMS/lmsy/m/n/12  $
  []
 
 [45] [46] [47]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 746.
+               Default added (so using `!tbp') on input line 758.
 
-<images/concentric_map.jpg, id=848, 672.26157pt x 493.845pt>
+<images/concentric_map.jpg, id=942, 672.26157pt x 493.845pt>
 File: images/concentric_map.jpg Graphic file (type jpg)
 
 <use images/concentric_map.jpg>
-Package pdftex.def Info: images/concentric_map.jpg used on input line 747.
+Package pdftex.def Info: images/concentric_map.jpg used on input line 759.
 (pdftex.def)             Requested size: 403.36005pt x 296.30928pt.
- [48pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-8}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.754 
-       <./images/concentric_map.jpg>]
+ [48] [49 <./images/concentric_map.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 755.
+               Default added (so using `!tbp') on input line 767.
 
 
-<images/traffic_count_color_coded_categorization.jpg, id=854, 700.11563pt x 625
+<images/traffic_count_color_coded_categorization.jpg, id=954, 700.11563pt x 625
 .58719pt>
 File: images/traffic_count_color_coded_categorization.jpg Graphic file (type jp
 g)
  <use images/traffic_count_color_coded_categorization.jpg>
 Package pdftex.def Info: images/traffic_count_color_coded_categorization.jpg us
-ed on input line 756.
+ed on input line 768.
 (pdftex.def)             Requested size: 350.05696pt x 312.79283pt.
-
-<images/traffic_month_average.jpg, id=857, 825.0825pt x 663.98062pt>
+ [50 <./images/traffic_count_color_coded_categorization.jpg>]
+<images/traffic_month_average.jpg, id=962, 825.0825pt x 663.98062pt>
 File: images/traffic_month_average.jpg Graphic file (type jpg)
 
 <use images/traffic_month_average.jpg>
-Package pdftex.def Info: images/traffic_month_average.jpg used on input line 76
-6.
+Package pdftex.def Info: images/traffic_month_average.jpg used on input line 77
+8.
 (pdftex.def)             Requested size: 412.54024pt x 331.98949pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[49] [50pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.3.9}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.781 
-       <./images/traffic_count_color_coded_categorization.jpg>] [51pdfTeX warni
-ng (ext4): destination with the same identifier (name{figure.3.10}) has been al
-ready used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.781 
-       <./images/traffic_month_average.jpg>] [52]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[53pdfTeX warning (ext4): destination with the same identifier (name{table.3.4}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.834 
-      ]
-<images/traffic_count_cumm_distribution.jpg, id=893, 358.33875pt x 214.55156pt>
+ [51 <./images/traffic_month_average.jpg>] [52] [53]
+<images/traffic_count_cumm_distribution.jpg, id=989, 358.33875pt x 214.55156pt>
 File: images/traffic_count_cumm_distribution.jpg Graphic file (type jpg)
 <use images/traffic_count_cumm_distribution.jpg>
 Package pdftex.def Info: images/traffic_count_cumm_distribution.jpg used on inp
-ut line 842.
+ut line 854.
 (pdftex.def)             Requested size: 268.7534pt x 160.91327pt.
- [54pdfTeX warning (ext4): destination with the same identifier (name{table.3.5
-}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.850 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3.11}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.850 
-       <./images/traffic_count_cumm_distribution.jpg>]
-<images/steps_function.jpg, id=902, 510.40688pt x 325.96782pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[54] <images/steps_function.jpg, id=998, 510.40688pt x 325.96782pt>
 File: images/steps_function.jpg Graphic file (type jpg)
 
 <use images/steps_function.jpg>
-Package pdftex.def Info: images/steps_function.jpg used on input line 853.
+Package pdftex.def Info: images/steps_function.jpg used on input line 865.
 (pdftex.def)             Requested size: 255.2028pt x 162.9835pt.
 
-<images/steps_function_zoom_in.jpg, id=903, 511.15968pt x 322.20375pt>
+<images/steps_function_zoom_in.jpg, id=999, 511.15968pt x 322.20375pt>
 File: images/steps_function_zoom_in.jpg Graphic file (type jpg)
 
 <use images/steps_function_zoom_in.jpg>
 Package pdftex.def Info: images/steps_function_zoom_in.jpg used on input line 8
-60.
+72.
 (pdftex.def)             Requested size: 255.57921pt x 161.10147pt.
- [55pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-12}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.876 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3.13}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.876 
-       <./images/steps_function.jpg> <./images/steps_function_zoom_in.jpg>]
-[56] <images/cumulative_variance_pca.jpg, id=923, 510.40688pt x 274.02374pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[55 <./images/traffic_count_cumm_distribution.jpg> <./images/steps_function.jpg
+>] [56 <./images/steps_function_zoom_in.jpg>]
+<images/cumulative_variance_pca.jpg, id=1017, 510.40688pt x 274.02374pt>
 File: images/cumulative_variance_pca.jpg Graphic file (type jpg)
 
 <use images/cumulative_variance_pca.jpg>
 Package pdftex.def Info: images/cumulative_variance_pca.jpg used on input line 
-887.
+899.
 (pdftex.def)             Requested size: 255.2028pt x 137.01154pt.
- [57pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-14}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.906 
-       <./images/cumulative_variance_pca.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 908--908
+ [57 <./images/cumulative_variance_pca.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 920--920
 [][][]\OT1/lmr/m/n/10 https://spark.apache.org/docs/latest/ml-classification-re
 gression.html#multilayer-
  []
@@ -1149,466 +1061,407 @@ gression.html#multilayer-
 [58]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 917.
+               Default added (so using `!tbp') on input line 929.
 
-<images/ann_topology.jpg, id=941, 583.42969pt x 490.08093pt>
+<images/ann_topology.jpg, id=1035, 583.42969pt x 490.08093pt>
 File: images/ann_topology.jpg Graphic file (type jpg)
 
 <use images/ann_topology.jpg>
-Package pdftex.def Info: images/ann_topology.jpg used on input line 918.
+Package pdftex.def Info: images/ann_topology.jpg used on input line 930.
 (pdftex.def)             Requested size: 291.71413pt x 245.03987pt.
- [59pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-15}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.934 \chapter
-              {Evaluation and Results} \label{chapter:evaluation_and_results} <
-./images/ann_topology.jpg>]
+ [59] [60 <./images/ann_topology.jpg>]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in alignment at lines 934--934
+Underfull \hbox (badness 10000) in alignment at lines 946--946
 []
  []
 
-[60
+[61
 
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 964.
+               Default added (so using `!tbp') on input line 976.
 
-<images/Trip_delay_per_day_week.jpg, id=950, 789.70032pt x 315.42844pt>
+<images/Trip_delay_per_day_week.jpg, id=1050, 789.70032pt x 315.42844pt>
 File: images/Trip_delay_per_day_week.jpg Graphic file (type jpg)
 
 <use images/Trip_delay_per_day_week.jpg>
 Package pdftex.def Info: images/Trip_delay_per_day_week.jpg used on input line 
-965.
+977.
 (pdftex.def)             Requested size: 394.8492pt x 157.71382pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 975.
+               Default added (so using `!tbp') on input line 987.
 
 
-<images/Transport_malta_trip_distribution.jpg, id=954, 624.08156pt x 393.72093p
-t>
+<images/Transport_malta_trip_distribution.jpg, id=1054, 624.08156pt x 393.72093
+pt>
 File: images/Transport_malta_trip_distribution.jpg Graphic file (type jpg)
  <use images/Transport_malta_trip_distribution.jpg>
 Package pdftex.def Info: images/Transport_malta_trip_distribution.jpg used on i
-nput line 976.
+nput line 988.
 (pdftex.def)             Requested size: 374.45183pt x 236.23438pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 985.
+               Default added (so using `!tbp') on input line 997.
 
-[61pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1003 
-        <./images/Trip_delay_per_day_week.jpg>] [62pdfTeX warning (ext4): desti
-nation with the same identifier (name{figure.4.2}) has been already used, dupli
-cate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1003 
-       pdfTeX warning (ext4): destination with the same identifier (name{table.
-4.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1003 
-        <./images/Transport_malta_trip_distribution.jpg>]
+[62 <./images/Trip_delay_per_day_week.jpg>] [63 <./images/Transport_malta_trip_
+distribution.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1005.
+               Default added (so using `!tbp') on input line 1017.
 
-<images/Trip_count_correlation.jpg, id=969, 674.52pt x 369.63094pt>
+<images/Trip_count_correlation.jpg, id=1069, 674.52pt x 369.63094pt>
 File: images/Trip_count_correlation.jpg Graphic file (type jpg)
 
 <use images/Trip_count_correlation.jpg>
 Package pdftex.def Info: images/Trip_count_correlation.jpg used on input line 1
-006.
+018.
 (pdftex.def)             Requested size: 404.71512pt x 221.78026pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1016.
-
-
-<images/Trip_distribution_line_fit_plot.jpg, id=973, 696.35156pt x 472.01344pt>
-File: images/Trip_distribution_line_fit_plot.jpg Graphic file (type jpg)
-<use images/Trip_distribution_line_fit_plot.jpg>
-Package pdftex.def Info: images/Trip_distribution_line_fit_plot.jpg used on inp
-ut line 1017.
-(pdftex.def)             Requested size: 348.17493pt x 236.00613pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 1028.
 
-<images/trip_delay_mosta_marsa.jpg, id=978, 823.57687pt x 321.45094pt>
+
+<images/Trip_distribution_line_fit_plot.jpg, id=1073, 696.35156pt x 472.01344pt
+>
+File: images/Trip_distribution_line_fit_plot.jpg Graphic file (type jpg)
+ <use images/Trip_distribution_line_fit_plot.jpg>
+Package pdftex.def Info: images/Trip_distribution_line_fit_plot.jpg used on inp
+ut line 1029.
+(pdftex.def)             Requested size: 348.17493pt x 236.00613pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1040.
+
+<images/trip_delay_mosta_marsa.jpg, id=1078, 823.57687pt x 321.45094pt>
 File: images/trip_delay_mosta_marsa.jpg Graphic file (type jpg)
 
 <use images/trip_delay_mosta_marsa.jpg>
 Package pdftex.def Info: images/trip_delay_mosta_marsa.jpg used on input line 1
-029.
+041.
 (pdftex.def)             Requested size: 411.78743pt x 160.72507pt.
- [63pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1033 \end{figure}
-                    <./images/Trip_count_correlation.jpg>] [64pdfTeX warning (e
-xt4): destination with the same identifier (name{figure.4.4}) has been already 
-used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1036 
-       pdfTeX warning (ext4): destination with the same identifier (name{figure
-.4.5}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1036 
-        <./images/Trip_distribution_line_fit_plot.jpg> <./images/trip_delay_mos
-ta_marsa.jpg>]
-<images/trip_delay_comparison.jpg, id=989, 632.3625pt x 390.70969pt>
+ [64 <./images/Trip_count_correlation.jpg>] [65 <./images/Trip_distribution_lin
+e_fit_plot.jpg> <./images/trip_delay_mosta_marsa.jpg>]
+<images/trip_delay_comparison.jpg, id=1089, 632.3625pt x 390.70969pt>
 File: images/trip_delay_comparison.jpg Graphic file (type jpg)
 
 <use images/trip_delay_comparison.jpg>
 Package pdftex.def Info: images/trip_delay_comparison.jpg used on input line 10
-39.
+51.
 (pdftex.def)             Requested size: 442.65074pt x 273.4949pt.
 
-Overfull \hbox (21.54985pt too wide) in paragraph at lines 1039--1041
+Overfull \hbox (21.54985pt too wide) in paragraph at lines 1051--1053
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1048.
+               Default added (so using `!tbp') on input line 1060.
 
 
-<images/trip_delay_correlation_DMAPI_vs_MINE.jpg, id=990, 629.35126pt x 213.798
-75pt>
+<images/trip_delay_correlation_DMAPI_vs_MINE.jpg, id=1090, 523.20468pt x 231.11
+343pt>
 File: images/trip_delay_correlation_DMAPI_vs_MINE.jpg Graphic file (type jpg)
  <use images/trip_delay_correlation_DMAPI_vs_MINE.jpg>
 Package pdftex.def Info: images/trip_delay_correlation_DMAPI_vs_MINE.jpg used o
-n input line 1049.
-(pdftex.def)             Requested size: 440.54288pt x 149.6581pt.
+n input line 1061.
+(pdftex.def)             Requested size: 366.24077pt x 161.77829pt.
+ [66 <./images/trip_delay_comparison.jpg>] [67 <./images/trip_delay_correlation
+_DMAPI_vs_MINE.jpg>] [68]
 
-Overfull \hbox (19.44199pt too wide) in paragraph at lines 1049--1051
- [][] 
- []
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1083.
 
-[65pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
-}) has been already used, duplicate ignored
+<images/traffic_flow_count_KN_MINE.jpg, id=1108, 532.99126pt x 328.97906pt>
+File: images/traffic_flow_count_KN_MINE.jpg Graphic file (type jpg)
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1057 
-        <./images/trip_delay_comparison.jpg>] [66pdfTeX warning (ext4): destina
-tion with the same identifier (name{table.4.2}) has been already used, duplicat
-e ignored
+<use images/traffic_flow_count_KN_MINE.jpg>
+Package pdftex.def Info: images/traffic_flow_count_KN_MINE.jpg used on input li
+ne 1087.
+(pdftex.def)             Requested size: 252.6631pt x 155.95042pt.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1059 
-        <./images/trip_delay_correlation_DMAPI_vs_MINE.jpg>] [67]
-
-! LaTeX Error: Environment subfigure undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1068 	\begin{subfigure}
-                         [t]{0.45\textwidth}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1068 	\begin{subfigure}[t]{0.45\textwidth}
-                                            
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.1068 	\begin{subfigure}[t]{0.45\textwidth}
-                                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-<example-image-a.pdf, id=1007, 321.2pt x 240.9pt>
-File: example-image-a.pdf Graphic file (type pdf)
- <use example-image-a.pdf>
-Package pdftex.def Info: example-image-a.pdf used on input line 1070.
-(pdftex.def)             Requested size: 421.10089pt x 315.83493pt.
+<images/traffic_flow_count_KN_Nigel_pace.jpg, id=1109, 532.99126pt x 320.69812p
+t>
+File: images/traffic_flow_count_KN_Nigel_pace.jpg Graphic file (type jpg)
+ <use images/traffic_flow_count_KN_Nigel_pace.jpg>
+Package pdftex.def Info: images/traffic_flow_count_KN_Nigel_pace.jpg used on in
+put line 1095.
+(pdftex.def)             Requested size: 252.6631pt x 152.02489pt.
 
 
-! LaTeX Error: \begin{figure} on input line 1066 ended by \end{subfigure}.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1103.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1072 	\end{subfigure}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<images/traffic_flow_count_KS_MINE.jpg, id=1112, 528.47438pt x 328.97906pt>
+File: images/traffic_flow_count_KS_MINE.jpg Graphic file (type jpg)
 
+<use images/traffic_flow_count_KS_MINE.jpg>
+Package pdftex.def Info: images/traffic_flow_count_KS_MINE.jpg used on input li
+ne 1107.
+(pdftex.def)             Requested size: 252.6631pt x 157.28569pt.
 
-! LaTeX Error: Environment subfigure undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1074 	\begin{subfigure}
-                         [t]{0.45\textwidth}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1074 	\begin{subfigure}[t]{0.45\textwidth}
-                                            
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.1074 	\begin{subfigure}[t]{0.45\textwidth}
-                                            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-<example-image-b.pdf, id=1008, 321.2pt x 240.9pt>
-File: example-image-b.pdf Graphic file (type pdf)
- <use example-image-b.pdf>
-Package pdftex.def Info: example-image-b.pdf used on input line 1076.
-(pdftex.def)             Requested size: 421.10089pt x 315.83493pt.
+<images/traffic_flow_count_KS_Nigel_pace.jpg, id=1113, 518.6878pt x 342.5297pt>
+File: images/traffic_flow_count_KS_Nigel_pace.jpg Graphic file (type jpg)
+<use images/traffic_flow_count_KS_Nigel_pace.jpg>
+Package pdftex.def Info: images/traffic_flow_count_KS_Nigel_pace.jpg used on in
+put line 1115.
+(pdftex.def)             Requested size: 252.6631pt x 166.8532pt.
 
 
-! LaTeX Error: \begin{figure} on input line 1066 ended by \end{subfigure}.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1123.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1078 	\end{subfigure}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<images/traffic_flow_count_MN_MINE.jpg, id=1116, 527.72156pt x 328.97906pt>
+File: images/traffic_flow_count_MN_MINE.jpg Graphic file (type jpg)
 
+<use images/traffic_flow_count_MN_MINE.jpg>
+Package pdftex.def Info: images/traffic_flow_count_MN_MINE.jpg used on input li
+ne 1127.
+(pdftex.def)             Requested size: 294.76933pt x 183.75516pt.
 
-! LaTeX Error: Environment subfigure undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1081 	\begin{subfigure}
-                         [t]{\textwidth}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.1081 	\begin{subfigure}[t]{\textwidth}
-                                        
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.1081 	\begin{subfigure}[t]{\textwidth}
-                                        
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-<example-image-c.pdf, id=1009, 321.2pt x 240.9pt>
-File: example-image-c.pdf Graphic file (type pdf)
- <use example-image-c.pdf>
-Package pdftex.def Info: example-image-c.pdf used on input line 1083.
-(pdftex.def)             Requested size: 421.10089pt x 315.83493pt.
+<images/traffic_flow_count_MN_Nigel_pace.jpg, id=1117, 532.23843pt x 282.30469p
+t>
+File: images/traffic_flow_count_MN_Nigel_pace.jpg Graphic file (type jpg)
+ <use images/traffic_flow_count_MN_Nigel_pace.jpg>
+Package pdftex.def Info: images/traffic_flow_count_MN_Nigel_pace.jpg used on in
+put line 1135.
+(pdftex.def)             Requested size: 294.76933pt x 156.35356pt.
 
 
-! LaTeX Error: \begin{figure} on input line 1066 ended by \end{subfigure}.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1142.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1085 	\end{subfigure}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+<images/traffic_flow_count_MS_MINE.jpg, id=1120, 531.48563pt x 328.22626pt>
+File: images/traffic_flow_count_MS_MINE.jpg Graphic file (type jpg)
 
-! Undefined control sequence.
-<argument> ...ion of all the figures. In (\subref 
-                                                  {fig:timing1}) you can see...
-l.1086 ...ming1}) you can see a  green square....}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+<use images/traffic_flow_count_MS_MINE.jpg>
+Package pdftex.def Info: images/traffic_flow_count_MS_MINE.jpg used on input li
+ne 1146.
+(pdftex.def)             Requested size: 294.76933pt x 182.04251pt.
 
-! Undefined control sequence.
-<argument> ...ion of all the figures. In (\subref 
-                                                  {fig:timing1}) you can see...
-l.1086 ...ming1}) you can see a  green square....}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ion of all the figures. In (\subref 
-                                                  {fig:timing1}) you can see...
-l.1086 ...ming1}) you can see a  green square....}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+<images/traffic_flow_count_MS_Nigel_pace.jpg, id=1121, 517.18219pt x 249.93375p
+t>
+File: images/traffic_flow_count_MS_Nigel_pace.jpg Graphic file (type jpg)
+ <use images/traffic_flow_count_MS_Nigel_pace.jpg>
+Package pdftex.def Info: images/traffic_flow_count_MS_Nigel_pace.jpg used on in
+put line 1154.
+(pdftex.def)             Requested size: 294.76933pt x 142.45609pt.
 
 
-LaTeX Warning: Float too large for page by 550.41325pt on input line 1087.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1169.
 
-[68] [69pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.4.7}) has been already used, duplicate ignored
+<images/traffic_flow_count_KN_line_plot.jpg, id=1125, 481.8pt x 244.66406pt>
+File: images/traffic_flow_count_KN_line_plot.jpg Graphic file (type jpg)
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1095 \chapter
-               {Future Work} \label{chapter:future_work}pdfTeX warning (ext4): 
-destination with the same identifier (name{figure.4.8}) has been already used, 
-duplicate ignored
+<use images/traffic_flow_count_KN_line_plot.jpg>
+Package pdftex.def Info: images/traffic_flow_count_KN_line_plot.jpg used on inp
+ut line 1173.
+(pdftex.def)             Requested size: 336.88199pt x 171.077pt.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1095 \chapter
-               {Future Work} \label{chapter:future_work}pdfTeX warning (ext4): 
-destination with the same identifier (name{figure.4.9}) has been already used, 
-duplicate ignored
+<images/traffic_flow_count_KS_line_plot.jpg, id=1126, 477.28313pt x 243.91125pt
+>
+File: images/traffic_flow_count_KS_line_plot.jpg Graphic file (type jpg)
+ <use images/traffic_flow_count_KS_line_plot.jpg>
+Package pdftex.def Info: images/traffic_flow_count_KS_line_plot.jpg used on inp
+ut line 1180.
+(pdftex.def)             Requested size: 336.88199pt x 172.15842pt.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1095 \chapter
-               {Future Work} \label{chapter:future_work}pdfTeX warning (ext4): 
-destination with the same identifier (name{figure.4.10}) has been already used,
- duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1095 \chapter
-               {Future Work} \label{chapter:future_work} <C:/Program Files/MiKT
-eX 2.9/tex/latex/mwe/example-image-a.pdf> <C:/Program Files/MiKTeX 2.9/tex/late
-x/mwe/example-image-b.pdf> <C:/Program Files/MiKTeX 2.9/tex/latex/mwe/example-i
-mage-c.pdf>]
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1187.
+
+
+<images/traffic_flow_count_MN_line_plot.jpg, id=1127, 472.76625pt x 243.15843pt
+>
+File: images/traffic_flow_count_MN_line_plot.jpg Graphic file (type jpg)
+ <use images/traffic_flow_count_MN_line_plot.jpg>
+Package pdftex.def Info: images/traffic_flow_count_MN_line_plot.jpg used on inp
+ut line 1191.
+(pdftex.def)             Requested size: 336.88199pt x 173.27444pt.
+
+<images/traffic_flow_count_MS_line_plot.jpg, id=1128, 478.78876pt x 243.15843pt
+>
+File: images/traffic_flow_count_MS_line_plot.jpg Graphic file (type jpg)
+ <use images/traffic_flow_count_MS_line_plot.jpg>
+Package pdftex.def Info: images/traffic_flow_count_MS_line_plot.jpg used on inp
+ut line 1198.
+(pdftex.def)             Requested size: 336.88199pt x 171.08908pt.
+ [69] [70 <./images/traffic_flow_count_KN_MINE.jpg> <./images/traffic_flow_coun
+t_KN_Nigel_pace.jpg>]
+[71 <./images/traffic_flow_count_KS_MINE.jpg> <./images/traffic_flow_count_KS_N
+igel_pace.jpg>] [72 <./images/traffic_flow_count_MN_MINE.jpg> <./images/traffic
+_flow_count_MN_Nigel_pace.jpg>] [73 <./images/traffic_flow_count_MS_MINE.jpg> <
+./images/traffic_flow_count_MS_Nigel_pace.jpg>] [74 <./images/traffic_flow_coun
+t_KN_line_plot.jpg> <./images/traffic_flow_count_KS_line_plot.jpg>] [75 <./imag
+es/traffic_flow_count_MN_line_plot.jpg> <./images/traffic_flow_count_MS_line_pl
+ot.jpg>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1210.
+
+
+<images/traffic_flow_counts_correlation_results.jpg, id=1159, 920.68968pt x 243
+.15843pt>
+File: images/traffic_flow_counts_correlation_results.jpg Graphic file (type jpg
+)
+ <use images/traffic_flow_counts_correlation_results.jpg>
+Package pdftex.def Info: images/traffic_flow_counts_correlation_results.jpg use
+d on input line 1211.
+(pdftex.def)             Requested size: 368.26935pt x 97.26164pt.
+
+
+Package caption Warning: \label without proper reference on input line 1169.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:kappara_traffic_flow_count_plot' on page 76 undef
+ined on input line 1217.
+
+
+Package caption Warning: \label without proper reference on input line 1083.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:kappara_north_traffic_flow_line_chart' on page 76
+ undefined on input line 1217.
+
+
+Package caption Warning: \label without proper reference on input line 1103.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:kappara_south_traffic_flow_line_chart' on page 76
+ undefined on input line 1217.
+
+
+Package caption Warning: \label without proper reference on input line 1187.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:marsa_traffic_flow_count_plots' on page 76 undefi
+ned on input line 1217.
+
+
+Package caption Warning: \label without proper reference on input line 1123.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:marsa_north_traffic_flow_line_chart' on page 76 u
+ndefined on input line 1217.
+
+
+Package caption Warning: \label without proper reference on input line 1142.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:marsa_south_traffic_flow_line_chart' on page 76 u
+ndefined on input line 1217.
+
+[76 <./images/traffic_flow_counts_correlation_results.jpg>] [77]
+<images/classification_metrics_result.jpg, id=1179, 511.15968pt x 454.69875pt>
+File: images/classification_metrics_result.jpg Graphic file (type jpg)
+
+<use images/classification_metrics_result.jpg>
+Package pdftex.def Info: images/classification_metrics_result.jpg used on input
+ line 1230.
+(pdftex.def)             Requested size: 383.3688pt x 341.02322pt.
+ [78] [79 <./images/classification_metrics_result.jpg>]
+<images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg, id=1191, 530.73282
+pt x 464.4853pt>
+File: images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg Graphic file (
+type jpg)
+
+<use images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg>
+Package pdftex.def Info: images/confusion_matrix_hamrun_valletta_342_4bin_15min
+.jpg used on input line 1240.
+(pdftex.def)             Requested size: 265.36575pt x 232.24208pt.
+
+<images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg, id=1192, 529.98pt 
+x 436.63126pt>
+File: images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg Graphic file (
+type jpg)
+
+<use images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>
+Package pdftex.def Info: images/confusion_matrix_marsa_aldo_moro_342_4bin_15min
+.jpg used on input line 1247.
+(pdftex.def)             Requested size: 264.98933pt x 218.3151pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[80 <./images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg>] [81 <./imag
+es/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in alignment at lines 1095--1095
+Underfull \hbox (badness 10000) in alignment at lines 1261--1261
 []
  []
 
-[70
+[82
 
-]
+] [83] [84] [85]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in alignment at lines 1117--1117
+Underfull \hbox (badness 10000) in alignment at lines 1301--1301
 []
  []
 
-[71
+[86
 
 ]
 Appendix A.
 
-Underfull \hbox (badness 10000) in alignment at lines 1141--1141
+Underfull \hbox (badness 10000) in alignment at lines 1327--1327
 []
  []
 
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 114
-4.
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 133
+0.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [72
+) [87
 
-] (fyp.bbl [73
+] (fyp.bbl [88
 
 
 ]
-[74] [75])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1154.
- [76]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1154.
+[89] [90])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1340.
+ [91]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1340.
  (fyp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1154.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1154.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1340.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1340.
 
-Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: 81DB1AF5F2A343A3EF3C11ED6933FB3F;3960.
 
+
+Package rerunfilecheck Warning: File `fyp.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `fyp.out':
+(rerunfilecheck)             Before: 1F255B6ED74363FC98199A1B7CE34882;4949
+(rerunfilecheck)             After:  86390CD3110A64F18B5E20D61190D828;4941.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1154.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1340.
  ) 
 Here is how much of TeX's memory you used:
- 9713 strings out of 493323
- 146652 string characters out of 3139038
- 257383 words of memory out of 3000000
- 12801 multiletter control sequences out of 15000+200000
- 79579 words of font info for 74 fonts, out of 3000000 for 9000
+ 10879 strings out of 493323
+ 170942 string characters out of 3139038
+ 282053 words of memory out of 3000000
+ 13916 multiletter control sequences out of 15000+200000
+ 82522 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,47p,2298b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,11n,48p,2298b,497s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Program Files
 /MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
 /dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
@@ -1623,13 +1476,12 @@ ype1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr
 Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
 /lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10
-.pfb>
-Output written on fyp.pdf (85 pages, 2789497 bytes).
+rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/lm/lmtt10.pfb>
+Output written on fyp.pdf (100 pages, 3840543 bytes).
 PDF statistics:
- 1178 PDF objects out of 1200 (max. 8388607)
- 238 named destinations out of 1000 (max. 500000)
- 528 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1368 PDF objects out of 1440 (max. 8388607)
+ 272 named destinations out of 1000 (max. 500000)
+ 673 words of extra memory for PDF output out of 10000 (max. 10000000)
 
