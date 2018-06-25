@@ -82,11 +82,11 @@
 
 \begin{acknowledgements}
 
-I would first like to thank my supervisor Dr. Charlie and Co-supervisor Dr.Colin Layfield who taught me amongst many other things one important approach and they kept persisting on it - \textit{To let the data speak for itself}. Discussing with them gradual achievements and caveats made it possible to foster insight.
+I would first like to thank my supervisor Dr. Charlie Abela and Co-supervisor Dr. Colin Layfield who taught me amongst many other things one important approach and they kept persisting on it - \textit{To let the data speak for itself}. Discussing with them gradual achievements and caveats made it possible to foster insight.
 
 This dissertation would not have been possible without the assistance of GO p.l.c through Mr. Joe Attard in order to get the anonymized mobile usage dataset and to get the high end technological resources needed for highly intensive processing. My colleagues at GO were also of great support and inspiration especially when I discussed with them certain technical aspects of the project.
 
-On a personal note I would like to thank my wife Andrea for her great support, love and constant encouragement. I would like to thank also my parents Benny and Carmen and the rest of my family especially my nephew Kyle and niece Shirley who proved to be a useful forced distraction when needed. I cannot not mention my close friends who did their best to make me look forward to strive towards completion by constantly sending me pictures of them having beers and a great night out without me. 
+On a personal note I would like to thank my wife Andrea for her great support, love and constant encouragement. I would like to thank also my parents Benny and Carmen and the rest of my family especially my nephew Kyle and niece Shirley who proved to be a useful forced distraction when needed. I cannot not mention my close friends who did their best to make me look forward to strive towards completion by constantly sending me pictures of them having beers on a great night out without me. 
 
 Last but not least I would like to thank all the academic and non-academic staff of the department of artificial intelligence. It was a great academic journey that enriched my experience and perspective towards the world of science.
 
@@ -96,7 +96,8 @@ Last but not least I would like to thank all the academic and non-academic staff
        
 \begin{abstract}
 Multi-modal originated vehicular traffic flow data can be obtained with various techniques. To what extent this data is reliable, complete, timely and readily available requires a thorough analysis of past work and currently available solutions. A novel approach consisting of an ensemble of machine learning and data-mining techniques is being proposed. 
-An anonymized mobile phone usage dataset from a telecommunications provider in Malta is used first to carry out basic traffic analytics. Then an origin-destination (OD) matrix based on the largest two clusters of activity per user will be computed to infer user trips between these clusters across time. Routes for these trips are retrieved with open source routing tools and obtained data pertaining to way nodes along these routes further enrich trip information. Spatial binning is then used to deduce the aggregate distribution of traffic load on the traffic network.  The OD matrix and grid network load are subsequently used to build a Neural Network predictive model. Several previous works \cite{Laurila2012,Hoteit2014} that carried out invaluable research in this field lacked on-line data in quality and quantity. They were at times compelled to devise corrective measures and carry out simulations to cater for such shortcomings. Having the luxury to avail of mobile call and data historical records will make it more possible to fine tune a better predictive model and evaluate it. Industry standard visualization tools were used to portray AI generated traffic patterns together with flow intensity projected in the geospatial dimension. 
+An anonymized mobile phone usage dataset from a telecommunications provider in Malta is used first to carry out basic traffic analytics. Then an origin-destination (OD) matrix based on the largest two clusters of activity per user will be computed to infer user trips between these clusters over time. Routes for these trips are retrieved with open source routing tools and obtained data pertaining to way nodes along these routes further enrich trip information. Spatial binning is then used to deduce the aggregate distribution of traffic load on the traffic network.  The OD matrix and grid network load are subsequently used to build a Neural Network predictive model. Several previous works \cite{Laurila2012,Hoteit2014} that carried out invaluable research in this field lacked on-line data in quality and quantity. They were at times compelled to devise corrective measures and carry out simulations to cater for such shortcomings. Having the luxury to avail of mobile call and data historical records will make it more possible to fine tune a better predictive model and evaluate it. Industry standard visualization tools were used to portray AI generated traffic patterns together with flow intensity projected in the geospatial dimension.
+The final results are satisfactory and the built models can effectively be used to both measure and predict traffic flow  counts in specific locations. Adding dynamic traffic assignment to the proposed solution would give more accurate results especially for traffic points that tend to be congested. 
 \end{abstract}
 
 \tableofcontents
@@ -991,10 +992,10 @@ One can notice how the trip count distribution per hour derived from mobile usag
 	\label{fig:trip_distribution_nso}
 \end{figure}
 
-As illustrated in plot \ref{fig:trip_count_correlation} trip count peaks for both reported distributions are observed at 7:00 a.m. and 5:00 p.m. NHTS was taken on a Wednesday and has no car trip distribution for Saturdays and Sundays. Since plot shown in \ref{fig:trip_distribution} show that weekdays' trip count distribution is similar in shape the average was taken on all weekdays of the whole month. However it should be noted that trip counts on a Monday are distinctively slightly higher than the other weekdays \ref{fig:trip_distribution}. 
+As illustrated in plot \ref{fig:trip_count_correlation} trip count peaks for both reported distributions are observed at 7:00 a.m. and 5:00 p.m. NHTS was taken on a Wednesday and has no car trip distribution for Saturdays and Sundays. Since plot shown in \ref{fig:trip_distribution} show that weekdays' OD generated trips count distribution is similar in shape the average was taken on all weekdays of the whole month. However it should be noted that trip counts on a Monday are distinctively slightly higher than the other weekdays \ref{fig:trip_distribution}. 
 
 
-\begin{table}[!]	
+\begin{table}[!] \label{table:trip_dsitribution_statistical_analysis}	
 	\centering
 	\resizebox{\textwidth}{!}{
 		
@@ -1008,7 +1009,7 @@ As illustrated in plot \ref{fig:trip_count_correlation} trip count peaks for bot
 			
 	\end{tabular} }
 	\caption{NHTS and OD trip distributions proved to be highly correlated. $ ^* p < 0.001$  } 
-	\label{table:trip_dsitribution_statistical_analysis}
+	
 \end{table}
 
 The dynamics of the plot show how there is a sudden decrease of trips per hour after 7:00 a.m. that continues till 11:00 a.m. when trips start to rise again to gradually ramp up. The gradient suddenly increases again at 3:00 p.m. The increase and decrease of trip rate around the 5:00 a.m. peak is smoother than then the one observed in the morning peak for both distributions as we (see figure \ref{fig:trip_count_correlation}). 
@@ -1032,7 +1033,7 @@ NHTS \cite{malta2011national} reports 11\% in car trips from 1998 to 2010 and as
 	\label{fig:trip_count_correlation_model}
 \end{figure}
 
-A linear regression model was devised to express the scaling up from trip distribution in 2010 and the one registered in 2016 in this study. A correlation statistical analysis would have sufficed to establish a linear relationship. There is definitely no causality relationship between these two variables. However a regression model was fitted to the data to express how scaling up can be done from a survey based dataset to the OD generated one (see figure \ref{fig:trip_count_correlation_model}) . Results are reported in table \ref{table:trip_dsitribution_statistical_analysis} and these show that there is a significant positive relationship between trip distributions.
+A linear regression model was devised to express the scaling up from trip distribution in 2010 and the one registered in 2016 in this study. A correlation statistical analysis would have sufficed to establish a linear relationship. There is definitely no causality relationship between these two variables. However a regression model was fitted to the data to express how scaling up of counts can be done from the OD generated one to actual data that is collected through surveys (see figure \ref{fig:trip_count_correlation_model}) . Results are reported in table \ref{table:trip_dsitribution_statistical_analysis} and these show that there is a significant positive relationship between trip distributions.
 
 
 \section{Trip average delay per hour evaluation} \label{section:trip_average_delay_evaluation}
@@ -1280,13 +1281,11 @@ An averaging moving filter would remove noise from the traffic flow count and im
 Evaluation for \ref{section:trip_average_delay_evaluation} was done by comparing results based on a June dataset with data retrieved through DMAPI and an October mobile data usage dataset. This evaluation although it gave promising results should be repeated with seasonality of datasets removed from the equation to compare like with like. Malta traffic in October is very different from Malta traffic in June. 
 
 
-
 \section{Future research and potential projects}
 
 \subsection{Machine learning for trip delay prediction}
 
 In this research machine learning was used to train an MLPC with all locations' traffic flow count as data features. All the traffic flow count would be mapped by a built model to a level of traffic representing the future traffic flow count for a specific location. A similar predictive model can be built to predict estimated trip delay for every given route for any given required time. A comprehensive used routes database that exists in Malta for all users based on the OD matrix has to be compiled. Than statisictical information on trip delays per 5 minutes for same routes are aggregated. One should investigate the possibility of using routes' trip delays as training input features to a machine learning model. The final predicted classification would be a trip delay class for certain give routes. The model basically would be a function that maps trip delays for a set of routes to a classification of trip delay for a given route.
-
 
 \subsection{Analysis of more activity hubs and how they affect traffic flow}
 
@@ -1297,28 +1296,23 @@ In order to keep this study simple and not increase the evaluation combinations 
 Other datasources such as social media and ANPR video streams could be used to further dynamically assign traffic to the road network. From social network feeds one can extract for example accidents location and time. This data could be used to analyse the accident impact on traffic flow and can be used as an input feature for machine learning models. Also correlation between weather and traffic flow can be done by using available weather APIs.
 
 
-
 \chapter{Conclusion}
  
- The approach taken is systematic so that the research passes through gradual stages in such a way that we build on top of previous analyses and prototypes. Targets of this research include extraction of behavioural patterns of traffic encountered on the level of the isolated individual, subset of individuals, locality, specific time events and specific traffic hotspots. As described at the outset the main aim is not to trace the mobility of users but rather to predict estimated traffic congestion points and computation of duration for a travelling path given a starting point and a destination. Ideally if the users are highly predictable and stick to a regular travelling pattern they might be automatically notified when they are actually going to travel, how much its going to take them in terms of duration and suggestions are given to take different alternative routes which are less costly in terms of business.
- 
- %TODO - https://news.transport.gov.mt/traffic-counts-in-santa-venera-2/
+Through a systematic approach a data processing pipeline was devised to extract vehicular traffic patterns from mobile usage data. The methodology consisted in building models for each pipeline phase that processed input data and fed next phases down the chain. The ensuing ensemble of techniques can be applied to deduce traffic analytics from time series mobile usage data. 
 
- 
- %TODO - traffic assignment 
- 
- %trip count nso vs trip count od matrix -> survey resolution is far less than one offered in OD matrix
- 
-%TODO - scaling of results - IMPORTNT - can be taken from linear regression model - If a road section model correlation is proved to be high and result are statistically significant
+The aforementioned pipeline models include users' activity hubs clustering, OD matrix based trip generation, trip delay information and traffic flow measurement and prediction. Clustering was used to create an OD matrix containing data on visits done to the two top locations where users made most use of mobile data. Trips were generated between every recorded departure from origin and arrival to destination and the resulting trip duration. OSRM was used to retrieve routes for these trips an get the actual estimated trip duration without traffic. The difference between the OSRM trip duration and the actual trip duration recorded from OD trip generation was considered to be the trip delay statistical information. OSRM was used as well to collect time series data that indicated where the traffic flow is being distributed on the road infrastructure in order to build aggregate statistical models. The traffic flow counts' dataset then was used to train an MLPC to build a model that predicts traffic flow count at varied time intervals ahead.
 
-%TODO - sample bias in Transport malta trip count - survey is taking during the afternoon when people who travel at night might not be there - during the night trip count is very low - it is state in NHTS that most respondents generally round off to the nearest 5 minutes
+Clustering was the only part of the methodology that could not be evaluated directly. Ground truth was not available to test how  accurately the resulting main locations for each user were matching the actual ones. Its evaluation relied on traffic flow count evaluation which is highly dependent on the OD-OSRM generated trips which are defined by the users' main two clusters.
 
-%TODO - NHTS car trip count was taken on one particular day - ours was taken on the whole month - plot is smoother.
+Since the mobile users population does not match the number of commuters that use their own vehicle for transportation it was expected that trip distribution statistics would give lower values than those reflected by actual values. A scaling up method was needed to extrapolate real world trip distribution statistics. A very strong correlation of 0.94 was found between average NHTS 2010 trip distribution data and trip distribution generated by OD-OSRM. A linear regression model was built to map OD-OSRM figures to scaled up numbers. One should underline the fact that a lot of human resources are needed to collect survey data and that surveys become eventually outdated. The method proposed in this research uses readily available data, is dynamically updated and have a 5 minute temporal resolution. Survey responses may not contain exact departure and arrival times since people possibly tend to round these when replying.
 
-%TODO - google cloud api cannot give historical records on delays. Prediciton of delay for very far away is not based on historical records.
+Correlation statistics were carried out for trip hourly average delay for four different routes. A promising overall correlation of 0.72 was found between trip delay data originating from OD-OSRM and Google's DMAPI. However one must note that DMAPI data was collected for a week in the month of June 2018 and OD-OSRM data was collected in October 2016. Our approach is better to give predictive models for the distant future.
 
-%TODO - controexamination between google distance matrix api and OD matrix trip delay results.
+Traffic flow distribution linear regression models were built to map OD-OSRM traffic flow distribution to actual ones. The linear relationship with data collected manually for four locations was analysed. It was concluded that the linear relationship is statistically significant and tends to have high correlation if the road traffic flow capacity is not exceeded. Otherwise for locations that tend to have high traffic congestion, correlation is both low and negative during traffic congestion time. Therefore it is concluded that negative correlations in traffic flow distribution linear models indicate that locations are experiencing slowing down of traffic due to congestion.
 
+Machine learning techniques were employed to predict traffic flow counts at a given time for a given location from previous traffic flow counts at an earlier time for all location data points. An MLPC was trained for four locations and prediction intervals ranged from 15 minutes to 1 day. Satisfactory results were attained and from these results it is concluded that users or information support systems can make well informed decisions on predicted traffic flow data for selected locations.
+
+The main strength of this dissertation was to give an accurate measure and an effective prediction of traffic flow demand (not traffic congestion) on the road infrastructure. The insight gained would help transport agencies' administrators to tackle infrastructure problems before they eventually happen. Improvement is mainly needed on dynamic traffic assignment.
 
  
  

@@ -39,7 +39,7 @@
 \contentsline {chapter}{\numberline {4.}Evaluation and Results}{61}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{61}{section.4.1}
 \contentsline {section}{\numberline {4.2}Trip counts per hour evaluation}{62}{section.4.2}
-\contentsline {section}{\numberline {4.3}Trip average delay per hour evaluation}{65}{section.4.3}
+\contentsline {section}{\numberline {4.3}Trip average delay per hour evaluation}{66}{section.4.3}
 \contentsline {section}{\numberline {4.4}Traffic flow count evaluation}{69}{section.4.4}
 \contentsline {section}{\numberline {4.5}Traffic flow count prediction for a selection of locations evaluation}{77}{section.4.5}
 \contentsline {chapter}{\numberline {5.}Future Work}{82}{chapter.5}
@@ -54,6 +54,6 @@
 \contentsline {subsection}{\numberline {5.2.2}Analysis of more activity hubs and how they affect traffic flow}{85}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Use of other datasets to increase traffic flow model accuracy }{85}{subsection.5.2.3}
 \contentsline {chapter}{\numberline {6.}Conclusion}{86}{chapter.6}
-\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{87}{appendix.A}
-\contentsline {section}{\numberline {A.1}These are some details}{87}{section.A.1}
-\contentsline {chapter}{References}{88}{section.A.1}
+\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{89}{appendix.A}
+\contentsline {section}{\numberline {A.1}These are some details}{89}{section.A.1}
+\contentsline {chapter}{References}{90}{section.A.1}
