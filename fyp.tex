@@ -20,12 +20,8 @@
 \usepackage{mathtools}
 \usepackage[noend]{algpseudocode}
 
-
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{graphicx}
-
-
 
 \makeatletter
 \def\BState{\State\hskip-\ALG@thistlm}
@@ -95,9 +91,9 @@ Last but not least I would like to thank all the academic and non-academic staff
 \end{acknowledgements}
        
 \begin{abstract}
-Multi-modal originated vehicular traffic flow data can be obtained with various techniques. To what extent this data is reliable, complete, timely and readily available requires a thorough analysis of past work and currently available solutions. A novel approach consisting of an ensemble of machine learning and data-mining techniques is being proposed. 
-An anonymized mobile phone usage dataset from a telecommunications provider in Malta is used first to carry out basic traffic analytics. Then an origin-destination (OD) matrix based on the largest two clusters of activity per user will be computed to infer user trips between these clusters over time. Routes for these trips are retrieved with open source routing tools and obtained data pertaining to way nodes along these routes further enrich trip information. Spatial binning is then used to deduce the aggregate distribution of traffic load on the traffic network.  The OD matrix and grid network load are subsequently used to build a Neural Network predictive model. Several previous works \cite{Laurila2012,Hoteit2014} that carried out invaluable research in this field lacked on-line data in quality and quantity. They were at times compelled to devise corrective measures and carry out simulations to cater for such shortcomings. Having the luxury to avail of mobile call and data historical records will make it more possible to fine tune a better predictive model and evaluate it. Industry standard visualization tools were used to portray AI generated traffic patterns together with flow intensity projected in the geospatial dimension.
-The final results are satisfactory and the built models can effectively be used to both measure and predict traffic flow  counts in specific locations. Adding dynamic traffic assignment to the proposed solution would give more accurate results especially for traffic points that tend to be congested. 
+Multi-modal originated vehicular traffic flow data can be obtained with various techniques. To what extent this data is reliable, complete, timely and readily available requires a thorough analysis of past work and currently available solutions. A novel approach consisting of an ensemble of machine learning and data-mining techniques is being proposed to prove that it is possible to extract vehicular traffic patterns from mobile usage data. 
+An anonymized mobile phone usage dataset from a telecommunications provider in Malta is first used to carry out basic traffic analytics. Then an origin-destination (OD) matrix based on the largest two clusters of activity per user will be computed to infer user trips between these clusters over time. Routes for these trips are retrieved with open source routing tools and obtained data pertaining to way nodes along these routes further enrich trip information. Spatial binning is then used to deduce the aggregate distribution of traffic load on the traffic network.  The OD matrix and grid network load are subsequently used to build a Neural Network predictive model. Several previous works \cite{Laurila2012,Hoteit2014} that carried out invaluable research in this field lacked on-line data in quality and quantity. They were at times compelled to devise corrective measures and carry out simulations to cater for such shortcomings. Having the luxury to avail of mobile call and data historical records will make it more possible to fine tune a better predictive model and evaluate it. Industry standard visualization tools were used to portray AI generated traffic patterns together with flow intensity projected in the geospatial dimension.
+The final results are satisfactory and the built models can effectively be used to both measure and predict traffic flow  counts in specific locations. Improvement through an addition of a dynamic traffic assignment algorithm to the proposed solution would give more accurate results especially for traffic points that tend to be congested. 
 \end{abstract}
 
 \tableofcontents
@@ -114,81 +110,106 @@ The final results are satisfactory and the built models can effectively be used 
 
 \section{Economic development and urbanization impact on transport} \label{section:introduction:economic_development}
 
-Land transport is a societal reality that is required for displacement of people for work, 
-leisure and other purposes. Transport is important as well to deliver goods and services. Land transportation has undoubtedly evolved with a fast pace and late technology advancements are making vehicular transportation more efficient, less polluting, faster, safer and more comfortable. There are many land transport modes which include bus, rail and private car as the most generally used.
+Land transport is a societal reality that is required for people to get to work, leisure and other places for other purposes. Transport is essential for delivering goods and services. Land transportation has undoubtedly evolved with a fast pace and late technology advancements are making vehicular transportation more efficient, less polluting, faster, safer and more comfortable. There are many land transport modes which include bus, rail and private car as the most generally used. In Malta 60\% of commuters opt for the car as the preferred mode of transport. This is stated in the modal split report in the National Transport Household Survey 2010 report document  \cite{malta2011national}.
 
-Economic development and urbanization comes at a cost. It surely has a direct impact on the increase of traffic congestion and all undesirable consequences it brings with it. Traffic congestion is especially synonymous with urban places where private car is the preferred mode of travelling. \cite{EUTransportDirectorate2018} mentions how traffic congestion in urban areas in the EU is costing 100 billion every year which amounts to 1\% of the EU GDP. \cite{Colak2015} ellaborates on the crippling effect on the economy because of traffic congestion. Traffic congestion amounted to 43\% (\texteuro117.9 million) of external costs in Malta in 2012, which is the origin of the mobile traces datasource used in this study \cite{Attard2015}. Other causes of external costs related to traffic include accidents, climate change, air pollution and noise which are all directly incremented by traffic congestion. No policy change scenario envisages an external cost of \texteuro151.1 million and \texteuro154.1 million for the years 2020 and 2030 respectively incurred on the economy of Malta.
+Economic development and urbanization come at a cost. It surely has a direct impact on the increase of traffic congestion and all undesirable consequences it brings with it. Traffic congestion is especially synonymous with urban places where private car is the preferred mode of travelling. \cite{EUTransportDirectorate2018} mentions how traffic congestion in urban areas in the EU is costing 100 billion every year which amounts to 1\% of the EU GDP. \cite{Colak2015} ellaborates on the crippling effect on the economy because of traffic congestion. Traffic congestion amounted to 43\% (\texteuro117.9 million) of external costs in Malta in 2012, which is the origin of the mobile traces datasource used in this study \cite{Attard2015}. Other causes of external costs related to traffic include accidents, climate change, air pollution and noise which are all directly incremented by traffic congestion. No policy change scenario envisages an external cost of \texteuro151.1 million and \texteuro154.1 million for the years 2020 and 2030 respectively incurred on the economy of Malta.
 
 In the US traffic congestion is similarly a cause of concern. Interesting but worrying facts are listed in a US mobility research done in 2015 \cite{Schrank.2015}. It states that the extra miles travelled by Americans in 2014 were 6.9 million at the cost of \textdollar160 billion. Congestion costs in the USA is on the increase. In the year 2000 it was reported to be at the level of \textdollar114 billion.
 
-Traffic delays impact direly also the shipment industry. Travel costs increase when travel time increases.  Pick-up and delivery times are more approximative. Transport companies need to take costly measures in order to make up for this and the increase in cost is more often than not passed to the consumer  \cite{Schrank.2015} \cite{CambridgeSystematicsInc.2005}.
+Traffic delays have a heavy impact on the shipment industry as well. Travel costs increase when travel time increases.  Pick-up and delivery time estimation become less accurate because of traffic congestion. Transport companies need to take costly measures in order to make up for this and the increase in cost is more often than not passed to the consumer  \cite{Schrank.2015} \cite{CambridgeSystematicsInc.2005}.
 
 \section{Addressing Traffic congestion} \label{section:introduction:addressing_traffic_congestion}
 
-Car users and even public transport users (since buses cannot avoid traffic although use of it alleviates it) tend to get rather frustrated from lost time on the road. This time is deducted from a healthy lifestyle or from productivity hours. 
+Both car users and public transport users tend to get frustrated from lost time on the road. This time is deducted from a healthy lifestyle or from productivity hours. 
 
-Driver self adaptation measures help to smartly mitigate delay times. Individual drivers can hear radio adverts or check CCTV to enquire the traffic situation before departing or even while driving for better planning. Use of software such as Google maps, Apple maps or Waze help to have an informed decision how to schedule trips and decide what route to take.  These applications might even suggest to take other transport modes because it is more convenient especially in terms of less time to get to destination.
+Drivers can adapt to smartly mitigate delay times. Individual drivers can hear radio adverts or check CCTV to inform themselves about the traffic situation before departing or while driving for better planning. Use of software such as Google maps  \footnote{https://www.google.com/maps}, Apple maps \footnote{https://apple.com/ios/maps/} or Waze \footnote{https://waze.com/en-GB/} help to have an informed decision how to schedule trips and decide what route to take.  These applications might even suggest to take other transport modes that offer faster alternatives.
 
-Addressing traffic delays should be addressed within a wider scope. Efficient traffic management should be on top of government transportation agencies agenda. Traffic management is multi-faceted especially the urban one. Possible measures that can be taken by transport authorities include making different modes of transport available and encourage the public to use it. Smart technology is a good candidate to alleviate travelling frustration by giving information,instructions and control parameters that have a say on traffic. For more uptake of public transport the public for instance can be informed and educated through mobile applications.  Mobile applications can be used to make the public transport experience more efficient, practical and the preferred choice. There are other deterrents such as increases in vehicle license tax and adding of parking fees to force drivers off the road and make them use public transport or go for any generic modal shift. But these are rather unpopular measures and policy making agents are susceptible to pressure in such a way that they are less proactive to implement such measures.
+Efficient traffic management should be at the top of national transportation agencies' agenda. Possible measures that can be taken by transport authorities include making different modes of transport more widely available and encourage the public to use it. Smart technology is another means to alleviate travelling frustration by giving information, instructions and control traffic flow in an automated manner. For more uptake of public transport the public for instance can be informed and educated through mobile applications.  Mobile applications can be used to make the public transport experience more efficient, practical and the preferred choice. There are other deterrents such as increases in vehicle license tax and adding of parking fees to force drivers off the road and make them use public transport or cleaner ways of transportation such as cycling.
 
-Other measures to tackle traffic problems is by enforcing traffic laws. This would diminish road accidents or casual road blockages that can cause flow disruptions. CCTV road network monitoring would be helpful to inform drivers to take alternative routes. CCTV could be used also for deployment of traffic management personnel in problematic areas. License number plate recognition through camera feeds processing can be used to measure traffic flow and even to apply a toll to users in certain traffic zones as a deterrent for private car use.  Park and ride systems may shift away concentration of traffic from urban centres.  \cite{AlNuaimi2015} for instance suggests how concerted efforts can lead to smart cities by analysing static data and make infrastructural changes by opening or modifying roads. Dynamic data then would be used to manage traffic lights to alleviate congestion, inform the public through their smart phones about the traffic status and orchestrate shipping movement for the supply chain.
+Law enforcement is another way to facilitate traffic flow. This would diminish road accidents or casual road blockages that can cause flow disruptions. Automatic number plate recognition (ANPR) through camera feeds processing can be used to measure traffic flow and even to apply a toll to users in certain traffic zones as a deterrent for private car use.  Park and ride systems shift away concentration of traffic from urban centres \cite{Attard2015}.  Nuaimi et al for instance show how concerted efforts can lead to smarter cities by analysing static data and make infrastructural changes by opening or modifying roads. In this study dynamic data was used to manage traffic lights to alleviate congestion, inform the public through their smart phones about the traffic status and control logistics related to movement of goods \cite{AlNuaimi2015}.
 
-Investment in the transport infrastructure to expand capacity is difficult to directly justify with a simple cost benefit analysis model. Increase in road capacity might seem a simple straightforward solution to alleviate traffic.  However infrastructure alterations might not necessarily equate to easing of traffic. Such costly changes might just spatially shift the problem elsewhere or not lead to the expected result. Forecasting of the gains made by road capacity increase or any other transport system changes may be distorted if induced traffic is not taken in consideration. Induced traffic may result from changes in route choice, peak hour traffic, modal split, overall transport volume, land use and quality of public transport services \cite{Naess2012}. When formulating return on investment functions induced traffic should not be ignored.
+Investment in the transport infrastructure to expand capacity is difficult to directly justify with a simple cost benefit analysis model \cite{atkinson2006cost}. Increase in road capacity might seem a simple straightforward solution to alleviate traffic.  However infrastructure alterations might not necessarily equate to easing of traffic. Such costly changes might just spatially shift the problem elsewhere or not lead to the expected result. Forecasting of the gains made by road capacity increase or any other transport system changes may be distorted if induced traffic is not taken in consideration. Induced traffic may result from changes in route choice, peak hour traffic, modal split, overall transport volume, land use and quality of public transport services \cite{Naess2012}. When formulating return on investment functions induced traffic should not be ignored.
 
 
 \section{Traffic information and management systems}\label{section:introduction:traffic_information_and_management_systems}
 
-Traffic management would primarily consist of a systematic approach to monitor accurately, with wide coverage what is the traffic status in the road network. In order that this information is kept relevant it needs to be constantly updated and gathered in a reliable fashion. Once such information is acquired intelligent traffic management systems architectures can be designed around static data and traffic control is based  on constant input feed stream processing. Obviously the latter is more challenging in terms of computational resources and design but is more reactive to abnormal situations such as accidents or unusual weather conditions since it is modelled on a running sample \cite{Toole2015}. Traffic related data stream processing might entail heavy real time processing of high variety data coming from multiple sources. Modern approaches such as big data based information systems become essential in order to create automated control systems that alleviate the load on the transport network.
+Traffic management systems primarily monitor traffic status in the road network and take traffic control decisions such as increasing or decreasing lanes in a tidal lane system based on traffic data. In order that this traffic information is kept relevant it needs to be constantly updated and gathered in a reliable fashion. Intelligent traffic management systems are more efficient when the traffic control decisions are based on real-time streams of traffic data. Processing real-time feeds is challenging both in terms of computational resources and design but is more reactive to abnormal situations such as accidents or unusual weather conditions since it is modelled on a running sample \cite{Toole2015}. Traffic related data stream processing might entail heavy real time processing of high variety data coming from multiple sources. Modern approaches such as big data based information systems become essential in order to create automated control systems that alleviate the load on the transport network\cite{Liu2014}.
 
-Traffic information Systems may be based on mobile data as main source of information. These type of systems would require that mobile data collection and its processing has wide coverage, is reliable and accurate and updated with high frequency \cite{Leduc2008}. Less coverage is to be expected in rural areas where base stations are highly dispersed when compared to urban areas. Mobile vehicle geolocation cannot be used for traffic flow counts on lanes as it can be done with inductive loops. Frequency of updates refers to collection of data that probes the traffic situation (counts) and also to the amount of fresh updates users get from the traffic information systems in real time.
+Traffic Information Systems (TIS) can tap into mobile usage records as main source of information. Such TIS leverage mobile data collection that has wide coverage, is reliable, accurate and updated frequently \cite{Leduc2008}. Less coverage is to be expected in rural areas where base stations are highly dispersed when compared to urban areas. Mobile vehicle geolocation has limited spatial resolution. For example it cannot be used for traffic flow counts on lanes as it can be done with inductive loops. 
 
 \section{Traveller centric traffic flow probing} \label{section:introduction:traveller_centric_traffic_flow_probing}
 
 %TODO - give some notes on floating car data
 
-Obviously the dynamics of traffic flow is determined by the travel needs of the masses. The daily commutes of every individual impacts those of others. The interaction at large scale of all the vehicles in a time series is difficult to model and then predict how traffic is affected along the course of the day. Traffic sensors, cameras and induction loops are all sources of information that can be lead to both detect high traffic intensity or even forecast it beforehand.  However the coverage these techniques offer is limited. Camera feeds and inductive-loop detectors cannot be installed in every road of the transport infrastructure. Crowd-sourced information that gives information on mobility traces enables new approaches how to make the road infrastructure management, both inter-towns and intra-cities, smarter. Vehicles and people that are on the move become traffic measurement mediums.
+Obviously the dynamics of traffic flow is determined by the travel needs of the masses. The daily commutes of every individual impacts those of others. The interaction at large scale of all the vehicles in a time series is difficult to model and to predict in a robust and responsive manner \cite{VLAHOGIANNI20143}. Traffic sensors, cameras and induction loops are all sources of information that can be used to both detect high traffic intensity or even forecast it beforehand.  However the coverage these techniques offer is limited. Camera feeds and inductive-loop detectors cannot be installed in every road of the transport infrastructure. Devices carried by travellers or embedded in used vehicle can be possibly used to build smart solution for traffic management \cite{VLAHOGIANNI20143}.
 
-Long before the information era started, spatio-temporal data on human mobility was collected in various forms and modalities. There are various reasons that raise interest in the scientific community for gathering such information. One of the methods used to gather such information is to do straightforward surveys\cite{Calabrese2013,Colak2015}. However these are expensive in terms of manual work needed to carry out and a lot of human resources are needed to gather information. Besides they could only give a snapshot of reality at a given point in time.  Generally these type of surveys are done every five to ten years \cite{Toole2015}. The data made available would be too static and increasing the frequency of survey taking would directly require more human resources assigned to the process. Given that telecommunications came into the picture and there was a wide adoption of its services at the turn of the millennium one could gather data more frequently in vaster amounts and in an automated fashion from mobile devices. The sample domain got even wider. A limitation which comes with mobile phone data is the lack of background known on the travellers. Surveys gather such information and make stratified sampling possible in order to have a more representative sample \cite{Colak2015}.
 
-\section{Application of mobile traces analytics} \label{section:introduction:application_mobile_traces}
+\subsection{Passive vs Active data collection}
+Long before the information era started, spatio-temporal data on human mobility was collected in various forms and modalities. One of the methods used to gather such information is to do straightforward surveys\cite{Calabrese2013,Colak2015}. However these are expensive methods because a lot of manual work needs to be carried out. Besides they could only give a snapshot of reality at a given point in time.  Generally these type of surveys are done every five to ten years \cite{Toole2015}. The data made available would be too static and increasing the frequency of survey taking would directly require more human resources assigned to the process. Given that mobile telecommunications came into the picture and there was a wide adoption of its services at the turn of the millennium more data points could be collected in an automated fashion. A limitation which comes with mobile user related information is the lack of background known on the mobile owner. Surveys gather such information and make stratified sampling possible in order to have a more representative sample \cite{Colak2015}.
 
-Primarily mobile traces would lead to location based services that have a wide application spectrum that go beyond solving mobility issues \cite{Hoteit2014,Calabrese2013,Gonzalez2008,Hoteit2016}. An individual's location and its relation with that of others within the context of the continuum of time is invaluable in many ways. This formidable datasource however poses a challenge. Location data, which usually comes in large amounts, has to be harvested, ingested efficiently and ideally processed in real time for the required final purpose which is value added location based services.
+\subsection{Application of mobile traces analytics} \label{section:introduction:application_mobile_traces}
+
+Mobile traces can be processed and used to offer location based services that have a wide application spectrum that go beyond solving mobility issues \cite{Hoteit2014,Calabrese2013,Gonzalez2008,Hoteit2016}. An individual's location and its relation with that of others within the context of the continuum of time is invaluable in many ways. This formidable datasource however poses a challenge. Location data, which usually comes in large amounts, has to be harvested, ingested efficiently and ideally processed in real time for the required final purpose which is value added location based services.
 
 The range of application and branches of research abound on remote collection of mobile users' geolocation information.   To name a few applications include: traffic patterns and prediction modelling, crowd management, hotspot detection, lost device recovery, emergency rescue, use for investigative authorities,  location-based recommendation and advertising systems, contextualized information, social interaction based application, epidemiology etc.  
 
-\cite{Calabrese2013} went even further to emphasize that such studies on human mobility patterns would be vital for better sustainable urban planning and a boost for the environment's well being given that transportation in 2004 accounted for 22\% of primary energy use.
+Calabrese et al  emphasized that studies on human mobility patterns would be vital for better sustainable urban planning and a boost for the environment's well being given that transportation in 2004 accounted for 22\% of primary energy use\cite{Calabrese2013}.
 
-Mobile device geolocation data surely proved to be useful to setup a platform to predict how traffic/commuting patterns evolve during different time-frames such as weekdays in contrast with weekends \cite{Steenbruggen2015}. Prediction of traffic patterns would also include jam detection \cite{Hoteit2014}.  Macroscopic monitoring and analysis of vehicle mobility through mobile traces is a wide area of study on its own which can branch in many fields of study \cite{Steenbruggen2015}. 
-
-In this dissertation we will focus on the topic of measuring traffic flow and predict how traffic increase along time by using mobile data usage. A combination of data mining and machine learning techniques will be used to devise a data processing pipeline. This pipeline will consume raw event data records containing cell tower locations and date time and then it zooms into the main areas of activity of users, plots routes between these areas and collects spatial grid aggregate data from daily trips done along these routes from thousands of users. The dataset which is produced from this pipeline is used to train and validate a predictive model using artificial neural networks.
-
-\section{Aims and objectives} \label{section:introduction:aims_objectives}
-
-The problem to be tackled by this research will be traffic congestion detection and also its prediction within a specific time window. Traffic congestion can be measured through aggregate functions exercised on areas with well defined geo-fences. Traffic hotspots' data is more static unlike the location of mobile users which is less accurately traceable. The trip trajectory of an individual when compared with traffic congestion at a given point is far more non-deterministic \cite{Jarv2012}. Data aggregation of multiple users against time will produce more accurate results when predicting waiting times at a traffic hotspot then when trying to predict the trip for a given time interval and specific mobile user.
-
-Traffic congestion analysis is tightly linked to a long list of factors. These factors are related in some way or another to mobile network determined location. It is not however excluded that the dataset is further augmented. Such factors or 'features' as most often referred to in applied artificial intelligence jargon might include but are not limited to are: number of exits at a junction point, distance from the nearest busy(a standard threshold is to be chosen on what defines 'busy' ) junction point, aggregate statistics of currently moving mobile users, historical trajectory data for drivers in the area, actual day of week, seasonality (whether it is a holiday or schools are closed), current infrastructural works which might skew the analysis, accidents records to correlate anomalies etc. Techniques that will be used as a traffic congestion metric is count of moving users per spatial bin at a given point in time\cite{Alarabi2014}. Spatial bins are geo-fenced areas in a rectangular format that enclose geospatial information. Frameworks such as Spatial Hadoop facilitate parallelized processing on large datasets in order to group data points in spatial bins for further analytics \cite{Alarabi2014}. 
-
-We propose a systematic approach how to address the problem often stated in literature related to mobility patterns \cite{Calabrese2013,Toole2015,Hoteit2014,Alexander2015}. We are aiming to devise an accurate metric of traffic congestion and be able to forecast traffic through a model trained and tested with available mobile usage data. The real challenges resides in achieving granularity when modelling traffic given that mobile usage records' geolocation dataset is sparse and reveals the position of users with a considerable margin of error \cite{Hoteit2014,Gonzalez2008}.
-
-\section{Dissertation outline} \label{section:introduction:dissertation_outline}
-This dissertation started with a section that introduces the reader to the vehicular traffic problematic nature. It continues by expanding the socio-economic impact of traffic and how it can be addressed with modern technology. At the outset it is mentioned how mobile data usage has great potential to monitor traffic conditions and to predict it across time. The following chapter "problem definition" will discuss how the problem at hand of measuring traffic and predicting from mobile usage data is not trivial. It will show where the main challenges reside in order to arrive to a viable solution. Background on traffic flow detection and prediction and an overview of related literature will be given in chapter \ref{background} "Background and literature review". The proposed method to showcase selected implementations of certain concepts inspired by literature will be elaborated in the "Methodology" chapter.  Validity and versatility of the created model will be evaluated in the "Evaluation and Results" chapter. Finally the "Conclusion and Future works" chapter will summarize what has been achieved in this work and to what extent.  In this chapter shortcomings of the proposed solution will be discussed and possible improvements and prospects for the future will be listed.
-
-
-
+Steenbruggen et al mention how mobile geolocation data can be used to differentiate weekday traffic patterns from those in the weekend \cite{Steenbruggen2015}. Another specific type of  prediction based on mobile usage discussed in \cite{Hoteit2014} is jam detection .  Macroscopic monitoring and analysis of vehicle mobility through mobile traces is a wide area of study on its own which can branch in many fields of study \cite{Steenbruggen2015}.
 
 
 \section{Problem definition}
-From this research it is required to demonstrate that it is possible to attain an accurate measure of traffic and predict traffic for different amounts of time ahead. It is required to prove that this can be possibly done by constructing a predictive model and make use of inference techniques that base themselves on data usage records collected from the mobile cellular network. As we will expand in chapter \ref{background}, the trajectory path plotted by the mobile antenna through which users are given service is far from being a true picture of the actual path of the user.  An algorithm must be devised to deduce the actual path travelled by the user for his most common trips. The predictive model must possibly predict the traffic in a reasonable amount of time since a prediction that take a long time to compute will become futile in its purpose.
+From this research it is required to demonstrate that it is possible to attain an accurate measure of traffic flow and predict traffic flow for specific locations from predefined time intervals ahead. It is required to prove that this can be possibly done by constructing a predictive model and make use of inference techniques that base themselves on data usage records collected from the mobile cellular network. As we will expand in chapter \ref{chapter:background}, the trajectory path plotted by the mobile antenna through which users are given service is far from being a true picture of the actual path of the user.  Another aspect of the problem is to detect when and where user trips start and finish and how this can be translated into traffic load on the road infrastructure.
+
+An algorithm must be devised to deduce the actual path travelled by the user for his most common trips. The predictive model has to predict the traffic in a responsive manner since predictions that take a long time to compute will not be useful.
 
 
 \subsection{Research Questions}
 
 Research will be done in a direction outlined by the questions below:
 \begin{enumerate}
+	\item Is the resolution of mobile data usage cell tower location fit for purpose to measure vehicular traffic flow on the road network?
+	
 	\item How is it possible to extract the geolocation of main areas of activity from user's mobile data usage records?
-	\item What is the best approach to analyse traffic flow over time in space? Is the resolution of mobile data usage cell tower location fit for purpose to measure vehicular traffic flow on the road network?
+	
+	\item Is it possible to extract trip information that is based on the users' main areas of activity?
+	
+	\item What is the best approach to analyse traffic flow on the road infrastructure over time in space given that trip information is available? 
+
 	\item Is it possible to model traffic flow over time with machine learning techniques that use mobile data usage or processed data derived from it? From how much time ahead can the model predict traffic flow with an acceptable margin of error in such a way that the prediction is useful and practical for trip planning and traffic management systems?
 \end{enumerate}
+
+
+
+
+\section{Aims and objectives} \label{section:introduction:aims_objectives}
+
+In this dissertation we will focus on measuring traffic flow and predict how traffic flow changes over time for a selection of locations by using mobile data usage. A combination of data mining and machine learning techniques will be used to devise a data processing pipeline. This data processing pipeline will:
+
+\begin{enumerate}
+ \item consume raw event data records containing cell tower locations and date time.
+ 
+ \item zoom into the main areas of activity of users by using unsupervised machine learning techniques that cluster the most dense groups of geolocation data points.
+ 
+ \item  determine routes between these main activity areas and collect spatial grid aggregate data from daily trips done along these routes from thousands of users. 
+ 
+ \item use the transformed data which is representative of traffic flow in various locations to train and validate a predictive model using artificial neural networks.\cite{Calabrese2013,Toole2015,Hoteit2014,Alexander2015}. 
+ 
+ \item feed visualization tools that enable visual inspection of traffic patterns projected on maps.
+
+\end{enumerate}
+
+A selection of methods that are encountered in literature will be applied and evaluated. The real challenges reside in achieving high spatio-temporal resolution when modelling traffic given that mobile usage records' geolocation dataset is sparse and tracks the position of users with a considerable margin of displacement error \cite{Hoteit2014,Gonzalez2008}.
+
+
+
+
+
+
+\section{Dissertation outline} \label{section:introduction:dissertation_outline}
+This dissertation started with a section that introduces the reader to the vehicular traffic problematic nature. It continues by expanding the socio-economic impact of traffic and how it can be addressed with modern technology. At the outset it is mentioned how mobile data usage has great potential to monitor traffic conditions and to predict it over time.
+
+ Background on traffic flow detection and prediction and an overview of related literature will be given in chapter \ref{chapter:background} "Background and literature review". The proposed method to demonstrate soundness of certain selected implementations of certain concepts inspired by literature will be elaborated in chapter \ref{chapter:methodology} "Methodology".  Validity and versatility of the created model will be evaluated and discussed in the "Evaluation and Results" chapter. Chapter chapter \ref{chapter:future_work} "Future Works"  will discuss possible improvements and potential future projects that can build on the work done in this dissertation. Finally the "Conclusion" chapter will summarize what has been achieved and to what extent in this dissertation, while highlighting limitations in the process.
 
 
 
@@ -198,72 +219,98 @@ This chapter will go over mainstream techniques and approaches that make use of 
 
 \section{Mobile location data sources} \label{background_mobile_location_data_sources} 
 
-Mobile location retrieval include various sources. User locations have to be recorded from cell towers mainly for billing purposes. Other records are generated when there is a location update and hand over information \cite{Calabrese2011}. Geographical coordinates of the cell tower are added with billing information. Call data records (CDR) or event data records (EDR) as they are generically referred to when they comprise other forms of activity other then calling are generated by network elements to capture and report user activity within the network. Reporting frequency and record triggering events can be configurable, allowing operators to trade off between keeping at their lowest the quantity of generated records that are hungry of storage resources and providing enough data for billing/troubleshooting purposes.
-Mobile internet is the service that generates most records. As soon as the user connects to the network, a first record is generated, providing all of the available information, including which cell tower is providing the service. Since data sessions span over a long period of time, periodic updates are required, allowing billing related entities to decide whether the user may continue to make use of the service. These updates may be triggered by either of the following:
+Mobile geolocation data retrieval include various sources. User locations have to be recorded from cell towers mainly for billing purposes. Other records are generated when there is a location update and hand over information \cite{Calabrese2011}. Geographical coordinates of the cell tower are added with billing information. 
+
+From a telecommunications background perspective Call data records (CDR) or event data records (EDR) as they are generically referred to when they comprise other forms of activity other then calling are generated by network elements to capture and report user activity within the network. Reporting frequency and record triggering events can be configurable, allowing operators to trade off between keeping at their lowest the quantity of generated records that are hungry of storage resources and providing enough data for billing/troubleshooting purposes.
+
+Mobile internet is the service that generates most records. As soon as the user connects to the network, a first record is generated, providing all of the available information, including which cell tower is providing the service. Since data sessions span over a long period of time, periodic updates are required, allowing billing related entities to control whether the user may continue to make use of the service or not. These updates may be triggered by either of the following:
 \begin{enumerate}
 \item Volume - a new record is generated as the user consumes more than a pre-configured volume.
 \item Time - if the user is idle, a new update record is still generated after a specific amount of time from the previous record.
 \item Network Trigger - operators may decide to generate a record each time there is a specific change (for instance, a change in radio access technology)
 \end{enumerate}
 	
-Together with call records, SMS records (messaging) and data traffic (2G/GSM, 3G/UMTS, 4G/LTE) records can also be stored. SMS records structure are similar to those of CDRs \cite{Calabrese2013}. A call data record structure would include the A-party (who is calling), the B-party (the person who is receiving the call), call duration, date and time of calls amongst other things which might not prove to be useful for location deducing purposes. The location is implicitly the sector of the base station antenna which was managing the call/sms and where ultimately the CDR has its origin. The technology of mobile data transfer (2G, 3G or 4G) the user device makes use of is negotiated depending on the strength of the signal and load of cell tower \cite{Liu2014}. The technology used will fail-over to a less faster one but stronger in signal strength if reception experienced by user weakens (example changeover from 4G to 3G and so forth). This has an implication on location detection as we will see later on. A data event record would include volume of transmitted data in the session.
+Together with call records, SMS records (messaging) and data traffic (2G/GSM, 3G/UMTS, 4G/LTE) records can also be stored. SMS records structure are similar to those of CDRs \cite{Calabrese2013}. A CDR structure would include the A-party (who is calling), the B-party (the person who is receiving the call), call duration, date and time of calls amongst other things which might not prove to be useful for location deducing purposes. The location is implicitly the sector of the base station antenna which was managing the call/sms and where ultimately the CDR has its origin. The technology of mobile data transfer (2G, 3G or 4G) the user device makes use of is negotiated depending on the strength of the signal and load of cell tower \cite{Liu2014}. The technology used will fail-over to a slower one but stronger in signal strength if reception experienced by user weakens (example changeover from 4G to 3G and so forth). This has an implication on location detection as we will see later on. A data event record would include volume of transmitted data in the session.
 
 Mobile device location traces have their limitations when used for vehicular traffic analyses. In contrast with surveys they lack demographics \cite{Calabrese2013,Colak2015} and market share of the mobile service provider that made the dataset available for scientific research might not be really representative of the commuting patterns \cite{Calabrese2011}. Many studies mentioned that it is important to remove bias in preprocessing of such datasets before any further processing is done \cite{Iqbal2014,Toole2015}.  Passive data gathered in the form of CDRs are not suited to extract different modes of travel, route assignment and classify detailed activity types \cite{Colak2015}.
 
-Mobile device location data is not only limited to data that originates from cellular networks. Global positioning system (GPS) is the most reliable source of geolocation because of its higher resolution with lower margin of error. This data is generated on the device and needs to be stored and communicated from the user's mobile with his own specific authorization. Using GPS data for a mobility study is more challenging because it needs the consent of users to get such data and drains the battery really fast especially because of long signal acquisition time \cite{Wang2012}. Thus users would be reluctant to have such service running in the background on their mobiles all the time \cite{Ahas2011}. 
+Mobile device location data is not only limited to data that originates from cellular networks. Global positioning system (GPS) is the most reliable source of geolocation because of its higher resolution with lower margin of error. This data is generated on the device and needs to be stored and communicated from the user's mobile with his own specific authorization. Using GPS data for a mobility study is more challenging because it needs the consent of users to get such data and drains the battery quickly especially because of long signal acquisition time\cite{Wang2012}. Thus users would be reluctant to have such service running in the background on their mobile phones all the time \cite{Ahas2011}. 
 
-CDRs were the most commonly mobile location data source used in recent research \cite{Hoteit2016}. The intention of our research is to use data usage EDRs since these can have a higher temporal resolution. A CDR can be more commonly generated when a user is not moving unless he is using hands free in his car. CDRs therefore would be more suited for home and work location detection whilst data usage records would be more generated frequently both when user is moving and stationary. To our best knowledge up till today the trend is to use CDRs. There are very few research projects that rely on mobile data usage to detect vehicular traffic or predict it. Few examples in literature are  \cite{Hoteit2014,Calabrese2011}. 
+CDRs were the most commonly mobile location data source used in recent research \cite{Hoteit2016}. The intention of our research is to use data usage EDRs since these can have a higher temporal resolution. CDR data can be more commonly generated when a user is not moving unless he is using hands free in his car. CDRs therefore would be more suited for home and work location detection whilst data usage records would be more generated frequently both when user is moving and stationary. To the best of our knowledge the trend is to use CDRs to trace mobility. There are very few research projects that rely on mobile data usage to detect vehicular traffic or predict it \cite{Hoteit2014,Calabrese2011}. 
 
-Other sources of geolocation include social mobile application recorded events such as check-ins in facebook \cite{Hoteit2014}. Such data can be accessed by available APIs.
+Other sources of geolocation include social mobile application recorded events such as check-ins in facebook \cite{Hoteit2014}. Such data can be accessed by available APIs \footnote{https://developers.facebook.com/docs/graph-api/reference/v3.0/checkin}.
 
-\subsection{Data format and sample structure used in literature} \label{methodoloy_sources}
+\subsection{Mobile usage data format and dataset sample structure} \label{methodoloy_sources}
 
 
-It is important to analyse in depth the structure of mobile records dataset sample and the method of collection thereof in order to understand possible limitations and strengths in related research. Another topic of special interest is the use of secondary datasets used to validate results achieved modelling travel on mobile generated data. Hoteit et al utilized mobile data coming from 1 million users between July and October 2009 \cite{Hoteit2014}. The data consisted of calling and messaging parties' anonymous id together with data of when users make a data connection. Interestingly in \cite{Calabrese2013} together with data collected from the CDRs (a sample of 1 million mobile users in Massachusetts) which contain calling id, time of when call/sms is done or received and when a data session is initiated, vehicle safety inspection data is used as part of the study. This is later used to verify approximately the kilometres covered when inferred from the trajectory computed based on the user data points. Time window is 3 months long and area covered is metropolitan Boston.  \cite{Calabrese2013,Colak2015} stressed several reasons why surveys have a lot of disadvantages when compared to mobile device generated data including sample size which is smaller, update frequency and certain types of time windows that are seldom considered or not captured by surveys such as seasonality, public holidays and weekends.   
+It is important to analyse in depth the structure of mobile records dataset sample and the method of collection thereof in order to understand possible limitations and strengths in related research. Another topic of special interest is the use of secondary datasets used to validate results achieved when modelling travel on mobile generated data. Hoteit et al utilized mobile data coming from 1 million users between July and October 2009 \cite{Hoteit2014}. The data consisted of calling and messaging parties' anonymous id together with data of when users make a data connection. Interestingly in \cite{Calabrese2013} apart from data collected from CDRs (a sample of 1 million mobile users in Massachusetts) which included calling id, time of when call/sms was sent or received and when a data session is initiated, vehicle safety inspection data was used as part of the study as well. Vehicle safety inspection data was later used to approximately verify the kilometres covered by inferring the trajectory. The time window in used by \cite{Calabrese2013} was 3 months long and the  area under study was metropolitan Boston.
 
-In \cite{Gonzalez2008} two datasets are used. First sample is of 100,000 individuals sub-sampled from a wider dataset population of 6 million anonymized  phone users. Again data used was id of device from which calls or sms originated or terminated and location of tower projected over time. Average area covered by cell tower was 3 km$^{2}$ with 30\% of cell towers having a coverage of 1 km$^{2}$ or less. The other dataset consisted of 206 mobile users whose location was traced every two hours for a week. The second dataset individuated irregular calling patterns noticed in the first one. Then displacements were recorded for consecutive calls in order to construct a distribution model.
+Calabrese et al and Colak et al stressed several reasons why research data samples collected with surveys present a lot of disadvantages when compared to mobile device generated data including sample size which is smaller, update frequency and certain types of time windows that are seldom considered or not captured by surveys such as seasonality, public holidays and weekends \cite{Calabrese2013,Colak2015}.   
 
-\cite{Hoteit2016} use two datasets which have GPS location of 86 mobile users in various places in the world. One dataset is generated by sub-sampling the original one in order to emulate a sparse CDR dataset. Authors were forced to do this since no real CDR dataset was available for their research.  
+Gonzalez et al mention two datasets in their research. The first sample was of 100,000 individuals sub-sampled from a wider dataset population of 6 million anonymized  phone users. Similar to other research aforementioned, the data which was used included id of device from which calls or sms originated or terminated and location of tower projected over time. The reported average area covered by a cell tower was 3 km$^{2}$ with 30\% of cell towers having a coverage of 1 km$^{2}$ or less. The second dataset consisted of 206 mobile users whose actual location was traced every two hours for a week. By comparing analysis of this dataset to the first one Gonzalez et al found irregularity in calling patterns observed when using CDR data only. Displacements were recorded for consecutive calls in order to construct a travelled distance distribution model.
 
-Two different examples of tools have been found to be employed to aggregate location data. Airsage datasets were found often to be used in literature \cite{Hoteit2014, Wang2013, Calabrese2013,Leduc2008,Wang2012, Colak2015}. Basically airsage does not simply just record the tower cell sector but depending on a refined triangulation algorithm it gives a more precise location.  \cite{Hoteit2016} makes use of MACACOApp which is an app that records mobile data usage but most importantly also GPS data. As already aforementioned GPS technology gives a more accurate geolocation. However the data sample size is much more on a minor scale than that collected from raw cdrs in other studies.
+Hoteit et al use two datasets which have GPS location of 86 mobile users in various places in the world \cite{Hoteit2016}. One dataset is generated by sub-sampling the original one in order to emulate a sparse CDR dataset. Authors were forced to do this since no real CDR dataset was available for their research.  
+
+In literature two different types of tools have been found to be employed to aggregate location data. Airsage datasets were found often to be used in literature \cite{Hoteit2014, Wang2013, Calabrese2013,Leduc2008,Wang2012, Colak2015}. Basically airsage does not simply just record the tower cell sector but depending on a refined triangulation algorithm it gives a more precise location.  \cite{Hoteit2016} makes use of MACACOApp which is an app that records mobile data usage but most importantly also GPS data. As already aforementioned GPS technology gives a more accurate geolocation. However the data sample size is smaller in comparison to data samples collected in the form of raw CDR data in other studies.
 
 \subsection{Mobile position inference from Floating cellular data} \label{mobile_inference} 
 
-The method that makes use of mobile data connectivity with base stations is commonly referred to as floating car data or more specifically floating cellular data (FCD) for sensor data originating mainly from cellular networks. A specific technique to actually determine a user's location is based on triangulation as done by the Airsage solution \cite{Hoteit2014}. Proprietary algorithms process data received from mobile service providers and outputs refined location information to customers. It was reported that in testing carried out by Geostat Inc. Airsage got accurate classification of congested traffic 91\% of the time  \cite{Wang2012}. No technical background was made available how these algorithms get a more precise location of mobile users and this is most likely attributed to the fact that algorithms are patented.  It is stated that Airsage location computation accuracy is within 200 to 300 metres in \cite{Colak2015}. \cite{Calabrese2013} states that the degree of precision reported by AirSage is an average of 320m and median of 220m. As already aforementioned AirSage has been used in \cite{Hoteit2014} as well. In comparison \cite{Gonzalez2008} simplistically mentions that 30\% (average is \(3km^{2}\)) of the towers are placed in a density of 1 tower per square km. This roughly would mean that at most an unprocessed location retrieved from cellular location data would have a maximum error of around 500m. 
+Collection of localization data that makes use of mobile phone data connectivity with base stations is commonly referred to as floating car data or more specifically floating cellular data (FCD) for sensor data originating mainly from cellular networks. A specific technique to actually determine a user's location is based on triangulation as done by the Airsage solution \cite{Hoteit2014}. An intuition about triangulation is shown in figure \ref{fig:triangulation} which is reproduced from an article by Phil Locke\footnotetext{http://wrongfulconvictionsblog.org/2012/06/01/cell\-tower\-triangulation\\-how\-it\-works. The red ellipse is the location boundaries for the phone}. Proprietary algorithms process data received from mobile service providers and outputs refined location information to customers. It was reported that in testing carried out by Geostat Inc. Airsage got accurate classification of congested traffic 91\% of the time  \cite{Wang2012}. No technical background was made available on how these algorithms get a more precise location of mobile users and this is most likely attributed to the fact that the algorithms behind the solution are patented \footnote{https://patents.justia.com/assignee/airsage\-inc}.  
 
-Therefore antenna/mobile tower location to which the mobile users connect with, may not be useful for all intents and purposes since it might be hundreds of metres away from the actual position. In our research we cannot make use of Airsage datasets. Such solutions must be already in accordance with local mobile network operators and currently there are no such agreements with the local providers. Therefore in this research some effort had to be dedicated to devise a simple triangulation or clustering method that can achieve more accurate mobile user location than the actual cell tower location. Since the grouping of multiple mobile users within a grid of location cells would prove to be more efficient in accurately measuring levels of traffic an essential topic to treat in traffic congestion research is spatial binning. Spatial binning basically provide geographical aggregate statistics.  MapReduce frameworks such as Spatial Hadoop exist so the expensive temporal geospatial analytics are done within an acceptable time window \cite{Wu2014,eldawy2015spatialhadoop}. Such tools would even provide the possibility of doing spatial joins that can correlate spatial features extracted from sources such as OpenStreetMaps with mobility data from a mobile usage dataset \cite{Alarabi2014}.
+\begin{figure}[h] \label{fig:triangulation}	
+	\includegraphics[scale=0.75]{triangulation.jpg}
+	\centering
+	\caption[Triangulation concept]{
+		Illustration of the triangulation concept which is based on signalling and negotiation with nearby towers. Triangulation computes the location information inferred from signal strength experienced by the mobile phone user. If no second or third tower was present the location would be considered anywhere within the sector on the circumference that is demarcated by the signal strength. The red ellipse is the location boundaries for the phone.}		
+
+\end{figure}
+
+It is stated in \cite{Colak2015} that Airsage location computation accuracy is within 200 to 300 metres . Calabrese et al state that the degree of location precision reported by AirSage is an average of 320m and median of 220m \cite{Calabrese2013}. As already aforementioned, AirSage has been used in \cite{Hoteit2014} as well. In comparison \cite{Gonzalez2008} simplistically mentions that 30\% (average is \(3km^{2}\)) of the towers are placed in a density of 1 tower per square km. This roughly would mean that at most an unprocessed location retrieved from cellular location data would have a maximum error of around 500m. 
+
+Location given by cell tower position to which mobile phone user is connected to is not useful for precise localization since recorded geolocation might be hundreds of metres away from the actual position. In our research we cannot make use of Airsage datasets. Such solutions must be already in accordance with mobile network operators from where mobile usage data is acquired.
+
+Therefore in this research some effort had to be dedicated to devise a simple triangulation or clustering method that can achieve more accurate mobile user location than the actual cell tower location. Since the grouping of multiple mobile users within a grid of location cells is more practical in giving a more clear traffic flow measure an essential topic to treat in traffic congestion research is spatial binning. Spatial binning determine geographical aggregate statistics. 
+
+MapReduce frameworks such as Spatial Hadoop exist so the expensive temporal geospatial analytics are done within an acceptable time window \cite{Wu2014,eldawy2015spatialhadoop}. Such tools provide the possibility of doing spatial joins that can correlate spatial features extracted from sources such as OpenStreetMaps with mobility data from a mobile usage dataset \cite{Alarabi2014}.
 
 
 \section{Privacy and data anonymization} \label{data_anonymization} 
 
 
-Mobile subscribers location is highly sensitive so anonymization has to come into play if legal issues are to be avoided when handling data for research purposes. For instance \cite{Laurila2012} exposes facts regarding potential privacy breach risks within datasets that have unique identifiers hashed. Methods that adds to anonymization efficiency listed in \cite{Laurila2012} are contractual binding of data users to not reverse-engineer identity together with truncation of data if in a given area enough data is available. Also \cite{Laurila2012} gives a detailed account of techniques used to hash unique identifiers. \cite{Shin} elaborates on how to use k-anonymity algorithm so that location data of a user makes his identity undistinguishable from other k-1 other users in the same region.
+Mobile subscribers location is highly sensitive so anonymization has to come into play if legal issues are to be avoided when handling data for research purposes. For instance \cite{Laurila2012} exposes facts regarding potential privacy breach risks within datasets that have unique identifiers hashed. Some standard practices that make anonymization procedures more efficient are listed in \cite{Laurila2012}. One of these is contractual binding where data users are legally bound to not attempt to reverse-engineer identity. Another method to further protect sensitive data through anonymization is truncation of data. For example only a part of the data is kept if it is decided that it is enough and meets the purpose of the data processing exercise. Also Laurila et al also give a detailed account of techniques used to hash unique identifiers. \cite{Shin} elaborates on how to use k-anonymity algorithm so that location data of a user makes his identity undistinguishable from other k-1 other users in the same region.
 
-Another way to guarantee privacy is limiting data retention. To safeguard privacy travel paths of a specific mobile user is kept for not more than 1 day in \cite{Hoteit2014} and 2 days in \cite{Calabrese2013}. It is the norm to assign a hashed anonymous identifier to each mobile user in such method as well.
+Another way to guarantee privacy is limiting data retention. To safeguard privacy travel paths of a specific mobile user is kept for not more than 1 day in \cite{Hoteit2014} and for not more than 2 days in \cite{Calabrese2013}. It is the norm to assign a hashed anonymous identifier to each mobile user in such a method as well.
 
 %TODO - re-identification - https://iapp.org/news/a/looking-to-comply-with-gdpr-heres-a-primer-on-anonymization-and-pseudonymization/
 
 
 \section{Big Data, the cloud and large scale real time stream processing} \label{background_big_data}
 
-Computing systems could not hold the pace of the vast increase in storage requirements \cite{Liu2014}. The bottleneck have been always IO reads and while cpu processing power and disk read speeds increased, data volume related to big data problems increased at a faster rate. 
+Liu Jun et al expand on the recent phenomenon of computing systems not keeping up the pace with the vast increase in storage requirements \cite{Liu2014}. In this study it is explained how intensive computing speeds are compromised when there is a lot of data reading and writing and when it is required to move both input and output data around in a distributed system for further processing and consumption. 
 
-Big data frameworks are suited for such scenarios. It shards the volume of data on a cluster of nodes and makes the addition of a new node in the infrastructure seamless. Failure of a node will not disrupt an ongoing computation since data will be redundant in other blocks of data replicated on other nodes in the cluster. Replacement of failing nodes is also a smooth operation in big data infrastructure. The main shift of the high performance architectural change was not how to distribute data in the network because this alone would increase network communication latency. It resides in offloading processing to the nodes where the data is located and only the resulting required information is transmitted back to a centralized node where the driver program is.
+Big data frameworks are suited for such scenarios. It shards the volume of data on a cluster of nodes and makes the addition of a new node in the infrastructure seamless. Failure of a node will not disrupt an ongoing global process since data will be redundant. Data redundancy is implemented by replication of data in blocks residing in nodes across the cluster. Hot replacement of failing nodes is also a smooth operation in big data infrastructure. The main paradigm shift to attain a high performance gain was to limit distribution of data across the network because this would mean less efficiency because of network transmission latency. The main strength of new Big Data architecture resides in offloading processing to the nodes where the data is located and only the resulting required information is transmitted back to a centralized node where the driver program is\cite{inoubli2016experimental}.
 
-When is the data infrastructure of a system in need of a shift to the Big Data paradigm and traditional RDBMS systems cease to be effective? When you have the 3 V's which are volume, velocity and variety in the data its a recipe for big data introduction as a part of the solution. This is quite applicable to the processing of the multitude of mobility data which comes in huge amounts and need to squeeze out information in the least amount of time. Our dataset that was collected between August 2016 and September 2017 is 150G in size. Building a predictive model on this dataset of such size and retrain in real-time would require a big data solution. Currently some of the leading frameworks in this area are Hadoop and Spark. Hadoop is treated in detail in \cite{Liu2014} and revolves around the mapreduce programming model. This work shows how enormous amounts of data is stored in a distributed fashion on HDFS (hadoop file system) which is highly scalable and fault tolerant. Spark is used extensively in lambda architectures that include both nightly batch and real time batch processing. \cite{Liu2014} might not be that related to the analysis of mobility behaviour but describes well how to process mobile device generated data traffic. It also gives a good account on how to monitor the infrastructure through various metrics and tooling. There are many papers related to mobile user travel pattern prediction that make use of big data innovation  \cite{Liu2014,Laurila2012,Kurien2012}. \cite{Toole2015} states that dataset size can be an issue for computation when determining the OD matrix. In this same study parallelization is used to assign routes to trips.
+When is the data infrastructure of a system in need of a shift to the Big Data paradigm and traditional RDBMS systems cease to be the preferred choice? When you have the 3 V's which are volume, velocity and variety in the data its a recipe for big data introduction as a part of the solution. This is quite applicable to the processing of the multitude of mobility data which comes in huge amounts and need to squeeze out information in the least amount of time. Our dataset that was collected between August 2016 and September 2017 is 150 GB in size. Building a predictive model on this dataset of such size and retrain in real-time would require a big data solution. 
+
+Currently some of the leading frameworks in this area are Hadoop and Spark. Hadoop is treated in detail in \cite{Liu2014} and revolves around the MapReduce programming model. This work shows how enormous amounts of data is stored in a distributed fashion on HDFS (hadoop file system) which is highly scalable and fault tolerant. Spark is used extensively in lambda architectures that include both nightly batch and real time batch processing. Liu Jun et al research is not directly related to the analysis of mobility behaviour but describes well how to process mobile device generated data traffic. It also gives a good account on how to monitor the infrastructure through various metrics and tooling. There are many papers related to mobile user travel pattern prediction that make use of big data innovation  \cite{Liu2014,Laurila2012,Kurien2012}. \cite{Toole2015} states that dataset size can be an issue for computation when determining the origins and destinations (OD) matrix (refer to sections \ref{section:odmatrix_trip_generation} and \ref{section:OD_Matrices}). In this same study parallelization is used to assign routes to trips.
 
 
 \section{Origin and destination matrices computation} \label{section:OD_Matrices}
-A consistent recurrence in traffic flow analyses literature is the study of how to deduce origin and destination (OD) locations for travelling vehicles\cite{Iqbal2014}. Many research articles confronted the problem posed by traffic congestion detection by first deducing the OD matrix \cite{Toole2015,Iqbal2014,Alexander2015,Calabrese2011,Calabrese2013,Colak2015}. In \cite{Alexander2015} OD matrices are used to generate trips and hence also give an accurate analysis of travel patterns. in \cite{Iqbal2014} the OD matrix extracted from mobile usage data is scaled up to generate an more representative OD matrix and a simulation is carried out in order to compare with traffic counts readings collected in surveys.
+A consistent recurrence in traffic flow analyses literature is the study of how to deduce origin and destination (OD) locations for travelling vehicles\cite{Iqbal2014}. Many research articles confronted the problem posed by traffic congestion detection by first deducing the OD matrix \cite{Toole2015,Iqbal2014,Alexander2015,Calabrese2011,Calabrese2013,Colak2015}. 
 
-ODs are used to extract main activity hubs. \cite{Gonzalez2008} states that 40\% of the time users are at their two preferred locations.  Therefore most trips can be mostly explained as being  between several locations since users tend to be highly inclined to be regular in spatial and temporal terms. All this leads to safely assume that the majority of trips are between home and work. In literature it  is commonly found that locations that were likely to be recorded in OD matrices were home and work \cite{Calabrese2011,Colak2015}.  In \cite{Calabrese2011} home location is detected for user by checking which 500 metres square cell has the most activity during the night for every specific user.
+In \cite{Alexander2015} OD matrices are used to generate trips and hence also give an accurate analysis of travel patterns. In \cite{Iqbal2014} the OD matrix extracted from mobile usage data is scaled up to generate a more representative OD matrix and a simulation is carried out in order to compare with traffic counts readings collected in surveys.
 
-\cite{Colak2015} labels zones such as home and work and tries to find purpose behind other types of trips. \cite{Colak2015} mentions how ODs are analysed in terms of stays and trips. Frequency of calls and time of day determine the labelling of these stays. It was not possible to categorize other types of stays other than home and work. So these types of stays are generally labelled as other.
-\cite{Calabrese2011} puts forward the concept of virtual location which is derived from fused visited locations by the user. Calabrese devises an algorithm which localizes the centroid of important locations in a user trip that are to be labelled as the origin or destinations of particular users \cite{Calabrese2011}. The method analyses which points are in the proximity of others within a 1 km radius. 
+ODs are used to extract main activity hubs. Gonzalez et al state that 40\% of the time users are at their two preferred locations.  Therefore most trips can be mostly explained as being  between several locations since users tend to be highly inclined to be regular in spatial and temporal terms. All this leads to safely assume that the majority of trips are between home and work. In literature it  is commonly found that locations that were likely to be recorded in OD matrices were home and work \cite{Calabrese2011,Colak2015}.  In \cite{Calabrese2011} home location is detected for user by checking which 500 metres square cell has the most activity during the night for every specific user.
 
-A common occurrence in literature is to remove users that do not make enough usage. The behaviour of these is less predictable and its more difficult to generate trips from OD data. In \cite{Toole2015} users that do not make enough calls are filtered out from dataset and \cite{Colak2015} filters out users with low activity when labelling activity zones. 
+Colak et al label zones such as home and work and tries to find purpose behind other types of trips \cite{Colak2015}. In this work it is mentioned as well how ODs are analysed in terms of stays and trips. Frequency of calls and time of day determine the labelling of these stays. It is stated that it was not possible to categorize other types of stays other than home and work. So these types of stays were labelled under the 'other' class.
 
-Displacement errors due to sudden change of cell tower for various reasons are reported to make datasets inconsistent. \cite{Iqbal2014} reduces false displacements by using a time window of 10 minutes. The most common location in the 10 minute window was considered the actual location. A time window of 1 hour is than used to detect trips. In \cite{Calabrese2011} a low pass filter is used to minimize localization errors. To reduce sudden movements due to cell tower handover clustering is used.  \cite{Colak2015} raises the concern in a similar fashion and says that CDR data contains jumps or oscillations which is noisy. \cite{Colak2015} mentions how Airsage dataset inherently provides triangulation that gives medoids as processed data. Filtering out of noise in a Rio de Janeiro CDR dataset is done by labelling stays only if records are registered for a user for more than 10 minutes. When observing stays for users for a long period of time it is possible to get more clear patterns where the stays are actually visited by users or not. \cite{Toole2015} removes noise from mobile phone calls deduced trajectories by using the stay algorithm proposed in \cite{Zheng2011}. A 'stay' location is recorded whenever user makes a set of calls with a time window greater than a given threshold. Centroid is then calculated for set of locations that are close to each other in order to compute a better approximate location of the user. \cite{Iqbal2014} mentions that Estimation of OD matrices can be unreliable because of sampling bias. Equally \cite{Toole2015} stresses that bias needs to be removed when constructing OD matrices.
+Calabrese et al (2011) put forward the concept of virtual location which is derived from fused visited locations by the user\cite{Calabrese2011}. This research devises an algorithm that localizes the centroid of important locations in a user trip that are to be labelled as the origin or destinations of particular users. The method analyses which points are in the proximity of others within a 1 km radius. 
+
+A common occurrence in literature is to remove users that do not make enough mobile usage. The behaviour of these is less predictable and its more difficult to generate trips from OD data for this type of users. In \cite{Toole2015} users that do not make enough calls are filtered out from dataset and \cite{Colak2015} filters out users with low activity when labelling activity zones. 
+
+Displacement errors due to sudden change of cell tower for various reasons are reported to make datasets inconsistent. False displacements are reduced in \cite{Iqbal2014} by using a time window of 10 minutes. The most common location in the 10 minute window was considered the actual location. A time window of 1 hour is than used to detect trips. In \cite{Calabrese2011} a low pass filter is used to minimize localization errors. To reduce sudden movements due to cell tower handover clustering is used. The same concern is raised in \cite{Colak2015} in a similar fashion and decribe how CDR data contains jumps or oscillations which introduce noise in the dataset. 
+
+It is mentioned in \cite{Colak2015} how Airsage dataset inherently provides triangulation that gives medoids as processed data. Filtering out of noise in a Rio de Janeiro CDR dataset is done by labelling stays only if records are registered for a user for more than 10 minutes. When observing stays for users for a longer period of time it is possible to get more clear patterns where the stays are actually visited by users or not. \cite{Toole2015} removes noise from mobile phone calls deduced trajectories by using the stay algorithm proposed in \cite{Zheng2011}. A location is labelled as a 'stay' whenever user makes a set of calls within a time window greater than a given threshold. The centroid is then calculated for a set of locations that are close to each other in order to compute a better approximate location of the user. \cite{Iqbal2014} mentions that Estimation of OD matrices can be unreliable because of sampling bias. Equally \cite{Toole2015} stresses that bias needs to be removed when constructing OD matrices.
 
 An important attribute to consider in OD matrices is its resolution since it might be important to aggregate data for statical purposes. Very few information has been found in literature on this. In \cite{Colak2015} census tracts and town boundaries are chosen for OD resolution. No justification for this choice is given tough.
 
@@ -316,7 +363,7 @@ with exponent $-\beta$=1.75 $\pm$ 0.15 (mean $\pm$ standard deviation), $\Delta 
 \begin{figure}[h]	
 	\includegraphics[scale=0.75]{truncated_power_law}
 	\centering
-	\caption{Truncated levy flight human motion modelling. Reproduced from \cite{Gonzalez2008}}
+	\caption[Truncated Levy Flight]{Truncated levy flight human motion modelling. Reproduced from \cite{Gonzalez2008}}
 	\label{fig:levy_flight}
 \end{figure}
 
@@ -449,7 +496,7 @@ When a frequency diagram is plotted an interesting fact comes out (see figure \r
 \begin{figure}	
 	\includegraphics[scale=0.75]{data_session_duration_bin_count.jpg}
 	\centering
-	\caption{At the right of the plot one can notice a spike of records on with data session duration of 1 hour.}
+	\caption[Data session duration distribution]{At the right of the plot one can notice a spike of records with a data session duration of 1 hour.}
 	\label{fig:data_session_duration_bin_count}
 \end{figure}
 
@@ -486,7 +533,7 @@ After removing 1 hour duration EDRs newly calculated summary statistics show tha
  \begin{figure}
  	\includegraphics[scale=0.75]{data_session_duration.jpg}
  	\centering
- 	\caption{80\% of the records are below the 5 minute threshold.}
+ 	\caption[Data session duration cummultive distribution]{80\% of the records are below the 5 minute threshold.}
  	\label{fig:data_session_duration}
  \end{figure}
  
@@ -512,7 +559,7 @@ The first approach that we tried to investigate was to relate the cell tower dat
 \begin{figure}[h]	
 	\includegraphics[scale=0.75]{cell_towers_distribution}
 	\centering
-	\caption{Cell tower range distribution. Red dots are cell tower locations and dotted line is the estimated range.}
+	\caption[Cell tower distance range]{Cell tower range distribution. Red dots are cell tower locations and dotted line is the estimated range.}
 	\label{fig:cell_towers_distribution}
 \end{figure}
 
@@ -543,7 +590,7 @@ DBSCAN (density based spatial clustering of applications) has an edge on k-means
 \begin{figure}[!]	
 	\includegraphics[scale=0.60]{clustering.jpg}
 	\centering
-	\caption{DBSCAN clustering to find main user activity hubs. (Sample illustration)}
+	\caption[DBSCAN clustering]{DBSCAN clustering to find main user activity hubs. (Sample illustration)}
 	\label{fig:db_scan_clustering}
 \end{figure}
  
@@ -582,14 +629,14 @@ As similarly done in Toole et al. \cite{Toole2015} routes between origins and de
 \begin{figure}[hp]	
 	\includegraphics[scale=0.60]{Trip_delay_cumm_distribution.jpg}
 	\centering
-	\caption{Cumulative distribution of trip delay. This figure shows how negative trip delay instances are a very small percentage. Cutoffs  of -5 and 45 minutes were chosen to select the trips for the learning model.  }
+	\caption[Trip delay cumulative distribution]{Cumulative distribution of trip delay. This figure shows how negative trip delay instances are a very small percentage. Cutoffs  of -5 and 45 minutes were chosen to select the trips for the learning model.  }
 	\label{fig:trip_delay_cum_distribution}
 \end{figure}
 
 \begin{figure}[!]	
 	\includegraphics[scale=0.60]{trip_delay_cumm_distribution_total.jpg}
 	\centering
-	\caption{Trip delay probability distribution presents a heavy tail on the right.  }
+	\caption[Trip delay total cumulative distribution]{Trip delay probability distribution presents a heavy tail on the right.  }
 	\label{fig:trip_delay_cum_distribution_heavy_tail}
 \end{figure}
 
@@ -598,7 +645,7 @@ Another important extracted information from route selection is the trip delay. 
 \begin{figure}[h]	
 	\includegraphics[scale=0.60]{Trip_delay.jpg}
 	\centering
-	\caption{Average trip delay patterns are different between weekdays and weekends. Peaking of average trip delay on weekdays happen at 6:00 a.m and 7:00 a.m. and 4:00 p.m. and 5:00 p.m. Peaks for weekend days happen later in the day.}
+	\caption[Hourly average trip delay weekdays vs weekends]{Average trip delay patterns are different between weekdays and weekends. Peaking of average trip delay on weekdays happen at 6:00 a.m and 7:00 a.m. and 4:00 p.m. and 5:00 p.m. Peaks for weekend days happen later in the day.}
 	\label{fig:trip_delay_weekdays_vs_weekends}
 \end{figure}
 
@@ -768,7 +815,7 @@ The centroid for each bin was calculated in order to attain the central coordina
 \begin{figure}[!]	
 	\includegraphics[scale=0.5]{traffic_count_color_coded_categorization.jpg}
 	\centering
-	\caption{Traffic flow count categorization through a colour coding. Traffic flow count intensity is represented with a colour scheme ranging from dark green (low recorded traffic) to dark red (heavy traffic). The range stretches on 11 quantiles.}
+	\caption[Traffic total flow count binning]{Traffic flow count categorization through a colour coding. Traffic flow count intensity is represented with a colour scheme ranging from dark green (low recorded traffic) to dark red (heavy traffic). The range stretches on 11 quantiles.}
 	\label{fig:traffic_count_color_coded_categorization}
 \end{figure}
 
@@ -899,7 +946,7 @@ we selected k to be 324 so that the preserved variance ratio $r$ is 90\%. In equ
 \begin{figure}[h]	
 	\includegraphics[scale=0.50]{cumulative_variance_pca.jpg}
 	\centering
-	\caption{First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance }
+	\caption[PCA first k components cumulative variance]{First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance }
 	\label{fig:cumulative_variance_pca}
 \end{figure}
 
@@ -930,7 +977,7 @@ The topology choice was determined after carrying out a grid search configured w
 \begin{figure}[!]	
 	\includegraphics[scale=0.50]{ann_topology.jpg}
 	\centering
-	\caption{Multilayer perceptron classifier topology }
+	\caption[Multilayer Perceptron Classifier topology]{Multilayer Perceptron Classifier topology (324,400,324,4)}
 	\label{fig:ann_topology}
 \end{figure}
  
@@ -977,7 +1024,7 @@ After determining the daily users' routes between different origins and destinat
 \begin{figure}[!]	
 	\includegraphics[scale=0.5]{Trip_delay_per_day_week.jpg}
 	\centering
-	\caption{OD matrix generated trip count patterns per day week. To note how Saturdays and Sundays which are outlined by the last and first two peaks respectively have unique traffic delay patterns.}
+	\caption[OD matrix generated trip count]{OD matrix generated trip count patterns per day week. To note how Saturdays and Sundays which are outlined by the last and first two peaks respectively have unique traffic delay patterns.}
 	\label{fig:trip_distribution}
 \end{figure}
 
@@ -988,7 +1035,7 @@ One can notice how the trip count distribution per hour derived from mobile usag
 \begin{figure}[!]	
 	\includegraphics[scale=0.6]{Transport_malta_trip_distribution.jpg}
 	\centering
-	\caption{Car trip distribution as reported in Transport Malta 2010 National Survey \cite{malta2011national}.}
+	\caption[NHTS car trip distribution]{Car trip distribution as reported in Transport Malta 2010 National Survey \cite{malta2011national}.}
 	\label{fig:trip_distribution_nso}
 \end{figure}
 
@@ -1008,7 +1055,7 @@ As illustrated in plot \ref{fig:trip_count_correlation} trip count peaks for bot
 			\hline			
 			
 	\end{tabular} }
-	\caption{NHTS and OD trip distributions proved to be highly correlated. $ ^* p < 0.001$  } 
+	\caption[NHTS and OD trip distributions correlation statistics]{NHTS and OD trip distributions proved to be highly correlated. $ ^* p < 0.001$  } 
 	
 \end{table}
 
@@ -1018,7 +1065,7 @@ The dynamics of the plot show how there is a sudden decrease of trips per hour a
 \begin{figure}[!]	
 	\includegraphics[scale=0.6]{Trip_count_correlation.jpg}
 	\centering
-	\caption{Comparison between OD average trip distribution over a month and Transport Malta 2010 survey results (\cite{malta2011national})}
+	\caption[Comparison between NHTS and OD average trip distribution ]{Comparison between OD average trip distribution over a month and Transport Malta 2010 survey results (\cite{malta2011national})}
 	\label{fig:trip_count_correlation}
 \end{figure}
 
@@ -1029,7 +1076,7 @@ NHTS \cite{malta2011national} reports 11\% in car trips from 1998 to 2010 and as
 \begin{figure}[!]	
 	\includegraphics[scale=0.5]{Trip_distribution_line_fit_plot.jpg}
 	\centering
-	\caption{Linear relationship between OD average trip distribution over a month and Transport Malta 2010 survey results \cite{malta2011national}}
+	\caption[NHTS and OD average trip distribution linear relationship]{Linear relationship between OD average trip distribution over a month and Transport Malta 2010 survey results \cite{malta2011national}}
 	\label{fig:trip_count_correlation_model}
 \end{figure}
 
@@ -1041,7 +1088,7 @@ A linear regression model was devised to express the scaling up from trip distri
 \begin{figure}[!]	
 	\includegraphics[scale=0.5]{trip_delay_mosta_marsa.jpg}
 	\centering
-	\caption{Expected trip delay 7 day distribution retrieved with Google distance matrix API for Mosta to Marsa route. Note how Sunday and Saturday delay pattern is different from the one observed for weekdays.}
+	\caption[Average expected trip delay - 7 day distibution]{Expected trip delay 7 day distribution retrieved with Google distance matrix API for Mosta to Marsa route. Note how Sunday and Saturday delay pattern is different from the one observed for weekdays.}
 	\label{fig:trip_delay_mosta_marsa}
 \end{figure}
 
@@ -1051,7 +1098,7 @@ Evaluation of average global trip delay results computed from OD and OSRM genera
 \begin{figure}[h]	
 	\includegraphics[scale=0.7]{trip_delay_comparison.jpg}
 	\centering
-	\caption{DMAPI expected average trip delay comparison with OD-OSRM computed average trip delays}
+	\caption[Trip delay line chart DMAPI vs OD-OSRM]{DMAPI expected average trip delay comparison with OD-OSRM computed average trip delays}
 	\label{fig:trip_delay_google_vs_mine}
 \end{figure}
 
@@ -1061,7 +1108,7 @@ At the end of April 2018 Google maps made available traffic information overlay 
 \begin{table}[!]	
 	\includegraphics[scale=0.7]{trip_delay_correlation_DMAPI_vs_MINE.jpg}
 	\centering
-	\caption{Correlation statistics between DMAPI routes' average trip delay and DMAPI routes' correlation with OD-OSRM computed trip delay. Note that correlation is being done between data retrieved in June for DMAPI and data retreived in October for OD-OSRM}
+	\caption[Trip delay correlation statistics between DMAPI and OD-OSRM]{Correlation statistics between DMAPI routes' average trip delay and DMAPI routes' correlation with OD-OSRM computed trip delay. Note that correlation is being done between data retrieved in June for DMAPI and data retreived in October for OD-OSRM}
 	\label{table:trip_delay_google_vs_mine}
 \end{table}
 
@@ -1137,7 +1184,7 @@ Route information was retrieved from OSRM with the OD matrix as input. Thus with
 		\caption{\scriptsize{Traffic flow count Marsa North - video stream}}
 		\label{fig:traffic_flow_count_MN_NP}
 	\end{subfigure}
-	\caption{Marsa North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
+	\caption[Linear chart for Kappara northbound and southbound traffic flow]{Marsa North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
 \end{figure}
 
 \begin{figure}[!] \label{fig:marsa_south_traffic_flow_line_chart}
@@ -1157,7 +1204,7 @@ Route information was retrieved from OSRM with the OD matrix as input. Thus with
 		\label{fig:traffic_flow_count_MS_NP}
 	\end{subfigure}
 	
-	\caption{Marsa South Traffic flow from OD-OSRM and video stream counts comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
+	\caption[Line chart for Marsa northbound and southbound traffic flow]{Marsa South Traffic flow from OD-OSRM and video stream counts comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
 \end{figure}
 
 %-----------------------------------------------------------------------------------------------------
@@ -1182,7 +1229,7 @@ The ground truth to be used is acquired from work done by Nigel Pace in his diss
 		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Kappara South}}
 		\label{fig:traffic_flow_count_KS_lineplot}
 	\end{subfigure}
-        \caption{OD-OSRM and video stream traffic flow Count linear plot for Kappara traffic flow points.}
+        \caption[Linear plot for Kappara northbound and southbound traffic flow regression model]{OD-OSRM and video stream traffic flow Count linear plot for Kappara traffic flow points.}
 \end{figure}
 
 \begin{figure}[!] \label{fig:marsa_traffic_flow_count_plots}
@@ -1190,17 +1237,17 @@ The ground truth to be used is acquired from work done by Nigel Pace in his diss
 	\begin{subfigure}{0.8\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{traffic_flow_count_MN_line_plot.jpg} 
-		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Marsa North}} \label{fig:traffic_flow_count_MN_lineplot}
+		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Marsa Northbound}} \label{fig:traffic_flow_count_MN_lineplot}
 	\end{subfigure}
 	
 	\vspace{1cm}
 	\begin{subfigure}{0.8\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{traffic_flow_count_MS_line_plot.jpg} 
-		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Marsa South}}
+		\caption{\scriptsize{OD-OSRM and video stream traffic flow Count linear plot - Marsa Southbound}}
 		\label{fig:traffic_flow_count_MS_lineplot}
 	\end{subfigure}	
-	\caption{OD-OSRM and video stream traffic flow Count linear plot for Marsa traffic flow points.}
+	\caption[Linear plot for Marsa northbound and southbound traffic flow regression model]{OD-OSRM and video stream traffic flow Count linear plot for Marsa Northbound and Southbound traffic flow points.}
 \end{figure}
 
 %-----------------------------------------------------------------------------------------
@@ -1211,7 +1258,7 @@ A simple linear regression model was fitted for each location to analyse the typ
 \begin{table}[!]	
 	\includegraphics[scale=0.4]{traffic_flow_counts_correlation_results.jpg}
 	\centering
-	\caption{Correlation statistics for linear regression models. OD-OSRM traffic flow count is the predictor variable and video stream traffic count is the dependent variable. $^*$Results are all significant with $p < 0.05$.}
+	\caption[Correlation statistics for traffic flow linear regression models]{Correlation statistics for linear regression models. OD-OSRM traffic flow count is the predictor variable and video stream traffic count is the dependent variable. $^*$Results are all significant with $p < 0.05$.}
 	\label{table:traffic_flow_correlation_results}
 \end{table}
 
@@ -1230,7 +1277,7 @@ In machine learning sometimes high recall is more important then high precision 
 \begin{table}[t!]	
 	\includegraphics[scale=0.75]{classification_metrics_result.jpg}
 	\centering
-	\caption{Classification evaluation metrics for 4 traffic flow road sections with 4 label classification and PCA set to extract 324 first components. Testing was done with 4 sizes of prediction time window ahead for each prediction location.}
+	\caption[Classification evaluation metrics for traffic flow prediction]{Classification evaluation metrics for 4 traffic flow road sections with 4 label classification and PCA set to extract 324 first components. Testing was done with 4 sizes of prediction time window ahead for each prediction location.}
 	\label{table:classification_mertrics}
 \end{table}
 
@@ -1240,14 +1287,14 @@ Table \ref{table:classification_mertrics} shows evaluation results described by 
 \begin{figure}[h]	
 	\includegraphics[scale=0.5]{confusion_matrix_hamrun_valletta_342_4bin_15min.jpg}
 	\centering
-	\caption{Confusion matrix for hamrun-valleta road traffic flow count for 15 minutes ahead prediction interval.}
+	\caption[Confusion matrix Hamrun to Valletta traffic flow prediction]{Confusion matrix for Hamrun to Valleta road traffic flow count for 15 minutes ahead prediction interval.}
 	\label{fig:confusion_matrix_hamrun_valletta_15min}
 \end{figure}
 
 \begin{figure}[h]	
 	\includegraphics[scale=0.5]{confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg}
 	\centering
-	\caption{Confusion matrix for marsa to aldo moro road traffic flow count for 15 minutes ahead prediction interval.}
+	\caption[Confusion matrix Marsa to Aldo Moro traffic flow prediciton]{Confusion matrix for Marsa to Aldo Moro road traffic flow count for 15 minutes ahead prediction interval.}
 	\label{fig:confusion_matrix_marsa_aldo_moro_15min}
 \end{figure}
 
@@ -1259,11 +1306,9 @@ Table \ref{table:classification_mertrics} shows evaluation results described by 
 
 %TODO - test with weekdays only
 
-\chapter{Future Work} \label{chapter:future_work}
+\chapter{Future Works} \label{chapter:future_work}
 
 \section{Future improvements}
-
-
 
 \subsection{Use of alternative data sources for ground truth}
 The challenge in such projects is to find ground truth to properly evaluate findings and achieved results. One way to achieve this is to develop or use off the shelf software that collects GPS points and collaborate with a group of people to gather the data. The resulting sample of data would be ideal to carry out correlations with experimental outcomes.
@@ -1294,6 +1339,10 @@ In order to keep this study simple and not increase the evaluation combinations 
 \subsection{Use of other datasets to increase traffic flow model accuracy }
 
 Other datasources such as social media and ANPR video streams could be used to further dynamically assign traffic to the road network. From social network feeds one can extract for example accidents location and time. This data could be used to analyse the accident impact on traffic flow and can be used as an input feature for machine learning models. Also correlation between weather and traffic flow can be done by using available weather APIs.
+
+\subsection{Analysis of road infrastructure impact on traffic flow}
+
+This dissertation's methodology made extensive use of Open source maps (OSM) and Open Source Routing Machine (OSRM). An interesting project would be to edit the OSM maps under observation (opening of a new road) with map editing software and check the impact on the traffic flow of routes which are adjacent or near to the modification done in the map. OSRM generates route information based on the OSM data and when the OSM data file is modified the change is reflected in the routing information. This would be very useful to simulate and analyse the impact on traffic flow before the actual alteration is made in the road infrastructure. 
 
 
 \chapter{Conclusion}

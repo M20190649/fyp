@@ -1,37 +1,38 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Truncated levy flight human motion modelling. Reproduced from \cite {Gonzalez2008}\relax }}{25}{figure.caption.4}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Triangulation concept}}{15}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Truncated Levy Flight}}{25}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces At the right of the plot one can notice a spike of records on with data session duration of 1 hour.\relax }}{33}{figure.caption.7}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 80\% of the records are below the 5 minute threshold.\relax }}{34}{figure.caption.9}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Cell tower range distribution. Red dots are cell tower locations and dotted line is the estimated range.\relax }}{35}{figure.caption.10}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces DBSCAN clustering to find main user activity hubs. (Sample illustration)\relax }}{39}{figure.caption.11}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Cumulative distribution of trip delay. This figure shows how negative trip delay instances are a very small percentage. Cutoffs of -5 and 45 minutes were chosen to select the trips for the learning model. \relax }}{43}{figure.caption.12}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Trip delay probability distribution presents a heavy tail on the right. \relax }}{43}{figure.caption.13}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Average trip delay patterns are different between weekdays and weekends. Peaking of average trip delay on weekdays happen at 6:00 a.m and 7:00 a.m. and 4:00 p.m. and 5:00 p.m. Peaks for weekend days happen later in the day.\relax }}{44}{figure.caption.14}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{49}{figure.caption.15}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Traffic flow count categorization through a colour coding. Traffic flow count intensity is represented with a colour scheme ranging from dark green (low recorded traffic) to dark red (heavy traffic). The range stretches on 11 quantiles.\relax }}{50}{figure.caption.16}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{51}{figure.caption.17}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Traffic count cumulative distribution for a chosen location. \relax }}{55}{figure.caption.20}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Traffic count logarithmic step function. \relax }}{55}{figure.caption.21}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Traffic count logarithmic step function. Lower traffic count mapping. \relax }}{56}{figure.caption.22}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces First components contain a higher percentage of the variance. First 324 components explain 90\% of the variance \relax }}{57}{figure.caption.23}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Multilayer perceptron classifier topology \relax }}{60}{figure.caption.24}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Data session duration distribution}}{33}{figure.caption.8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Data session duration cummultive distribution}}{34}{figure.caption.10}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Cell tower distance range}}{35}{figure.caption.11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces DBSCAN clustering}}{39}{figure.caption.12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Trip delay cumulative distribution}}{43}{figure.caption.13}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Trip delay total cumulative distribution}}{43}{figure.caption.14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Hourly average trip delay weekdays vs weekends}}{44}{figure.caption.15}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{49}{figure.caption.16}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Traffic total flow count binning}}{50}{figure.caption.17}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{51}{figure.caption.18}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Traffic count cumulative distribution for a chosen location. \relax }}{55}{figure.caption.21}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Traffic count logarithmic step function. \relax }}{55}{figure.caption.22}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Traffic count logarithmic step function. Lower traffic count mapping. \relax }}{56}{figure.caption.23}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces PCA first k components cumulative variance}}{57}{figure.caption.24}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Multilayer Perceptron Classifier topology}}{60}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces OD matrix generated trip count patterns per day week. To note how Saturdays and Sundays which are outlined by the last and first two peaks respectively have unique traffic delay patterns.\relax }}{62}{figure.caption.25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Car trip distribution as reported in Transport Malta 2010 National Survey \cite {malta2011national}.\relax }}{63}{figure.caption.26}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison between OD average trip distribution over a month and Transport Malta 2010 survey results (\cite {malta2011national})\relax }}{64}{figure.caption.28}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Linear relationship between OD average trip distribution over a month and Transport Malta 2010 survey results \cite {malta2011national}\relax }}{65}{figure.caption.29}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Expected trip delay 7 day distribution retrieved with Google distance matrix API for Mosta to Marsa route. Note how Sunday and Saturday delay pattern is different from the one observed for weekdays.\relax }}{65}{figure.caption.30}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces DMAPI expected average trip delay comparison with OD-OSRM computed average trip delays\relax }}{66}{figure.caption.31}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Kappara North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite {Pace2017}.\relax }}{70}{figure.caption.33}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Kappara South Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite {Pace2017}\relax }}{71}{figure.caption.34}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Marsa North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite {Pace2017}.\relax }}{72}{figure.caption.35}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Marsa South Traffic flow from OD-OSRM and video stream counts comparison. Video stream count graphic has been reproduced from \cite {Pace2017}.\relax }}{73}{figure.caption.36}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces OD-OSRM and video stream traffic flow Count linear plot for Kappara traffic flow points.\relax }}{74}{figure.caption.37}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces OD-OSRM and video stream traffic flow Count linear plot for Marsa traffic flow points.\relax }}{75}{figure.caption.38}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Confusion matrix for hamrun-valleta road traffic flow count for 15 minutes ahead prediction interval.\relax }}{80}{figure.caption.41}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Confusion matrix for marsa to aldo moro road traffic flow count for 15 minutes ahead prediction interval.\relax }}{81}{figure.caption.42}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces OD matrix generated trip count}}{62}{figure.caption.26}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces NHTS car trip distribution}}{63}{figure.caption.27}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison between NHTS and OD average trip distribution }}{64}{figure.caption.29}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces NHTS and OD average trip distribution linear relationship}}{65}{figure.caption.30}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Average expected trip delay - 7 day distibution}}{65}{figure.caption.31}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Trip delay line chart DMAPI vs OD-OSRM}}{66}{figure.caption.32}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Kappara North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite {Pace2017}.\relax }}{70}{figure.caption.34}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Kappara South Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite {Pace2017}\relax }}{71}{figure.caption.35}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Linear chart for Kappara northbound and southbound traffic flow}}{72}{figure.caption.36}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Line chart for Marsa northbound and southbound traffic flow}}{73}{figure.caption.37}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Linear plot for Kappara northbound and southbound traffic flow regression model}}{74}{figure.caption.38}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Linear plot for Marsa northbound and southbound traffic flow regression model}}{75}{figure.caption.39}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Confusion matrix Hamrun to Valletta traffic flow prediction}}{80}{figure.caption.42}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Confusion matrix Marsa to Aldo Moro traffic flow prediciton}}{81}{figure.caption.43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
