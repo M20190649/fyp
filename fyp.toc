@@ -16,7 +16,12 @@
 \contentsline {section}{\numberline {2.2}Privacy and data anonymization}{16}{section.2.2}
 \contentsline {section}{\numberline {2.3}Big Data, the cloud and large scale real time stream processing}{17}{section.2.3}
 \contentsline {section}{\numberline {2.4}Origin and destination matrices computation}{18}{section.2.4}
-\contentsline {section}{\numberline {2.5}Graph databases and Parallel graph processing}{23}{section.2.5}
+\contentsline {subsection}{\numberline {2.4.1}Use of OD matrices to store information on main user locations and trips inbetween}{18}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Cleaning of data, removal of noise and minimization of displacement error}{19}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Use of scaling methods to get more accurate OD matrices}{20}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Route selection for OD matrices}{21}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}OD matrices evaluation}{22}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}Traffic flow measurement and pattern extraction}{23}{section.2.5}
 \contentsline {section}{\numberline {2.6}Model fitting to human mobility}{24}{section.2.6}
 \contentsline {section}{\numberline {2.7}Prediction methods}{28}{section.2.7}
 \contentsline {chapter}{\numberline {3.}Methodology}{29}{chapter.3}
