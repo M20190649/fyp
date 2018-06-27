@@ -96,15 +96,17 @@ An anonymized mobile phone usage dataset from a telecommunications provider in M
 The final results are satisfactory and the built models can effectively be used to both measure and predict traffic flow  counts in specific locations. Improvement through an addition of a dynamic traffic assignment algorithm to the proposed solution would give more accurate results especially for traffic points that tend to be congested. 
 \end{abstract}
 
+
+
 \tableofcontents
 
 \listoffigures
 
 \listoftables
 
-
-
 \mainmatter
+
+
 
 \chapter{Introduction} \label{chapter:introduction}
 
@@ -187,22 +189,19 @@ Research will be done in a direction outlined by the questions below:
 In this dissertation we will focus on measuring traffic flow and predict how traffic flow changes over time for a selection of locations by using mobile data usage. A combination of data mining and machine learning techniques will be used to devise a data processing pipeline. This data processing pipeline will:
 
 \begin{enumerate}
- \item consume raw event data records containing cell tower locations and date time.
+ \item consume raw event data records containing cell tower locations and date time and carry out preliminary descriptive statistical analysis. \label{objective:01}
  
- \item zoom into the main areas of activity of users by using unsupervised machine learning techniques that cluster the most dense groups of geolocation data points.
+ \item zoom into the main areas of activity of users by using unsupervised machine learning techniques that cluster the most dense groups of geolocation data points. \label{objective:02}
  
- \item  determine routes between these main activity areas and collect spatial grid aggregate data from daily trips done along these routes from thousands of users. 
+ \item  determine routes between these main activity areas and collect spatial grid aggregate data from daily trips done along these routes from thousands of users. \label{objective:03}
  
- \item use the transformed data which is representative of traffic flow in various locations to train and validate a predictive model using artificial neural networks.\cite{Calabrese2013,Toole2015,Hoteit2014,Alexander2015}. 
+ \item use the transformed data which is representative of traffic flow in various locations to train and validate a predictive model using artificial neural networks \cite{Calabrese2013,Toole2015,Hoteit2014,Alexander2015}.  \label{objective:04}
  
- \item feed visualization tools that enable visual inspection of traffic patterns projected on maps.
+ \item feed visualization tools that enable visual inspection of traffic patterns projected on maps. \label{objective:05}
 
 \end{enumerate}
 
 A selection of methods that are encountered in literature will be applied and evaluated. The real challenges reside in achieving high spatio-temporal resolution when modelling traffic given that mobile usage records' geolocation dataset is sparse and tracks the position of users with a considerable margin of displacement error \cite{Hoteit2014,Gonzalez2008}.
-
-
-
 
 
 
@@ -309,7 +308,7 @@ Calabrese et al (2011) put forward the concept of virtual location which is deri
  
 
 
-\subsection{Cleaning of data, removal of noise and minimization of displacement error}
+\subsection{Cleaning of data, removal of noise and minimization of displacement error} \label{subsection: data_processing}
 A common occurrence in literature is to remove users that do not make enough mobile usage. The behaviour of these is less predictable and its more difficult to generate trips from OD data for this type of users. In \cite{Toole2015} users that do not make enough calls are filtered out from dataset and \cite{Colak2015} filters out users with low activity when labelling activity zones.
 
 Displacement errors due to sudden change of cell tower for various reasons are reported to make datasets inconsistent. False displacements are reduced in \cite{Iqbal2014} by using a time window of 10 minutes. The most common location in the 10 minute window was considered the actual location. A time window of 1 hour is than used to detect trips. In \cite{Calabrese2011} a low pass filter is used to minimize localization errors. To reduce sudden movements due to cell tower handover clustering is used. The same concern is raised in \cite{Colak2015} in a similar fashion and decribe how CDR data contains jumps or oscillations which introduce noise in the dataset. 
@@ -318,7 +317,7 @@ It is mentioned in \cite{Colak2015} how Airsage dataset inherently provides tria
 
 An important attribute to consider in OD matrices is its resolution since it might be important to aggregate data for statistical purposes. Not a lot of information was found in literature on this. In \cite{Colak2015} census tracts and town boundaries are chosen for OD resolution level. No justification for this choice is given tough.
 
-\subsection{Use of scaling methods to get more accurate OD matrices}
+\subsection{Use of scaling methods to get more accurate OD matrices} \label{subsection:OD_scaling}
 
 Scaling methods to scale traffic flow are often used to obtain OD matrices that reflect reality better. In \cite{Iqbal2014} a scaling factor $\beta$ is used to get the actual OD matrix for traffic flow. The scaling factor is obtained by inputting optimization formulas, route choice probabilistic models, network data and the OD matrix in a simulation engine. The scaling is then distributed as shown in equation \ref{OD_scaling}
 
@@ -326,7 +325,7 @@ Scaling methods to scale traffic flow are often used to obtain OD matrices that 
 \textit{OD}_{ij} = \sum _{ij} (t-OD_{ij}) * \beta_{ij} 
 \end{equation}
 
-In equation \ref{OD_scaling}, $OD_{ij}$ is the final resulting actual OD matrix.  $(t-OD_{ij})$ is the transient OD matrix that contains trip data from origin nodes to destination nodes. Transient here means that the node to node trips may be missing the actual nodes' information because CDR data does not capture all locations in the trips made. Thus $(t-OD_{ij})$ represents only a segment of the actual trips. A simulation platform, MITSIMLab\footnote{https://its.mit.edu/software/mitsimlab}, is used to find a scaling factor $\beta_{ij}$ for every transient OD link.
+In equation \ref{OD_scaling}, $OD_{ij}$ is the final resulting actual OD matrix.  $(t-OD_{ij})$ is the transient OD matrix that contains trip data from origin nodes to destination nodes. Transient here means that the node to node trips may be missing the actual nodes' information because CDR data does not capture all locations in the trips made. Thus $(t-OD_{ij})$ represents only a segment of the actual trips. A simulation platform, MITSIMLab\footnote{https://its.mit.edu/software/mitsimlab}, was used to find a scaling factor $\beta_{ij}$ for every transient OD link.
 
 Colak et al uses the iterative proportional fitting (IPF) upscaling method. Here Colak determined the expansion factor for each tract and in the IPF took in consideration trips to destinations as well. In his conclusions Colak stated that the IPF Procedure to distribute user CDRs according to population might have been too simplistic of an approach.
 
@@ -421,21 +420,36 @@ Prediction of traffic results have to take in consideration where the model is b
 
 \chapter{Methodology} \label{chapter:methodology}
 
-One of the main objectives was to extract meaningful features from mobile data usage that would serve as the basis to build a traffic flow model. Before choosing an approach and construct an algorithm to use in order to map raw data and translate it into traffic flow metrics a thorough familiarization exercise with the data was due. A feasibility check had to be carried out on whether it was possible that by devising an algorithm a direct relationship is established between mobile usage data and traffic flow. If data would have proven to be too sparse, both temporally and spatially,  augmentation of mobile usage dataset by tapping into other datasets would have been necessary. Such  datasets could include ANPR data collected from video streams, call data records available openly on the internet, accident reports and anything related to road transport which would convey information on human mobility patterns. In this chapter we will elaborate how we investigated certain approaches and how we decided to dig deeper with some chosen techniques rather than others depending on how practical the solution was and how it would give a better result.
+One of the main objectives (O\ref{objective:01}) was to extract meaningful features from mobile data usage that would serve as the basis to build a traffic flow model. Before choosing an approach and constructing an algorithm that maps raw data and translates it into traffic flow metrics a thorough familiarization exercise with the data was due. A feasibility check had to be carried out on whether it was possible that by devising an algorithm a direct relationship is established between mobile usage data and traffic flow. If data was found to be too sparse, both temporally and spatially,  augmentation would have been required by tapping into other datasets would have been necessary. Such  datasets could include ANPR data collected from video streams, call data records available openly on the internet, accident reports and anything related to road transport which would convey additional information on human mobility patterns. 
+
+In this chapter we will elaborate how we investigated a number of approaches and how we decided to dig deeper with a set of techniques preferred to others depending on how practical the solution was and how it would give a better result. The methodology presented in this chapter has a step by step scientific method in which procedures were devised to test hypotheses. The data that results from a devised procedure was analyzed and if it was not working properly further optimizations were done and alterations were discussed. Finally conclusions were drawn and communicated in sections \ref{chapter:evaluation_and_results} and \ref{chapter:conclusion}  and where results were not found aligned or partially aligned with the hypotheses, suggestions how further research can be done were outlined in section \ref{section:future_improvements} 
+
+The main hypotheses' experimental procedures that have been tested and refined in this methodology are 
+
+\begin{enumerate}
+	
+	\item Clustering of main user activity locations. 
+	\item Trip generation from main activity clusters.
+	\item Trip count and trip delay measurement.
+	\item Traffic flow load distribution on road infrastructure. 
+	\item Traffic flow prediciton with different prediction time interval ahead.
+	
+\end{enumerate}
 
 \section{Mobile data collection and structure} \label{section:methodology:mobile_data_collection_structure}
 
-The anonymized dataset was provided by GO Plc Malta which is one of the main data providers. The dataset recorded ranges from October 2016 to September 2017 which is a full year of data. However it was decided to concentrate only on the month of October 2016 so that analysis and model learning is faster by working on prototypes tested on a sample of the data. Results were considered to be satisfactory even though it is known that for certain machine learning  algorithms training with more data would probably give better results. Number of distinct cells amount to several thousands but distinct cell locations amount to only a few hundreds since a cell tower shares antennas for different technologies. Precise figures cannot be disclosed due to commercial sensitivity.
+The anonymized dataset was provided by GO Plc Malta\footnote{https://go.com.mt} which is one of the main Malta telecommunication services providers. The anonymization process was done by the company itself and authors had no access to the original dataset. The dataset recorded ranges from October 2016 to September 2017 which is a full year of data. However it was decided to concentrate only on the month of October 2016 so that analysis and model learning is faster by working on prototypes tested on a sample of the data. The data volume for the month of October was 11 GB. The whole dataset volume amounted to 150 GB. Notwithstanding the fact that all experimentation was only done with data from October 2016, results were considered to be satisfactory even though it is known that for certain machine learning algorithms, training with more data would probably give better results. 
 
-As stated by the provider of the dataset, EDR/CDR records are generally buffered to file on the network element. Files are closed periodically, generally every 1 to 5 minutes. Files are then collected and processed by the mediation platform, which parses, enhances, and extracts all of the necessary information from these records. New files are then sent towards billing and other entities as per required. It normally takes around 10 minutes for an EDR/CDR to be within the data-warehouse, hence available for further processing. However mobile operator engineers stated that polling frequency can be increased as needed. A smaller polling interval would allow to have predictions closer to reality.
+Number of distinct cell towers that mobile phone users connected to amounted to several thousands but distinct cell locations amount to only a few hundreds since a cell tower shares antennas for different technologies. Precise figures cannot be disclosed due to commercial sensitivity.
 
-Unique data usage users amount approximately to 108 thousand for the month of October 2016. This month was chosen for its' heavy traffic characteristics because schools start in their full sway and university students start to travel with their cars adding to the load of traffic. This sample would be roughly representing half of the provider's subscriber base which is just over 200 thousand. This figure was derived from all the distinct users that make calls or use data. Therefore the number of data users that are in the sample is roughly half of the whole set of users. One must take note however that all these data users in this study might not necessarily contribute in a directly proportional manner to the number of vehicles on the move at a certain point in time. There might be static users, users who are just passengers in the car, users that have more than one device and other users that make use of other means of transport. All these facts must be taken in consideration when setting up the proposed solution and evaluating results. The records' data structure is shown in table \ref{table:dataset_01}.
+The procedure how data is collected from the network of cell towers was discussed with the company engineers. The engineers stated that EDR/CDR records are generally buffered to file on the network element. Files are closed periodically, generally every 1 to 5 minutes. Files are then collected and processed by the mediation platform, which parses, enhances, and extracts all of the necessary information from these records. New files are then sent towards billing and other entities as per required. It normally takes around 10 minutes for an EDR/CDR to be within the data-warehouse, hence available for further processing. However the company's engineers stated that polling frequency can be increased as needed. A smaller polling interval would allow to have better near real-time vehicular traffic analytics.
+
+Unique data usage users amount approximately to 108 thousand for the month of October 2016. This month was chosen for its' heavy traffic characteristics because schools start and university students start to travel with their cars adding to the load of traffic. This sample represents roughly half of the provider's subscriber base which is just over 200 thousand. This figure was derived from all the distinct users that make calls or use data. It is important to note however, that the data users considered in this study might not necessarily be directly proportional to the number of moving vehicles at a certain point in time. The dataset includes static users, users who are just passengers in the car, users that have more than one device and other users that make use of other means of transport. Such factors must be taken in consideration when setting up the proposed solution and evaluating results. The records' data structure is shown in table \ref{table:dataset_01}.
 
 %TODO - Here to correlate with MCA data on data usage and subscriber base.
 
-\begin{table}[h]
-    \label{table:dataset_01}
-	\centering
+\begin{table}[h] 
+    \centering
 	\resizebox{\textwidth}{!}{
 
 \begin{tabular}{|l|p{5cm}|c|}
@@ -464,19 +478,21 @@ Unique data usage users amount approximately to 108 thousand for the month of Oc
 	RAT\_TYPE & Network technology & LTE \\ 
 	\hline 
 \end{tabular} }
-\caption{Data Dictionary of mobile usage raw dataset} 
+\caption{Description of data fields in the mobile usage raw dataset} 
+\label{table:dataset_01}
 \end{table}
 
 
 \section{Dataset preliminary analysis} \label{section:methodology:data_set_preliminary_analysis}
 
-Total number of records of any given type for the month of october 2016 was 125 million. 78\% of these records are data usage records. This gives an indication that there is a four fold higher frequency data usage type record generation when compared with calling data records generate rates. This fact evidently gives an edge on other research that used calling data records as their data source since the frequency of users location recording is much higher. Higher temporal resolution would reflect better spatial resolution and both of these in combination will conduce to better results both when measuring traffic flow counts and when extracting main user activity hubs. Lower sampling rates lead to interpolation error. 
+The total number of records of data session or voice call type for the month of october 2016 was 125 million with 78\% of these records representing data usage records. This means that data usage records are four times as much as the call data records. This fact evidently gives an edge on other research that used calling data records as their data source since the frequency of users location recording is much higher. Higher temporal resolution reflects higher spatial resolution. A user might not make data sessions for a long period of time and therefore his travelling information would be missing for this period.  Higher spatio-temporal resolution conduce to better results both when extracting main user activity hubs and when measuring traffic flow counts. Lower sampling rates lead to interpolation error. In section \ref{section:OD_Matrices} it is described how in literature data with a resolution under a given threshold is filtered out.
 
-Table \ref{table:summary statistics} shows some summary statistics about the main unprocessed data set. Minimum and maximum timestamps show that data stretches from the very first minute to the last of the month being analysed. The total count of data usage records is 97 million. The basic data session duration  mean was approximately 16 minutes which was quite discouraging. This would entail that on average a wait of 16 minutes would be required to write to data storage a mobile cell EDR. This is not desirable for real time immediate future traffic count forecasts because the time for the detected departure is retrieved much later than it would actually have happened in such a way that predictions become useless. This would boil down to having a data session duration length which contributes to a considerable displacement error. Until the user connects to the next cell there is a distance covered within the average of 16 minutes and a standard deviation of 22 minutes which is also very high. For a vehicle driving at an average of 40km per hour this would translate to an average displacement error of 10km. 
+%TODO - edge on other research - mention which research
+
+Table \ref{table:summary statistics} shows some summary statistics about the main unprocessed data set. Minimum and maximum timestamps show that data stretches for the whole month under analysis. The total count of data usage records is 97 million. The data session's mean duration was approximately 16 minutes which was quite discouraging. This would entail that on average a wait of 16 minutes would be required to write to data storage a mobile cell EDR. This is not desirable for near real-time future traffic count forecasts because the time for the detected departure is retrieved much later than it would actually have happened in such a way that predictions become useless. This would boil down to having a data session duration length which contributes to a considerable displacement error. Until the user connects to the next cell there is a distance covered within the average of 16 minutes and a standard deviation of 22 minutes which is also very high. For a vehicle driving at an average of 40km per hour this would translate to an average displacement error of 10km. 
 
 
 \begin{table}[h]
-	\label{table:summary statistics}
 	\centering
 	\resizebox{\textwidth}{!}{
 		
@@ -497,19 +513,20 @@ Table \ref{table:summary statistics} shows some summary statistics about the mai
 
 	\end{tabular} }
 	\caption{Basic summary statistics of main EDR dataset.} 
+	\label{table:summary statistics}
 \end{table}
 
 
-When a frequency diagram is plotted an interesting fact comes out (see figure \ref{fig:data_session_duration_bin_count}). 15\% of the EDRs have a data session duration value of 1 hour. This duration is the limit set by the telecommunications provider for a mobile usage EDR. These records are generated for users who are not moving. Records with such duration were filtered out for a better summary statistics exercise since the main focus is on records that are related to movement. As a consequence more precise statistical information was acquired which describes better the possible level of displacement error and how long does it take to register the first record after a user moves from one location to another.
+Some interesting facts were noted when a frequency diagram was plotted, see Figure \ref{fig:data_session_duration_bin_count}). 15\% of the EDRs have a data session duration of 1 hour. This duration is the limit set by the telecommunications provider for a mobile usage EDR. These records are generated for users who are not moving. Records with such duration were filtered out for a better summary statistics since the main focus is on records that are related to movement. As a consequence more precise statistical information was acquired which describes better the possible level of displacement error and how long does it take to register the first record after a user moves from one location to another.
 
 \begin{figure}	
 	\includegraphics[scale=0.75]{data_session_duration_bin_count.jpg}
 	\centering
-	\caption[Data session duration distribution]{At the right of the plot one can notice a spike of records with a data session duration of 1 hour.}
+	\caption[Data session duration distribution]{The single line column bar spike on the right represents sessions of 1 hr duration.}
 	\label{fig:data_session_duration_bin_count}
 \end{figure}
 
-After removing 1 hour duration EDRs newly calculated summary statistics show that the mean and standard deviation are decreased down to 8 minutes and 14 minutes respectively. This is a 50\% gain with respect to previous statistical data. Further looking at the data, by overlaying a cumulative distirbution it is shown that 80\% of the records are below the 5 minute mark. These data facts have to be all taken in consideration when assessing the usefulness of the prediction results in evaluation and results chapter \ref{chapter:evaluation_and_results}. 
+After we removed the 1 hour duration EDRs newly calculated summary statistics show that the mean and standard deviation decreased to 8 minutes and 14 minutes respectively. This is a 50\% gain with respect to previous statistical data. Further looking at the data session duration frequency plot, by overlaying a cumulative distribution it is shown that 80\% of the records are below the 5 minute mark. These data facts have to be all taken in consideration when assessing the usefulness of the prediction results in evaluation and results in Chapter \ref{chapter:evaluation_and_results}: Evaluation. 
 
 
 
@@ -560,10 +577,12 @@ After removing 1 hour duration EDRs newly calculated summary statistics show tha
 
 \section{Algorithm Selection} \label{section:methodology:algorithm_selection}
 
-One of he most challenging tasks involved in this study was to assign vehicular traffic to the road network depending on surrounding cell tower traffic in a time series.
+One of the main challenges involved in this study was to assign vehicular traffic to the road network depending on surrounding cell tower traffic in a time series (O\ref{objective:03}).
 
 \subsection{Trajectory interpolation through cell tower data} \label{subsection:methodology:trajectory_interpolation}
-The first approach that we tried to investigate was to relate the cell tower data by snapping it to the road infrastructure mesh depending from which direction the vehicle is coming. Various APIs are available to retrieve nearest road from an input geographical location\footnote{Google Snap to Road is an example - https://developers.google.com/maps/documentation/roads/snap}. We had no prior knowledge on how cell tower transmission is configured. There are many settings which might determine the range of the cell tower including frequency, rated power, height of tower etc. Given that such information was missing transmission range of the cell towers was an unknown variable. A possible  alternative to roughly estimate range was to calculate the average distance from the nearest \textit{k} neighbouring towers for all cell towers. However from a sample taken from the dataset available of the cell towers across Malta the variance seemed quite high, ranging from an inter-distance of 150m in urbanized areas to several kilometres in rural areas (Comprehensive cell tower locations map for all the country not being shown since it is sensitive commercial data). Further to this from the analytical perspective it was decided to plot the cell towers' on the map and check if their distribution pattern would make it feasible to snap a data record cell tower location to the nearest road or area polygon. Thus here it was taken as an assumption that the area around cell towers will be be given service with equal range from each tower. Allowance for overlapping was also taken in consideration. It is evident from figure \ref{fig:cell_towers_distribution} that a lot of roads would be included in the range of a cell tower so it would have been difficult to devise an algorithm to derive trajectories and traffic flow counts from cell tower location data. Given that there are a lot of unknowns including how handover procedure is handled in specific areas and the actual range of cell towers, the solution path of snapping to nearest roads depending on EDR coordinates was discarded. Such an approach would might have made it too impractical to assign traffic to junctions, roads or polygon areas and the probability of inaccurate results was high.
+We first investigated the possibility to snap the cell tower location data to the road infrastructure mesh depending from which direction the vehicle is coming. Various APIs are available to retrieve nearest road from an input geographical location\footnote{Google Snap to Road API, Bing Map API and OSRM nearest service are examples: https://developers.google.com/maps/documentation/roads/snap, https://microsoft.com/en-us/maps/snap-to-road, http://project-osrm.org/docs/v5.5.1/api/\#nearest-service}. We investigated how cell tower transmission is configured. There are many settings which determine the range of the cell tower including frequency, rated power, height of tower etc. Given that such information was not available, transmission range of the cell towers was an unknown variable. Another alternative to roughly estimate the range was to calculate the average distance from the nearest \textit{k} neighbouring towers for all cell towers. However from a sample taken from the available dataset of the cell towers across Malta, the variance seemed quite high, ranging from an inter-distance of 150m in urbanized areas to several kilometres in rural areas (comprehensive cell tower locations map across the country not being shown since it is  commercial sensitive information). Furthermore, it was decided to plot the cell towers' on the map and check if their distribution pattern would make it feasible to snap a data record cell tower location to the nearest road or area polygon. Thus here it was assumed that the area around cell towers will have transmission strength with equal range from each tower. Allowance for overlapping was also taken into consideration. 
+
+A typical example of how many road sections there are within an area covered by a number of cell towers can be seen in figure \ref{fig:cell_towers_distribution}. One can easily appreciate that a lot of roads are associated to a particular cell tower which makes it difficult to devise an algorithm to derive trajectories and traffic flow counts from cell tower location data. Given that there are a lot of unknowns including how handover procedure is handled in specific areas and the actual range of cell towers, the solution path of snapping to nearest roads depending on EDR coordinates was discarded. This approach would have been impractical to assign traffic to junctions, roads or polygon areas and the probability of inaccurate results was high.
 
 \begin{figure}[h]	
 	\includegraphics[scale=0.75]{cell_towers_distribution}
@@ -573,27 +592,35 @@ The first approach that we tried to investigate was to relate the cell tower dat
 \end{figure}
 
 \subsection{Traffic simulation from OD matrix} \label{subsection:methodology:traffic_simulation_ODMatrix}
-Another approach would have been to simulate traffic by inputting statistical information on travel patterns retrieved parameters from the dataset. Possible input to the simulation based traffic model would have been an OD matrix that will be discussed in section \ref{section:methodology:clustering}. Toledo et al. \cite{Toledo2004} mentions that OD flows are an important input to simulation models but an accurate OD matrix is difficult to acquire. An example of such implementation of a simulation based on an OD matrix can be found in \cite{Hirai2015}. In this study electronic toll collection data is used to form an initial OD-Matrix. This OD matrix is further optimized by optimizing a model that gets observed detector data and a simulation based on current OD, computes the least cost difference and optimizes the OD matrix depending on result. This process is iterated until an acceptable coefficient of determination is achieved. Simulation models generally give two types of outputs namely a visual simulation of traffic flow on a map and textual statistical output that can include metrics such as traffic delays, gap distances, speed and overall trip distance travelled by vehicles.
+Another approach that was considered was to simulate traffic by using statistical information based on travel patterns extracted from the dataset. In section \ref{section:OD_Matrices} we described how Iqbal et al optimized OD matrices through simulation. An OD matrix can be used as input to a simulation based traffic model. We discuss how an OD matrix was generated in section \ref{section:methodology:clustering}. 
+ 
+Toledo et al. \cite{Toledo2004} mentions that OD flows are an important input to simulation models but an accurate OD matrix is difficult to acquire. An example of an implementation of a simulation based on an OD matrix can be found in \cite{Hirai2015}. In this study, electronic toll collection data is used to form an initial OD-Matrix. This OD matrix is further improved by optimizing a model that gets observed detector data and a simulation based on current OD, computes the least cost difference and optimizes the OD matrix depending on result. This process is iterated until an acceptable coefficient of determination is achieved. Simulation models generally give two types of outputs namely a visual simulation of traffic flow on a map and textual statistical output that can include metrics such as traffic delays, gap distances, speed and overall trip distance travelled by vehicles.
 
-While macroscopic traffic simulators seem promising for motorways environments they are found to be less suitable for urban scenarios \cite{Bazghandi2012}. Urban environments have a lot of conflicting traffic flows caused by the numerous junctions and small roads that feed and attract traffic from the road network. Also such simulators require accurate OD matrices which cannot be achievable from our dataset due to displacement error created by cell tower location and actual location inevitable considerable distance difference. In our research we tried to focus on both the macroscopic and on the microscopic level since we had a dataset that have ample coverage at our disposition especially in urban areas.    
+While macroscopic traffic simulators seem promising for motorways environments they were found to be less suitable for urban scenarios \cite{Bazghandi2012}. Urban environments have a lot of conflicting traffic flows caused by the numerous junctions and small roads that feed and attract traffic from the road network. Also such simulators require accurate OD matrices. This cannot be achieved by using our dataset due to displacement error created by distance separation between cell tower location and actual location.
+
+In our research we tried to focus on both the macroscopic and on the microscopic level since we had a dataset that has ample coverage especially in urban areas.    
 
 %TODO - read and add notes from Macroscopic Traffic Flow Model Calibration Using Different Optimization Algorithms
 
 \subsection{Traffic flow detection by trip generation assigned\\ traffic} \label{subsection:methodology:trip_generation}
-The method chosen to detect traffic on the road network was to first generate an OD matrix that contains main stay locations for users in a time series. Then a trip is generated between each main location for each user. The trip would include turn by turn directions with longitude and latitude coordinates. Traffic load assignment is then assigned to junctions and turns depending on the time retrieved from OSM (Open Street Maps) data. The major challenge here would prove to be the traffic assignment given that there is an interaction of a lot of vehicles at a given point in time with a complex structure of roads and unexpected events such as weather, accidents and road blockages for whatever reason. 
+The method we adopted to detect traffic on the road network involved first the generation of an OD matrix that contains main stay locations for users in a time series. Then a trip is generated between each main location for each user. The trip includes turn by turn directions with longitude and latitude coordinates. Traffic load assignment is then assigned to junctions and turns depending on the time retrieved from OSM (Open Street Maps) data. The major challenge here proved to be the traffic assignment, given that there is an interaction of a lot of vehicles at a given point in time with a complex structure of roads and unexpected events such as weather, accidents and road blockages. 
 
 
-\section{Main activity hubs extraction and displacement error removal through clustering} \label{section:methodology:clustering}
+\section{Main activity hubs extraction through clustering} \label{section:methodology:clustering}
 
-One of the main steps of the proposed algorithm is to derive main areas of activity from the mobile data usage of subscribers. One possible way to do this from the described dataset is by clustering. Clustering is also used to remove noise caused by displacement through frequent oscillations by finding a centroid of activity. Removal of displacement error through triangulation has been ruled out. There are missing dataset features that are needed to get a more accurate location with this process such as strength of signal from every cell tower that the user connects to. Moreover simple geometrical triangulation does not have the aggregation characteristics that clustering has. Grouping of similar locations have to be implemented on top of triangulation. Triangulation is more suited to remove noise or displacement error caused by cell tower oscillations or handovers. These are caused either because the signal from a tower is weaker from another that can provide better service or there is momentary offloading causing a user to switch his connection to another tower with less load. In section \ref{section:OD_Matrices} it was discussed how certain authors employed various techniques to smooth sudden location change of mobile users because they often switch cell towers in very short time intervals that cannot be attributed to movement. 
+One of the main steps of the proposed algorithm is to derive main areas of activity from the mobile data usage of subscribers. This can be achieved using clustering. Clustering was also used to remove noise caused by displacement through frequent oscillations by finding a centroid of activity. The removal of the displacement error through triangulation has been ruled out. There are missing dataset features that are required to get a more accurate location with this process such as strength of signal from every cell tower that the user connects to. Moreover simple geometrical triangulation does not have the aggregation characteristics that clustering has. Grouping of similar locations have to be implemented on top of triangulation. Triangulation is more suited to remove noise or displacement error caused by cell tower oscillations or handovers. These are caused either because the signal from a tower is weaker from another that can provide better service or there is momentary offloading causing a user to switch his connection to another tower with less load. 
+
+In section \ref{section:OD_Matrices} it was discussed how certain authors employed various techniques to smooth sudden location change of mobile users because they often switch cell towers in very short time intervals that cannot be attributed to movement. 
+
+%TODO - add reference for clustering in traffic
  
-Clustering is a machine learning unsupervised technique used to classify entities which have similar features. Clustering is done depending on the chosen algorithm and calibration hyper-parameters that control the grouping process. Two clustering techniques that were checked for their appropriateness to this research were k-means and DBSCAN. 
+Clustering is a machine learning unsupervised technique used to classify entities which have similar features. Clustering is done depending on the chosen algorithm and calibration hyper-parameters that control the grouping process. Two clustering techniques that were considered for their appropriateness to this research were k-means and DBSCAN \cite{ChakrabortyNKNagwaniLopamudraDey2011,huang2017research}. 
 
 \subsection{K-means clustering} \label{subsection:methodology:kmeans_clustering}
-k-means algorithm is highly popular especially for first analysis of datasets because it is simple to implement and highly efficient. The main drawback of k-means clustering its requirement to select the number of clusters you need to find before running the algorithm. Then a number of expected centroids equal to the number of targeted clusters are randomly chosen. The algorithm starts to find the nearest neighbours based on a distance metric until finally the clusters are formed. This process can be run iteratively until the ideal set of centroids with the least root mean square error are found. Also something important to note is that clusters tend to be spherical in nature. This would be highly visible if 2D clusters are plotted on a graph.
+k-means algorithm is highly popular especially for first analysis of datasets because it is simple to implement and highly efficient. The main drawback of k-means clustering is the requirement to select the number of clusters before running the algorithm. Then a number of expected centroids equal to the number of targeted clusters are randomly chosen. The algorithm starts to find the nearest neighbours based on a distance metric until finally the clusters are formed. This process can be run iteratively until the ideal set of centroids with the least root mean square error are found. Also something important to note is that clusters tend to be spherical in nature. This would be highly visible if 2D clusters are plotted on a graph. The only advantage of using k-means clustering over using DBSCAN is its speed. k-means performs better than DBSCAN especially for incremental version of the algorithms when datasets are frequently updated \cite{ChakrabortyNKNagwaniLopamudraDey2011}.
 
 \subsection{DBSCAN clustering}  \label{subsection:methodology:dbscan_clustering}
-DBSCAN (density based spatial clustering of applications) has an edge on k-means and is mostly suited to our research since it does not need to set the number of clusters that we are after for each user at the outset. Moreover it finds clusters of non-spherical nature and leaves noisy elements out of the computed clusters \cite{ChakrabortyNKNagwaniLopamudraDey2011}. DBSCAN has three main hyper parameters to set namely minimum points,  $\epsilon$ (radius of area within which density is measured)  and a distance metric. The algorithm is more sensitive to density rather than to aggregate distance of surrounding points. Basically the algorithm finds core points that have the required minimum points in its neighbourhood dictated by the distance metric. Other non core points that are within core points' radius range (i.e. they are not surrounded with the minimum number of points) are referred to as boundary points. If clusters formed by the core points overlap each other they form one single cluster, hence the non-spherical shape of the clusters.
+DBSCAN (density based spatial clustering of applications) has an edge on k-means and is mostly suited to our research since it does not need to set the number of clusters that we are after for each user at the outset. Moreover it finds clusters of non-spherical nature and leaves noisy elements out of the computed clusters \cite{ChakrabortyNKNagwaniLopamudraDey2011}. DBSCAN has three main hyper parameters to set namely minimum points,  $\epsilon$ (radius of area within which density is measured)  and a distance metric. The algorithm is more sensitive to density rather than to aggregate distance of surrounding points. Basically the algorithm finds core points that have the required minimum points in its neighbourhood dictated by the distance metric. Other non core points that are within core points' radius range (i.e. they are not surrounded with the minimum number of points) are referred to as boundary points. If clusters formed by the core points overlap each other they are grouped together into one single cluster, hence the non-spherical shape of the clusters.
 
 
 \begin{figure}[!]	
@@ -604,7 +631,11 @@ DBSCAN (density based spatial clustering of applications) has an edge on k-means
 \end{figure}
  
 
-DBSCAN was the preferred candidate for clustering since the aim was to find dense clusters of mobile data usage activity and random locations visited by users are of no interest and need to be filtered out. The curse of dimensionality does not apply here since there are only two dimensions with the same scale.  The values of hyper-parameters were 500m for radius, minimum required points was set to 3 and euclidean distance was chosen as the distance metric. The mean distance between a sample of cell tower locations taken randomly from the whole dataset was calculated to be 350m. The radius was chosen to be 500m to allow for overlapping but not include too many cell towers accept for the shouldering ones. By choosing an excessive $\epsilon$ the centroid location coordinates was being too inaccurate and was clustering a wide range of subscribers' activity. With a smaller $\epsilon$ minimal clustering (every cell tower will be start to be considered a cluster) was being attained since cell tower location areas will not overlap. The OPTICS algorithm which does away with the $\epsilon$ parameter iterates until it finds the optimal $\epsilon$ and orders its clusters in a hierarchical result. However this algorithm is more computationally expensive and we opted to use the non-generalized DBSCAN version of the algorithm. The implementation used\footnote{https://github.com/scalanlp/nak} was integrated into Apache Spark processes that output clusters of usage patterns for every user. The output of the implementation we used was in the form of coordinates that outlined the rectangular boundaries of the cluster. The final geographic coordinates that would denote the main activity clusters would be those of the centroid. Therefore the centroid for each rectangular cluster had to be determined with readily available libraries (esri was the used library)\footnote{https://github.com/Esri/spatial-framework-for-hadoop, https://github.com/Esri/geometry-api-java} within Apache Hive.   
+DBSCAN was the preferred candidate for clustering since the aim was to find dense clusters of mobile data usage activity and random locations visited by users are of no interest and need to be filtered out. The curse of dimensionality does not apply here since there are only two dimensions with the same scale.  The values of hyper-parameters were 500m for radius, minimum required points was set to 3 and euclidean distance was chosen as the distance metric. The mean distance between a sample of cell tower locations taken randomly from the whole dataset was calculated to be 350m. The radius was chosen to be 500m to allow for overlapping but not include too many cell towers accept for the shouldering ones. By choosing an excessive $\epsilon$ the centroid location coordinates was being too inaccurate and was clustering a wide range of subscribers' activity. With a smaller $\epsilon$ minimal clustering (every cell tower will be start to be considered a cluster) was being attained since cell tower location areas will not overlap. 
+
+The OPTICS algorithm which does away with the $\epsilon$ parameter iterates until it finds the optimal $\epsilon$ and orders its clusters in a hierarchical result. However this algorithm is more computationally expensive and we opted to use the non-generalized DBSCAN version of the algorithm. The implementation used\footnote{https://github.com/scalanlp/nak} was integrated into Apache Spark processes that output clusters of usage patterns for every user. The output of the implementation we used was in the form of coordinates that outlined the rectangular boundaries of the cluster. The final geographic coordinates that denote the main activity clusters were those of the centroid. The centroid for each rectangular cluster had to be determined with readily available libraries (esri was the used library)\footnote{https://github.com/Esri/spatial-framework-for-hadoop, https://github.com/Esri/geometry-api-java} within Apache Hive. 
+
+In figure \ref{fig:db_scan_clustering} clustering of cell towers can be observed. The centre of the quadrilaterals would mark the centre of activity for the mobile usage. When there are no cell towers nearby the coordinates of the cell tower itself becomes the centre of activity for the mobile data usage. 
 
 %TODO - IMPORTANT - what is the Distribution of the first two clusters on the whole data set.
 
@@ -613,26 +644,27 @@ DBSCAN was the preferred candidate for clustering since the aim was to find dens
 %TODO - read Dynamic clustering and propagation of congestion in heterogeneously congested urban traffic networks
 
 
-
 \section{OD Matrix trip Generation}  \label{section:odmatrix_trip_generation}
 
-To simplify and present in a summarized way a high-level overview is given in the form of pseudo-code in algorithm \ref{algorithm:overview}. The main modules of the algorithm will be discussed in detail in the following subsections.
+OD matrix trip generation consists of a sequence of steps. A high-level overview is given in the form of pseudo-code in algorithm \ref{algorithm:overview}. The main modules of the algorithm will be discussed in detail in the following subsections.
  
 \subsection{OD Matrix computation}   \label{subsection:odmatrix_computation}
-In our research we decided to focus on two main areas of activity per user as the basis of our OD matrix generation. Inclusion of more areas of activity is left for future studies (refer to chapter \ref{chapter:future_work}). It is assumed that most of the trips happen between home and work and vice versa. This is based on conclusions encountered in related literature (see section \ref{section:OD_Matrices}). 
-The top two clusters per user where retrieved from the resulting users' clusters created with DBSCAN algorithm run. We considered these top two clusters as the origin and destination of trips including returns. Then the user EDRs that have geographical coordinates located in the two main activity cluster areas are filtered into a new dataset through the spatial join technique. This process will produce a dataset containing all data usage records that have a location in either of the top two clusters for any user in a times series. This resulting dataset is substantially the OD matrix.
+In our research we decided to focus on two main areas of activity per user as the basis of our OD matrix generation, namely home and work location. Inclusion of more areas of activity is left for future studies (refer to section \ref{section:future_research}). It is assumed that most of the trips happen between home and work and vice versa. This is based on conclusions encountered in related literature (see section \ref{section:OD_Matrices}). 
+The top two clusters per user where retrieved from the resulting users' clusters created with DBSCAN algorithm run (see section \ref{section:methodology:clustering}). We considered these top two clusters as the origin and destination of trips including returns. Then the user EDRs that have geographical coordinates located in the two main activity cluster areas are filtered into a new dataset through the spatial join technique \cite{eldawy2015spatialhadoop}. This process results in a dataset containing all data usage records that have a location in either of the top two clusters for any user in a times series. This resulting dataset is substantially the OD matrix.
+
+%TODO - needs further clarification
 
 \subsection{Trip generation, route choice and traffic assignment} \label{subsection:trip_generation}
 
-OD matrices on their own would not give information how traffic flow is distributed on the roads. We needed to detect when trips happen by recording change of user cluster location events. This was achieved by ordering OD matrix entries by user and timestamp. The dataset was then scanned and when location of activity of a given record is found to be different from the previous record, the previous record is tagged as a departure and the current one is set as an arrival. The computations done depending on previous and current rows while scanning a dataset were made by using Apache Hive window analytical functions \footnote{https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics}. 
+Basic OD matrices on their own do not give information how traffic flow is distributed on the roads because they represent only home and work locations. Therefore we had futher enrich the OD matrix by detecting when trips happen by recording change of user cluster location events. This was achieved by ordering OD matrix entries by user and timestamp. The dataset was then scanned and when location of activity of a given record is found to be different from the previous record, the previous record is tagged as a departure and the current one is set as an arrival. We used Apache Hive's window analytic functions for the computations because it offers an sql-like syntax which we were already familiar with and processing is done on top of Hadoop. This made processing of huge amounts of data faster through parallel, distributed computing  \footnote{https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics}. Hive is a data warehouse infrastucture tool running on Hadoop, abstracts a lot of java api calls to get data from distributed file systems managed by Hadoop \footnote{https://en.wikipedia.org/wiki/Apache\_Hive}. Hive has a specific SQL dialect HiveQL(HQL) that can retrieve data from hdfs (hadoop disributed file system) without implementing the mapreduce calls.
 
 %TODO - How many records are of trip duration less than 5 minutes?
 
-There is a caveat on the accuracy of the actual duration of the trip. Records of mobile data usage are generated depending on actual usage at a given location. The frequency of generation of such records would have a direct effect on the accuracy of departure and arrival times for any given trip. The more the temporal resolution is high the more accurate are the departure and arrival times since if the record is generated at a low frequency it cannot be determined with confidence and low margin of error. For example the user might arrive to his work location but he takes too much time to start his first data session. This would add extra trip delay and the resulting trip duration less accurate depending on the gap of time between the actual arrival time and the first generated mobile usage record timestamp. Therefore users with more frequent usage of mobile data have trips with durations with a narrower error margin. Departure times are more precise since these are computed by adjusting the EDR timestamp by adding the data session duration. This will give an accurate timestamp that denote when users leave their clusters.   
+There is a caveat on the accuracy of the actual duration of the trip. Records of mobile data usage are generated depending on actual usage at a given location. The frequency of generation of such records has a direct effect on the accuracy of departure and arrival times for any given trip. The higher is the temporal resolution, the more accurate are the departure and arrival times. If on the other hand records are generated at a lower frequency it cannot be determined with confidence and with a low margin of error. For example the user might arrive at his work location but he takes too much time to start his first mobile data session. This would add extra trip delay with the result that the trip duration is less accurate depending on the gap of time between the actual arrival time and the first generated mobile usage record timestamp. Therefore users with more frequent usage of mobile data have trips with durations with a narrower error margin. Departure times are more precise since these are computed by adjusting the EDR timestamp and adding the data session duration. This gives an accurate timestamp that represents when users leave their main clusters (home or work location).   
 
 %TODO - frequency of mobile usage records and space in between. 
 
-As similarly done in Toole et al. \cite{Toole2015} routes between origins and destinations were inferred from OSM. A route was assigned for each entry in the OD matrix together with duration information from the trip. The user's routing choice was assumed to be the fastest one given by the Open Source Routing Machine\footnote{http://project-osrm.org/docs/v5.15.2/api/\#route-service} (OSRM). OSRM api provides the possibility to request alternative routes. However in the approach taken the route selection was always considered to be static and user does not change route depending on traffic or due to  unexpected events on the road network such as accidents or blockages caused by various other reasons. The fastest route is attributed to each trip done by each user. This may not always be the case since route selection can differ depending on traffic perception and arbitrary route selection made by users. This is a limitation of this research and introduces inevitable bias. It should be noted however that in the urban scenario in Malta the different routes to take towards work and back are limited due to the small scale of the road network infrastructure. In other words there are few possible routes from which users can choose from or that enable detouring, making it highly probable that the fastest path is the preferred choice. In section \ref{section:traffic_flow_evaluation} it is discussed how to measure a level of confidence in the traffic assignment model.
+We inferred the routes between origins and destination from the OSM in a similar manner to the work of Toole et al \cite{Toole2015}. A route was assigned for each entry in the OD matrix together with duration information from the trip. The user's routing choice was assumed to be the fastest one given by the Open Source Routing Machine\footnote{http://project-osrm.org/docs/v5.15.2/api/\#route-service} (OSRM). OSRM api provides the possibility to request alternative routes. However in the approach taken the route selection was always considered to be static and user does not change route depending on traffic or due to  unexpected events on the road network such as accidents or blockages caused by various other reasons. The fastest route is attributed to each trip done by each user. This may not always be the case since route selection can differ depending on traffic perception and arbitrary route selection made by users. This is a limitation of this research and introduces inevitable bias. It should be noted however that in the urban scenario in Malta the different routes to take towards work and back are limited due to the small scale of the road network infrastructure. In other words there are few possible routes from which users can choose from or that enable detouring, making it highly probable that the fastest path is the preferred choice. In section \ref{section:traffic_flow_evaluation} it is discussed how to measure a level of confidence in the traffic assignment model.
 
 
 \begin{figure}[hp]	
@@ -649,7 +681,9 @@ As similarly done in Toole et al. \cite{Toole2015} routes between origins and de
 	\label{fig:trip_delay_cum_distribution_heavy_tail}
 \end{figure}
 
-Another important extracted information from route selection is the trip delay. The total duration for each trip per user was retrieved from OSRM. The OSRM derived route duration does not account for delays. The difference between the actual trip duration retrieved from observed departures and arrivals per user and the OSRM derived trip duration was considered to be the global trip delay. After computing delays for each trip per user, aggregate statistics were collated to describe typical delays at different hours both in weekdays and weekends. Trip delay difference is evident even between Saturdays and Sundays but is highly regular for weekdays as seen in figure  \ref{fig:trip_delay_weekdays_vs_weekends}. A peculiar observation is the negative trip delays. This can be accounted for by actual trips that were faster than expected and estimated by OSRM. Such negative trip delays are observed during the night when people tend to arrive earlier due to almost in-existent traffic. Average trip delay peaks happen between 6:00 a.m. and 7:00 a.m. and 4:00 p.m. and 5:00 pm. for every weekday. Only one peak can be observed for weekend days.  Saturdays and Sundays peak trip delays are observed later in the day where usually during weekdays average trip delays are smaller. This can be attributed to the fact that people go out later during the day on these two days. Also it is clearly noticeable that for Saturdays and Sundays only one distinct peak can be seen in the distribution and average trip delays per hour are much lower in general.
+Another important information that was extracted from the route selection is the trip delay. The total duration for each trip per user was retrieved from the OSRM. The derived route duration does not account for delays. The difference between the actual trip duration retrieved from observed departures and arrivals per user and the OSRM derived trip duration was considered to be the global trip delay. After computing delays for each trip per user, aggregate statistics were collated to describe typical delays at different hours both in weekdays and weekends. Trip delay difference is evident even between Saturdays and Sundays but is highly regular for weekdays as seen in figure  \ref{fig:trip_delay_weekdays_vs_weekends}. 
+
+A peculiar observation is the negative trip delays. This can be accounted for by actual trips that were faster than expected and estimated by OSRM. Such negative trip delays were observed during the night when people tend to arrive earlier due to almost in-existent traffic. Average trip delay peaks happen between 6:00 a.m. and 7:00 a.m. and 4:00 p.m. and 5:00 pm. for every weekday. Only one peak can be observed for weekend days.  Saturdays and Sundays peak trip delays are observed later in the day where usually during weekdays average trip delays are smaller. This can be attributed to the fact that people go out later during the day on these two days. Also it is clearly noticeable that for Saturdays and Sundays only one distinct peak can be seen in the distribution and average trip delays per hour are much lower in general.
 
 \begin{figure}[h]	
 	\includegraphics[scale=0.60]{Trip_delay.jpg}
@@ -658,9 +692,9 @@ Another important extracted information from route selection is the trip delay. 
 	\label{fig:trip_delay_weekdays_vs_weekends}
 \end{figure}
 
-Trip delay data had to be further investigated to remove outliers and data that was not suited for the traffic flow count and the machine learning model had to be filtered out. The data model fitted a heavy tailed distribution \ref{fig:trip_delay_cum_distribution_heavy_tail}. Data was skewed to the right because of long trip delays attributed to pauses in trips that are likely caused by intermediate location visits between the main areas of activity. Similarly trip delays less than -5 minutes were mainly attributed to location sudden displacement caused by cell tower switching (see section \ref{section:OD_Matrices} in chapter \ref{chapter:background} ). Cut-off points were set to -5 minutes and 45 minutes for the lower and upper bounds respectively. Consequently 50\% of the data was maintained.  
+Trip delay data had to be further investigated to remove outliers and data that was not suited for the traffic flow count and the machine learning model had to be filtered out. The data model fitted a heavy tailed distribution as seen in figure \ref{fig:trip_delay_cum_distribution_heavy_tail}. Data was skewed to the right because of long trip delays attributed to pauses in trips that are likely caused by intermediate location visits between the main areas of activity. Similarly trip delays of less than -5 minutes\footnote{The negative trip delays are caused by trips with duration less than the one retrieved from the OSRM} were mainly attributed to sudden location displacement caused by cell tower switching (see section \ref{section:OD_Matrices} in chapter \ref{chapter:background} ). Cut-off points were set to -5 minutes and 45 minutes for the lower and upper bounds respectively. Consequently 50\% of the data was maintained.  
 
-In OSM technical jargon that describe map objects the route consists in steps that contain manoeuvres. These manoeuvres fields encapsulate geographical coordinates data and duration property after which the driving decision should be taken. The manoeuvres' timestamp was computed by accumulating previous steps duration and add the final total offset to the trip departure timestamp. A new dataset was created with records including previous data structure and steps' information having the timestamp and the coordinates. Therefore the new dataset in addition to the coordinates of mobile users at their origin and their destination had trip geolocation information in the form of trip steps.
+In OSM a route consists of steps and these in turn contain manoeuvres. Manoeuvers encapsulate geographical coordinates data and duration property after which the driving decision should be taken. The manoeuvres' timestamp was computed by accumulating the duration of the previous steps and adding the final total offset to the trip departure timestamp. A new dataset was created with records including previous data structure and steps' information having the timestamp and the coordinates. Therefore the new dataset in addition to the coordinates of mobile users at their origin and their destination had trip geolocation information in the form of trip steps.
  
 
 %TODO - mention how to redistoirubte delay heuristically on steps depending on traffic flow contained in the grid cell where the step was located.
@@ -806,11 +840,9 @@ In OSM technical jargon that describe map objects the route consists in steps th
 
 \section{Traffic flow aggregation through spatial binning} \label{section:spatial_binning}
 
-To get aggregate statistics on traffic distribution hadoop spatial binning was used as proposed in (Eldawy et al,2015) \cite{eldawy2015spatialhadoop}. Hive, which is a data warehouse infrastucture tool running on Hadoop, abstracts a lot of java api calls to get data from distributed file systems managed by Hadoop \footnote{https://en.wikipedia.org/wiki/Apache\_Hive}. Hive has a specific SQL dialect HiveQL(HQL) that can retrieve data from hdfs (hadoop disributed file system) without implementing the mapreduce calls.
+To get aggregate statistics on traffic distribution, hadoop spatial binning was used as proposed in Eldawy et al \cite{eldawy2015spatialhadoop}. The framework we used for spatial binning was Spatial Hadoop which is highly efficient to process geolocation data because it uses MapReduce \footnote{https://hortonworks.com/apache/mapreduce} and a 2-level spatial index. MapReduce executes tasks with a level of parallelism and computation is distributed. Spatial Hadoop uses a special algorithm to partition data in Hadoop and maintains a spatial index for fast querying and fast spatial joins \cite{eldawy2015spatialhadoop}. 
 
-Another used tool was Spatial Hadoop which is highly efficient to process geolocation data because it uses MapReduce \footnote{https://hortonworks.com/apache/mapreduce} and a 2-level spatial index. MapReduce executes tasks with a level of parallelism and computation is distributed. Spatial Hadoop uses a special algorithm to partition data in Hadoop and maintains a spatial index for fast querying and fast spatial joins \cite{eldawy2015spatialhadoop}. 
-
-A Hive user defined function (UDF) from esri (esri is the company that owns the ArcGIS solution) is used within the Hive query language (HQL) syntax to count traffic flow by spatial bin\footnote{https://github.com/Esri/spatial-framework-for-hadoop}. A spatial bin is a computational geometry that can be used to numerically describe features in a specific region. In our case we used 0.0005 degrees bins to count traffic flow 'steps' derived from OSM routes. 0.0005 degrees bins approximately equate to 50 by 50 metres bins. We are stating that dimensions are not precise when computing the geometrical bin because dimensions are not strictly universal and vary according to map position. These tend to be more of an elongated rectangle near the poles and squarish near the equator. This happens because latitudes get narrower for bins near the poles due to the fact that the earth is not a perfect sphere but an oblate spheroid\footnote{http://www.longitudestore.com/how-big-is-one-gps-degree.html}. Not withstanding this the bins in the spatial area under investigation are of the same size since Malta does not relatively cover a wide area. We chose $50m^2$ spatial bins to aggregate traffic flow data in order not to have too much wide geometries that can aggregate traffic coming from two roads. Smaller bins than 50 metres square make aggregations less meaningful since aggregation is more near to data points rather than grouping polygons. 
+A Hive user defined function (UDF) from esri (esri is the company that owns the ArcGIS solution) is used within the Hive query language (HQL) syntax to interact with Hadoop and count traffic flow by spatial bin\footnote{https://github.com/Esri/spatial-framework-for-hadoop}. A spatial bin is a computational geometry that can be used to numerically describe features in a specific region. In our case we used 0.0005 degrees bins to count traffic flow 'steps' derived from OSM routes. 0.0005 degrees bins approximately equate to 50 by 50 metres bins. We are stating that dimensions are not precise when computing the geometrical bin because dimensions are not strictly universal and vary according to map position. These tend to be more of an elongated rectangle near the poles and squarish near the equator. This happens because latitudes get narrower for bins near the poles due to the fact that the earth is not a perfect sphere but an oblate spheroid\footnote{http://www.longitudestore.com/how-big-is-one-gps-degree.html}. Not withstanding this the bins in the spatial area under investigation are of the same size since Malta does not cover a wide area. We chose $50m^2$ spatial bins to aggregate traffic flow data. In this way we do not have too much wide geometries that can aggregate traffic coming from two roads. Bins with sizes that are less than $50m^2$ make aggregations less meaningful since aggregation is more near to data points rather than grouping polygons. 
 
 \begin{figure}[!]	
 	\includegraphics[scale=0.6]{concentric_map.jpg}
@@ -819,7 +851,9 @@ A Hive user defined function (UDF) from esri (esri is the company that owns the 
 	\label{fig:spatial_binning_traffic_count}
 \end{figure}
 
-The centroid for each bin was calculated in order to attain the central coordinates of the polygon delineating the bin. Aggregation was not only done spatially but also temporally within intervals of 5 minutes each. This choice of interval size is quite subjective in nature but it has been decided that it is both granular enough and not too wide to describe traffic flow temporally. Prediction of traffic could then be more practical in terms of time windows ahead relative to the prediction to be done. A larger time window would not permit finer prediction in a time series. For example a non-sliding 10 minute time window which would allow predictions 10 minutes ahead, 20 minutes ahead and so forth. We did not use a sliding window so that we have less data points for training since training of neural networks would be more costly in terms of computation and would have made analysis more time consuming and complex. Having a sliding window would make it more flexible to decouple the averaging window size from the time ahead distance. The prediction time ahead parameter would not need to be a multiple of the averaging window.
+The centroid for each bin was calculated in order to attain the central coordinates of the polygon delineating the bin. Aggregation was not only done spatially but also temporally with intervals of 5 minutes each. This choice of interval's size is quite subjective in nature but it has been decided that it is both granular enough and not too wide to describe traffic flow temporally. Prediction of traffic could then be more practical in terms of prediction time ahead window sizes. A larger time window would not permit finer prediction in a time series. For example a non-sliding 10 minute time window would allow predictions 10 minutes ahead and a 20 minute sliding window would allow for predictions 20 minutes ahead and so on.
+
+We did not use a sliding window since this would have resulted in less data points for training since training of neural networks would be more costly in terms of computation and would have made analysis more time consuming and complex. Having a sliding window on the other hand makes it more flexible to decouple the averaging window size from the time ahead distance. The prediction time ahead parameter would not need to be a multiple of the averaging window.
 
 \begin{figure}[!]	
 	\includegraphics[scale=0.5]{traffic_count_color_coded_categorization.jpg}
@@ -829,7 +863,7 @@ The centroid for each bin was calculated in order to attain the central coordina
 \end{figure}
 
 %TODO - possibly move to 
-Visual tools such as CartoDB\footnote{https://carto.com} where used to illustrate aggregation of traffic flow count in spatial bins. Figure \ref{fig:spatial_binning_traffic_count} shows which areas attract most traffic in Malta. Well known to be busy traffic flow Locations such as Santa Venera tunnels and Southern Harbour area around the four lane roads in Marsa have bigger distinctive spherical markers. The tool allows to select specific date and time to analyse traffic temporally. A similar visualization depicts average traffic intensity across the whole month under investigation. The tool allows to configure pop ups that can display relative information to the bubble such as location coordinates and average month traffic.
+Visual tools such as CartoDB\footnote{https://carto.com} where used to illustrate aggregation of traffic flow count in spatial bins. Figure \ref{fig:spatial_binning_traffic_count} shows which areas attract most traffic in Malta. Locations such as the Santa Venera tunnels and Southern Harbour area around the four lane roads in Marsa have bigger distinctive spherical markers indicating that these roads are very busy. The tool allows to select specific date and time to analyse traffic temporally. A similar visualization (figure \ref{fig:spatial_binning_traffic_count}) depicts average traffic intensity across the whole month under investigation. CartoDB allowed us to configure pop ups that can display relative information to the bubble such as location coordinates and average month traffic.
 
 \begin{figure}[h]	
 	\includegraphics[scale=0.5]{traffic_month_average.jpg}
@@ -838,7 +872,7 @@ Visual tools such as CartoDB\footnote{https://carto.com} where used to illustrat
 	\label{fig:traffic_month_average}
 \end{figure}
 
-Another illustration (see figure \ref{fig:traffic_count_color_coded_categorization}) shows through a colour scheme in a categorical manner the intensity of traffic flow. This method makes it easier to categorize traffic flow count than the method used to display traffic in figure \ref{fig:spatial_binning_traffic_count}.   
+Another illustration (see figure \ref{fig:traffic_count_color_coded_categorization}) uses a colour scheme in a categorical manner to display the intensity of traffic flow. This visualization technique makes it easier to categorize traffic flow count than the technique used to display traffic in figure \ref{fig:spatial_binning_traffic_count}.   
 
 
 
@@ -1028,7 +1062,9 @@ Therefore inaccurate results error introduction in early stages would trickle do
 
 \section{Trip counts per hour evaluation}
 
-After determining the daily users' routes between different origins and destinations done there are two sets of important information that are derived. These are namely trip count and trip delay per route. Distributions for both were further derived given that information such as trip departure timestamp is available for every route. 
+After determining the users' daily routes between different origins and destinations there are two sets of important information that had to be derived. These are namely trip count and trip delay per route. 
+
+The former represents the average hourly trips done while the latter represents the average delay for every route or for all trips in general. Distributions for both were further derived by using information such as trip departure and arrival timestamp which is available for every route. 
 
 \begin{figure}[!]	
 	\includegraphics[scale=0.5]{Trip_delay_per_day_week.jpg}
@@ -1038,7 +1074,7 @@ After determining the daily users' routes between different origins and destinat
 \end{figure}
 
 
-One can notice how the trip count distribution per hour derived from mobile usage EDRs (see figure \ref{fig:trip_distribution}) generated OD Matrix is strikingly similar with the trip distribution as reported in a National Household Travel survey (NHTS) done in 2010 \cite{malta2011national} (see figure \ref{fig:trip_distribution_nso}). 
+In figure \ref{fig:trip_distribution} we show that the trip distribution derived from mobile usage EDRs' generated OD Matrix is strikingly similar with the trip distribution as reported in a National Household Travel survey (NHTS) done in 2010 \cite{malta2011national} (see figure \ref{fig:trip_distribution_nso}). 
 
 
 \begin{figure}[!]	
@@ -1048,7 +1084,7 @@ One can notice how the trip count distribution per hour derived from mobile usag
 	\label{fig:trip_distribution_nso}
 \end{figure}
 
-As illustrated in plot \ref{fig:trip_count_correlation} trip count peaks for both reported distributions are observed at 7:00 a.m. and 5:00 p.m. NHTS was taken on a Wednesday and has no car trip distribution for Saturdays and Sundays. Since plot shown in \ref{fig:trip_distribution} show that weekdays' OD generated trips count distribution is similar in shape the average was taken on all weekdays of the whole month. However it should be noted that trip counts on a Monday are distinctively slightly higher than the other weekdays \ref{fig:trip_distribution}. 
+As illustrated in plot \ref{fig:trip_count_correlation} trip count peaks for both reported distributions are observed at 7:00 a.m. and 5:00 p.m. NHTS data was collected on a Wednesday and has no car trip distribution for Saturdays and Sundays. Since plot shown in \ref{fig:trip_distribution} show that weekdays' OD generated trips count distribution is similar in shape the average was taken on all weekdays of the whole month. However it should be noted that trip counts on a Monday are distinctively slightly higher than the other weekdays \ref{fig:trip_distribution}. 
 
 
 \begin{table}[!] \label{table:trip_dsitribution_statistical_analysis}	
@@ -1137,7 +1173,7 @@ Route information was retrieved from OSRM with the OD matrix as input. Thus with
 
 
 %---------------------------------- TRAFFIC FLOW COUNT NIGEL PACE VS MINE -------------------
-\begin{figure}[!] \label{fig:kappara_north_traffic_flow_line_chart}
+\begin{figure}[!] 
 	\centering
 	\begin{subfigure}{0.6\textwidth}
 		\centering
@@ -1155,9 +1191,10 @@ Route information was retrieved from OSRM with the OD matrix as input. Thus with
 	\end{subfigure}
 	
 	\caption{Kappara North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
+	\label{fig:kappara_north_traffic_flow_line_chart}
 \end{figure}
 
-\begin{figure}[!] \label{fig:kappara_south_traffic_flow_line_chart}
+\begin{figure}[!] 
 	\centering
 	\begin{subfigure}{0.6\textwidth}
 		\centering
@@ -1174,10 +1211,11 @@ Route information was retrieved from OSRM with the OD matrix as input. Thus with
 		\label{fig:traffic_flow_count_KS_NP}
 	\end{subfigure}
 	\caption{Kappara South Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite{Pace2017}}
+	\label{fig:kappara_south_traffic_flow_line_chart}
 \end{figure}
 
 
-\begin{figure}[!] \label{fig:marsa_north_traffic_flow_line_chart}
+\begin{figure}[!] 
 	\centering
 	\begin{subfigure}{0.7\textwidth}
 		\centering
@@ -1194,9 +1232,10 @@ Route information was retrieved from OSRM with the OD matrix as input. Thus with
 		\label{fig:traffic_flow_count_MN_NP}
 	\end{subfigure}
 	\caption[Linear chart for Kappara northbound and southbound traffic flow]{Marsa North Traffic flow counts from OD-OSRM and video stream count comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
+	\label{fig:marsa_north_traffic_flow_line_chart}
 \end{figure}
 
-\begin{figure}[!] \label{fig:marsa_south_traffic_flow_line_chart}
+\begin{figure}[!] 
 	\centering
 	\begin{subfigure}{0.7\textwidth}
 		\centering
@@ -1214,6 +1253,7 @@ Route information was retrieved from OSRM with the OD matrix as input. Thus with
 	\end{subfigure}
 	
 	\caption[Line chart for Marsa northbound and southbound traffic flow]{Marsa South Traffic flow from OD-OSRM and video stream counts comparison. Video stream count graphic has been reproduced from \cite{Pace2017}.}
+	\label{fig:marsa_south_traffic_flow_line_chart}
 \end{figure}
 
 %-----------------------------------------------------------------------------------------------------
@@ -1223,7 +1263,7 @@ The ground truth to be used is acquired from work done by Nigel Pace in his diss
 
 %---------------------------------- TRAFFIC FLOW COUNT LINE PLOTS -------------------
 
-\begin{figure}[!] \label{fig:kappara_traffic_flow_count_plot}
+\begin{figure}[!] 
 	\centering
 	\begin{subfigure}{0.8\textwidth}
 		\centering
@@ -1239,9 +1279,10 @@ The ground truth to be used is acquired from work done by Nigel Pace in his diss
 		\label{fig:traffic_flow_count_KS_lineplot}
 	\end{subfigure}
         \caption[Linear plot for Kappara northbound and southbound traffic flow regression model]{OD-OSRM and video stream traffic flow Count linear plot for Kappara traffic flow points.}
+        \label{fig:kappara_traffic_flow_count_plot}
 \end{figure}
 
-\begin{figure}[!] \label{fig:marsa_traffic_flow_count_plots}
+\begin{figure}[!] 
 	\centering
 	\begin{subfigure}{0.8\textwidth}
 		\centering
@@ -1257,6 +1298,7 @@ The ground truth to be used is acquired from work done by Nigel Pace in his diss
 		\label{fig:traffic_flow_count_MS_lineplot}
 	\end{subfigure}	
 	\caption[Linear plot for Marsa northbound and southbound traffic flow regression model]{OD-OSRM and video stream traffic flow Count linear plot for Marsa Northbound and Southbound traffic flow points.}
+	\label{fig:marsa_traffic_flow_count_plots}
 \end{figure}
 
 %-----------------------------------------------------------------------------------------
@@ -1317,7 +1359,7 @@ Table \ref{table:classification_mertrics} shows evaluation results described by 
 
 \chapter{Future Works} \label{chapter:future_work}
 
-\section{Future improvements}
+\section{Future improvements} \label{section:future_improvements}
 
 \subsection{Use of alternative data sources for ground truth}
 The challenge in such projects is to find ground truth to properly evaluate findings and achieved results. One way to achieve this is to develop or use off the shelf software that collects GPS points and collaborate with a group of people to gather the data. The resulting sample of data would be ideal to carry out correlations with experimental outcomes.
@@ -1335,7 +1377,7 @@ An averaging moving filter would remove noise from the traffic flow count and im
 Evaluation for \ref{section:trip_average_delay_evaluation} was done by comparing results based on a June dataset with data retrieved through DMAPI and an October mobile data usage dataset. This evaluation although it gave promising results should be repeated with seasonality of datasets removed from the equation to compare like with like. Malta traffic in October is very different from Malta traffic in June. 
 
 
-\section{Future research and potential projects}
+\section{Future research and potential projects} \label{section:future_research}
 
 \subsection{Machine learning for trip delay prediction}
 
@@ -1354,7 +1396,7 @@ Other datasources such as social media and ANPR video streams could be used to f
 This dissertation's methodology made extensive use of Open source maps (OSM) and Open Source Routing Machine (OSRM). An interesting project would be to edit the OSM maps under observation (opening of a new road) with map editing software and check the impact on the traffic flow of routes which are adjacent or near to the modification done in the map. OSRM generates route information based on the OSM data and when the OSM data file is modified the change is reflected in the routing information. This would be very useful to simulate and analyse the impact on traffic flow before the actual alteration is made in the road infrastructure. 
 
 
-\chapter{Conclusion}
+\chapter{Conclusion} \label{chapter:conclusion}
  
 Through a systematic approach a data processing pipeline was devised to extract vehicular traffic patterns from mobile usage data. The methodology consisted in building models for each pipeline phase that processed input data and fed next phases down the chain. The ensuing ensemble of techniques can be applied to deduce traffic analytics from time series mobile usage data. 
 
