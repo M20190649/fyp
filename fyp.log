@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  28 JUN 2018 03:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  28 JUN 2018 09:53
 entering extended mode
 **./fyp.tex
 (fyp.tex
@@ -649,14 +649,14 @@ LaTeX Info: Redefining \nameref on input line 63.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- <crest.pdf, id=222, 302.26929pt x 413.97762pt>
+ <crest.pdf, id=218, 445.665pt x 433.62pt>
 File: crest.pdf Graphic file (type pdf)
-
-<use crest.pdf>
+ <use crest.pdf>
 Package pdftex.def Info: crest.pdf used on input line 77.
-(pdftex.def)             Requested size: 62.32074pt x 85.35826pt.
+(pdftex.def)             Requested size: 87.72375pt x 85.35826pt.
 LaTeX Font Info:    Try loading font information for OML+lmm on input line 77.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 77.
@@ -767,7 +767,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [6] [7] [8] [9]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in alignment at lines 215--215
+Underfull \hbox (badness 10000) in alignment at lines 213--213
 []
  []
 
@@ -777,296 +777,335 @@ Underfull \hbox (badness 10000) in alignment at lines 215--215
 me{Hfootnote.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.257 ...is the location boundaries for the phone}
+l.255 ...is the location boundaries for the phone}
                                                   . Proprietary algorithms p...
 [14]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 259.
+               Default added (so using `!tbp') on input line 257.
 
-<images/triangulation.jpg, id=602, 420.82219pt x 359.09157pt>
+<images/triangulation.jpg, id=605, 420.82219pt x 359.09157pt>
 File: images/triangulation.jpg Graphic file (type jpg)
 
 <use images/triangulation.jpg>
-Package pdftex.def Info: images/triangulation.jpg used on input line 260.
+Package pdftex.def Info: images/triangulation.jpg used on input line 258.
 (pdftex.def)             Requested size: 315.61586pt x 269.31801pt.
  [15 <./images/triangulation.jpg>] [16] [17]
 [18] [19] [20] [21] [22] [23] [24]
-<images/truncated_power_law.jpg, id=731, 344.78813pt x 333.49594pt>
+<images/truncated_power_law.jpg, id=734, 344.78813pt x 333.49594pt>
 File: images/truncated_power_law.jpg Graphic file (type jpg)
 
 <use images/truncated_power_law.jpg>
-Package pdftex.def Info: images/truncated_power_law.jpg used on input line 371.
+Package pdftex.def Info: images/truncated_power_law.jpg used on input line 367.
 
 (pdftex.def)             Requested size: 258.59045pt x 250.12134pt.
  [25 <./images/truncated_power_law.jpg>]
-[26] [27] [28] [29]
+[26] [27] [28]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in alignment at lines 421--421
+Underfull \hbox (badness 10000) in alignment at lines 408--408
 []
  []
 
-[30
+[29
 
-] [31]
+] [30]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[32] [33]
-<images/data_session_duration_bin_count.jpg, id=812, 427.5975pt x 223.58531pt>
+[31] [32]
+<images/data_session_duration_bin_count.jpg, id=809, 427.5975pt x 223.58531pt>
 File: images/data_session_duration_bin_count.jpg Graphic file (type jpg)
 
 <use images/data_session_duration_bin_count.jpg>
 Package pdftex.def Info: images/data_session_duration_bin_count.jpg used on inp
-ut line 523.
+ut line 507.
 (pdftex.def)             Requested size: 320.69733pt x 167.68855pt.
- [34]
-<images/data_session_duration.jpg, id=819, 588.69937pt x 327.47343pt>
+ [33]
+<images/data_session_duration.jpg, id=815, 588.69937pt x 327.47343pt>
 File: images/data_session_duration.jpg Graphic file (type jpg)
 
 <use images/data_session_duration.jpg>
-Package pdftex.def Info: images/data_session_duration.jpg used on input line 56
-0.
+Package pdftex.def Info: images/data_session_duration.jpg used on input line 54
+4.
 (pdftex.def)             Requested size: 441.52344pt x 245.60448pt.
 
-Overfull \hbox (20.42255pt too wide) in paragraph at lines 560--562
+Overfull \hbox (20.42255pt too wide) in paragraph at lines 544--546
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--583
+Underfull \hbox (badness 10000) in paragraph at lines 557--557
 \OT1/lmr/m/n/10 https://developers.google.com/maps/documentation/roads/snap, ht
 tps://microsoft.com/en-
  []
 
-[35 <./images/data_session_duration_bin_count.jpg>] [36 <./images/data_session_
+[34 <./images/data_session_duration_bin_count.jpg>] [35 <./images/data_session_
 duration.jpg>]
-<images/cell_towers_distribution.png, id=832, 482.80376pt x 323.2075pt>
+<images/cell_towers_distribution.png, id=829, 482.80376pt x 323.2075pt>
 File: images/cell_towers_distribution.png Graphic file (type png)
 
 <use images/cell_towers_distribution.png>
 Package pdftex.def Info: images/cell_towers_distribution.png used on input line
- 588.
+ 562.
 (pdftex.def)             Requested size: 362.10193pt x 242.40503pt.
- [37 <./images/cell_towers_distribution.png>]
+ [36 <./images/cell_towers_distribution.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 605.
+(hyperref)                removing `\\' on input line 578.
 
-[38] [39] [40]
+[37] [38] [39]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 626.
+               Default added (so using `!tbp') on input line 597.
 
-<images/clustering.jpg, id=869, 633.11531pt x 373.395pt>
+<images/clustering.jpg, id=865, 633.11531pt x 373.395pt>
 File: images/clustering.jpg Graphic file (type jpg)
 
 <use images/clustering.jpg>
-Package pdftex.def Info: images/clustering.jpg used on input line 627.
+Package pdftex.def Info: images/clustering.jpg used on input line 598.
 (pdftex.def)             Requested size: 379.87212pt x 224.03873pt.
- [41 <./images/clustering.jpg>]
+ [40 <./images/clustering.jpg>]
 
-LaTeX Warning: Reference `section:future_research' on page 42 undefined on inpu
-t line 652.
+LaTeX Warning: Reference `section:future_research' on page 41 undefined on inpu
+t line 618.
 
-[42]
-Overfull \hbox (10.84427pt too wide) in paragraph at lines 659--659
+[41]
+Overfull \hbox (10.84427pt too wide) in paragraph at lines 624--624
 [][][]\OT1/lmr/m/n/10 https://cwiki.apache.org/confluence/display/Hive/Language
 Manual+WindowingAndAnalytics| 
  []
 
-[43] [44]
-<images/Trip_delay_cumm_distribution.jpg, id=904, 625.58719pt x 411.03563pt>
+[42] [43]
+<images/Trip_delay_cumm_distribution.jpg, id=901, 625.58719pt x 411.03563pt>
 File: images/Trip_delay_cumm_distribution.jpg Graphic file (type jpg)
 
 <use images/Trip_delay_cumm_distribution.jpg>
 Package pdftex.def Info: images/Trip_delay_cumm_distribution.jpg used on input 
-line 671.
+line 633.
 (pdftex.def)             Requested size: 375.35521pt x 246.62328pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 677.
+               Default added (so using `!tbp') on input line 639.
 
 
-<images/trip_delay_cumm_distribution_total.jpg, id=905, 517.18219pt x 302.63063
+<images/trip_delay_cumm_distribution_total.jpg, id=902, 517.18219pt x 302.63063
 pt>
 File: images/trip_delay_cumm_distribution_total.jpg Graphic file (type jpg)
  <use images/trip_delay_cumm_distribution_total.jpg>
 Package pdftex.def Info: images/trip_delay_cumm_distribution_total.jpg used on 
-input line 678.
+input line 640.
 (pdftex.def)             Requested size: 310.3117pt x 181.57977pt.
- [45 <./images/Trip_delay_cumm_distribution.jpg>]
-<images/Trip_delay.jpg, id=911, 651.93562pt x 472.01344pt>
+ [44 <./images/Trip_delay_cumm_distribution.jpg>]
+<images/Trip_delay.jpg, id=908, 651.93562pt x 472.01344pt>
 File: images/Trip_delay.jpg Graphic file (type jpg)
 
 <use images/Trip_delay.jpg>
-Package pdftex.def Info: images/Trip_delay.jpg used on input line 689.
+Package pdftex.def Info: images/Trip_delay.jpg used on input line 651.
 (pdftex.def)             Requested size: 391.16438pt x 283.21025pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[46 <./images/trip_delay_cumm_distribution_total.jpg>]
+[45 <./images/trip_delay_cumm_distribution_total.jpg>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 703.
+put line 663.
 
-Overfull \hbox (18.38298pt too wide) in paragraph at lines 719--720
+Overfull \hbox (18.38298pt too wide) in paragraph at lines 679--680
 [] $[] \OMS/lmsy/m/n/12   []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 720--722
+Underfull \hbox (badness 10000) in paragraph at lines 680--682
 [] $[] \OMS/lmsy/m/n/12  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 728--729
+Underfull \hbox (badness 10000) in paragraph at lines 688--689
 [] $[] \OMS/lmsy/m/n/12  
  []
 
 
-Overfull \hbox (34.48232pt too wide) in paragraph at lines 747--748
+Overfull \hbox (34.48232pt too wide) in paragraph at lines 707--708
 [] $[] \OMS/lmsy/m/n/12   [][]$ 
  []
 
 
-Overfull \hbox (19.79933pt too wide) in paragraph at lines 751--752
+Overfull \hbox (19.79933pt too wide) in paragraph at lines 711--712
 [] $[] \OMS/lmsy/m/n/12   []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
 [][]
  []
 
 
-Overfull \hbox (35.15453pt too wide) in paragraph at lines 793--794
+Overfull \hbox (35.15453pt too wide) in paragraph at lines 753--754
 [] $[] \OMS/lmsy/m/n/12  $ $[][]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 794--795
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 [] $[] \OMS/lmsy/m/n/12  $
  []
 
 
-Overfull \hbox (35.39581pt too wide) in paragraph at lines 796--797
+Overfull \hbox (35.39581pt too wide) in paragraph at lines 756--757
 []$[][][]$ 
  []
 
 
-Overfull \hbox (8.4082pt too wide) in paragraph at lines 811--812
+Overfull \hbox (8.4082pt too wide) in paragraph at lines 771--772
 [] $[] \OMS/lmsy/m/n/12  $ $[][][][]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--830
+Underfull \hbox (badness 10000) in paragraph at lines 789--790
 [] $[] \OMS/lmsy/m/n/12  $
  []
 
-[47 <./images/Trip_delay.jpg>] [48] [49]
+[46 <./images/Trip_delay.jpg>] [47] [48]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 847.
+               Default added (so using `!tbp') on input line 807.
 
-<images/concentric_map.jpg, id=940, 672.26157pt x 493.845pt>
+<images/concentric_map.jpg, id=937, 672.26157pt x 493.845pt>
 File: images/concentric_map.jpg Graphic file (type jpg)
 
 <use images/concentric_map.jpg>
-Package pdftex.def Info: images/concentric_map.jpg used on input line 848.
+Package pdftex.def Info: images/concentric_map.jpg used on input line 808.
 (pdftex.def)             Requested size: 403.36005pt x 296.30928pt.
- [50] [51 <./images/concentric_map.jpg>]
+ [49] [50 <./images/concentric_map.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 856.
+               Default added (so using `!tbp') on input line 816.
 
 
-<images/traffic_count_color_coded_categorization.jpg, id=952, 700.11563pt x 625
+<images/traffic_count_color_coded_categorization.jpg, id=949, 700.11563pt x 625
 .58719pt>
 File: images/traffic_count_color_coded_categorization.jpg Graphic file (type jp
 g)
  <use images/traffic_count_color_coded_categorization.jpg>
 Package pdftex.def Info: images/traffic_count_color_coded_categorization.jpg us
-ed on input line 857.
+ed on input line 817.
 (pdftex.def)             Requested size: 350.05696pt x 312.79283pt.
- [52 <./images/traffic_count_color_coded_categorization.jpg>]
+ [51 <./images/traffic_count_color_coded_categorization.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 869.
+               Default added (so using `!tbp') on input line 828.
 
-<images/traffic_month_average.jpg, id=961, 825.0825pt x 663.98062pt>
+<images/traffic_month_average.jpg, id=957, 825.0825pt x 663.98062pt>
 File: images/traffic_month_average.jpg Graphic file (type jpg)
 
 <use images/traffic_month_average.jpg>
-Package pdftex.def Info: images/traffic_month_average.jpg used on input line 87
-0.
+Package pdftex.def Info: images/traffic_month_average.jpg used on input line 82
+9.
 (pdftex.def)             Requested size: 412.54024pt x 331.98949pt.
- [53] [54 <./images/traffic_month_average.jpg>] [55] [56]
-<images/traffic_count_cumm_distribution.jpg, id=993, 358.33875pt x 214.55156pt>
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 841.
+
+<images/traffic_torque_600am.jpg, id=964, 987.69pt x 668.4975pt>
+File: images/traffic_torque_600am.jpg Graphic file (type jpg)
+
+<use images/traffic_torque_600am.jpg>
+Package pdftex.def Info: images/traffic_torque_600am.jpg used on input line 842
+.
+(pdftex.def)             Requested size: 395.069pt x 267.39426pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 848.
+
+<images/traffic_torque_700am.jpg, id=965, 989.94844pt x 666.99188pt>
+File: images/traffic_torque_700am.jpg Graphic file (type jpg)
+
+<use images/traffic_torque_700am.jpg>
+Package pdftex.def Info: images/traffic_torque_700am.jpg used on input line 849
+.
+(pdftex.def)             Requested size: 395.97237pt x 266.79202pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 855.
+
+<images/traffic_torque_700am_zoomin.jpg, id=966, 996.72375pt x 675.27281pt>
+File: images/traffic_torque_700am_zoomin.jpg Graphic file (type jpg)
+
+<use images/traffic_torque_700am_zoomin.jpg>
+Package pdftex.def Info: images/traffic_torque_700am_zoomin.jpg used on input l
+ine 856.
+(pdftex.def)             Requested size: 398.68243pt x 270.10434pt.
+ [52] [53 <./images/traffic_month_average.jpg>] [54 <./images/traffic_torque_60
+0am.jpg> <./images/traffic_torque_700am.jpg>] [55 <./images/traffic_torque_700a
+m_zoomin.jpg>] [56] [57]
+<images/traffic_count_cumm_distribution.jpg, id=1005, 358.33875pt x 214.55156pt
+>
 File: images/traffic_count_cumm_distribution.jpg Graphic file (type jpg)
-<use images/traffic_count_cumm_distribution.jpg>
+ <use images/traffic_count_cumm_distribution.jpg>
 Package pdftex.def Info: images/traffic_count_cumm_distribution.jpg used on inp
-ut line 952.
+ut line 934.
 (pdftex.def)             Requested size: 268.7534pt x 160.91327pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[57]
+[58]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 963.
+               Default added (so using `!tbp') on input line 945.
 
-<images/steps_function.jpg, id=1004, 510.40688pt x 325.96782pt>
+<images/steps_function.jpg, id=1017, 510.40688pt x 325.96782pt>
 File: images/steps_function.jpg Graphic file (type jpg)
 
 <use images/steps_function.jpg>
-Package pdftex.def Info: images/steps_function.jpg used on input line 964.
+Package pdftex.def Info: images/steps_function.jpg used on input line 946.
 (pdftex.def)             Requested size: 306.24648pt x 195.58218pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 970.
+               Default added (so using `!tbp') on input line 952.
 
-<images/steps_function_zoom_in.jpg, id=1005, 511.15968pt x 322.20375pt>
+<images/steps_function_zoom_in.jpg, id=1018, 511.15968pt x 322.20375pt>
 File: images/steps_function_zoom_in.jpg Graphic file (type jpg)
 
 <use images/steps_function_zoom_in.jpg>
 Package pdftex.def Info: images/steps_function_zoom_in.jpg used on input line 9
-71.
+53.
 (pdftex.def)             Requested size: 306.69817pt x 193.32373pt.
- [58 <./images/traffic_count_cumm_distribution.jpg>] [59 <./images/steps_functi
+ [59 <./images/traffic_count_cumm_distribution.jpg>] [60 <./images/steps_functi
 on.jpg> <./images/steps_function_zoom_in.jpg>]
-<images/cumulative_variance_pca.jpg, id=1017, 510.40688pt x 274.02374pt>
+<images/cumulative_variance_pca.jpg, id=1029, 510.40688pt x 274.02374pt>
 File: images/cumulative_variance_pca.jpg Graphic file (type jpg)
 
 <use images/cumulative_variance_pca.jpg>
 Package pdftex.def Info: images/cumulative_variance_pca.jpg used on input line 
-989.
+964.
 (pdftex.def)             Requested size: 255.2028pt x 137.01154pt.
- [60 <./images/cumulative_variance_pca.jpg>] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 1023--1023
+ [61 <./images/cumulative_variance_pca.jpg>] [62]
+Underfull \hbox (badness 10000) in paragraph at lines 992--992
 [][][]\OT1/lmr/m/n/10 https://spark.apache.org/docs/latest/ml-classification-re
 gression.html#multilayer-
  []
 
-[62]
+[63]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1032.
+               Default added (so using `!tbp') on input line 1000.
 
-<images/ann_topology.jpg, id=1047, 583.42969pt x 490.08093pt>
+<images/ann_topology.jpg, id=1059, 583.42969pt x 490.08093pt>
 File: images/ann_topology.jpg Graphic file (type jpg)
 
 <use images/ann_topology.jpg>
-Package pdftex.def Info: images/ann_topology.jpg used on input line 1033.
+Package pdftex.def Info: images/ann_topology.jpg used on input line 1001.
 (pdftex.def)             Requested size: 291.71413pt x 245.03987pt.
- [63 <./images/ann_topology.jpg>] [64]
+ [64 <./images/ann_topology.jpg>]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in alignment at lines 1049--1049
+Underfull \hbox (badness 10000) in alignment at lines 1012--1012
 []
  []
 
@@ -1075,320 +1114,344 @@ Underfull \hbox (badness 10000) in alignment at lines 1049--1049
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1072.
+               Default added (so using `!tbp') on input line 1035.
 
-<images/Trip_delay_per_day_week.jpg, id=1065, 789.70032pt x 315.42844pt>
+<images/Trip_delay_per_day_week.jpg, id=1073, 789.70032pt x 315.42844pt>
 File: images/Trip_delay_per_day_week.jpg Graphic file (type jpg)
 
 <use images/Trip_delay_per_day_week.jpg>
 Package pdftex.def Info: images/Trip_delay_per_day_week.jpg used on input line 
-1073.
+1036.
 (pdftex.def)             Requested size: 394.8492pt x 157.71382pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1083.
+               Default added (so using `!tbp') on input line 1046.
 
 
-<images/Transport_malta_trip_distribution.jpg, id=1069, 624.08156pt x 393.72093
+<images/Transport_malta_trip_distribution.jpg, id=1077, 624.08156pt x 393.72093
 pt>
 File: images/Transport_malta_trip_distribution.jpg Graphic file (type jpg)
  <use images/Transport_malta_trip_distribution.jpg>
 Package pdftex.def Info: images/Transport_malta_trip_distribution.jpg used on i
-nput line 1084.
+nput line 1047.
 (pdftex.def)             Requested size: 374.45183pt x 236.23438pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1093.
+               Default added (so using `!tbp') on input line 1056.
 
 [66 <./images/Trip_delay_per_day_week.jpg>] [67 <./images/Transport_malta_trip_
 distribution.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1113.
+               Default added (so using `!tbp') on input line 1076.
 
-<images/Trip_count_correlation.jpg, id=1084, 674.52pt x 369.63094pt>
+<images/Trip_count_correlation.jpg, id=1092, 674.52pt x 369.63094pt>
 File: images/Trip_count_correlation.jpg Graphic file (type jpg)
 
 <use images/Trip_count_correlation.jpg>
 Package pdftex.def Info: images/Trip_count_correlation.jpg used on input line 1
-114.
+077.
 (pdftex.def)             Requested size: 404.71512pt x 221.78026pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1124.
+               Default added (so using `!tbp') on input line 1087.
 
 
-<images/Trip_distribution_line_fit_plot.jpg, id=1089, 696.35156pt x 472.01344pt
+<images/Trip_distribution_line_fit_plot.jpg, id=1097, 696.35156pt x 472.01344pt
 >
 File: images/Trip_distribution_line_fit_plot.jpg Graphic file (type jpg)
  <use images/Trip_distribution_line_fit_plot.jpg>
 Package pdftex.def Info: images/Trip_distribution_line_fit_plot.jpg used on inp
-ut line 1125.
+ut line 1088.
 (pdftex.def)             Requested size: 348.17493pt x 236.00613pt.
  [68 <./images/Trip_count_correlation.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1136.
+               Default added (so using `!tbp') on input line 1099.
 
-<images/trip_delay_mosta_marsa.jpg, id=1098, 823.57687pt x 321.45094pt>
+<images/trip_delay_mosta_marsa.jpg, id=1106, 823.57687pt x 321.45094pt>
 File: images/trip_delay_mosta_marsa.jpg Graphic file (type jpg)
 
 <use images/trip_delay_mosta_marsa.jpg>
 Package pdftex.def Info: images/trip_delay_mosta_marsa.jpg used on input line 1
-137.
+100.
 (pdftex.def)             Requested size: 411.78743pt x 160.72507pt.
  [69 <./images/Trip_distribution_line_fit_plot.jpg> <./images/trip_delay_mosta_
 marsa.jpg>]
-<images/trip_delay_comparison.jpg, id=1104, 632.3625pt x 390.70969pt>
+<images/trip_delay_comparison.jpg, id=1112, 632.3625pt x 390.70969pt>
 File: images/trip_delay_comparison.jpg Graphic file (type jpg)
 
 <use images/trip_delay_comparison.jpg>
 Package pdftex.def Info: images/trip_delay_comparison.jpg used on input line 11
-47.
+10.
 (pdftex.def)             Requested size: 442.65074pt x 273.4949pt.
 
-Overfull \hbox (21.54985pt too wide) in paragraph at lines 1147--1149
+Overfull \hbox (21.54985pt too wide) in paragraph at lines 1110--1112
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1156.
+               Default added (so using `!tbp') on input line 1119.
 
 
-<images/trip_delay_correlation_DMAPI_vs_MINE.jpg, id=1105, 523.20468pt x 231.11
+<images/trip_delay_correlation_DMAPI_vs_MINE.jpg, id=1113, 523.20468pt x 231.11
 343pt>
 File: images/trip_delay_correlation_DMAPI_vs_MINE.jpg Graphic file (type jpg)
  <use images/trip_delay_correlation_DMAPI_vs_MINE.jpg>
 Package pdftex.def Info: images/trip_delay_correlation_DMAPI_vs_MINE.jpg used o
-n input line 1157.
+n input line 1120.
 (pdftex.def)             Requested size: 366.24077pt x 161.77829pt.
- [70 <./images/trip_delay_comparison.jpg>] [71 <./images/trip_delay_correlation
-_DMAPI_vs_MINE.jpg>] [72]
+ [70 <./images/trip_delay_comparison.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1181.
+               Default added (so using `!tbp') on input line 1129.
 
-<images/traffic_flow_count_KN_MINE.jpg, id=1124, 532.99126pt x 328.97906pt>
+<images/OD-OSRM_traffic_900am.jpg, id=1121, 920.68968pt x 525.46312pt>
+File: images/OD-OSRM_traffic_900am.jpg Graphic file (type jpg)
+
+<use images/OD-OSRM_traffic_900am.jpg>
+Package pdftex.def Info: images/OD-OSRM_traffic_900am.jpg used on input line 11
+30.
+(pdftex.def)             Requested size: 368.26935pt x 210.18152pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1136.
+
+<images/google_traffic_900am.jpg, id=1122, 982.42032pt x 667.74469pt>
+File: images/google_traffic_900am.jpg Graphic file (type jpg)
+
+<use images/google_traffic_900am.jpg>
+Package pdftex.def Info: images/google_traffic_900am.jpg used on input line 113
+7.
+(pdftex.def)             Requested size: 392.96117pt x 267.09314pt.
+ [71 <./images/trip_delay_correlation_DMAPI_vs_MINE.jpg>] [72 <./images/OD-OSRM
+_traffic_900am.jpg> <./images/google_traffic_900am.jpg>] [73]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1159.
+
+<images/traffic_flow_count_KN_MINE.jpg, id=1140, 532.99126pt x 328.97906pt>
 File: images/traffic_flow_count_KN_MINE.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_KN_MINE.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KN_MINE.jpg used on input li
-ne 1185.
+ne 1163.
 (pdftex.def)             Requested size: 252.6631pt x 155.95042pt.
 
-<images/traffic_flow_count_KN_Nigel_pace.jpg, id=1125, 532.99126pt x 320.69812p
+<images/traffic_flow_count_KN_Nigel_pace.jpg, id=1141, 532.99126pt x 320.69812p
 t>
 File: images/traffic_flow_count_KN_Nigel_pace.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_KN_Nigel_pace.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KN_Nigel_pace.jpg used on in
-put line 1193.
+put line 1171.
 (pdftex.def)             Requested size: 252.6631pt x 152.02489pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1202.
+               Default added (so using `!tbp') on input line 1180.
 
-<images/traffic_flow_count_KS_MINE.jpg, id=1128, 528.47438pt x 328.97906pt>
+<images/traffic_flow_count_KS_MINE.jpg, id=1144, 528.47438pt x 328.97906pt>
 File: images/traffic_flow_count_KS_MINE.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_KS_MINE.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KS_MINE.jpg used on input li
-ne 1206.
+ne 1184.
 (pdftex.def)             Requested size: 252.6631pt x 157.28569pt.
 
-<images/traffic_flow_count_KS_Nigel_pace.jpg, id=1129, 518.6878pt x 342.5297pt>
+<images/traffic_flow_count_KS_Nigel_pace.jpg, id=1145, 518.6878pt x 342.5297pt>
 File: images/traffic_flow_count_KS_Nigel_pace.jpg Graphic file (type jpg)
 <use images/traffic_flow_count_KS_Nigel_pace.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KS_Nigel_pace.jpg used on in
-put line 1214.
+put line 1192.
 (pdftex.def)             Requested size: 252.6631pt x 166.8532pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1223.
+               Default added (so using `!tbp') on input line 1201.
 
-<images/traffic_flow_count_MN_MINE.jpg, id=1132, 527.72156pt x 328.97906pt>
+<images/traffic_flow_count_MN_MINE.jpg, id=1148, 527.72156pt x 328.97906pt>
 File: images/traffic_flow_count_MN_MINE.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_MN_MINE.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MN_MINE.jpg used on input li
-ne 1227.
+ne 1205.
 (pdftex.def)             Requested size: 294.76933pt x 183.75516pt.
 
-<images/traffic_flow_count_MN_Nigel_pace.jpg, id=1133, 532.23843pt x 282.30469p
+<images/traffic_flow_count_MN_Nigel_pace.jpg, id=1149, 532.23843pt x 282.30469p
 t>
 File: images/traffic_flow_count_MN_Nigel_pace.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_MN_Nigel_pace.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MN_Nigel_pace.jpg used on in
-put line 1235.
+put line 1213.
 (pdftex.def)             Requested size: 294.76933pt x 156.35356pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1243.
+               Default added (so using `!tbp') on input line 1221.
 
-<images/traffic_flow_count_MS_MINE.jpg, id=1136, 531.48563pt x 328.22626pt>
+<images/traffic_flow_count_MS_MINE.jpg, id=1152, 531.48563pt x 328.22626pt>
 File: images/traffic_flow_count_MS_MINE.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_MS_MINE.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MS_MINE.jpg used on input li
-ne 1247.
+ne 1225.
 (pdftex.def)             Requested size: 294.76933pt x 182.04251pt.
 
-<images/traffic_flow_count_MS_Nigel_pace.jpg, id=1137, 517.18219pt x 249.93375p
+<images/traffic_flow_count_MS_Nigel_pace.jpg, id=1153, 517.18219pt x 249.93375p
 t>
 File: images/traffic_flow_count_MS_Nigel_pace.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_MS_Nigel_pace.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MS_Nigel_pace.jpg used on in
-put line 1255.
+put line 1233.
 (pdftex.def)             Requested size: 294.76933pt x 142.45609pt.
- [73] [74 <./images/traffic_flow_count_KN_MINE.jpg> <./images/traffic_flow_coun
+ [74] [75 <./images/traffic_flow_count_KN_MINE.jpg> <./images/traffic_flow_coun
 t_KN_Nigel_pace.jpg>]
-[75 <./images/traffic_flow_count_KS_MINE.jpg> <./images/traffic_flow_count_KS_N
-igel_pace.jpg>] [76 <./images/traffic_flow_count_MN_MINE.jpg> <./images/traffic
-_flow_count_MN_Nigel_pace.jpg>] [77 <./images/traffic_flow_count_MS_MINE.jpg> <
+[76 <./images/traffic_flow_count_KS_MINE.jpg> <./images/traffic_flow_count_KS_N
+igel_pace.jpg>] [77 <./images/traffic_flow_count_MN_MINE.jpg> <./images/traffic
+_flow_count_MN_Nigel_pace.jpg>] [78 <./images/traffic_flow_count_MS_MINE.jpg> <
 ./images/traffic_flow_count_MS_Nigel_pace.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1271.
+               Default added (so using `!tbp') on input line 1249.
 
-<images/traffic_flow_count_KN_line_plot.jpg, id=1162, 481.8pt x 244.66406pt>
+<images/traffic_flow_count_KN_line_plot.jpg, id=1178, 481.8pt x 244.66406pt>
 File: images/traffic_flow_count_KN_line_plot.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_KN_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KN_line_plot.jpg used on inp
-ut line 1275.
+ut line 1253.
 (pdftex.def)             Requested size: 336.88199pt x 171.077pt.
 
-<images/traffic_flow_count_KS_line_plot.jpg, id=1163, 477.28313pt x 243.91125pt
+<images/traffic_flow_count_KS_line_plot.jpg, id=1179, 477.28313pt x 243.91125pt
 >
 File: images/traffic_flow_count_KS_line_plot.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_KS_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KS_line_plot.jpg used on inp
-ut line 1282.
+ut line 1260.
 (pdftex.def)             Requested size: 336.88199pt x 172.15842pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1290.
+               Default added (so using `!tbp') on input line 1268.
 
 
-<images/traffic_flow_count_MN_line_plot.jpg, id=1164, 472.76625pt x 243.15843pt
+<images/traffic_flow_count_MN_line_plot.jpg, id=1180, 472.76625pt x 243.15843pt
 >
 File: images/traffic_flow_count_MN_line_plot.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_MN_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MN_line_plot.jpg used on inp
-ut line 1294.
+ut line 1272.
 (pdftex.def)             Requested size: 336.88199pt x 173.27444pt.
 
-<images/traffic_flow_count_MS_line_plot.jpg, id=1165, 478.78876pt x 243.15843pt
+<images/traffic_flow_count_MS_line_plot.jpg, id=1181, 478.78876pt x 243.15843pt
 >
 File: images/traffic_flow_count_MS_line_plot.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_MS_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MS_line_plot.jpg used on inp
-ut line 1301.
+ut line 1279.
 (pdftex.def)             Requested size: 336.88199pt x 171.08908pt.
- [78 <./images/traffic_flow_count_KN_line_plot.jpg> <./images/traffic_flow_coun
-t_KS_line_plot.jpg>] [79 <./images/traffic_flow_count_MN_line_plot.jpg> <./imag
+ [79 <./images/traffic_flow_count_KN_line_plot.jpg> <./images/traffic_flow_coun
+t_KS_line_plot.jpg>] [80 <./images/traffic_flow_count_MN_line_plot.jpg> <./imag
 es/traffic_flow_count_MS_line_plot.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1314.
+               Default added (so using `!tbp') on input line 1292.
 
 
-<images/traffic_flow_counts_correlation_results.jpg, id=1175, 920.68968pt x 243
+<images/traffic_flow_counts_correlation_results.jpg, id=1191, 920.68968pt x 243
 .15843pt>
 File: images/traffic_flow_counts_correlation_results.jpg Graphic file (type jpg
 )
  <use images/traffic_flow_counts_correlation_results.jpg>
 Package pdftex.def Info: images/traffic_flow_counts_correlation_results.jpg use
-d on input line 1315.
+d on input line 1293.
 (pdftex.def)             Requested size: 368.26935pt x 97.26164pt.
- [80 <./images/traffic_flow_counts_correlation_results.jpg>] [81]
-<images/classification_metrics_result.jpg, id=1194, 511.15968pt x 454.69875pt>
+ [81 <./images/traffic_flow_counts_correlation_results.jpg>] [82]
+<images/classification_metrics_result.jpg, id=1211, 511.15968pt x 454.69875pt>
 File: images/classification_metrics_result.jpg Graphic file (type jpg)
 
 <use images/classification_metrics_result.jpg>
 Package pdftex.def Info: images/classification_metrics_result.jpg used on input
- line 1338.
+ line 1312.
 (pdftex.def)             Requested size: 383.3688pt x 341.02322pt.
- [82] [83 <./images/classification_metrics_result.jpg>]
-<images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg, id=1207, 530.73282
+ [83 <./images/classification_metrics_result.jpg>]
+<images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg, id=1216, 530.73282
 pt x 464.4853pt>
 File: images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg Graphic file (
 type jpg)
 
 <use images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg>
 Package pdftex.def Info: images/confusion_matrix_hamrun_valletta_342_4bin_15min
-.jpg used on input line 1348.
+.jpg used on input line 1321.
 (pdftex.def)             Requested size: 265.36575pt x 232.24208pt.
 
-<images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg, id=1208, 529.98pt 
+<images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg, id=1217, 529.98pt 
 x 436.63126pt>
 File: images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg Graphic file (
 type jpg)
 
 <use images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>
 Package pdftex.def Info: images/confusion_matrix_marsa_aldo_moro_342_4bin_15min
-.jpg used on input line 1355.
+.jpg used on input line 1328.
 (pdftex.def)             Requested size: 264.98933pt x 218.3151pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [84 <./images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg>] [85 <./imag
-es/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>] [86]
+es/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>] [86] [87]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in alignment at lines 1374--1374
+Underfull \hbox (badness 10000) in alignment at lines 1353--1353
 []
  []
 
-[87
+[88
 
-] [88] [89]
-Overfull \hbox (1.11229pt too wide) in paragraph at lines 1400--1401
+] [89] [90]
+Overfull \hbox (1.11229pt too wide) in paragraph at lines 1379--1380
 []\OT1/lmr/m/n/12 This dis-ser-ta-tion's method-ol-ogy made ex-ten-sive use of 
 Open source maps (OSM)
  []
 
-[90]
+[91]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in alignment at lines 1402--1402
+Underfull \hbox (badness 10000) in alignment at lines 1381--1381
 []
  []
 
-[91
+[92
 
-] [92] [93] (fyp.bbl [94
+] [93] [94] (fyp.bbl [95
 
 
-] [95] [96])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1432.
- [97]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1432.
+] [96] [97])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1411.
+ [98]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1411.
  (fyp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1432.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1432.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1411.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1411.
 
 Package rerunfilecheck Info: File `fyp.out' has not changed.
-(rerunfilecheck)             Checksum: E460CA17583DD922B4868BCB5D311495;4558.
+(rerunfilecheck)             Checksum: 4D8A70C8C43F89A310DA1591D3CE9214;4492.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1432.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1411.
  ) 
 Here is how much of TeX's memory you used:
- 10883 strings out of 493323
- 170925 string characters out of 3139038
- 277671 words of memory out of 3000000
- 13891 multiletter control sequences out of 15000+200000
+ 10917 strings out of 493323
+ 172013 string characters out of 3139038
+ 278167 words of memory out of 3000000
+ 13915 multiletter control sequences out of 15000+200000
  82211 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,11n,47p,1710b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1407,9 +1470,9 @@ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on fyp.pdf (106 pages, 3891308 bytes).
+Output written on fyp.pdf (107 pages, 5130110 bytes).
 PDF statistics:
- 1394 PDF objects out of 1440 (max. 8388607)
- 304 named destinations out of 1000 (max. 500000)
- 646 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1413 PDF objects out of 1440 (max. 8388607)
+ 309 named destinations out of 1000 (max. 500000)
+ 663 words of extra memory for PDF output out of 10000 (max. 10000000)
 

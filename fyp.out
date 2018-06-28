@@ -23,33 +23,32 @@
 \BOOKMARK [2][-]{subsection.2.4.5}{OD matrices evaluation}{section.2.4}% 23
 \BOOKMARK [1][-]{section.2.5}{Traffic flow measurement and pattern extraction}{chapter.2}% 24
 \BOOKMARK [1][-]{section.2.6}{Model fitting to human mobility}{chapter.2}% 25
-\BOOKMARK [1][-]{section.2.7}{Prediction methods}{chapter.2}% 26
-\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 27
-\BOOKMARK [1][-]{section.3.1}{Mobile data collection and structure}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.2}{Dataset preliminary analysis}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.3}{Algorithm Selection}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.3.1}{Trajectory interpolation through cell tower data}{section.3.3}% 31
-\BOOKMARK [2][-]{subsection.3.3.2}{Traffic simulation from OD matrix}{section.3.3}% 32
-\BOOKMARK [2][-]{subsection.3.3.3}{Traffic flow detection by trip generation assigned traffic}{section.3.3}% 33
-\BOOKMARK [1][-]{section.3.4}{Main activity hubs extraction through clustering}{chapter.3}% 34
-\BOOKMARK [2][-]{subsection.3.4.1}{K-means clustering}{section.3.4}% 35
-\BOOKMARK [2][-]{subsection.3.4.2}{DBSCAN clustering}{section.3.4}% 36
-\BOOKMARK [1][-]{section.3.5}{OD Matrix trip Generation}{chapter.3}% 37
-\BOOKMARK [2][-]{subsection.3.5.1}{OD Matrix computation}{section.3.5}% 38
-\BOOKMARK [2][-]{subsection.3.5.2}{Trip generation, route choice and traffic assignment}{section.3.5}% 39
-\BOOKMARK [1][-]{section.3.6}{Traffic flow aggregation through spatial binning}{chapter.3}% 40
-\BOOKMARK [1][-]{section.3.7}{Traffic flow modelling and prediction}{chapter.3}% 41
-\BOOKMARK [2][-]{subsection.3.7.1}{Preprocessing data for the prediction model}{section.3.7}% 42
-\BOOKMARK [2][-]{subsection.3.7.2}{Dimensionality Reduction}{section.3.7}% 43
-\BOOKMARK [2][-]{subsection.3.7.3}{Prediction through Multilayer Perceptron Classifier}{section.3.7}% 44
-\BOOKMARK [0][-]{chapter.4}{Evaluation and Results}{}% 45
-\BOOKMARK [1][-]{section.4.1}{Trip counts per hour evaluation}{chapter.4}% 46
-\BOOKMARK [1][-]{section.4.2}{Trip average delay per hour evaluation}{chapter.4}% 47
-\BOOKMARK [1][-]{section.4.3}{Traffic flow count evaluation}{chapter.4}% 48
-\BOOKMARK [1][-]{section.4.4}{Traffic flow count prediction for a selection of locations evaluation}{chapter.4}% 49
-\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 50
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 51
-\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 52
-\BOOKMARK [0][-]{chapter.6}{Future Works}{}% 53
-\BOOKMARK [1][-]{section.6.1}{Future improvements}{chapter.6}% 54
-\BOOKMARK [0][-]{section.6.1}{References}{}% 55
+\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 26
+\BOOKMARK [1][-]{section.3.1}{Mobile data collection and structure}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.2}{Dataset preliminary analysis}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.3}{Algorithm Selection}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.1}{Trajectory interpolation through cell tower data}{section.3.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.2}{Traffic simulation from OD matrix}{section.3.3}% 31
+\BOOKMARK [2][-]{subsection.3.3.3}{Traffic flow detection by trip generation assigned traffic}{section.3.3}% 32
+\BOOKMARK [1][-]{section.3.4}{Main activity hubs extraction through clustering}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.4.1}{K-means clustering}{section.3.4}% 34
+\BOOKMARK [2][-]{subsection.3.4.2}{DBSCAN clustering}{section.3.4}% 35
+\BOOKMARK [1][-]{section.3.5}{OD Matrix trip Generation}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.5.1}{OD Matrix computation}{section.3.5}% 37
+\BOOKMARK [2][-]{subsection.3.5.2}{Trip generation, route choice and traffic assignment}{section.3.5}% 38
+\BOOKMARK [1][-]{section.3.6}{Traffic flow aggregation through spatial binning}{chapter.3}% 39
+\BOOKMARK [1][-]{section.3.7}{Traffic flow modelling and prediction}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.7.1}{Preprocessing data for the prediction model}{section.3.7}% 41
+\BOOKMARK [2][-]{subsection.3.7.2}{Dimensionality Reduction}{section.3.7}% 42
+\BOOKMARK [2][-]{subsection.3.7.3}{Prediction through Multilayer Perceptron Classifier}{section.3.7}% 43
+\BOOKMARK [0][-]{chapter.4}{Evaluation and Results}{}% 44
+\BOOKMARK [1][-]{section.4.1}{Trip counts per hour evaluation}{chapter.4}% 45
+\BOOKMARK [1][-]{section.4.2}{Trip average delay per hour evaluation}{chapter.4}% 46
+\BOOKMARK [1][-]{section.4.3}{Traffic flow count evaluation}{chapter.4}% 47
+\BOOKMARK [1][-]{section.4.4}{Traffic flow count prediction for a selection of locations evaluation}{chapter.4}% 48
+\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 49
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 50
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 51
+\BOOKMARK [0][-]{chapter.6}{Future Works}{}% 52
+\BOOKMARK [1][-]{section.6.1}{Future improvements}{chapter.6}% 53
+\BOOKMARK [0][-]{section.6.1}{References}{}% 54

@@ -141,8 +141,6 @@ Traffic Information Systems (TIS) can tap into mobile usage records as main sour
 
 \section{Traveller centric traffic flow probing} \label{section:introduction:traveller_centric_traffic_flow_probing}
 
-%TODO - give some notes on floating car data
-
 Obviously the dynamics of traffic flow is determined by the travel needs of the masses. The daily commutes of every individual impacts those of others. The interaction at large scale of all the vehicles in a time series is difficult to model and to predict in a robust and responsive manner \cite{VLAHOGIANNI20143}. Traffic sensors, cameras and induction loops are all sources of information that can be used to both detect high traffic intensity or even forecast it beforehand.  However the coverage these techniques offer is limited. Camera feeds and inductive-loop detectors cannot be installed in every road of the transport infrastructure. Devices carried by travellers or embedded in used vehicle can be possibly used to build smart solution for traffic management \cite{VLAHOGIANNI20143}.
 
 
@@ -208,7 +206,7 @@ A selection of methods that are encountered in literature will be applied and ev
 \section{Dissertation outline} \label{section:introduction:dissertation_outline}
 This dissertation started with a section that introduces the reader to the vehicular traffic problematic nature. It continues by expanding the socio-economic impact of traffic and how it can be addressed with modern technology. At the outset it is mentioned how mobile data usage has great potential to monitor traffic conditions and to predict it over time.
 
- Background on traffic flow detection and prediction and an overview of related literature will be given in chapter \ref{chapter:background} "Background and literature review". The proposed method to demonstrate soundness of certain selected implementations of certain concepts inspired by literature will be elaborated in chapter \ref{chapter:methodology} "Methodology".  Validity and versatility of the created model will be evaluated and discussed in the "Evaluation and Results" chapter. Chapter chapter \ref{chapter:future_work} "Future Works"  will discuss possible improvements and potential future projects that can build on the work done in this dissertation. Finally the "Conclusion" chapter will summarize what has been achieved and to what extent in this dissertation, while highlighting limitations in the process.
+ Background on traffic flow detection and prediction and an overview of related literature will be given in chapter \ref{chapter:background} "Background and literature review". The proposed method to demonstrate soundness of certain selected implementations of certain concepts inspired by literature will be elaborated in chapter \ref{chapter:methodology} "Methodology".  Validity and versatility of the created model will be evaluated and discussed in the "Evaluation and Results" chapter.  The "Conclusion" chapter will summarize what has been achieved and to what extent in this dissertation, while highlighting limitations in the process. Finally chapter  \ref{chapter:future_work} "Future Works"  will discuss possible improvements and potential future projects that can build on the work done in this dissertation.
 
 
 
@@ -279,8 +277,6 @@ MapReduce frameworks such as Spatial Hadoop exist so the expensive temporal geos
 Mobile subscribers location is highly sensitive so anonymization has to come into play if legal issues are to be avoided when handling data for research purposes. For instance \cite{Laurila2012} exposes facts regarding potential privacy breach risks within datasets that have unique identifiers hashed. Some standard practices that make anonymization procedures more efficient are listed in \cite{Laurila2012}. One of these is contractual binding where data users are legally bound to not attempt to reverse-engineer identity. Another method to further protect sensitive data through anonymization is truncation of data. For example only a part of the data is kept if it is decided that it is enough and meets the purpose of the data processing exercise. Also Laurila et al also give a detailed account of techniques used to hash unique identifiers. \cite{Shin} elaborates on how to use k-anonymity algorithm so that location data of a user makes his identity undistinguishable from other k-1 other users in the same region.
 
 Another way to guarantee privacy is limiting data retention. To safeguard privacy travel paths of a specific mobile user is kept for not more than 1 day in \cite{Hoteit2014} and for not more than 2 days in \cite{Calabrese2013}. It is the norm to assign a hashed anonymous identifier to each mobile user in such a method as well.
-
-%TODO - re-identification - https://iapp.org/news/a/looking-to-comply-with-gdpr-heres-a-primer-on-anonymization-and-pseudonymization/
 
 
 \section{Big Data, the cloud and large scale real time stream processing} \label{background_big_data}
@@ -408,21 +404,12 @@ where $r_{g}$ is the radius of gyration and ${\stackrel{\to }{p}}$ is the magnit
 In \cite{Hoteit2016} the hypothesis that an individual tends to be found with high probability at his home or place of work leads to classification of individual calling activity locations. The classification method labels these locations as \textit{'stop-by'} categories. The 'stop-by' categories are 'stop-by home' which is demarcated by the night time interval where a user is expected to be at home. 'stob-by-flexhome' is a refinement over and above 'stop-by-home' were night time interval varies per user. 'Stop-by-spothome' fills data lacunas or corrects errors when there are exceptional errors where user is expected to be in home location as indicated by previous category.
 
 
-\section{Prediction methods}
-
-{works in progress}
-
-Prediction of traffic results have to take in consideration where the model is being used for forecasting. \cite{Sommer2013} states for example that it is easier to predict traffic in highways rather than in urban areas since traffic tends to be smoother.
-
-%TODO - important
-
-
 
 \chapter{Methodology} \label{chapter:methodology}
 
 One of the main objectives (O\ref{objective:01}) was to extract meaningful features from mobile data usage that would serve as the basis to build a traffic flow model. Before choosing an approach and constructing an algorithm that maps raw data and translates it into traffic flow metrics a thorough familiarization exercise with the data was due. A feasibility check had to be carried out on whether it was possible that by devising an algorithm a direct relationship is established between mobile usage data and traffic flow. If data was found to be too sparse, both temporally and spatially,  augmentation would have been required by tapping into other datasets would have been necessary. Such  datasets could include ANPR data collected from video streams, call data records available openly on the internet, accident reports and anything related to road transport which would convey additional information on human mobility patterns. 
 
-In this chapter we will elaborate how we investigated a number of approaches and how we decided to dig deeper with a set of techniques preferred to others depending on how practical the solution was and how it would give a better result. The methodology presented in this chapter has a step by step scientific method in which procedures were devised to test hypotheses. The data that results from a devised procedure was analyzed and if it was not working properly further optimizations were done and alterations were discussed. Finally conclusions were drawn and communicated in sections \ref{chapter:evaluation_and_results} and \ref{chapter:conclusion}  and where results were not found aligned or partially aligned with the hypotheses, suggestions how further research can be done were outlined in section \ref{section:future_improvements} 
+In this chapter we will elaborate how we investigated a number of approaches and how we decided to dig deeper with a set of techniques preferred to others depending on how practical the solution was and how it would give a better result. The methodology presented in this chapter has a step by step scientific method in which procedures were devised to test hypotheses. The data that results from a devised procedure was analysed and if it was not working properly further optimizations were done and alterations were discussed. Finally conclusions were drawn and communicated in sections \ref{chapter:evaluation_and_results} and \ref{chapter:conclusion}  and where results were not found aligned or partially aligned with the hypotheses, suggestions how further research can be done were outlined in section \ref{section:future_improvements} 
 
 The main hypotheses' experimental procedures that have been tested and refined in this methodology are 
 
@@ -446,7 +433,6 @@ The procedure how data is collected from the network of cell towers was discusse
 
 Unique data usage users amount approximately to 108 thousand for the month of October 2016. This month was chosen for its' heavy traffic characteristics because schools start and university students start to travel with their cars adding to the load of traffic. This sample represents roughly half of the provider's subscriber base which is just over 200 thousand. This figure was derived from all the distinct users that make calls or use data. It is important to note however, that the data users considered in this study might not necessarily be directly proportional to the number of moving vehicles at a certain point in time. The dataset includes static users, users who are just passengers in the car, users that have more than one device and other users that make use of other means of transport. Such factors must be taken in consideration when setting up the proposed solution and evaluating results. The records' data structure is shown in table \ref{table:dataset_01}.
 
-%TODO - Here to correlate with MCA data on data usage and subscriber base.
 
 \begin{table}[h] 
     \centering
@@ -486,8 +472,6 @@ Unique data usage users amount approximately to 108 thousand for the month of Oc
 \section{Dataset preliminary analysis} \label{section:methodology:data_set_preliminary_analysis}
 
 The total number of records of data session or voice call type for the month of october 2016 was 125 million with 78\% of these records representing data usage records. This means that data usage records are four times as much as the call data records. This fact evidently gives an edge on other research that used calling data records as their data source since the frequency of users location recording is much higher. Higher temporal resolution reflects higher spatial resolution. A user might not make data sessions for a long period of time and therefore his travelling information would be missing for this period.  Higher spatio-temporal resolution conduce to better results both when extracting main user activity hubs and when measuring traffic flow counts. Lower sampling rates lead to interpolation error. In section \ref{section:OD_Matrices} it is described how in literature data with a resolution under a given threshold is filtered out.
-
-%TODO - edge on other research - mention which research
 
 Table \ref{table:summary statistics} shows some summary statistics about the main unprocessed data set. Minimum and maximum timestamps show that data stretches for the whole month under analysis. The total count of data usage records is 97 million. The data session's mean duration was approximately 16 minutes which was quite discouraging. This would entail that on average a wait of 16 minutes would be required to write to data storage a mobile cell EDR. This is not desirable for near real-time future traffic count forecasts because the time for the detected departure is retrieved much later than it would actually have happened in such a way that predictions become useless. This would boil down to having a data session duration length which contributes to a considerable displacement error. Until the user connects to the next cell there is a distance covered within the average of 16 minutes and a standard deviation of 22 minutes which is also very high. For a vehicle driving at an average of 40km per hour this would translate to an average displacement error of 10km. 
 
@@ -564,16 +548,6 @@ After we removed the 1 hour duration EDRs newly calculated summary statistics sh
  \end{figure}
  
 
-%See notes in %https://onedrive.live.com/edit.aspx/DOCUMENTS/THESIS?cid=467740571959b235&id=documents&wd=target%28BIG%20DATA%20ARCHITECTURE%2FHIVE.one%7C19327BD9-4579-41F9-B4C8-2688BDD8650D%2FTRIPS%20BY%20DAY%20OF%20WEEK%20HOUR%7CA927A243-B669-4C3A-BD69-6FAF6E87251C%2F%29
-%onenote:https://d.docs.live.net/467740571959b235/DOCUMENTS/THESIS/BIG%20DATA%20ARCHITECTURE/HIVE.one#TRIPS%20BY%20DAY%20OF%20WEEK%20HOUR&section-id={19327BD9-4579-41F9-B4C8-2688BDD8650D}&page-id={A927A243-B669-4C3A-BD69-6FAF6E87251C}&object-id={E4273ACD-1D2A-4BD6-A4DD-243496DEC6AA}&12
-
-
-%TODO - number of sessions per hour for data users
-%TODO - usage of data during the day and durng the night
-%TODO - distribution of data usage (variance) per hour
-%TODO - A graph that has average traffic intensity between 6.00am and 9.00am and 4.00pm and 7.00pm in the evening would be hgihly informative.
-
-
 
 \section{Algorithm Selection} \label{section:methodology:algorithm_selection}
 
@@ -600,7 +574,6 @@ While macroscopic traffic simulators seem promising for motorways environments t
 
 In our research we tried to focus on both the macroscopic and on the microscopic level since we had a dataset that has ample coverage especially in urban areas.    
 
-%TODO - read and add notes from Macroscopic Traffic Flow Model Calibration Using Different Optimization Algorithms
 
 \subsection{Traffic flow detection by trip generation assigned\\ traffic} \label{subsection:methodology:trip_generation}
 The method we adopted to detect traffic on the road network involved first the generation of an OD matrix that contains main stay locations for users in a time series. Then a trip is generated between each main location for each user as it will be explained in section \ref{section:odmatrix_trip_generation}. The trip includes turn by turn directions with longitude and latitude coordinates. Traffic load assignment is then assigned to junctions and turns depending on the time retrieved from OSM (Open Street Maps) data (see section \ref{section:spatial_binning}). The major challenge here proved to be the traffic assignment, given that there is an interaction of a lot of vehicles at a given point in time with a complex structure of roads and unexpected events such as weather, accidents and road blockages. 
@@ -611,8 +584,6 @@ The method we adopted to detect traffic on the road network involved first the g
 One of the main steps of the proposed algorithm is to derive main areas of activity from the mobile data usage of subscribers. This can be achieved using clustering. Clustering was also used to remove noise caused by displacement through frequent oscillations by finding a centroid of activity. The removal of the displacement error through triangulation has been ruled out. There are missing dataset features that are required to get a more accurate location with this process such as strength of signal from every cell tower that the user connects to. Moreover simple geometrical triangulation does not have the aggregation characteristics that clustering has. Grouping of similar locations have to be implemented on top of triangulation. Triangulation is more suited to remove noise or displacement error caused by cell tower oscillations or handovers. These are caused either because the signal from a tower is weaker from another that can provide better service or there is momentary offloading causing a user to switch his connection to another tower with less load. 
 
 In section \ref{section:OD_Matrices} it was discussed how certain authors employed various techniques to smooth sudden location change of mobile users because they often switch cell towers in very short time intervals that cannot be attributed to movement. 
-
-%TODO - add reference for clustering in traffic
  
 Clustering is a machine learning unsupervised technique used to classify entities which have similar features. Clustering is done depending on the chosen algorithm and calibration hyper-parameters that control the grouping process. Two clustering techniques that were considered for their appropriateness to this research were k-means and DBSCAN \cite{ChakrabortyNKNagwaniLopamudraDey2011,huang2017research}. 
 
@@ -637,11 +608,6 @@ The OPTICS algorithm which does away with the $\epsilon$ parameter iterates unti
 
 In figure \ref{fig:db_scan_clustering} clustering of cell towers can be observed. The centre of the quadrilaterals would mark the centre of activity for the mobile usage. When there are no cell towers nearby the coordinates of the cell tower itself becomes the centre of activity for the mobile data usage. 
 
-%TODO - IMPORTANT - what is the Distribution of the first two clusters on the whole data set.
-
-%TODO - Top two activity locations extraction. What about the third one? Get distribution per user and possible filtering on distribution. Assuming that the top two activity locations for each user are the home and work location.
-
-%TODO - read Dynamic clustering and propagation of congestion in heterogeneously congested urban traffic networks
 
 
 \section{OD Matrix trip Generation}  \label{section:odmatrix_trip_generation}
@@ -652,17 +618,13 @@ OD matrix trip generation consists of a sequence of steps. A high-level overview
 In our research we decided to focus on two main areas of activity per user as the basis of our OD matrix generation, namely home and work location. Inclusion of more areas of activity is left for future studies (refer to section \ref{section:future_research}). It is assumed that most of the trips happen between home and work and vice versa. This is based on conclusions encountered in related literature (see section \ref{section:OD_Matrices}). 
 The top two mobile data usage activity clusters per user where retrieved from the resulting users' clusters created with DBSCAN algorithm run (see section \ref{section:methodology:clustering}). We considered these top two clusters as the origin and destination of trips including returns. Then the user EDRs that have geographical coordinates located in the two main activity cluster areas are filtered into a new dataset through the spatial join technique \cite{eldawy2015spatialhadoop}. This process results in a dataset containing all data usage records that have a location in either of the top two clusters for any user in a times series. This resulting dataset is substantially the OD matrix.
 
-%TODO - needs further clarification
 
 \subsection{Trip generation, route choice and traffic assignment} \label{subsection:trip_generation}
 
 Basic OD matrices on their own do not give information how traffic flow is distributed on the roads because they represent only home and work locations. Therefore we had futher enrich the OD matrix by detecting when trips happen by recording change of user cluster location events. This was achieved by ordering OD matrix entries by user and timestamp. The dataset was then scanned and when location of activity of a given record is found to be different from the previous record, the previous record is tagged as a departure and the current one is set as an arrival. We used Apache Hive's window analytic functions for the computations because it offers an sql-like syntax which we were already familiar with and processing is done on top of Hadoop. This made processing of huge amounts of data faster through parallel, distributed computing  \footnote{https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics}. Hive is a data warehouse infrastucture tool running on Hadoop, abstracts a lot of java api calls to get data from distributed file systems managed by Hadoop \footnote{https://en.wikipedia.org/wiki/Apache\_Hive}. Hive has a specific SQL dialect HiveQL(HQL) that can retrieve data from hdfs (hadoop disributed file system) without implementing the mapreduce calls.
 
-%TODO - How many records are of trip duration less than 5 minutes?
 
 There is a caveat on the accuracy of the actual duration of the trip. Records of mobile data usage are generated depending on actual usage at a given location. The frequency of generation of such records has a direct effect on the accuracy of departure and arrival times for any given trip. The higher is the temporal resolution, the more accurate are the departure and arrival times. If on the other hand records are generated at a lower frequency it cannot be determined with confidence and with a low margin of error. For example the user might arrive at his work location but he takes too much time to start his first mobile data session. This would add extra trip delay with the result that the trip duration is less accurate depending on the gap of time between the actual arrival time and the first generated mobile usage record timestamp. Therefore users with more frequent usage of mobile data have trips with durations with a narrower error margin. Departure times are more precise since these are computed by adjusting the EDR timestamp and adding the data session duration. This gives an accurate timestamp that represents when users leave their main clusters (home or work location).   
-
-%TODO - frequency of mobile usage records and space in between. 
 
 We inferred the routes between origins and destination from the OSM in a similar manner to the work of Toole et al \cite{Toole2015}. A route was assigned for each entry in the OD matrix together with duration information from the trip. The user's routing choice was assumed to be the fastest one given by the Open Source Routing Machine\footnote{http://project-osrm.org/docs/v5.15.2/api/\#route-service} (OSRM). The OSRM api provides the possibility to request alternative routes. However in the approach taken the route selection was always considered to be static and user does not change route depending on traffic or due to  unexpected events on the road network such as accidents or blockages caused by various other reasons. The fastest route is attributed to each trip done by each user. This may not always be the case since route selection can differ depending on traffic perception and arbitrary route selection made by users. This is a limitation of this research and introduces inevitable bias. It should be noted however that in the urban scenario in Malta the different routes to take towards work and back are limited due to the small scale of the road network infrastructure. In other words there are few possible routes from which users can choose from or that enable detouring, making it highly probable that the fastest path is the preferred choice. In section \ref{section:traffic_flow_evaluation} it is discussed how to measure a level of confidence in the traffic assignment model.
 
@@ -696,8 +658,6 @@ Trip delay data had to be further investigated to remove outliers and data that 
 
 In OSM a route consists of steps and these in turn contain manoeuvres. Manoeuvers encapsulate geographical coordinates data and duration property after which the driving decision should be taken. The manoeuvres' timestamp was computed by accumulating the duration of the previous steps and adding the final total offset to the trip departure timestamp. A new dataset was created with records including previous data structure and steps' information having the timestamp and the coordinates. Therefore the new dataset in addition to the coordinates of mobile users at their origin and their destination had trip geolocation information in the form of trip steps.
  
-
-%TODO - mention how to redistoirubte delay heuristically on steps depending on traffic flow contained in the grid cell where the step was located.
 
 \begin{algorithm}[hp]
 	\caption{Experimental Overview}
@@ -863,7 +823,6 @@ The centroid for each bin was calculated in order to attain the central coordina
 We did not use a sliding window since this would have resulted in less data points for training since training of neural networks would be more costly in terms of computation and would have made analysis more time consuming and complex. Having a sliding window on the other hand makes it more flexible to decouple the averaging window size from the time ahead distance. The prediction time ahead parameter would not need to be a multiple of the averaging window.
 
 
-%TODO - possibly move to 
 Visual tools such as CartoDB\footnote{https://carto.com} where used to illustrate aggregation of traffic flow count in spatial bins. Figure \ref{fig:spatial_binning_traffic_count} shows which areas attract most traffic in Malta. Locations such as the Santa Venera tunnels and Southern Harbour area around the four lane roads in Marsa have bigger distinctive spherical markers indicating that these roads are very busy. The tool allows to select specific date and time to analyse traffic temporally. A similar visualization (figure \ref{fig:spatial_binning_traffic_count}) depicts average traffic intensity across the whole month under investigation. CartoDB allowed us to configure pop ups that can display relative information to the bubble such as location coordinates and average month traffic.
 
 \begin{figure}[!]	
@@ -873,18 +832,41 @@ Visual tools such as CartoDB\footnote{https://carto.com} where used to illustrat
 	\label{fig:traffic_month_average}
 \end{figure}
 
-Another illustration (see figure \ref{fig:traffic_count_color_coded_categorization}) uses a colour scheme in a categorical manner to display the intensity of traffic flow. This visualization technique makes it easier to categorize traffic flow count than the technique used to display traffic in figure \ref{fig:spatial_binning_traffic_count}.   
+Another illustration (see figure \ref{fig:traffic_count_color_coded_categorization}) uses a colour scheme in a categorical manner to display the intensity of traffic flow. This visualization technique makes it easier to categorize traffic flow count than the technique used to display traffic in figure \ref{fig:spatial_binning_traffic_count}.
+
+CartoDB was a fundamental tool to analyse how traffic flow count changed with time and where. Methods that have been devised in this research to aggregate traffic flow on the road network, can effectively have the generated results illustrated temporally by moving a time window slider in the CartoDB UI. For instance the traffic at 7:00 a.m shown in figure \ref{fig:traffic_torque_700am} is much busier than the traffic shown in figure  \ref{fig:traffic_torque_600am}. Figure \ref{fig:traffic_torque_700am_zoomin} is a zoomed in image of the figure shown in  \ref{fig:traffic_torque_700am}.
+
+
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.4]{traffic_torque_600am.jpg}
+	\centering
+	\caption{Traffic flow count at 6:00 a.m. illustrated through CartoDB temporal mapping }
+	\label{fig:traffic_torque_600am}
+\end{figure}
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.4]{traffic_torque_700am.jpg}
+	\centering
+	\caption{Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping. }
+	\label{fig:traffic_torque_700am}
+\end{figure}  
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.4]{traffic_torque_700am_zoomin.jpg}
+	\centering
+	\caption{Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping (zoomed in). }
+	\label{fig:traffic_torque_700am_zoomin}
+\end{figure}
+
+ 
 
 
 
 \section{Traffic flow modelling and prediction} \label{section:traffic_flow_modelling_and_prediction}
 
-%TODO - steps for predicive modelling -> https://www.mathworks.com/discovery/predictive-modeling.html
 
 The hypothesis that traffic flow in all areas is directly correlated to how traffic in a specific given area will be in the immediate future determined how the prediction model was structured. More specifically traffic flow at any particular bin $b_i$ at time $t$ influences traffic at bin $b_j$ at time $t + n$. The traffic intensity at any given location is a function of other traffic flow counts from other preceeding bins. The computation of traffic in a location that is based on past traffic cannot be achieved by deriving a mathematical function. A process of artificial intelligence learning is needed in order to build a model. Black box predictive modelling was obtained by training a neural network. Neural networks are known for their ability to generalize and to be able to learn and handle unexpected inputs \cite{sommer2013using}. There were various steps needed to fit a neural network model which was then used to predict the traffic flow. The aim was to select a sample of locations and predict their traffic. In the following subsections it will be explained how data was processed prior training of the model, how the model hyperparameters were chosen, how the model was eventually trained and then how the model was validated.
-
-
-%TODO - remove outliers by histogram -> check SPARK:FLATTEN OD TRIPS
 
 \subsection{Preprocessing data for the prediction model} \label{subsection:Preprocessing data for the prediction model}
 The first data mining exercise was to build a dataset where each record contains all Malta traffic flow count for every 5 minutes for the month of October 2016 (see table \ref{table:dataset_02}). This dataset was then ordered by time. This dataset was to be derived from the generated dataset in subsection \ref{subsection:trip_generation}. This dataset consisted of aggregated traffic flow for each spatial geolocation in a time series with 5 minutes bins. The final resulting dataset from preprocessing was used to train and validate the artificial neural network (ANN). The features selected to build the model are the traffic flow counts at every location geofenced by a spatial bin. The aggregation process of traffic counts within specific spatial bins was explained in section \ref{section:spatial_binning}.
@@ -975,13 +957,6 @@ From figure \ref{fig:label_classification_of_traffic_count_zoom_in} it can be se
 \end{figure}
 
 
-  
-%TODO - Traffic may be in decline and on the incline 
-
-%TODO - setting the learning rate
-
-
-
 \subsection{Dimensionality Reduction}
 The dataset acquired from the original data usage mobile is huge. The features that describe the data amounted to 4134 as already mentioned in subsection \ref{subsection:Preprocessing data for the prediction model}. The planned computational complexity depended on how quickly the model converges. However for each iteration carried out to reduce the cost and undergo gradient descent the magnitude of the computations to be performed depended on the number of training examples multiplied by the number of features multiplied by in turn by the number of neurons in each hidden layer. The number of hidden layers was chosen depending on how much complex the problem is but tends to fall victim of overfitting the model if too many layers are inserted in architecture. As mentioned in \cite{Jain1996} ANN design parameters such as number of neurons and number of hidden layers need a trial and error approach to get an architecture that yields better results. Therefore it was important to optimize computation times in order that experimentation that leads to an optimal architecture is less time consuming. Also the final model is simpler and practical in terms of getting a prediction after an acceptable amount of time.
 
@@ -1004,12 +979,6 @@ we selected k to be 324 so that the preserved variance ratio $r$ is 90\%. In equ
 
 
 
-%
-%TODO - some notes on selecting features. 
-
-%TODO - need to compute results with 324 components to get 90% variance 
-
-
 \subsection{Prediction through Multilayer Perceptron Classifier}
 
 
@@ -1024,7 +993,6 @@ The ANN approach is stated to have the universal approximation property which un
 
 The Spark 2.3.0 implementation that was used makes use of back-propagation to learn the model. It employs the logistic function as an activation function with Limited-memory Broyden-Fletcher-Goldfarb-Shanno (LBFGS) to minimize error\footnote{https://dzone.com/articles/deep-learning-via-multilayer-perceptron-classifier}.  
 
-%TODO - add formulas for logistic and softmax function from https://dzone.com/articles/deep-learning-via-multilayer-perceptron-classifier
 
 The topology choice was determined after carrying out a grid search configured with a set of different hyperparameters. Different configurations for architecture structure were tried out and evaluated until the best performing architecture was chosen. The input and output layers size (number of neurons) are respectively dictated by the number of input PCA extracted features and output classes which are the possible traffic levels indicated by model. Two hidden layers were added to the overall topology. After testing out different possible architectures, the final configuration consisted of 324 neurons for both the input layer and for the second hidden layer, 400 neurons for the first hidden layer and 4 neurons for the output layer which defined the output classes (see figure \ref{fig:ann_topology}). All architecture layers are fully connected to the successive layer. 
 
@@ -1037,12 +1005,7 @@ The topology choice was determined after carrying out a grid search configured w
 \end{figure}
  
 
-%TODO - why are more hidden layers needed
-
 The available labelled data points dataset was split into 60\% training and 40\% testing. The model with maximum iterations parameter set to 200 showed that after a set of runs it converged consistently. The first phase of setting up the model consisted of the training part where the weights settle to a final value that lead to a minimal error in its classification within the parameter of tolerance set in the configuration. Training outputs a model which is then fitted on the testing data. In the testing phase the prediction efficacy of the model built during training is checked by retrieving certain metrics.
-
-%TODO - maybe add visualization section
-
 
 
 
@@ -1161,7 +1124,22 @@ At the end of April 2018 Google maps made available traffic information overlay 
 \end{table}
 
 
-The trip delay model built through the OD matrix is a basic statistical one that gives average trip delay per hour. Google distance metric API gives estimated duration information (with traffic and without) by specific route. In order to compare the estimations of our model with the Google one for the local traffic a data-mining process that scraped a data set of trip delay through the DMAPI web service was carried out. 
+The trip delay model built through the OD matrix is a basic statistical one that gives average trip delay per hour. Google distance metric API gives estimated duration information (with traffic and without) by specific route. In order to compare the estimations of our model with the Google one for the local traffic a data-mining process that scraped a data set of trip delay through the DMAPI web service was carried out. Figures \ref{fig:trip_delay_carto_db} and  \ref{fig:trip_delay_google_900am} show traffic status for the same zone at the same hour for OD-OSRM traffic flow count and Google traffic status. Note the similarity in how traffic hotspots' locations are shown.
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.4]{OD-OSRM_traffic_900am.jpg}
+	\centering
+	\caption[OD-OSRM traffic flow count mapping]{OD-OSRM traffic flow count mapping at 8:00 a.m. on a weekday}
+	\label{fig:trip_delay_carto_db}
+\end{figure}
+
+\begin{figure}[!]	
+	\includegraphics[scale=0.4]{google_traffic_900am.jpg}
+	\centering
+	\caption[Google Map Traffic delay mapping]{Google Map Traffic mapping at 8:00 a.m. on a weekday - to compare with OD-OSRM traffic flow count mapping}
+	\label{fig:trip_delay_google_900am}
+\end{figure}
+ 
 
 Seven whole days of data from June 2018 was scraped by retrieving duration information for every quarter of an hour (see figure \ref{fig:trip_delay_mosta_marsa} for an example). Estimated trip delay is calculated by subtracting estimated trip duration from trip duration in traffic. Average trip delay was then computed per hour. This process was done for four different routes namely Mosta to Marsa, Mellieha to Swieqi (MS), Birkirkara to Sliema (BS) and Valletta to Mgarr (VM) and the overall trip delay average was calculated on these routes. These routes were chosen for two reasons. Firstly these were chosen because they represent routes that are really varied in type in terms of direction and areas covered. Secondly because the average time of the selected route trips which is retrieved from Google API (24 minutes) approximates the global trip average time which is reported for a car trip in \cite{malta2011national} (20 minutes). To be noted however that from 2010, trip delays likely increase was due to further loading of traffic on the road infrastructure.
 
@@ -1330,10 +1308,6 @@ In section \ref{section:traffic_flow_modelling_and_prediction} an approach how t
 
 Traffic flow count is represented with 4 bins which are equivalent to the model's classes. These classes range from class one to class four with class one being the lowest indicator of traffic flow count and class four being the highest. The MLPC model was devised by dedicating 60\% of the data for training and 40\% of the data for testing. Since Neural networks require a lot of data to train properly no data was dedicated for validating the models when searching the optimal hyper  parameters such as neural network topology layout and PCA first k components. A trial and error approach was used to check how the model would perform when changing such hyperparameters. Testing was done only for the application phase to evaluate how the model would perform with real-world data. 
 
-Collected performance metrics included accuracy and weighted precision, recall and F1-score. Accuracy gives a very basic picture of how the model is performing, however it does not provide clear information how the model is performing across all traffic flow count classes. The locations chosen from the available dataset possess the property of unbalanced classes. For example if a given location has 95\% of classes of type one a model which always predicts class one will be 95\% accurate on testing. Weighted precision and weighted recall further describe the performance of the model. When having a high precision and a low recall the model is more appropriate for exactness in classification (false positives are kept at a minimum at the cost of a high number of false negatives). A high recall and low precision model is better in identifying  a higher percentage of classes correctly but can output a relatively high number of false positives in the process.   
-
-In machine learning sometimes high recall is more important than high precision or the other way round and in most of the times there is a trade-off. The more tuning is made to any one of the metrics to improve it, the riskier it is to get a lower performance in another metric.  The ideal is to have both high recall and high precision. In the case of this study recall for high level of traffic classes is very important since knowledge of high traffic count is important and noise would be acceptable. Weighted F1-score was used to portray a balanced measure between recall and precision.
-
 \begin{table}[t!]	
 	\includegraphics[scale=0.75]{classification_metrics_result.jpg}
 	\centering
@@ -1341,8 +1315,7 @@ In machine learning sometimes high recall is more important than high precision 
 	\label{table:classification_mertrics}
 \end{table}
 
-Table \ref{table:classification_mertrics} shows the evaluation results described in terms of the metrics just discussed. It can be seen that models trained to predict for smaller time ahead intervals generally perform better than models that are trained with a lengthier prediction time interval for the same location.  Models all have proven to have highest recall and precision for class one traffic flow counts. It appears from table that the best overall classification metric scores were attained for Hamrun-Valletta roadway. However on examination of the confusion matrix (shown in fig. \ref{fig:confusion_matrix_hamrun_valletta_15min}) for classification results per label we noted that the model performed very badly for high traffic flow count classes. There were no results for class four and for classes two and three the precision and recall metrics are very low. In fact when computing the F1-score for class two and class three both results to be low at 0.14 and 0.0 respectively. In contrast predictive overall results for Marsa road that leads to Aldo Moro are less promising than those for Hamrun-Valletta arterial road. Still the predictive efficacy results are very good especially when examined in the perspective of the confusion matrix shown in fig. \ref{fig:confusion_matrix_marsa_aldo_moro_15min}. Class four classified as class one or class two cases are very few and even if almost half of class four test values were predicted as class three in practice this would still make the model useful and offer guidance to describe the level of high traffic flow counts.
-
+Collected performance metrics included accuracy and weighted precision, recall and F1-score. Accuracy gives a very basic picture of how the model is performing, however it does not provide clear information how the model is performing across all traffic flow count classes. The locations chosen from the available dataset possess the property of unbalanced classes. For example if a given location has 95\% of classes of type one a model which always predicts class one will be 95\% accurate on testing. Weighted precision and weighted recall further describe the performance of the model. When having a high precision and a low recall the model is more appropriate for exactness in classification (false positives are kept at a minimum at the cost of a high number of false negatives). A high recall and low precision model is better in identifying  a higher percentage of classes correctly but can output a relatively high number of false positives in the process.   
 
 \begin{figure}[h]	
 	\includegraphics[scale=0.5]{confusion_matrix_hamrun_valletta_342_4bin_15min.jpg}
@@ -1357,6 +1330,12 @@ Table \ref{table:classification_mertrics} shows the evaluation results described
 	\caption[Confusion matrix Marsa to Aldo Moro traffic flow prediciton]{Confusion matrix for Marsa to Aldo Moro road traffic flow count for 15 minutes ahead prediction interval.}
 	\label{fig:confusion_matrix_marsa_aldo_moro_15min}
 \end{figure}
+
+In machine learning sometimes high recall is more important than high precision or the other way round and in most of the times there is a trade-off. The more tuning is made to any one of the metrics to improve it, the riskier it is to get a lower performance in another metric.  The ideal is to have both high recall and high precision. In the case of this study recall for high level of traffic classes is very important since knowledge of high traffic count is important and noise would be acceptable. Weighted F1-score was used to portray a balanced measure between recall and precision.
+
+Table \ref{table:classification_mertrics} shows the evaluation results described in terms of the metrics just discussed. It can be seen that models trained to predict for smaller time ahead intervals generally perform better than models that are trained with a lengthier prediction time interval for the same location.  Models all have proven to have highest recall and precision for class one traffic flow counts. It appears from table that the best overall classification metric scores were attained for Hamrun-Valletta roadway. However on examination of the confusion matrix (shown in fig. \ref{fig:confusion_matrix_hamrun_valletta_15min}) for classification results per label we noted that the model performed very badly for high traffic flow count classes. There were no results for class four and for classes two and three the precision and recall metrics are very low. In fact when computing the F1-score for class two and class three both results to be low at 0.14 and 0.0 respectively. This was found to happen as well in literature. In \cite{lv2015traffic} it is stated how trained ANN model does not perform well when traffic counts are low. Relative error in evaluation is much bigger when traffic flow is small. Results are only being quoted by Lv et al when traffic flow is 450 vehicles or more for a 15 minute time window.
+
+In contrast predictive overall results for Marsa road that leads to Aldo Moro are less promising than those for Hamrun-Valletta arterial road. Still the predictive efficacy results are very good especially when examined in the perspective of the confusion matrix shown in fig. \ref{fig:confusion_matrix_marsa_aldo_moro_15min}. Class four classified as class one or class two cases are very few and even if almost half of class four test values were predicted as class three in practice this would still make the model useful and offer guidance to describe the level of high traffic flow counts.
 
 
 \section{Conclusion}

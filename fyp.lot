@@ -1,15 +1,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Description of data fields in the mobile usage raw dataset\relax }}{33}{table.caption.6}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Basic summary statistics of main EDR dataset.\relax }}{34}{table.caption.7}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Basic summary statistics of main EDR dataset after removing 1 hour duration EDRs.\relax }}{35}{table.caption.9}
-\contentsline {table}{\numberline {3.4}{\ignorespaces A sample of traffic flow count by bin for every 5 minute window.\relax }}{56}{table.caption.19}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Sparse traffic flow matrix\relax }}{57}{table.caption.20}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Description of data fields in the mobile usage raw dataset\relax }}{32}{table.caption.6}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Basic summary statistics of main EDR dataset.\relax }}{33}{table.caption.7}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Basic summary statistics of main EDR dataset after removing 1 hour duration EDRs.\relax }}{34}{table.caption.9}
+\contentsline {table}{\numberline {3.4}{\ignorespaces A sample of traffic flow count by bin for every 5 minute window.\relax }}{57}{table.caption.22}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Sparse traffic flow matrix\relax }}{58}{table.caption.23}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces NHTS and OD trip distributions correlation statistics}}{67}{table.caption.28}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Trip delay correlation statistics between DMAPI and OD-OSRM}}{71}{table.caption.33}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Correlation statistics for traffic flow linear regression models}}{80}{table.caption.40}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Classification evaluation metrics for traffic flow prediction}}{83}{table.caption.41}
+\contentsline {table}{\numberline {4.1}{\ignorespaces NHTS and OD trip distributions correlation statistics}}{67}{table.caption.31}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Trip delay correlation statistics between DMAPI and OD-OSRM}}{71}{table.caption.36}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Correlation statistics for traffic flow linear regression models}}{81}{table.caption.45}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Classification evaluation metrics for traffic flow prediction}}{83}{table.caption.46}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
