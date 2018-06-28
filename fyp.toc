@@ -11,56 +11,45 @@
 \contentsline {section}{\numberline {1.7}Dissertation outline}{9}{section.1.7}
 \contentsline {chapter}{\numberline {2.}Background and Literature Review}{10}{chapter.2}
 \contentsline {section}{\numberline {2.1}Mobile location data sources}{10}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Mobile usage data format and dataset sample structure}{12}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Mobile usage data format and dataset sample structure}{13}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Mobile position inference from Floating cellular data}{14}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Privacy and data anonymization}{16}{section.2.2}
 \contentsline {section}{\numberline {2.3}Big Data, the cloud and large scale real time stream processing}{17}{section.2.3}
 \contentsline {section}{\numberline {2.4}Origin and destination matrices computation}{18}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Use of OD matrices to store information on main user locations and trips inbetween}{18}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Use of OD matrices to store information on main user locations and trips inbetween}{19}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Cleaning of data, removal of noise and minimization of displacement error}{19}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Use of scaling methods to get more accurate OD matrices}{20}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.3}Use of scaling methods to get more accurate OD matrices}{21}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Route selection for OD matrices}{21}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}OD matrices evaluation}{22}{subsection.2.4.5}
 \contentsline {section}{\numberline {2.5}Traffic flow measurement and pattern extraction}{23}{section.2.5}
 \contentsline {section}{\numberline {2.6}Model fitting to human mobility}{24}{section.2.6}
-\contentsline {section}{\numberline {2.7}Prediction methods}{28}{section.2.7}
-\contentsline {chapter}{\numberline {3.}Methodology}{29}{chapter.3}
-\contentsline {section}{\numberline {3.1}Mobile data collection and structure}{30}{section.3.1}
-\contentsline {section}{\numberline {3.2}Dataset preliminary analysis}{32}{section.3.2}
-\contentsline {section}{\numberline {3.3}Algorithm Selection}{34}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Trajectory interpolation through cell tower data}{34}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Traffic simulation from OD matrix}{36}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Traffic flow detection by trip generation assigned\\ traffic}{37}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Main activity hubs extraction through clustering}{38}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}K-means clustering}{39}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}DBSCAN clustering}{39}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}OD Matrix trip Generation}{41}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}OD Matrix computation}{41}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Trip generation, route choice and traffic assignment}{42}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Traffic flow aggregation through spatial binning}{49}{section.3.6}
+\contentsline {section}{\numberline {2.7}Prediction methods}{29}{section.2.7}
+\contentsline {chapter}{\numberline {3.}Methodology}{30}{chapter.3}
+\contentsline {section}{\numberline {3.1}Mobile data collection and structure}{31}{section.3.1}
+\contentsline {section}{\numberline {3.2}Dataset preliminary analysis}{33}{section.3.2}
+\contentsline {section}{\numberline {3.3}Algorithm Selection}{35}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Trajectory interpolation through cell tower data}{35}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Traffic simulation from OD matrix}{37}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Traffic flow detection by trip generation assigned\\ traffic}{38}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Main activity hubs extraction through clustering}{39}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}K-means clustering}{40}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}DBSCAN clustering}{40}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}OD Matrix trip Generation}{42}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}OD Matrix computation}{42}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Trip generation, route choice and traffic assignment}{43}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Traffic flow aggregation through spatial binning}{50}{section.3.6}
 \contentsline {section}{\numberline {3.7}Traffic flow modelling and prediction}{53}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Preprocessing data for the prediction model}{54}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Dimensionality Reduction}{58}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Prediction through Multilayer Perceptron Classifier (MLPC)}{59}{subsection.3.7.3}
-\contentsline {chapter}{\numberline {4.}Evaluation and Results}{62}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{62}{section.4.1}
-\contentsline {section}{\numberline {4.2}Trip counts per hour evaluation}{63}{section.4.2}
-\contentsline {section}{\numberline {4.3}Trip average delay per hour evaluation}{67}{section.4.3}
-\contentsline {section}{\numberline {4.4}Traffic flow count evaluation}{70}{section.4.4}
-\contentsline {section}{\numberline {4.5}Traffic flow count prediction for a selection of locations evaluation}{78}{section.4.5}
-\contentsline {chapter}{\numberline {5.}Future Works}{83}{chapter.5}
-\contentsline {section}{\numberline {5.1}Future improvements}{83}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Use of alternative data sources for ground truth}{83}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Clustering optimization}{83}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Route selection}{84}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Efficient traffic flow count noise filtering}{84}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Evaluate trip average delay by correlating with data with same seasonality}{85}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}Future research and potential projects}{85}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Machine learning for trip delay prediction}{85}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Analysis of more activity hubs and how they affect traffic flow}{86}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Use of other datasets to increase traffic flow model accuracy }{86}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Analysis of road infrastructure impact on traffic flow}{87}{subsection.5.2.4}
-\contentsline {chapter}{\numberline {6.}Conclusion}{88}{chapter.6}
-\contentsline {chapter}{\numberline {A.}This chapter is in the appendix}{91}{appendix.A}
-\contentsline {section}{\numberline {A.1}These are some details}{91}{section.A.1}
-\contentsline {chapter}{References}{92}{section.A.1}
+\contentsline {subsection}{\numberline {3.7.1}Preprocessing data for the prediction model}{55}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Dimensionality Reduction}{60}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Prediction through Multilayer Perceptron Classifier}{61}{subsection.3.7.3}
+\contentsline {chapter}{\numberline {4.}Evaluation and Results}{65}{chapter.4}
+\contentsline {section}{\numberline {4.1}Trip counts per hour evaluation}{66}{section.4.1}
+\contentsline {section}{\numberline {4.2}Trip average delay per hour evaluation}{70}{section.4.2}
+\contentsline {section}{\numberline {4.3}Traffic flow count evaluation}{73}{section.4.3}
+\contentsline {section}{\numberline {4.4}Traffic flow count prediction for a selection of locations evaluation}{81}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion}{84}{section.4.5}
+\contentsline {chapter}{\numberline {5.}Conclusion}{87}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion}{89}{section.5.1}
+\contentsline {chapter}{\numberline {6.}Future Works}{91}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future improvements}{91}{section.6.1}
+\contentsline {chapter}{References}{94}{section.6.1}

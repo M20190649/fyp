@@ -25,6 +25,13 @@ L.~Alexander, S.~Jiang, M.~Murga, and M.~C. Gonz{\'{a}}lez.
 \newblock {\em Transportation Research Part C: Emerging Technologies},
   58:240--250, 2015.
 
+\bibitem{Ankerst1999}
+M.~Ankerst, M.~M. Breunig, H.-P. Kriegel, and J.~Sander.
+\newblock Optics: Ordering points to identify the clustering structure.
+\newblock In {\em Proceedings of the 1999 ACM SIGMOD International Conference
+  on Management of Data}, SIGMOD '99, pages 49--60, New York, NY, USA, 1999.
+  ACM.
+
 \bibitem{atkinson2006cost}
 G.~Atkinson, S.~Mourato, et~al.
 \newblock {\em Cost-benefit analysis and the environment: recent developments}.
@@ -201,6 +208,12 @@ M.~Sommer, S.~Tomforde, and J.~H{\"{a}}hner.
   Management System}.
 \newblock In {\em Presented as part of the 2013 Workshop on Embedded
   Self-Organizing Systems}. {USENIX}, 2013.
+
+\bibitem{sommer2013using}
+M.~Sommer, S.~Tomforde, and J.~H{\"a}hner.
+\newblock Using a neural network for forecasting in an organic traffic control
+  management system.
+\newblock In {\em ESOS}, 2013.
 
 \bibitem{Steenbruggen2015}
 J.~Steenbruggen, E.~Tranos, and P.~Nijkamp.
