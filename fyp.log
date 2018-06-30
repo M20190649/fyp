@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  28 JUN 2018 09:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  28 JUN 2018 18:34
 entering extended mode
 **./fyp.tex
 (fyp.tex
@@ -529,37 +529,264 @@ Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 \c@subfigure=\count130
 \c@subtable=\count131
 )
-\c@definition=\count132
-\c@example=\count133
-\c@proposition=\count134
-\c@lemma=\count135
-\c@corollary=\count136
-\c@theorem=\count137
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex
+.sty
+Package: biblatex 2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox
+.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count132
+)
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count133
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\xstring\xstring.s
+ty
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\generic\xstring\xstring
+.tex
+\@xs@message=\write3
+\integerpart=\count134
+\decimalpart=\count135
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count136
+\c@listtotal=\count137
+\c@listcount=\count138
+\c@liststart=\count139
+\c@liststop=\count140
+\c@citecount=\count141
+\c@citetotal=\count142
+\c@multicitecount=\count143
+\c@multicitetotal=\count144
+\c@instcount=\count145
+\c@maxnames=\count146
+\c@minnames=\count147
+\c@maxitems=\count148
+\c@minitems=\count149
+\c@citecounter=\count150
+\c@savedcitecounter=\count151
+\c@uniquelist=\count152
+\c@uniquename=\count153
+\c@refsection=\count154
+\c@refsegment=\count155
+\c@maxextratitle=\count156
+\c@maxextratitleyear=\count157
+\c@maxextrayear=\count158
+\c@maxextraalpha=\count159
+\c@abbrvpenalty=\count160
+\c@highnamepenalty=\count161
+\c@lownamepenalty=\count162
+\c@maxparens=\count163
+\c@parenlevel=\count164
+\blx@tempcnta=\count165
+\blx@tempcntb=\count166
+\blx@tempcntc=\count167
+\blx@maxsection=\count168
+\blx@maxsegment@0=\count169
+\blx@notetype=\count170
+\blx@parenlevel@text=\count171
+\blx@parenlevel@foot=\count172
+\blx@sectionciteorder@0=\count173
+\labelnumberwidth=\skip69
+\labelalphawidth=\skip70
+\biblabelsep=\skip71
+\bibitemsep=\skip72
+\bibnamesep=\skip73
+\bibinitsep=\skip74
+\bibparsep=\skip75
+\bibhang=\skip76
+\blx@bcfin=\read2
+\blx@bcfout=\write4
+\c@mincomprange=\count174
+\c@maxcomprange=\count175
+\c@mincompwidth=\count176
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-dm.d
+ef)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count177
+\c@savedafterword=\count178
+\c@annotator=\count179
+\c@savedannotator=\count180
+\c@author=\count181
+\c@savedauthor=\count182
+\c@bookauthor=\count183
+\c@savedbookauthor=\count184
+\c@commentator=\count185
+\c@savedcommentator=\count186
+\c@editor=\count187
+\c@savededitor=\count188
+\c@editora=\count189
+\c@savededitora=\count190
+\c@editorb=\count191
+\c@savededitorb=\count192
+\c@editorc=\count193
+\c@savededitorc=\count194
+\c@foreword=\count195
+\c@savedforeword=\count196
+\c@holder=\count197
+\c@savedholder=\count198
+\c@introduction=\count199
+\c@savedintroduction=\count266
+\c@namea=\count267
+\c@savednamea=\count268
+\c@nameb=\count269
+\c@savednameb=\count270
+\c@namec=\count271
+\c@savednamec=\count272
+\c@translator=\count273
+\c@savedtranslator=\count274
+\c@shortauthor=\count275
+\c@savedshortauthor=\count276
+\c@shorteditor=\count277
+\c@savedshorteditor=\count278
+\c@labelname=\count279
+\c@savedlabelname=\count280
+\c@institution=\count281
+\c@savedinstitution=\count282
+\c@lista=\count283
+\c@savedlista=\count284
+\c@listb=\count285
+\c@savedlistb=\count286
+\c@listc=\count287
+\c@savedlistc=\count288
+\c@listd=\count289
+\c@savedlistd=\count290
+\c@liste=\count291
+\c@savedliste=\count292
+\c@listf=\count293
+\c@savedlistf=\count294
+\c@location=\count295
+\c@savedlocation=\count296
+\c@organization=\count297
+\c@savedorganization=\count298
+\c@origlocation=\count299
+\c@savedoriglocation=\count300
+\c@origpublisher=\count301
+\c@savedorigpublisher=\count302
+\c@publisher=\count303
+\c@savedpublisher=\count304
+\c@language=\count305
+\c@savedlanguage=\count306
+\c@pageref=\count307
+\c@savedpageref=\count308
+\shorthandwidth=\skip77
+\shortjournalwidth=\skip78
+\shortserieswidth=\skip79
+\shorttitlewidth=\skip80
+\shortauthorwidth=\skip81
+\shorteditorwidth=\skip82
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-comp
+at.def
+File: blx-compat.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex
+.def
+File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count309
+\c@textcitetotal=\count310
+\c@textcitemaxnames=\count311
+\c@biburlnumpenalty=\count312
+\c@biburlucpenalty=\count313
+\c@biburllcpenalty=\count314
+\c@smartand=\count315
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\nume
+ric.bbx
+File: numeric.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\stan
+dard.bbx
+File: standard.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count316
+\c@bbx:relatedtotal=\count317
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\cbx\nume
+ric.cbx
+File: numeric.cbx 2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex
+.cfg
+File: biblatex.cfg 
+))
+\c@definition=\count318
+\c@example=\count319
+\c@proposition=\count320
+\c@lemma=\count321
+\c@corollary=\count322
+\c@theorem=\count323
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\engl
+ish.lbx
+File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count324
+\@quotereset=\count325
  (fyp.aux)
 \openout1 = `fyp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 63.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 64.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 63.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -604,16 +831,16 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (C:\Users\maurice.saliba\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count138
+\scratchcounter=\count326
 \scratchdimen=\dimen145
 \scratchbox=\box32
-\nofMPsegments=\count139
-\nofMParguments=\count140
+\nofMPsegments=\count327
+\nofMParguments=\count328
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count141
+\MPscratchCnt=\count329
 \MPscratchDim=\dimen146
-\MPnumerator=\count142
-\makeMPintoPDFobject=\count143
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
 \everyMPtoPDFconversion=\toks35
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -629,7 +856,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 63.
+Package hyperref Info: Link coloring OFF on input line 64.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -637,78 +864,102 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count144
+\c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 
 (fyp.out) (fyp.out)
-\@outlinefile=\write3
-\openout3 = `fyp.out'.
+\@outlinefile=\write5
+\openout5 = `fyp.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- <crest.pdf, id=218, 445.665pt x 433.62pt>
+Package biblatex Info: No input encoding detected.
+(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'ascii'.
+\openout4 = `fyp.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+
+
+! Package biblatex Error: File 'fyp.bbl' not created by biblatex.
+
+See the biblatex package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \begin{document}
+                     
+This file was apparently not created by biblatex. Rename it or
+move it to a location were TeX will not find it. If this error
+persists, consider redefining \blxauxsuffix.See the biblatex
+manual for details.
+
+Package biblatex Info: Reference section=0 on input line 64.
+Package biblatex Info: Reference segment=0 on input line 64.
+<crest.pdf, id=218, 445.665pt x 433.62pt>
 File: crest.pdf Graphic file (type pdf)
  <use crest.pdf>
-Package pdftex.def Info: crest.pdf used on input line 77.
+Package pdftex.def Info: crest.pdf used on input line 78.
 (pdftex.def)             Requested size: 87.72375pt x 85.35826pt.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 77.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 78.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 77.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 78.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 77.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 78.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 77.
+(Font)              <12> on input line 78.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 77.
+(Font)              <8> on input line 78.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 77.
-LaTeX Font Info:    Try loading font information for U+msa on input line 77.
+(Font)              <6> on input line 78.
+LaTeX Font Info:    Try loading font information for U+msa on input line 78.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 77.
+LaTeX Font Info:    Try loading font information for U+msb on input line 78.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./crest.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 
  []
 
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 77.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 78.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 77--77
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 78--78
   $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 
  []
 
@@ -716,728 +967,1399 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--77
 
 ] [3
 
-] [4
+]
+
+LaTeX Warning: Citation 'Laurila2012' on page 4 undefined on input line 96.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 4 undefined on input line 96.
+
+[4
 
 ] (fyp.toc [5
 
 ])
-\tf@toc=\write4
-\openout4 = `fyp.toc'.
+\tf@toc=\write6
+\openout6 = `fyp.toc'.
 
  [6] (fyp.lof [7
 
 ])
-\tf@lof=\write5
-\openout5 = `fyp.lof'.
+\tf@lof=\write7
+\openout7 = `fyp.lof'.
 
  [8] (fyp.lot)
-\tf@lot=\write6
-\openout6 = `fyp.lot'.
+\tf@lot=\write8
+\openout8 = `fyp.lot'.
 
  [9
 
 ]
 Chapter 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 111.
+(Font)              <24.88> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 111.
+(Font)              <20.74> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 111.
+(Font)              <17.28> on input line 112.
 
-Underfull \hbox (badness 10000) in alignment at lines 111--111
+Underfull \hbox (badness 10000) in alignment at lines 112--112
 []
  []
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 117.
+
+LaTeX Warning: Citation 'malta2011national' on page 1 undefined on input line 1
+16.
+
+
+LaTeX Warning: Citation 'EUTransportDirectorate2018' on page 1 undefined on inp
+ut line 118.
+
+
+LaTeX Warning: Citation 'Colak2015' on page 1 undefined on input line 118.
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 118.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [1
+)
+
+LaTeX Warning: Citation 'Attard2015' on page 1 undefined on input line 118.
+
+[1
 
 
 ]
+
+LaTeX Warning: Citation 'Schrank.2015' on page 2 undefined on input line 120.
+
+
+LaTeX Warning: Citation 'Schrank.2015' on page 2 undefined on input line 122.
+
+
+LaTeX Warning: Citation 'CambridgeSystematicsInc.2005' on page 2 undefined on i
+nput line 122.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 127.
+(Font)              <10> on input line 128.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 127.
+(Font)              <7> on input line 128.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 127.
- [2] [3] [4] [5]
-[6] [7] [8] [9]
+(Font)              <5> on input line 128.
+[2]
+
+LaTeX Warning: Citation 'Attard2015' on page 3 undefined on input line 132.
+
+
+LaTeX Warning: Citation 'AlNuaimi2015' on page 3 undefined on input line 132.
+
+
+LaTeX Warning: Citation 'atkinson2006cost' on page 3 undefined on input line 13
+4.
+
+
+LaTeX Warning: Citation 'Naess2012' on page 3 undefined on input line 134.
+
+[3]
+
+LaTeX Warning: Citation 'Toole2015' on page 4 undefined on input line 139.
+
+
+LaTeX Warning: Citation 'Liu2014' on page 4 undefined on input line 139.
+
+
+LaTeX Warning: Citation 'Leduc2008' on page 4 undefined on input line 141.
+
+
+LaTeX Warning: Citation 'VLAHOGIANNI20143' on page 4 undefined on input line 14
+5.
+
+
+LaTeX Warning: Citation 'VLAHOGIANNI20143' on page 4 undefined on input line 14
+5.
+
+[4]
+
+LaTeX Warning: Citation 'Calabrese2013' on page 5 undefined on input line 149.
+
+
+LaTeX Warning: Citation 'Colak2015' on page 5 undefined on input line 149.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 5 undefined on input line 149.
+
+
+LaTeX Warning: Citation 'Colak2015' on page 5 undefined on input line 149.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 5 undefined on input line 153.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 5 undefined on input line 153.
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 5 undefined on input line 153.
+
+
+LaTeX Warning: Citation 'Hoteit2016' on page 5 undefined on input line 153.
+
+[5]
+
+LaTeX Warning: Citation 'Calabrese2013' on page 6 undefined on input line 157.
+
+
+LaTeX Warning: Citation 'Steenbruggen2015' on page 6 undefined on input line 15
+9.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 6 undefined on input line 159.
+
+
+LaTeX Warning: Citation 'Steenbruggen2015' on page 6 undefined on input line 15
+9.
+
+
+Overfull \hbox (1.72404pt too wide) in paragraph at lines 159--160
+\OT1/lmr/m/n/12 An-other spe-cific type of pre-dic-tion based on mo-bile us-age
+ dis-cussed in [[]]
+ []
+
+[6] [7]
+
+LaTeX Warning: Citation 'Calabrese2013' on page 8 undefined on input line 197.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 8 undefined on input line 197.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 8 undefined on input line 197.
+
+
+LaTeX Warning: Citation 'Alexander2015' on page 8 undefined on input line 197.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 8 undefined on input line 203.
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 8 undefined on input line 203.
+
+[8] [9]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in alignment at lines 213--213
+Underfull \hbox (badness 10000) in alignment at lines 214--214
 []
  []
+
+
+LaTeX Warning: Citation 'Calabrese2011' on page 10 undefined on input line 220.
+
 
 [10
 
-] [11] [12] [13]pdfTeX warning (ext4): destination with the same identifier (na
-me{Hfootnote.4}) has been already used, duplicate ignored
+]
+
+LaTeX Warning: Citation 'Calabrese2013' on page 11 undefined on input line 231.
+
+
+
+LaTeX Warning: Citation 'Liu2014' on page 11 undefined on input line 231.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 11 undefined on input line 233.
+
+
+
+LaTeX Warning: Citation 'Colak2015' on page 11 undefined on input line 233.
+
+
+LaTeX Warning: Citation 'Calabrese2011' on page 11 undefined on input line 233.
+
+
+
+LaTeX Warning: Citation 'Iqbal2014' on page 11 undefined on input line 233.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 11 undefined on input line 233.
+
+
+LaTeX Warning: Citation 'Colak2015' on page 11 undefined on input line 233.
+
+[11]
+
+LaTeX Warning: Citation 'Wang2012' on page 12 undefined on input line 235.
+
+
+LaTeX Warning: Citation 'Ahas2011' on page 12 undefined on input line 235.
+
+
+LaTeX Warning: Citation 'Hoteit2016' on page 12 undefined on input line 237.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 12 undefined on input line 237.
+
+
+LaTeX Warning: Citation 'Calabrese2011' on page 12 undefined on input line 237.
+
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 12 undefined on input line 239.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 12 undefined on input line 244.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 12 undefined on input line 244.
+
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 12 undefined on input line 244.
+
+
+[12]
+
+LaTeX Warning: Citation 'Calabrese2013' on page 13 undefined on input line 246.
+
+
+
+LaTeX Warning: Citation 'Colak2015' on page 13 undefined on input line 246.
+
+[13]
+
+LaTeX Warning: Citation 'Hoteit2016' on page 14 undefined on input line 250.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 14 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Wang2013' on page 14 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 14 undefined on input line 252.
+
+
+
+LaTeX Warning: Citation 'Leduc2008' on page 14 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Wang2012' on page 14 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Colak2015' on page 14 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Hoteit2016' on page 14 undefined on input line 252.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 14 undefined on input line 256.
+
+pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.4})
+ has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.255 ...is the location boundaries for the phone}
+l.256 ...is the location boundaries for the phone}
                                                   . Proprietary algorithms p...
+
+LaTeX Warning: Citation 'Wang2012' on page 14 undefined on input line 256.
+
 [14]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 257.
+               Default added (so using `!tbp') on input line 258.
 
-<images/triangulation.jpg, id=605, 420.82219pt x 359.09157pt>
+<images/triangulation.jpg, id=511, 420.82219pt x 359.09157pt>
 File: images/triangulation.jpg Graphic file (type jpg)
 
 <use images/triangulation.jpg>
-Package pdftex.def Info: images/triangulation.jpg used on input line 258.
+Package pdftex.def Info: images/triangulation.jpg used on input line 259.
 (pdftex.def)             Requested size: 315.61586pt x 269.31801pt.
- [15 <./images/triangulation.jpg>] [16] [17]
-[18] [19] [20] [21] [22] [23] [24]
-<images/truncated_power_law.jpg, id=734, 344.78813pt x 333.49594pt>
+
+
+LaTeX Warning: Citation 'Colak2015' on page 15 undefined on input line 266.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 15 undefined on input line 266.
+
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 15 undefined on input line 266.
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 15 undefined on input line 266.
+
+[15 <./images/triangulation.jpg>]
+
+LaTeX Warning: Citation 'Wu2014' on page 16 undefined on input line 272.
+
+
+LaTeX Warning: Citation 'eldawy2015spatialhadoop' on page 16 undefined on input
+ line 272.
+
+
+LaTeX Warning: Citation 'Alarabi2014' on page 16 undefined on input line 272.
+
+
+LaTeX Warning: Citation 'Laurila2012' on page 16 undefined on input line 278.
+
+
+LaTeX Warning: Citation 'Laurila2012' on page 16 undefined on input line 278.
+
+
+LaTeX Warning: Citation 'Shin' on page 16 undefined on input line 278.
+
+[16]
+
+LaTeX Warning: Citation 'Hoteit2014' on page 17 undefined on input line 280.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 17 undefined on input line 280.
+
+
+
+LaTeX Warning: Citation 'Liu2014' on page 17 undefined on input line 285.
+
+
+LaTeX Warning: Citation 'inoubli2016experimental' on page 17 undefined on input
+ line 287.
+
+[17]
+
+LaTeX Warning: Citation 'Liu2014' on page 18 undefined on input line 291.
+
+
+LaTeX Warning: Citation 'Liu2014' on page 18 undefined on input line 291.
+
+
+LaTeX Warning: Citation 'Laurila2012' on page 18 undefined on input line 291.
+
+
+LaTeX Warning: Citation 'Kurien2012' on page 18 undefined on input line 291.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 18 undefined on input line 291.
+
+
+LaTeX Warning: Citation 'Iqbal2014' on page 18 undefined on input line 295.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 18 undefined on input line 295.
+
+
+LaTeX Warning: Citation 'Iqbal2014' on page 18 undefined on input line 295.
+
+
+LaTeX Warning: Citation 'Alexander2015' on page 18 undefined on input line 295.
+
+
+
+LaTeX Warning: Citation 'Calabrese2011' on page 18 undefined on input line 295.
+
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 18 undefined on input line 295.
+
+
+
+LaTeX Warning: Citation 'Colak2015' on page 18 undefined on input line 295.
+
+[18]
+
+LaTeX Warning: Citation 'Calabrese2011' on page 19 undefined on input line 299.
+
+
+
+LaTeX Warning: Citation 'Colak2015' on page 19 undefined on input line 299.
+
+
+LaTeX Warning: Citation 'Calabrese2011' on page 19 undefined on input line 299.
+
+
+
+LaTeX Warning: Citation 'Colak2015' on page 19 undefined on input line 301.
+
+
+LaTeX Warning: Citation 'Calabrese2011' on page 19 undefined on input line 303.
+
+
+[19]
+
+LaTeX Warning: Citation 'Toole2015' on page 20 undefined on input line 309.
+
+
+LaTeX Warning: Citation 'Colak2015' on page 20 undefined on input line 309.
+
+
+LaTeX Warning: Citation 'Iqbal2014' on page 20 undefined on input line 311.
+
+
+LaTeX Warning: Citation 'Calabrese2011' on page 20 undefined on input line 311.
+
+
+
+LaTeX Warning: Citation 'Colak2015' on page 20 undefined on input line 311.
+
+
+LaTeX Warning: Citation 'Colak2015' on page 20 undefined on input line 313.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 20 undefined on input line 313.
+
+
+LaTeX Warning: Citation 'Zheng2011' on page 20 undefined on input line 313.
+
+
+LaTeX Warning: Citation 'Iqbal2014' on page 20 undefined on input line 313.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 20 undefined on input line 313.
+
+[20]
+
+LaTeX Warning: Citation 'Colak2015' on page 21 undefined on input line 315.
+
+
+LaTeX Warning: Citation 'Iqbal2014' on page 21 undefined on input line 319.
+
+[21]
+
+LaTeX Warning: Citation 'Iqbal2014' on page 22 undefined on input line 331.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 22 undefined on input line 331.
+
+
+LaTeX Warning: Citation 'Colak2015' on page 22 undefined on input line 331.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 22 undefined on input line 331.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 22 undefined on input line 337.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 22 undefined on input line 337.
+
+
+LaTeX Warning: Citation 'Iqbal2014' on page 22 undefined on input line 339.
+
+
+LaTeX Warning: Citation 'Calabrese2011' on page 22 undefined on input line 339.
+
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 22 undefined on input line 339.
+
+[22]
+
+LaTeX Warning: Citation 'Calabrese2011' on page 23 undefined on input line 345.
+
+
+[23]
+
+LaTeX Warning: Citation 'Toole2015' on page 24 undefined on input line 353.
+
+
+LaTeX Warning: Citation 'Toole2015' on page 24 undefined on input line 353.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 24 undefined on input line 357.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 24 undefined on input line 357.
+
+[24]
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 25 undefined on input line 359.
+
+<images/truncated_power_law.jpg, id=574, 344.78813pt x 333.49594pt>
 File: images/truncated_power_law.jpg Graphic file (type jpg)
 
 <use images/truncated_power_law.jpg>
-Package pdftex.def Info: images/truncated_power_law.jpg used on input line 367.
+Package pdftex.def Info: images/truncated_power_law.jpg used on input line 368.
 
 (pdftex.def)             Requested size: 258.59045pt x 250.12134pt.
- [25 <./images/truncated_power_law.jpg>]
-[26] [27] [28]
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 25 undefined on input line 370.
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 25 undefined on input line 370.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 25 undefined on input line 374.
+
+
+
+LaTeX Warning: Citation 'Hoteit2016' on page 25 undefined on input line 374.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 25 undefined on input line 374.
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 25 undefined on input line 374.
+
+
+Overfull \hbox (4.28253pt too wide) in paragraph at lines 374--376
+[]\OT1/lmr/m/n/12 This math-e-mat-i-cal model is cited and ver-i-fied in [[]]. 
+The method-
+ []
+
+[25 <./images/truncated_power_law.jpg>]
+
+LaTeX Warning: Citation 'Calabrese2013' on page 26 undefined on input line 377.
+
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 26 undefined on input line 377.
+
+
+
+LaTeX Warning: Citation 'Hoteit2016' on page 26 undefined on input line 377.
+
+[26]
+
+LaTeX Warning: Citation 'Hoteit2014' on page 27 undefined on input line 379.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 27 undefined on input line 381.
+
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 27 undefined on input line 383.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 27 undefined on input line 383.
+
+
+LaTeX Warning: Citation 'Hoteit2016' on page 27 undefined on input line 385.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 27 undefined on input line 387.
+
+
+LaTeX Warning: Citation 'Calabrese2013' on page 27 undefined on input line 388.
+
+
+
+LaTeX Warning: Citation 'Hoteit2016' on page 27 undefined on input line 389.
+
+[27]
+
+LaTeX Warning: Citation 'Hoteit2014' on page 28 undefined on input line 391.
+
+
+LaTeX Warning: Citation 'Hoteit2014' on page 28 undefined on input line 391.
+
+
+LaTeX Warning: Citation 'Gonzalez2008' on page 28 undefined on input line 391.
+
+
+LaTeX Warning: Citation 'Hoteit2016' on page 28 undefined on input line 391.
+
+[28]
+
+LaTeX Warning: Citation 'Hoteit2016' on page 29 undefined on input line 405.
+
+[29]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in alignment at lines 408--408
+Underfull \hbox (badness 10000) in alignment at lines 409--409
 []
  []
 
-[29
+[30
 
-] [30]
+] [31]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[31] [32]
-<images/data_session_duration_bin_count.jpg, id=809, 427.5975pt x 223.58531pt>
+[32] [33]
+<images/data_session_duration_bin_count.jpg, id=632, 427.5975pt x 223.58531pt>
 File: images/data_session_duration_bin_count.jpg Graphic file (type jpg)
 
 <use images/data_session_duration_bin_count.jpg>
 Package pdftex.def Info: images/data_session_duration_bin_count.jpg used on inp
-ut line 507.
+ut line 508.
 (pdftex.def)             Requested size: 320.69733pt x 167.68855pt.
- [33]
-<images/data_session_duration.jpg, id=815, 588.69937pt x 327.47343pt>
+ [34]
+<images/data_session_duration.jpg, id=639, 588.69937pt x 327.47343pt>
 File: images/data_session_duration.jpg Graphic file (type jpg)
 
 <use images/data_session_duration.jpg>
 Package pdftex.def Info: images/data_session_duration.jpg used on input line 54
-4.
+5.
 (pdftex.def)             Requested size: 441.52344pt x 245.60448pt.
 
-Overfull \hbox (20.42255pt too wide) in paragraph at lines 544--546
+Overfull \hbox (20.42255pt too wide) in paragraph at lines 545--547
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 557--557
+Underfull \hbox (badness 10000) in paragraph at lines 558--558
 \OT1/lmr/m/n/10 https://developers.google.com/maps/documentation/roads/snap, ht
 tps://microsoft.com/en-
  []
 
-[34 <./images/data_session_duration_bin_count.jpg>] [35 <./images/data_session_
+[35 <./images/data_session_duration_bin_count.jpg>] [36 <./images/data_session_
 duration.jpg>]
-<images/cell_towers_distribution.png, id=829, 482.80376pt x 323.2075pt>
+<images/cell_towers_distribution.png, id=652, 482.80376pt x 323.2075pt>
 File: images/cell_towers_distribution.png Graphic file (type png)
 
 <use images/cell_towers_distribution.png>
 Package pdftex.def Info: images/cell_towers_distribution.png used on input line
- 562.
+ 563.
 (pdftex.def)             Requested size: 362.10193pt x 242.40503pt.
- [36 <./images/cell_towers_distribution.png>]
+ [37 <./images/cell_towers_distribution.png>]
+
+LaTeX Warning: Citation 'Toledo2004' on page 38 undefined on input line 572.
+
+
+LaTeX Warning: Citation 'Hirai2015' on page 38 undefined on input line 572.
+
+
+LaTeX Warning: Citation 'Bazghandi2012' on page 38 undefined on input line 574.
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 578.
+(hyperref)                removing `\\' on input line 579.
 
-[37] [38] [39]
+[38]
+
+LaTeX Warning: Citation 'ChakrabortyNKNagwaniLopamudraDey2011' on page 39 undef
+ined on input line 589.
+
+
+LaTeX Warning: Citation 'huang2017research' on page 39 undefined on input line 
+589.
+
+[39]
+
+LaTeX Warning: Citation 'ChakrabortyNKNagwaniLopamudraDey2011' on page 40 undef
+ined on input line 592.
+
+
+LaTeX Warning: Citation 'ChakrabortyNKNagwaniLopamudraDey2011' on page 40 undef
+ined on input line 595.
+
+[40]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 597.
+               Default added (so using `!tbp') on input line 598.
 
-<images/clustering.jpg, id=865, 633.11531pt x 373.395pt>
+<images/clustering.jpg, id=677, 633.11531pt x 373.395pt>
 File: images/clustering.jpg Graphic file (type jpg)
 
 <use images/clustering.jpg>
-Package pdftex.def Info: images/clustering.jpg used on input line 598.
+Package pdftex.def Info: images/clustering.jpg used on input line 599.
 (pdftex.def)             Requested size: 379.87212pt x 224.03873pt.
- [40 <./images/clustering.jpg>]
+ [41 <./images/clustering.jpg>]
 
-LaTeX Warning: Reference `section:future_research' on page 41 undefined on inpu
-t line 618.
+LaTeX Warning: Reference `section:future_research' on page 42 undefined on inpu
+t line 619.
 
-[41]
-Overfull \hbox (10.84427pt too wide) in paragraph at lines 624--624
+
+LaTeX Warning: Citation 'eldawy2015spatialhadoop' on page 42 undefined on input
+ line 620.
+
+[42]
+Overfull \hbox (10.84427pt too wide) in paragraph at lines 625--625
 [][][]\OT1/lmr/m/n/10 https://cwiki.apache.org/confluence/display/Hive/Language
 Manual+WindowingAndAnalytics| 
  []
 
-[42] [43]
-<images/Trip_delay_cumm_distribution.jpg, id=901, 625.58719pt x 411.03563pt>
+[43]
+
+LaTeX Warning: Citation 'Toole2015' on page 44 undefined on input line 630.
+
+[44]
+<images/Trip_delay_cumm_distribution.jpg, id=710, 625.58719pt x 411.03563pt>
 File: images/Trip_delay_cumm_distribution.jpg Graphic file (type jpg)
 
 <use images/Trip_delay_cumm_distribution.jpg>
 Package pdftex.def Info: images/Trip_delay_cumm_distribution.jpg used on input 
-line 633.
+line 634.
 (pdftex.def)             Requested size: 375.35521pt x 246.62328pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 639.
+               Default added (so using `!tbp') on input line 640.
 
 
-<images/trip_delay_cumm_distribution_total.jpg, id=902, 517.18219pt x 302.63063
+<images/trip_delay_cumm_distribution_total.jpg, id=711, 517.18219pt x 302.63063
 pt>
 File: images/trip_delay_cumm_distribution_total.jpg Graphic file (type jpg)
  <use images/trip_delay_cumm_distribution_total.jpg>
 Package pdftex.def Info: images/trip_delay_cumm_distribution_total.jpg used on 
-input line 640.
+input line 641.
 (pdftex.def)             Requested size: 310.3117pt x 181.57977pt.
- [44 <./images/Trip_delay_cumm_distribution.jpg>]
-<images/Trip_delay.jpg, id=908, 651.93562pt x 472.01344pt>
+ [45 <./images/Trip_delay_cumm_distribution.jpg>]
+<images/Trip_delay.jpg, id=717, 651.93562pt x 472.01344pt>
 File: images/Trip_delay.jpg Graphic file (type jpg)
 
 <use images/Trip_delay.jpg>
-Package pdftex.def Info: images/Trip_delay.jpg used on input line 651.
+Package pdftex.def Info: images/Trip_delay.jpg used on input line 652.
 (pdftex.def)             Requested size: 391.16438pt x 283.21025pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45 <./images/trip_delay_cumm_distribution_total.jpg>]
+[46 <./images/trip_delay_cumm_distribution_total.jpg>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 663.
+put line 664.
 
-Overfull \hbox (18.38298pt too wide) in paragraph at lines 679--680
+Overfull \hbox (18.38298pt too wide) in paragraph at lines 680--681
 [] $[] \OMS/lmsy/m/n/12   []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--682
+Underfull \hbox (badness 10000) in paragraph at lines 681--683
 [] $[] \OMS/lmsy/m/n/12  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 688--689
+Underfull \hbox (badness 10000) in paragraph at lines 689--690
 [] $[] \OMS/lmsy/m/n/12  
  []
 
 
-Overfull \hbox (34.48232pt too wide) in paragraph at lines 707--708
+Overfull \hbox (34.48232pt too wide) in paragraph at lines 708--709
 [] $[] \OMS/lmsy/m/n/12   [][]$ 
  []
 
 
-Overfull \hbox (19.79933pt too wide) in paragraph at lines 711--712
+Overfull \hbox (19.79933pt too wide) in paragraph at lines 712--713
 [] $[] \OMS/lmsy/m/n/12   []$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 735--736
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
 [][]
  []
 
-
-Overfull \hbox (35.15453pt too wide) in paragraph at lines 753--754
+[47 <./images/Trip_delay.jpg>]
+Overfull \hbox (35.15453pt too wide) in paragraph at lines 754--755
 [] $[] \OMS/lmsy/m/n/12  $ $[][]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--755
+Underfull \hbox (badness 10000) in paragraph at lines 755--756
 [] $[] \OMS/lmsy/m/n/12  $
  []
 
 
-Overfull \hbox (35.39581pt too wide) in paragraph at lines 756--757
+Overfull \hbox (35.39581pt too wide) in paragraph at lines 757--758
 []$[][][]$ 
  []
 
 
-Overfull \hbox (8.4082pt too wide) in paragraph at lines 771--772
+Overfull \hbox (8.4082pt too wide) in paragraph at lines 772--773
 [] $[] \OMS/lmsy/m/n/12  $ $[][][][]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 789--790
+Underfull \hbox (badness 10000) in paragraph at lines 790--791
 [] $[] \OMS/lmsy/m/n/12  $
  []
 
-[46 <./images/Trip_delay.jpg>] [47] [48]
+
+LaTeX Warning: Citation 'eldawy2015spatialhadoop' on page 48 undefined on input
+ line 804.
+
+
+LaTeX Warning: Citation 'eldawy2015spatialhadoop' on page 48 undefined on input
+ line 804.
+
+[48] [49] [50]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 807.
+               Default added (so using `!tbp') on input line 808.
 
-<images/concentric_map.jpg, id=937, 672.26157pt x 493.845pt>
+<images/concentric_map.jpg, id=751, 672.26157pt x 493.845pt>
 File: images/concentric_map.jpg Graphic file (type jpg)
 
 <use images/concentric_map.jpg>
-Package pdftex.def Info: images/concentric_map.jpg used on input line 808.
+Package pdftex.def Info: images/concentric_map.jpg used on input line 809.
 (pdftex.def)             Requested size: 403.36005pt x 296.30928pt.
- [49] [50 <./images/concentric_map.jpg>]
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 816.
+               Default added (so using `!tbp') on input line 817.
 
 
-<images/traffic_count_color_coded_categorization.jpg, id=949, 700.11563pt x 625
+<images/traffic_count_color_coded_categorization.jpg, id=752, 700.11563pt x 625
 .58719pt>
 File: images/traffic_count_color_coded_categorization.jpg Graphic file (type jp
 g)
  <use images/traffic_count_color_coded_categorization.jpg>
 Package pdftex.def Info: images/traffic_count_color_coded_categorization.jpg us
-ed on input line 817.
+ed on input line 818.
 (pdftex.def)             Requested size: 350.05696pt x 312.79283pt.
- [51 <./images/traffic_count_color_coded_categorization.jpg>]
+ [51 <./images/concentric_map.jpg>] [52 <./images/traffic_count_color_coded_cat
+egorization.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 828.
+               Default added (so using `!tbp') on input line 829.
 
-<images/traffic_month_average.jpg, id=957, 825.0825pt x 663.98062pt>
+<images/traffic_month_average.jpg, id=765, 825.0825pt x 663.98062pt>
 File: images/traffic_month_average.jpg Graphic file (type jpg)
 
 <use images/traffic_month_average.jpg>
-Package pdftex.def Info: images/traffic_month_average.jpg used on input line 82
-9.
+Package pdftex.def Info: images/traffic_month_average.jpg used on input line 83
+0.
 (pdftex.def)             Requested size: 412.54024pt x 331.98949pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 841.
+               Default added (so using `!tbp') on input line 842.
 
-<images/traffic_torque_600am.jpg, id=964, 987.69pt x 668.4975pt>
+<images/traffic_torque_600am.jpg, id=772, 987.69pt x 668.4975pt>
 File: images/traffic_torque_600am.jpg Graphic file (type jpg)
 
 <use images/traffic_torque_600am.jpg>
-Package pdftex.def Info: images/traffic_torque_600am.jpg used on input line 842
+Package pdftex.def Info: images/traffic_torque_600am.jpg used on input line 843
 .
 (pdftex.def)             Requested size: 395.069pt x 267.39426pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 848.
+               Default added (so using `!tbp') on input line 849.
 
-<images/traffic_torque_700am.jpg, id=965, 989.94844pt x 666.99188pt>
+<images/traffic_torque_700am.jpg, id=773, 989.94844pt x 666.99188pt>
 File: images/traffic_torque_700am.jpg Graphic file (type jpg)
 
 <use images/traffic_torque_700am.jpg>
-Package pdftex.def Info: images/traffic_torque_700am.jpg used on input line 849
+Package pdftex.def Info: images/traffic_torque_700am.jpg used on input line 850
 .
 (pdftex.def)             Requested size: 395.97237pt x 266.79202pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 855.
+               Default added (so using `!tbp') on input line 856.
 
-<images/traffic_torque_700am_zoomin.jpg, id=966, 996.72375pt x 675.27281pt>
+<images/traffic_torque_700am_zoomin.jpg, id=774, 996.72375pt x 675.27281pt>
 File: images/traffic_torque_700am_zoomin.jpg Graphic file (type jpg)
 
 <use images/traffic_torque_700am_zoomin.jpg>
 Package pdftex.def Info: images/traffic_torque_700am_zoomin.jpg used on input l
-ine 856.
+ine 857.
 (pdftex.def)             Requested size: 398.68243pt x 270.10434pt.
- [52] [53 <./images/traffic_month_average.jpg>] [54 <./images/traffic_torque_60
-0am.jpg> <./images/traffic_torque_700am.jpg>] [55 <./images/traffic_torque_700a
-m_zoomin.jpg>] [56] [57]
-<images/traffic_count_cumm_distribution.jpg, id=1005, 358.33875pt x 214.55156pt
->
+
+
+LaTeX Warning: Citation 'sommer2013using' on page 53 undefined on input line 87
+0.
+
+[53] [54 <./images/traffic_month_average.jpg>] [55 <./images/traffic_torque_600
+am.jpg> <./images/traffic_torque_700am.jpg>] [56 <./images/traffic_torque_700am
+_zoomin.jpg>] [57] [58]
+<images/traffic_count_cumm_distribution.jpg, id=811, 358.33875pt x 214.55156pt>
 File: images/traffic_count_cumm_distribution.jpg Graphic file (type jpg)
- <use images/traffic_count_cumm_distribution.jpg>
+<use images/traffic_count_cumm_distribution.jpg>
 Package pdftex.def Info: images/traffic_count_cumm_distribution.jpg used on inp
-ut line 934.
+ut line 935.
 (pdftex.def)             Requested size: 268.7534pt x 160.91327pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[58]
+[59]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 945.
+               Default added (so using `!tbp') on input line 946.
 
-<images/steps_function.jpg, id=1017, 510.40688pt x 325.96782pt>
+<images/steps_function.jpg, id=822, 510.40688pt x 325.96782pt>
 File: images/steps_function.jpg Graphic file (type jpg)
 
 <use images/steps_function.jpg>
-Package pdftex.def Info: images/steps_function.jpg used on input line 946.
+Package pdftex.def Info: images/steps_function.jpg used on input line 947.
 (pdftex.def)             Requested size: 306.24648pt x 195.58218pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 952.
+               Default added (so using `!tbp') on input line 953.
 
-<images/steps_function_zoom_in.jpg, id=1018, 511.15968pt x 322.20375pt>
+<images/steps_function_zoom_in.jpg, id=823, 511.15968pt x 322.20375pt>
 File: images/steps_function_zoom_in.jpg Graphic file (type jpg)
 
 <use images/steps_function_zoom_in.jpg>
 Package pdftex.def Info: images/steps_function_zoom_in.jpg used on input line 9
-53.
+54.
 (pdftex.def)             Requested size: 306.69817pt x 193.32373pt.
- [59 <./images/traffic_count_cumm_distribution.jpg>] [60 <./images/steps_functi
-on.jpg> <./images/steps_function_zoom_in.jpg>]
-<images/cumulative_variance_pca.jpg, id=1029, 510.40688pt x 274.02374pt>
+
+
+LaTeX Warning: Citation 'Jain1996' on page 60 undefined on input line 962.
+
+[60 <./images/traffic_count_cumm_distribution.jpg>] [61 <./images/steps_functio
+n.jpg> <./images/steps_function_zoom_in.jpg>]
+<images/cumulative_variance_pca.jpg, id=833, 510.40688pt x 274.02374pt>
 File: images/cumulative_variance_pca.jpg Graphic file (type jpg)
 
 <use images/cumulative_variance_pca.jpg>
 Package pdftex.def Info: images/cumulative_variance_pca.jpg used on input line 
-964.
+965.
 (pdftex.def)             Requested size: 255.2028pt x 137.01154pt.
- [61 <./images/cumulative_variance_pca.jpg>] [62]
-Underfull \hbox (badness 10000) in paragraph at lines 992--992
+
+
+LaTeX Warning: Citation 'raschka2015python' on page 62 undefined on input line 
+971.
+
+
+LaTeX Warning: Citation 'Yang2004' on page 62 undefined on input line 971.
+
+[62 <./images/cumulative_variance_pca.jpg>] [63]
+
+LaTeX Warning: Citation 'hornik1990universal' on page 64 undefined on input lin
+e 993.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 993--993
 [][][]\OT1/lmr/m/n/10 https://spark.apache.org/docs/latest/ml-classification-re
 gression.html#multilayer-
  []
 
-[63]
+[64]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1000.
+               Default added (so using `!tbp') on input line 1001.
 
-<images/ann_topology.jpg, id=1059, 583.42969pt x 490.08093pt>
+<images/ann_topology.jpg, id=857, 583.42969pt x 490.08093pt>
 File: images/ann_topology.jpg Graphic file (type jpg)
 
 <use images/ann_topology.jpg>
-Package pdftex.def Info: images/ann_topology.jpg used on input line 1001.
+Package pdftex.def Info: images/ann_topology.jpg used on input line 1002.
 (pdftex.def)             Requested size: 291.71413pt x 245.03987pt.
- [64 <./images/ann_topology.jpg>]
+ [65 <./images/ann_topology.jpg>] [66]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in alignment at lines 1012--1012
+Underfull \hbox (badness 10000) in alignment at lines 1013--1013
 []
  []
 
-[65
+[67
 
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1035.
+               Default added (so using `!tbp') on input line 1036.
 
-<images/Trip_delay_per_day_week.jpg, id=1073, 789.70032pt x 315.42844pt>
+<images/Trip_delay_per_day_week.jpg, id=874, 789.70032pt x 315.42844pt>
 File: images/Trip_delay_per_day_week.jpg Graphic file (type jpg)
 
 <use images/Trip_delay_per_day_week.jpg>
 Package pdftex.def Info: images/Trip_delay_per_day_week.jpg used on input line 
-1036.
+1037.
 (pdftex.def)             Requested size: 394.8492pt x 157.71382pt.
 
 
+LaTeX Warning: Citation 'malta2011national' on page 68 undefined on input line 
+1044.
+
+
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1046.
+               Default added (so using `!tbp') on input line 1047.
 
 
-<images/Transport_malta_trip_distribution.jpg, id=1077, 624.08156pt x 393.72093
-pt>
+<images/Transport_malta_trip_distribution.jpg, id=877, 624.08156pt x 393.72093p
+t>
 File: images/Transport_malta_trip_distribution.jpg Graphic file (type jpg)
  <use images/Transport_malta_trip_distribution.jpg>
 Package pdftex.def Info: images/Transport_malta_trip_distribution.jpg used on i
-nput line 1047.
+nput line 1048.
 (pdftex.def)             Requested size: 374.45183pt x 236.23438pt.
 
 
+LaTeX Warning: Citation 'malta2011national' on page 68 undefined on input line 
+1050.
+
+
+LaTeX Warning: Citation 'malta2011national' on page 68 undefined on input line 
+1050.
+
+
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1056.
+               Default added (so using `!tbp') on input line 1057.
 
-[66 <./images/Trip_delay_per_day_week.jpg>] [67 <./images/Transport_malta_trip_
-distribution.jpg>]
+[68 <./images/Trip_delay_per_day_week.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1076.
+               Default added (so using `!tbp') on input line 1077.
 
-<images/Trip_count_correlation.jpg, id=1092, 674.52pt x 369.63094pt>
+<images/Trip_count_correlation.jpg, id=886, 674.52pt x 369.63094pt>
 File: images/Trip_count_correlation.jpg Graphic file (type jpg)
 
 <use images/Trip_count_correlation.jpg>
 Package pdftex.def Info: images/Trip_count_correlation.jpg used on input line 1
-077.
+078.
 (pdftex.def)             Requested size: 404.71512pt x 221.78026pt.
 
 
+LaTeX Warning: Citation 'malta2011national' on page 69 undefined on input line 
+1080.
+
+
+LaTeX Warning: Citation 'malta2011national' on page 69 undefined on input line 
+1080.
+
+
+LaTeX Warning: Citation 'malta2011national' on page 69 undefined on input line 
+1085.
+
+
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1087.
+               Default added (so using `!tbp') on input line 1088.
 
 
-<images/Trip_distribution_line_fit_plot.jpg, id=1097, 696.35156pt x 472.01344pt
->
+<images/Trip_distribution_line_fit_plot.jpg, id=888, 696.35156pt x 472.01344pt>
 File: images/Trip_distribution_line_fit_plot.jpg Graphic file (type jpg)
- <use images/Trip_distribution_line_fit_plot.jpg>
+<use images/Trip_distribution_line_fit_plot.jpg>
 Package pdftex.def Info: images/Trip_distribution_line_fit_plot.jpg used on inp
-ut line 1088.
+ut line 1089.
 (pdftex.def)             Requested size: 348.17493pt x 236.00613pt.
- [68 <./images/Trip_count_correlation.jpg>]
+
+
+LaTeX Warning: Citation 'malta2011national' on page 69 undefined on input line 
+1091.
+
+
+LaTeX Warning: Citation 'malta2011national' on page 69 undefined on input line 
+1091.
+
+[69 <./images/Transport_malta_trip_distribution.jpg>] [70 <./images/Trip_count_
+correlation.jpg> <./images/Trip_distribution_line_fit_plot.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1099.
+               Default added (so using `!tbp') on input line 1100.
 
-<images/trip_delay_mosta_marsa.jpg, id=1106, 823.57687pt x 321.45094pt>
+<images/trip_delay_mosta_marsa.jpg, id=900, 823.57687pt x 321.45094pt>
 File: images/trip_delay_mosta_marsa.jpg Graphic file (type jpg)
 
 <use images/trip_delay_mosta_marsa.jpg>
 Package pdftex.def Info: images/trip_delay_mosta_marsa.jpg used on input line 1
-100.
+101.
 (pdftex.def)             Requested size: 411.78743pt x 160.72507pt.
- [69 <./images/Trip_distribution_line_fit_plot.jpg> <./images/trip_delay_mosta_
-marsa.jpg>]
-<images/trip_delay_comparison.jpg, id=1112, 632.3625pt x 390.70969pt>
+
+
+LaTeX Warning: Citation 'malta2011national' on page 71 undefined on input line 
+1107.
+
+<images/trip_delay_comparison.jpg, id=901, 632.3625pt x 390.70969pt>
 File: images/trip_delay_comparison.jpg Graphic file (type jpg)
 
 <use images/trip_delay_comparison.jpg>
 Package pdftex.def Info: images/trip_delay_comparison.jpg used on input line 11
-10.
+11.
 (pdftex.def)             Requested size: 442.65074pt x 273.4949pt.
 
-Overfull \hbox (21.54985pt too wide) in paragraph at lines 1110--1112
+Overfull \hbox (21.54985pt too wide) in paragraph at lines 1111--1113
  [][] 
  []
 
+[71 <./images/trip_delay_mosta_marsa.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1119.
+               Default added (so using `!tbp') on input line 1120.
 
 
-<images/trip_delay_correlation_DMAPI_vs_MINE.jpg, id=1113, 523.20468pt x 231.11
-343pt>
+<images/trip_delay_correlation_DMAPI_vs_MINE.jpg, id=906, 523.20468pt x 231.113
+43pt>
 File: images/trip_delay_correlation_DMAPI_vs_MINE.jpg Graphic file (type jpg)
  <use images/trip_delay_correlation_DMAPI_vs_MINE.jpg>
 Package pdftex.def Info: images/trip_delay_correlation_DMAPI_vs_MINE.jpg used o
-n input line 1120.
+n input line 1121.
 (pdftex.def)             Requested size: 366.24077pt x 161.77829pt.
- [70 <./images/trip_delay_comparison.jpg>]
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1129.
+               Default added (so using `!tbp') on input line 1130.
 
-<images/OD-OSRM_traffic_900am.jpg, id=1121, 920.68968pt x 525.46312pt>
+<images/OD-OSRM_traffic_900am.jpg, id=909, 920.68968pt x 525.46312pt>
 File: images/OD-OSRM_traffic_900am.jpg Graphic file (type jpg)
 
 <use images/OD-OSRM_traffic_900am.jpg>
 Package pdftex.def Info: images/OD-OSRM_traffic_900am.jpg used on input line 11
-30.
+31.
 (pdftex.def)             Requested size: 368.26935pt x 210.18152pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1136.
+               Default added (so using `!tbp') on input line 1137.
 
-<images/google_traffic_900am.jpg, id=1122, 982.42032pt x 667.74469pt>
+<images/google_traffic_900am.jpg, id=910, 982.42032pt x 667.74469pt>
 File: images/google_traffic_900am.jpg Graphic file (type jpg)
 
 <use images/google_traffic_900am.jpg>
 Package pdftex.def Info: images/google_traffic_900am.jpg used on input line 113
-7.
+8.
 (pdftex.def)             Requested size: 392.96117pt x 267.09314pt.
- [71 <./images/trip_delay_correlation_DMAPI_vs_MINE.jpg>] [72 <./images/OD-OSRM
-_traffic_900am.jpg> <./images/google_traffic_900am.jpg>] [73]
+
+
+LaTeX Warning: Citation 'malta2011national' on page 72 undefined on input line 
+1145.
+
+[72 <./images/trip_delay_comparison.jpg>] [73 <./images/trip_delay_correlation_
+DMAPI_vs_MINE.jpg> <./images/OD-OSRM_traffic_900am.jpg>] [74 <./images/google_t
+raffic_900am.jpg>] [75]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1159.
+               Default added (so using `!tbp') on input line 1160.
 
-<images/traffic_flow_count_KN_MINE.jpg, id=1140, 532.99126pt x 328.97906pt>
+<images/traffic_flow_count_KN_MINE.jpg, id=931, 532.99126pt x 328.97906pt>
 File: images/traffic_flow_count_KN_MINE.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_KN_MINE.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KN_MINE.jpg used on input li
-ne 1163.
+ne 1164.
 (pdftex.def)             Requested size: 252.6631pt x 155.95042pt.
 
-<images/traffic_flow_count_KN_Nigel_pace.jpg, id=1141, 532.99126pt x 320.69812p
-t>
+<images/traffic_flow_count_KN_Nigel_pace.jpg, id=932, 532.99126pt x 320.69812pt
+>
 File: images/traffic_flow_count_KN_Nigel_pace.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_KN_Nigel_pace.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KN_Nigel_pace.jpg used on in
-put line 1171.
+put line 1172.
 (pdftex.def)             Requested size: 252.6631pt x 152.02489pt.
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1180.
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1177.
 
-<images/traffic_flow_count_KS_MINE.jpg, id=1144, 528.47438pt x 328.97906pt>
+
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1177.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1181.
+
+<images/traffic_flow_count_KS_MINE.jpg, id=933, 528.47438pt x 328.97906pt>
 File: images/traffic_flow_count_KS_MINE.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_KS_MINE.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KS_MINE.jpg used on input li
-ne 1184.
+ne 1185.
 (pdftex.def)             Requested size: 252.6631pt x 157.28569pt.
 
-<images/traffic_flow_count_KS_Nigel_pace.jpg, id=1145, 518.6878pt x 342.5297pt>
+<images/traffic_flow_count_KS_Nigel_pace.jpg, id=934, 518.6878pt x 342.5297pt>
 File: images/traffic_flow_count_KS_Nigel_pace.jpg Graphic file (type jpg)
+
 <use images/traffic_flow_count_KS_Nigel_pace.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KS_Nigel_pace.jpg used on in
-put line 1192.
+put line 1193.
 (pdftex.def)             Requested size: 252.6631pt x 166.8532pt.
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1201.
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1197.
 
-<images/traffic_flow_count_MN_MINE.jpg, id=1148, 527.72156pt x 328.97906pt>
+
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1197.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1202.
+
+<images/traffic_flow_count_MN_MINE.jpg, id=935, 527.72156pt x 328.97906pt>
 File: images/traffic_flow_count_MN_MINE.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_MN_MINE.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MN_MINE.jpg used on input li
-ne 1205.
+ne 1206.
 (pdftex.def)             Requested size: 294.76933pt x 183.75516pt.
 
-<images/traffic_flow_count_MN_Nigel_pace.jpg, id=1149, 532.23843pt x 282.30469p
-t>
+<images/traffic_flow_count_MN_Nigel_pace.jpg, id=936, 532.23843pt x 282.30469pt
+>
 File: images/traffic_flow_count_MN_Nigel_pace.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_MN_Nigel_pace.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MN_Nigel_pace.jpg used on in
-put line 1213.
+put line 1214.
 (pdftex.def)             Requested size: 294.76933pt x 156.35356pt.
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1221.
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1218.
 
-<images/traffic_flow_count_MS_MINE.jpg, id=1152, 531.48563pt x 328.22626pt>
+
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1218.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 1222.
+
+<images/traffic_flow_count_MS_MINE.jpg, id=937, 531.48563pt x 328.22626pt>
 File: images/traffic_flow_count_MS_MINE.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_MS_MINE.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MS_MINE.jpg used on input li
-ne 1225.
+ne 1226.
 (pdftex.def)             Requested size: 294.76933pt x 182.04251pt.
 
-<images/traffic_flow_count_MS_Nigel_pace.jpg, id=1153, 517.18219pt x 249.93375p
-t>
+<images/traffic_flow_count_MS_Nigel_pace.jpg, id=938, 517.18219pt x 249.93375pt
+>
 File: images/traffic_flow_count_MS_Nigel_pace.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_MS_Nigel_pace.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MS_Nigel_pace.jpg used on in
-put line 1233.
+put line 1234.
 (pdftex.def)             Requested size: 294.76933pt x 142.45609pt.
- [74] [75 <./images/traffic_flow_count_KN_MINE.jpg> <./images/traffic_flow_coun
-t_KN_Nigel_pace.jpg>]
-[76 <./images/traffic_flow_count_KS_MINE.jpg> <./images/traffic_flow_count_KS_N
-igel_pace.jpg>] [77 <./images/traffic_flow_count_MN_MINE.jpg> <./images/traffic
-_flow_count_MN_Nigel_pace.jpg>] [78 <./images/traffic_flow_count_MS_MINE.jpg> <
-./images/traffic_flow_count_MS_Nigel_pace.jpg>]
+
+
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1239.
+
+
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1239.
+
+
+LaTeX Warning: Citation 'Pace2017' on page 76 undefined on input line 1245.
+
+[76] [77 <./images/traffic_flow_count_KN_MINE.jpg> <./images/traffic_flow_count
+_KN_Nigel_pace.jpg>] [78 <./images/traffic_flow_count_KS_MINE.jpg> <./images/tr
+affic_flow_count_KS_Nigel_pace.jpg>] [79 <./images/traffic_flow_count_MN_MINE.j
+pg> <./images/traffic_flow_count_MN_Nigel_pace.jpg>] [80 <./images/traffic_flow
+_count_MS_MINE.jpg> <./images/traffic_flow_count_MS_Nigel_pace.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1249.
+               Default added (so using `!tbp') on input line 1250.
 
-<images/traffic_flow_count_KN_line_plot.jpg, id=1178, 481.8pt x 244.66406pt>
+<images/traffic_flow_count_KN_line_plot.jpg, id=960, 481.8pt x 244.66406pt>
 File: images/traffic_flow_count_KN_line_plot.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_KN_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KN_line_plot.jpg used on inp
-ut line 1253.
+ut line 1254.
 (pdftex.def)             Requested size: 336.88199pt x 171.077pt.
 
-<images/traffic_flow_count_KS_line_plot.jpg, id=1179, 477.28313pt x 243.91125pt
->
+<images/traffic_flow_count_KS_line_plot.jpg, id=961, 477.28313pt x 243.91125pt>
 File: images/traffic_flow_count_KS_line_plot.jpg Graphic file (type jpg)
- <use images/traffic_flow_count_KS_line_plot.jpg>
+<use images/traffic_flow_count_KS_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_KS_line_plot.jpg used on inp
-ut line 1260.
+ut line 1261.
 (pdftex.def)             Requested size: 336.88199pt x 172.15842pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1268.
+               Default added (so using `!tbp') on input line 1269.
 
 
-<images/traffic_flow_count_MN_line_plot.jpg, id=1180, 472.76625pt x 243.15843pt
->
+<images/traffic_flow_count_MN_line_plot.jpg, id=962, 472.76625pt x 243.15843pt>
 File: images/traffic_flow_count_MN_line_plot.jpg Graphic file (type jpg)
- <use images/traffic_flow_count_MN_line_plot.jpg>
+<use images/traffic_flow_count_MN_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MN_line_plot.jpg used on inp
-ut line 1272.
+ut line 1273.
 (pdftex.def)             Requested size: 336.88199pt x 173.27444pt.
 
-<images/traffic_flow_count_MS_line_plot.jpg, id=1181, 478.78876pt x 243.15843pt
->
+<images/traffic_flow_count_MS_line_plot.jpg, id=963, 478.78876pt x 243.15843pt>
 File: images/traffic_flow_count_MS_line_plot.jpg Graphic file (type jpg)
- <use images/traffic_flow_count_MS_line_plot.jpg>
+<use images/traffic_flow_count_MS_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MS_line_plot.jpg used on inp
-ut line 1279.
+ut line 1280.
 (pdftex.def)             Requested size: 336.88199pt x 171.08908pt.
- [79 <./images/traffic_flow_count_KN_line_plot.jpg> <./images/traffic_flow_coun
-t_KS_line_plot.jpg>] [80 <./images/traffic_flow_count_MN_line_plot.jpg> <./imag
-es/traffic_flow_count_MS_line_plot.jpg>]
+
+
+LaTeX Warning: Citation 'Pace2017' on page 81 undefined on input line 1290.
+
+[81 <./images/traffic_flow_count_KN_line_plot.jpg> <./images/traffic_flow_count
+_KS_line_plot.jpg>] [82 <./images/traffic_flow_count_MN_line_plot.jpg> <./image
+s/traffic_flow_count_MS_line_plot.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 1292.
+               Default added (so using `!tbp') on input line 1293.
 
 
-<images/traffic_flow_counts_correlation_results.jpg, id=1191, 920.68968pt x 243
-.15843pt>
+<images/traffic_flow_counts_correlation_results.jpg, id=973, 920.68968pt x 243.
+15843pt>
 File: images/traffic_flow_counts_correlation_results.jpg Graphic file (type jpg
 )
  <use images/traffic_flow_counts_correlation_results.jpg>
 Package pdftex.def Info: images/traffic_flow_counts_correlation_results.jpg use
-d on input line 1293.
+d on input line 1294.
 (pdftex.def)             Requested size: 368.26935pt x 97.26164pt.
- [81 <./images/traffic_flow_counts_correlation_results.jpg>] [82]
-<images/classification_metrics_result.jpg, id=1211, 511.15968pt x 454.69875pt>
+
+
+LaTeX Warning: Citation 'Pace2017' on page 83 undefined on input line 1302.
+
+[83 <./images/traffic_flow_counts_correlation_results.jpg>] [84]
+<images/classification_metrics_result.jpg, id=991, 511.15968pt x 454.69875pt>
 File: images/classification_metrics_result.jpg Graphic file (type jpg)
 
 <use images/classification_metrics_result.jpg>
 Package pdftex.def Info: images/classification_metrics_result.jpg used on input
- line 1312.
+ line 1313.
 (pdftex.def)             Requested size: 383.3688pt x 341.02322pt.
- [83 <./images/classification_metrics_result.jpg>]
-<images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg, id=1216, 530.73282
-pt x 464.4853pt>
+ [85 <./images/classification_metrics_result.jpg>]
+<images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg, id=996, 530.73282p
+t x 464.4853pt>
 File: images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg Graphic file (
 type jpg)
 
 <use images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg>
 Package pdftex.def Info: images/confusion_matrix_hamrun_valletta_342_4bin_15min
-.jpg used on input line 1321.
+.jpg used on input line 1322.
 (pdftex.def)             Requested size: 265.36575pt x 232.24208pt.
 
-<images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg, id=1217, 529.98pt 
-x 436.63126pt>
+<images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg, id=997, 529.98pt x
+ 436.63126pt>
 File: images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg Graphic file (
 type jpg)
-
-<use images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>
+ <use images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>
 Package pdftex.def Info: images/confusion_matrix_marsa_aldo_moro_342_4bin_15min
-.jpg used on input line 1328.
+.jpg used on input line 1329.
 (pdftex.def)             Requested size: 264.98933pt x 218.3151pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[84 <./images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg>] [85 <./imag
-es/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>] [86] [87]
+
+LaTeX Warning: Citation 'lv2015traffic' on page 86 undefined on input line 1337
+.
+
+[86 <./images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg>] [87 <./imag
+es/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>] [88] [89]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in alignment at lines 1353--1353
+Underfull \hbox (badness 10000) in alignment at lines 1354--1354
 []
  []
 
-[88
+[90
 
-] [89] [90]
-Overfull \hbox (1.11229pt too wide) in paragraph at lines 1379--1380
+] [91] [92]
+Overfull \hbox (1.11229pt too wide) in paragraph at lines 1380--1381
 []\OT1/lmr/m/n/12 This dis-ser-ta-tion's method-ol-ogy made ex-ten-sive use of 
 Open source maps (OSM)
  []
 
-[91]
+[93]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in alignment at lines 1381--1381
+Underfull \hbox (badness 10000) in alignment at lines 1382--1382
 []
  []
 
-[92
 
-] [93] [94] (fyp.bbl [95
+LaTeX Warning: Citation 'Ankerst1999' on page 94 undefined on input line 1392.
 
 
-] [96] [97])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1411.
- [98]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1411.
+LaTeX Warning: Citation 'huang2017research' on page 94 undefined on input line 
+1392.
+
+[94
+
+] [95] [96]
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1410  \bibliography
+                     {references}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1412.
+[97
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1412.
  (fyp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1411.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1411.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1412.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1412.
 
 Package rerunfilecheck Info: File `fyp.out' has not changed.
 (rerunfilecheck)             Checksum: 4D8A70C8C43F89A310DA1591D3CE9214;4492.
@@ -1445,16 +2367,24 @@ Package rerunfilecheck Info: File `fyp.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1411.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                fyp
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'fyp.run.xml'.
+\openout1 = `fyp.run.xml'.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1412.
  ) 
 Here is how much of TeX's memory you used:
- 10917 strings out of 493323
- 172013 string characters out of 3139038
- 278167 words of memory out of 3000000
- 13915 multiletter control sequences out of 15000+200000
+ 17151 strings out of 493323
+ 287175 string characters out of 3139038
+ 750803 words of memory out of 3000000
+ 20146 multiletter control sequences out of 15000+200000
  82211 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,11n,47p,1710b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,11n,47p,1713b,1356s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
@@ -1470,9 +2400,9 @@ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on fyp.pdf (107 pages, 5130110 bytes).
+Output written on fyp.pdf (106 pages, 5079909 bytes).
 PDF statistics:
- 1413 PDF objects out of 1440 (max. 8388607)
- 309 named destinations out of 1000 (max. 500000)
+ 1166 PDF objects out of 1200 (max. 8388607)
+ 262 named destinations out of 1000 (max. 500000)
  663 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -22,6 +22,7 @@
 
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 
 \makeatletter
 \def\BState{\State\hskip-\ALG@thistlm}
@@ -1333,7 +1334,7 @@ Collected performance metrics included accuracy and weighted precision, recall a
 
 In machine learning sometimes high recall is more important than high precision or the other way round and in most of the times there is a trade-off. The more tuning is made to any one of the metrics to improve it, the riskier it is to get a lower performance in another metric.  The ideal is to have both high recall and high precision. In the case of this study recall for high level of traffic classes is very important since knowledge of high traffic count is important and noise would be acceptable. Weighted F1-score was used to portray a balanced measure between recall and precision.
 
-Table \ref{table:classification_mertrics} shows the evaluation results described in terms of the metrics just discussed. It can be seen that models trained to predict for smaller time ahead intervals generally perform better than models that are trained with a lengthier prediction time interval for the same location.  Models all have proven to have highest recall and precision for class one traffic flow counts. It appears from table that the best overall classification metric scores were attained for Hamrun-Valletta roadway. However on examination of the confusion matrix (shown in fig. \ref{fig:confusion_matrix_hamrun_valletta_15min}) for classification results per label we noted that the model performed very badly for high traffic flow count classes. There were no results for class four and for classes two and three the precision and recall metrics are very low. In fact when computing the F1-score for class two and class three both results to be low at 0.14 and 0.0 respectively. This was found to happen as well in literature. In \cite{lv2015traffic} it is stated how trained ANN model does not perform well when traffic counts are low. Relative error in evaluation is much bigger when traffic flow is small. Results are only being quoted by Lv et al when traffic flow is 450 vehicles or more for a 15 minute time window.
+Table \ref{table:classification_mertrics} shows the evaluation results described in terms of the metrics just discussed. It can be seen that models trained to predict for smaller time ahead intervals generally perform better than models that are trained with a lengthier prediction time interval for the same location.  Models all have proven to have highest recall and precision for class one traffic flow counts. It appears from table that the best overall classification metric scores were attained for Hamrun-Valletta roadway. However on examination of the confusion matrix (shown in fig. \ref{fig:confusion_matrix_hamrun_valletta_15min}) for classification results per label we noted that the model performed very badly for high traffic flow count classes. There were no results for class four and for classes two and three the precision and recall metrics are very low. In fact when computing the F1-score for class two and class three both results to be low at 0.14 and 0.0 respectively. This was found to happen as well in literature. In \cite{lv2015traffic} it is stated how a trained ANN model to predict traffic flow count does not perform well when traffic counts are low. Relative error in evaluation is much bigger when traffic flow is small. For this reason results are only being quoted by Lv et al when traffic flow is 450 vehicles or more for a 15 minute time window.
 
 In contrast predictive overall results for Marsa road that leads to Aldo Moro are less promising than those for Hamrun-Valletta arterial road. Still the predictive efficacy results are very good especially when examined in the perspective of the confusion matrix shown in fig. \ref{fig:confusion_matrix_marsa_aldo_moro_15min}. Class four classified as class one or class two cases are very few and even if almost half of class four test values were predicted as class three in practice this would still make the model useful and offer guidance to describe the level of high traffic flow counts.
 
@@ -1405,7 +1406,7 @@ Evaluation for average trip delay computation (see section \ref{section:trip_ave
 
 
 \bibliomatter
-\bibliographystyle{abbrv}
+
  \bibliography{references}
  
 \end{document}
