@@ -1,274 +1,233 @@
 \begin{thebibliography}{10}
 
-\bibitem{Ahas2011}
-R.~Ahas, M.~Tiru, E.~Saluveer, and C.~Demunter.
-\newblock {Mobile telephones and mobile positioning data as source for
-  statistics : Estonian experiences}.
-\newblock {\em Presentation for NTTS}, 2011.
+\bibitem{Laurila2012}
+J.~K. Laurila, D.~Gatica-Perez, I.~Aad, J.~Blom, O.~Bornet, T.-M.-T. Do,
+  O.~Dousse, J.~Eberle, and M.~Miettinen, ``{The mobile data challenge: Big
+  data for mobile computing research},'' {\em Proceedings of the Workshop on
+  the Nokia Mobile Data Challenge, in Conjunction with the 10th International
+  Conference on Pervasive Computing}, pp.~1--8, 2012.
 
-\bibitem{AlNuaimi2015}
-E.~{Al Nuaimi}, H.~{Al Neyadi}, N.~Mohamed, and J.~Al-Jaroodi.
-\newblock {Applications of big data to smart cities}.
-\newblock {\em Journal of Internet Services and Applications}, 6(1):1--15,
-  2015.
+\bibitem{Hoteit2014}
+S.~Hoteit, S.~Secci, S.~Sobolevsky, C.~Ratti, and G.~Pujolle, ``{Estimating
+  human trajectories and hotspots through mobile phone data},'' {\em Computer
+  Networks}, vol.~64, pp.~296--307, 2014.
 
-\bibitem{Alarabi2014}
-L.~Alarabi, A.~Eldawy, R.~Alghamdi, and M.~F. Mokbel.
-\newblock {TAREEG : A MapReduce-Based Web Service for Extracting Spatial Data
-  from OpenStreetMap *}.
-\newblock pages 0--3, 2014.
+\bibitem{malta2011national}
+T.~Malta, ``National household travel survey 2010. transport malta,'' 2011.
 
-\bibitem{Alexander2015}
-L.~Alexander, S.~Jiang, M.~Murga, and M.~C. Gonz{\'{a}}lez.
-\newblock {Origin-destination trips by purpose and time of day inferred from
-  mobile phone data}.
-\newblock {\em Transportation Research Part C: Emerging Technologies},
-  58:240--250, 2015.
-
-\bibitem{Ankerst1999}
-M.~Ankerst, M.~M. Breunig, H.-P. Kriegel, and J.~Sander.
-\newblock Optics: Ordering points to identify the clustering structure.
-\newblock In {\em Proceedings of the 1999 ACM SIGMOD International Conference
-  on Management of Data}, SIGMOD '99, pages 49--60, New York, NY, USA, 1999.
-  ACM.
-
-\bibitem{atkinson2006cost}
-G.~Atkinson, S.~Mourato, et~al.
-\newblock {\em Cost-benefit analysis and the environment: recent developments}.
-\newblock 2006.
-
-\bibitem{Attard2015}
-M.~Attard, P.~{Von Brockdorff}, and F.~Bezzina.
-\newblock {The External Costs of Passenger and Commercial Vehicles Use in
-  Malta}.
-\newblock 2015.
-
-\bibitem{Bazghandi2012}
-A.~Bazghandi.
-\newblock {Techniques, Advantages and Problems of Agent Based Modeling for
-  Traffic Simulation}.
-\newblock {\em International Journal of Computer Science Issues},
-  9(1):115--119, 2012.
-
-\bibitem{Calabrese2011}
-C.~Calabrese, F.~Giusy, D.~Lorenzo, L.~Liu, C.~Ratti, F.~Calabrese, and G.~D.
-  Lorenzo.
-\newblock {Estimating Origin-Destination flows using opportunistically
-  collected mobile phone location data from one million users in Boston
-  Metropolitan Area Terms of Use Estimating Origin-Destination flows using
-  opportunistically collected mobile phone location da}.
-\newblock {\em IEEE Pervasive Computing}, 10(4):36--44, 2011.
-
-\bibitem{Calabrese2013}
-F.~Calabrese, M.~Diao, G.~{Di Lorenzo}, J.~Ferreira, and C.~Ratti.
-\newblock {Understanding individual mobility patterns from urban sensing data:
-  A mobile phone trace example}.
-\newblock {\em Transportation Research Part C: Emerging Technologies},
-  26:301--313, 2013.
-
-\bibitem{CambridgeSystematicsInc.2005}
-{Cambridge Systematics Inc.} and {Battelle Memorial Institute}.
-\newblock {An Initial Assessment of Freight Bottlenecks on Highways}.
-\newblock (October):191, 2005.
-
-\bibitem{ChakrabortyNKNagwaniLopamudraDey2011}
-S.~{Chakraborty NKNagwani Lopamudra Dey}.
-\newblock {Performance Comparison of Incremental K-means and Incremental DBSCAN
-  Algorithms}.
-\newblock {\em International Journal of Computer Applications},
-  27(11):975--8887, 2011.
+\bibitem{EUTransportDirectorate2018}
+{Directorate General for Mobility and Transport}, ``{Urban mobility},'' 2018.
 
 \bibitem{Colak2015}
 S.~{\c{C}}olak, L.~P. Alexander, B.~G. Alvim, S.~R. Mehndiratta, and M.~C.
-  Gonz{\'{a}}lez.
-\newblock {Analyzing Cell Phone Location Data for Urban Travel}.
-\newblock {\em Transportation Research Record: Journal of the Transportation
-  Research Board}, 2526:126--135, 2015.
+  Gonz{\'{a}}lez, ``{Analyzing Cell Phone Location Data for Urban Travel},''
+  {\em Transportation Research Record: Journal of the Transportation Research
+  Board}, vol.~2526, pp.~126--135, 2015.
 
-\bibitem{EUTransportDirectorate2018}
-{Directorate General for Mobility and Transport}.
-\newblock {Urban mobility}, 2018.
-
-\bibitem{eldawy2015spatialhadoop}
-A.~Eldawy and M.~F. Mokbel.
-\newblock Spatialhadoop: A mapreduce framework for spatial data.
-\newblock In {\em Data Engineering (ICDE), 2015 IEEE 31st International
-  Conference on}, pages 1352--1363. IEEE, 2015.
-
-\bibitem{Gonzalez2008}
-M.~C. Gonzalez, C.~A. Hidalgo, and A.-L. Barabasi.
-\newblock {Understanding individual human mobility patterns}.
-\newblock {\em Nature}, 453(7196):779--782, 2008.
-
-\bibitem{Hirai2015}
-S.~Hirai, J.~Xing, R.~Horiguchi, T.~Shiraishi, and M.~Kobayashi.
-\newblock {Development of a Network Traffic Simulator for the Entire
-  Inter-urban Expressway Network in Japan}.
-\newblock {\em Transportation Research Procedia}, 6(June 2014):285--296, 2015.
-
-\bibitem{hornik1990universal}
-K.~Hornik, M.~Stinchcombe, and H.~White.
-\newblock Universal approximation of an unknown mapping and its derivatives
-  using multilayer feedforward networks.
-\newblock {\em Neural networks}, 3(5):551--560, 1990.
-
-\bibitem{Hoteit2016}
-S.~Hoteit, G.~Chen, A.~Viana, and M.~Fiore.
-\newblock {Filling the gaps: On the Completion of Sparse Call Detail Records
-  for Mobility Analysis}.
-\newblock {\em Proceedings of the Eleventh ACM Workshop on Challenged Networks
-  - CHANTS '16}, (October):45--50, 2016.
-
-\bibitem{Hoteit2014}
-S.~Hoteit, S.~Secci, S.~Sobolevsky, C.~Ratti, and G.~Pujolle.
-\newblock {Estimating human trajectories and hotspots through mobile phone
-  data}.
-\newblock {\em Computer Networks}, 64:296--307, 2014.
-
-\bibitem{huang2017research}
-F.~Huang, Q.~Zhu, J.~Zhou, J.~Tao, X.~Zhou, D.~Jin, X.~Tan, and L.~Wang.
-\newblock Research on the parallelization of the dbscan clustering algorithm
-  for spatial data mining based on the spark platform.
-\newblock {\em Remote Sensing}, 9(12):1301, 2017.
-
-\bibitem{inoubli2016experimental}
-W.~Inoubli, S.~Aridhi, H.~Mezni, M.~Maddouri, and E.~M. Nguifo.
-\newblock An experimental survey on big data frameworks.
-\newblock {\em arXiv preprint arXiv:1610.09962}, 2016.
-
-\bibitem{Iqbal2014}
-M.~S. Iqbal, C.~F. Choudhury, P.~Wang, and M.~C. Gonz{\'{a}}lez.
-\newblock {Development of origin-destination matrices using mobile phone call
-  data}.
-\newblock {\em Transportation Research Part C: Emerging Technologies},
-  40:63--74, 2014.
-
-\bibitem{Jain1996}
-A.~K. Jain and J.~Mao.
-\newblock {Artificial Neural Network: A Tutorial}.
-\newblock {\em Communications}, 29:31--44, 1996.
-
-\bibitem{Kurien2012}
-A.~M. Kurien, G.~Noel, K.~Djouani, B.~J. {Van Wyk}, and A.~Mellouk.
-\newblock {A subscriber classification approach for mobile cellular networks}.
-\newblock {\em Simulation Modelling Practice and Theory}, 25:17--35, 2012.
-
-\bibitem{Laurila2012}
-J.~K. Laurila, D.~Gatica-Perez, I.~Aad, J.~Blom, O.~Bornet, T.-M.-T. Do,
-  O.~Dousse, J.~Eberle, and M.~Miettinen.
-\newblock {The mobile data challenge: Big data for mobile computing research}.
-\newblock {\em Proceedings of the Workshop on the Nokia Mobile Data Challenge,
-  in Conjunction with the 10th International Conference on Pervasive
-  Computing}, pages 1--8, 2012.
-
-\bibitem{Leduc2008}
-G.~Leduc.
-\newblock {Road Traffic Data : Collection Methods and Applications}.
-\newblock {\em EUR Number: Technical Note: JRC 47967}, JRC 47967:55, 2008.
-
-\bibitem{Liu2014}
-J.~Liu, F.~Liu, and N.~Ansari.
-\newblock {Monitoring and analyzing big traffic data of a large-scale cellular
-  network with Hadoop}.
-\newblock {\em IEEE Network}, 28(4):32--39, 2014.
-
-\bibitem{lv2015traffic}
-Y.~Lv, Y.~Duan, W.~Kang, Z.~Li, and F.-Y. Wang.
-\newblock Traffic flow prediction with big data: a deep learning approach.
-\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
-  16(2):865--873, 2015.
-
-\bibitem{malta2011national}
-T.~Malta.
-\newblock National household travel survey 2010. transport malta, 2011.
-
-\bibitem{Naess2012}
-P.~Naess, M.~S. Nicolaisen, and A.~Strand.
-\newblock {Traffic Forecasts Ignoring Induced Demand: a Shaky Fundament for
-  Cost-Benefit Analyses}.
-\newblock {\em European Journal of Transport and Infrastructure Research},
-  12(3):291--309, 2012.
-
-\bibitem{Pace2017}
-N.~Pace.
-\newblock {Investigating the Potential of Big Data in the Management of Traffic
-  in Malta}, 2017.
-
-\bibitem{raschka2015python}
-S.~Raschka.
-\newblock {\em Python machine learning}.
-\newblock Packt Publishing Ltd, 2015.
+\bibitem{Attard2015}
+M.~Attard, P.~{Von Brockdorff}, and F.~Bezzina, ``{The External Costs of
+  Passenger and Commercial Vehicles Use in Malta},'' 2015.
 
 \bibitem{Schrank.2015}
-D.~Schrank., B.~Eisele., T.~Lomax., and J.~Bak.
-\newblock {2015 Urban Mobility Scorecard}, 2015.
+D.~Schrank., B.~Eisele., T.~Lomax., and J.~Bak., ``{2015 Urban Mobility
+  Scorecard},'' 2015.
 
-\bibitem{Shin}
-H.~Shin, J.~Vaidya, V.~Atluri, and S.~Choi.
-\newblock {Ensuring Privacy and Security for LBS through Trajectory
-  Partitioning}.
+\bibitem{CambridgeSystematicsInc.2005}
+{Cambridge Systematics Inc.} and {Battelle Memorial Institute}, ``{An Initial
+  Assessment of Freight Bottlenecks on Highways},'' no.~October, p.~191, 2005.
 
-\bibitem{sommer2013using}
-M.~Sommer, S.~Tomforde, and J.~H{\"a}hner.
-\newblock Using a neural network for forecasting in an organic traffic control
-  management system.
-\newblock In {\em ESOS}, 2013.
+\bibitem{AlNuaimi2015}
+E.~{Al Nuaimi}, H.~{Al Neyadi}, N.~Mohamed, and J.~Al-Jaroodi, ``{Applications
+  of big data to smart cities},'' {\em Journal of Internet Services and
+  Applications}, vol.~6, no.~1, pp.~1--15, 2015.
 
-\bibitem{Steenbruggen2015}
-J.~Steenbruggen, E.~Tranos, and P.~Nijkamp.
-\newblock {Data from mobile phone operators: A tool for smarter cities?}
-\newblock {\em Telecommunications Policy}, 39(3-4):335--346, 2015.
+\bibitem{atkinson2006cost}
+G.~Atkinson, S.~Mourato, {\em et~al.}, {\em Cost-benefit analysis and the
+  environment: recent developments}.
+\newblock 2006.
 
-\bibitem{Toledo2004}
-T.~Toledo, M.~Ben-Akiva, D.~Darda, M.~Jha, and H.~Koutsopoulos.
-\newblock {Calibration of Microscopic Traffic Simulation Models with Aggregate
-  Data}.
-\newblock {\em Transportation Research Record: Journal of the Transportation
-  Research Board}, 1876:10--19, 2004.
+\bibitem{Naess2012}
+P.~Naess, M.~S. Nicolaisen, and A.~Strand, ``{Traffic Forecasts Ignoring
+  Induced Demand: a Shaky Fundament for Cost-Benefit Analyses},'' {\em European
+  Journal of Transport and Infrastructure Research}, vol.~12, no.~3,
+  pp.~291--309, 2012.
 
 \bibitem{Toole2015}
 J.~L. Toole, S.~Colak, B.~Sturt, L.~P. Alexander, A.~Evsukoff, and M.~C.
-  Gonz{\'{a}}lez.
-\newblock {The path most traveled: Travel demand estimation using big data
-  resources}.
-\newblock {\em Transportation Research Part C: Emerging Technologies},
-  58:162--177, 2015.
+  Gonz{\'{a}}lez, ``{The path most traveled: Travel demand estimation using big
+  data resources},'' {\em Transportation Research Part C: Emerging
+  Technologies}, vol.~58, pp.~162--177, 2015.
+
+\bibitem{Liu2014}
+J.~Liu, F.~Liu, and N.~Ansari, ``{Monitoring and analyzing big traffic data of
+  a large-scale cellular network with Hadoop},'' {\em IEEE Network}, vol.~28,
+  no.~4, pp.~32--39, 2014.
+
+\bibitem{Leduc2008}
+G.~Leduc, ``{Road Traffic Data : Collection Methods and Applications},'' {\em
+  EUR Number: Technical Note: JRC 47967}, vol.~JRC 47967, p.~55, 2008.
 
 \bibitem{VLAHOGIANNI20143}
-E.~I. Vlahogianni, M.~G. Karlaftis, and J.~C. Golias.
-\newblock Short-term traffic forecasting: Where we are and where we’re going.
-\newblock {\em Transportation Research Part C: Emerging Technologies}, 43:3 --
-  19, 2014.
+E.~I. Vlahogianni, M.~G. Karlaftis, and J.~C. Golias, ``Short-term traffic
+  forecasting: Where we are and where we’re going,'' {\em Transportation
+  Research Part C: Emerging Technologies}, vol.~43, pp.~3 -- 19, 2014.
 \newblock Special Issue on Short-term Traffic Flow Forecasting.
 
+\bibitem{Calabrese2013}
+F.~Calabrese, M.~Diao, G.~{Di Lorenzo}, J.~Ferreira, and C.~Ratti,
+  ``{Understanding individual mobility patterns from urban sensing data: A
+  mobile phone trace example},'' {\em Transportation Research Part C: Emerging
+  Technologies}, vol.~26, pp.~301--313, 2013.
+
+\bibitem{Gonzalez2008}
+M.~C. Gonzalez, C.~A. Hidalgo, and A.-L. Barabasi, ``{Understanding individual
+  human mobility patterns},'' {\em Nature}, vol.~453, no.~7196, pp.~779--782,
+  2008.
+
+\bibitem{Hoteit2016}
+S.~Hoteit, G.~Chen, A.~Viana, and M.~Fiore, ``{Filling the gaps: On the
+  Completion of Sparse Call Detail Records for Mobility Analysis},'' {\em
+  Proceedings of the Eleventh ACM Workshop on Challenged Networks - CHANTS
+  '16}, no.~October, pp.~45--50, 2016.
+
+\bibitem{Steenbruggen2015}
+J.~Steenbruggen, E.~Tranos, and P.~Nijkamp, ``{Data from mobile phone
+  operators: A tool for smarter cities?},'' {\em Telecommunications Policy},
+  vol.~39, no.~3-4, pp.~335--346, 2015.
+
+\bibitem{Alexander2015}
+L.~Alexander, S.~Jiang, M.~Murga, and M.~C. Gonz{\'{a}}lez,
+  ``{Origin-destination trips by purpose and time of day inferred from mobile
+  phone data},'' {\em Transportation Research Part C: Emerging Technologies},
+  vol.~58, pp.~240--250, 2015.
+
+\bibitem{Calabrese2011}
+C.~Calabrese, F.~Giusy, D.~Lorenzo, L.~Liu, C.~Ratti, F.~Calabrese, and G.~D.
+  Lorenzo, ``{Estimating Origin-Destination flows using opportunistically
+  collected mobile phone location data from one million users in Boston
+  Metropolitan Area Terms of Use Estimating Origin-Destination flows using
+  opportunistically collected mobile phone location da},'' {\em IEEE Pervasive
+  Computing}, vol.~10, no.~4, pp.~36--44, 2011.
+
+\bibitem{Iqbal2014}
+M.~S. Iqbal, C.~F. Choudhury, P.~Wang, and M.~C. Gonz{\'{a}}lez, ``{Development
+  of origin-destination matrices using mobile phone call data},'' {\em
+  Transportation Research Part C: Emerging Technologies}, vol.~40, pp.~63--74,
+  2014.
+
 \bibitem{Wang2012}
-M.-h. Wang and S.~D. Schrock.
-\newblock {Feasibility of Using Cellular Telephone Data to Determine the
-  Truckshed of Intermodal Facilities}.
-\newblock {\em Cell}, (August 2009), 2012.
+M.-h. Wang and S.~D. Schrock, ``{Feasibility of Using Cellular Telephone Data
+  to Determine the Truckshed of Intermodal Facilities},'' {\em Cell},
+  no.~August 2009, 2012.
+
+\bibitem{Ahas2011}
+R.~Ahas, M.~Tiru, E.~Saluveer, and C.~Demunter, ``{Mobile telephones and mobile
+  positioning data as source for statistics : Estonian experiences},'' {\em
+  Presentation for NTTS}, 2011.
 
 \bibitem{Wang2013}
-M.~H. Wang, S.~D. Schrock, N.~{Vander Broek}, and T.~Mulinazzi.
-\newblock {Estimating Dynamic Origin-Destination Data and Travel Demand Using
-  Cell Phone Network Data}.
-\newblock {\em International Journal of Intelligent Transportation Systems
-  Research}, 11(2):76--86, 2013.
+M.~H. Wang, S.~D. Schrock, N.~{Vander Broek}, and T.~Mulinazzi, ``{Estimating
+  Dynamic Origin-Destination Data and Travel Demand Using Cell Phone Network
+  Data},'' {\em International Journal of Intelligent Transportation Systems
+  Research}, vol.~11, no.~2, pp.~76--86, 2013.
 
 \bibitem{Wu2014}
-H.~Wu, T.~Zhang, and J.~Gong.
-\newblock {GeoComputation for Geospatial Big Data}.
-\newblock {\em Transactions in GIS}, 18(S1):1--2, 2014.
+H.~Wu, T.~Zhang, and J.~Gong, ``{GeoComputation for Geospatial Big Data},''
+  {\em Transactions in GIS}, vol.~18, no.~S1, pp.~1--2, 2014.
 
-\bibitem{Yang2004}
-K.~Yang and C.~Shahabi.
-\newblock {A PCA-based similarity measure for multivariate time series}.
-\newblock {\em Proceedings of the 2nd ACM international workshop on Multimedia
-  databases - MMDB '04}, page~65, 2004.
+\bibitem{eldawy2015spatialhadoop}
+A.~Eldawy and M.~F. Mokbel, ``Spatialhadoop: A mapreduce framework for spatial
+  data,'' in {\em Data Engineering (ICDE), 2015 IEEE 31st International
+  Conference on}, pp.~1352--1363, IEEE, 2015.
+
+\bibitem{Alarabi2014}
+L.~Alarabi, A.~Eldawy, R.~Alghamdi, and M.~F. Mokbel, ``{TAREEG : A
+  MapReduce-Based Web Service for Extracting Spatial Data from OpenStreetMap
+  *},'' pp.~0--3, 2014.
+
+\bibitem{Shin}
+H.~Shin, J.~Vaidya, V.~Atluri, and S.~Choi, ``{Ensuring Privacy and Security
+  for LBS through Trajectory Partitioning},''
+
+\bibitem{inoubli2016experimental}
+W.~Inoubli, S.~Aridhi, H.~Mezni, M.~Maddouri, and E.~M. Nguifo, ``An
+  experimental survey on big data frameworks,'' {\em arXiv preprint
+  arXiv:1610.09962}, 2016.
+
+\bibitem{Kurien2012}
+A.~M. Kurien, G.~Noel, K.~Djouani, B.~J. {Van Wyk}, and A.~Mellouk, ``{A
+  subscriber classification approach for mobile cellular networks},'' {\em
+  Simulation Modelling Practice and Theory}, vol.~25, pp.~17--35, 2012.
 
 \bibitem{Zheng2011}
-Y.~Zheng and X.~Xie.
-\newblock {Learning travel recommendations from user-generated GPS traces}.
-\newblock {\em ACM Transactions on Intelligent Systems and Technology},
-  2(1):1--29, 2011.
+Y.~Zheng and X.~Xie, ``{Learning travel recommendations from user-generated GPS
+  traces},'' {\em ACM Transactions on Intelligent Systems and Technology},
+  vol.~2, no.~1, pp.~1--29, 2011.
+
+\bibitem{Toledo2004}
+T.~Toledo, M.~Ben-Akiva, D.~Darda, M.~Jha, and H.~Koutsopoulos, ``{Calibration
+  of Microscopic Traffic Simulation Models with Aggregate Data},'' {\em
+  Transportation Research Record: Journal of the Transportation Research
+  Board}, vol.~1876, pp.~10--19, 2004.
+
+\bibitem{Hirai2015}
+S.~Hirai, J.~Xing, R.~Horiguchi, T.~Shiraishi, and M.~Kobayashi, ``{Development
+  of a Network Traffic Simulator for the Entire Inter-urban Expressway Network
+  in Japan},'' {\em Transportation Research Procedia}, vol.~6, no.~June 2014,
+  pp.~285--296, 2015.
+
+\bibitem{Bazghandi2012}
+A.~Bazghandi, ``{Techniques, Advantages and Problems of Agent Based Modeling
+  for Traffic Simulation},'' {\em International Journal of Computer Science
+  Issues}, vol.~9, no.~1, pp.~115--119, 2012.
+
+\bibitem{ChakrabortyNKNagwaniLopamudraDey2011}
+S.~{Chakraborty NKNagwani Lopamudra Dey}, ``{Performance Comparison of
+  Incremental K-means and Incremental DBSCAN Algorithms},'' {\em International
+  Journal of Computer Applications}, vol.~27, no.~11, pp.~975--8887, 2011.
+
+\bibitem{huang2017research}
+F.~Huang, Q.~Zhu, J.~Zhou, J.~Tao, X.~Zhou, D.~Jin, X.~Tan, and L.~Wang,
+  ``Research on the parallelization of the dbscan clustering algorithm for
+  spatial data mining based on the spark platform,'' {\em Remote Sensing},
+  vol.~9, no.~12, p.~1301, 2017.
+
+\bibitem{sommer2013using}
+M.~Sommer, S.~Tomforde, and J.~H{\"a}hner, ``Using a neural network for
+  forecasting in an organic traffic control management system.,'' in {\em
+  ESOS}, 2013.
+
+\bibitem{Jain1996}
+A.~K. Jain and J.~Mao, ``{Artificial Neural Network: A Tutorial},'' {\em
+  Communications}, vol.~29, pp.~31--44, 1996.
+
+\bibitem{raschka2015python}
+S.~Raschka, {\em Python machine learning}.
+\newblock Packt Publishing Ltd, 2015.
+
+\bibitem{Yang2004}
+K.~Yang and C.~Shahabi, ``{A PCA-based similarity measure for multivariate time
+  series},'' {\em Proceedings of the 2nd ACM international workshop on
+  Multimedia databases - MMDB '04}, p.~65, 2004.
+
+\bibitem{hornik1990universal}
+K.~Hornik, M.~Stinchcombe, and H.~White, ``Universal approximation of an
+  unknown mapping and its derivatives using multilayer feedforward networks,''
+  {\em Neural networks}, vol.~3, no.~5, pp.~551--560, 1990.
+
+\bibitem{Pace2017}
+N.~Pace, ``{Investigating the Potential of Big Data in the Management of
+  Traffic in Malta},'' 2017.
+
+\bibitem{lv2015traffic}
+Y.~Lv, Y.~Duan, W.~Kang, Z.~Li, and F.-Y. Wang, ``Traffic flow prediction with
+  big data: a deep learning approach,'' {\em IEEE Transactions on Intelligent
+  Transportation Systems}, vol.~16, no.~2, pp.~865--873, 2015.
+
+\bibitem{Ankerst1999}
+M.~Ankerst, M.~M. Breunig, H.-P. Kriegel, and J.~Sander, ``Optics: Ordering
+  points to identify the clustering structure,'' in {\em Proceedings of the
+  1999 ACM SIGMOD International Conference on Management of Data}, SIGMOD '99,
+  (New York, NY, USA), pp.~49--60, ACM, 1999.
 
 \end{thebibliography}
