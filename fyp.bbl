@@ -198,8 +198,8 @@ M.~Sommer, S.~Tomforde, and J.~H{\"a}hner, ``Using a neural network for
   ESOS}, 2013.
 
 \bibitem{Jain1996}
-A.~K. Jain and J.~Mao, ``{Artificial Neural Network: A Tutorial},'' {\em
-  Communications}, vol.~29, pp.~31--44, 1996.
+A.~K. Jain, J.~Mao, and K.~M. Mohiuddin, ``Artificial neural networks: A
+  tutorial,'' {\em Computer}, vol.~29, no.~3, pp.~31--44, 1996.
 
 \bibitem{raschka2015python}
 S.~Raschka, {\em Python machine learning}.
