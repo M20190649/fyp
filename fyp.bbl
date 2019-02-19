@@ -29,8 +29,8 @@ M.~Attard, P.~{Von Brockdorff}, and F.~Bezzina, ``{The External Costs of
   Passenger and Commercial Vehicles Use in Malta},'' 2015.
 
 \bibitem{Schrank.2015}
-D.~Schrank., B.~Eisele., T.~Lomax., and J.~Bak., ``{2015 Urban Mobility
-  Scorecard},'' 2015.
+U.~M. Scorecard, ``The texas a\&m transportation institute and inrix,'' {\em
+  Inc., USA}, vol.~9, no.~2015, p.~10, 2015.
 
 \bibitem{CambridgeSystematicsInc.2005}
 {Cambridge Systematics Inc.} and {Battelle Memorial Institute}, ``{An Initial
@@ -144,6 +144,10 @@ A.~Eldawy and M.~F. Mokbel, ``Spatialhadoop: A mapreduce framework for spatial
 L.~Alarabi, A.~Eldawy, R.~Alghamdi, and M.~F. Mokbel, ``{TAREEG : A
   MapReduce-Based Web Service for Extracting Spatial Data from OpenStreetMap
   *},'' pp.~0--3, 2014.
+
+\bibitem{Shin}
+H.~Shin, J.~Vaidya, V.~Atluri, and S.~Choi, ``{Ensuring Privacy and Security
+  for LBS through Trajectory Partitioning},''
 
 \bibitem{inoubli2016experimental}
 W.~Inoubli, S.~Aridhi, H.~Mezni, M.~Maddouri, and E.~M. Nguifo, ``An
