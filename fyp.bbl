@@ -1,17 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Laurila2012}
-J.~K. Laurila, D.~Gatica-Perez, I.~Aad, J.~Blom, O.~Bornet, T.-M.-T. Do,
-  O.~Dousse, J.~Eberle, and M.~Miettinen, ``{The mobile data challenge: Big
-  data for mobile computing research},'' {\em Proceedings of the Workshop on
-  the Nokia Mobile Data Challenge, in Conjunction with the 10th International
-  Conference on Pervasive Computing}, pp.~1--8, 2012.
-
-\bibitem{Hoteit2014}
-S.~Hoteit, S.~Secci, S.~Sobolevsky, C.~Ratti, and G.~Pujolle, ``{Estimating
-  human trajectories and hotspots through mobile phone data},'' {\em Computer
-  Networks}, vol.~64, pp.~296--307, 2014.
-
 \bibitem{malta2011national}
 T.~Malta, ``National household travel survey 2010. transport malta,'' 2011.
 
@@ -79,6 +67,11 @@ F.~Calabrese, M.~Diao, G.~{Di Lorenzo}, J.~Ferreira, and C.~Ratti,
   mobile phone trace example},'' {\em Transportation Research Part C: Emerging
   Technologies}, vol.~26, pp.~301--313, 2013.
 
+\bibitem{Hoteit2014}
+S.~Hoteit, S.~Secci, S.~Sobolevsky, C.~Ratti, and G.~Pujolle, ``{Estimating
+  human trajectories and hotspots through mobile phone data},'' {\em Computer
+  Networks}, vol.~64, pp.~296--307, 2014.
+
 \bibitem{Gonzalez2008}
 M.~C. Gonzalez, C.~A. Hidalgo, and A.-L. Barabasi, ``{Understanding individual
   human mobility patterns},'' {\em Nature}, vol.~453, no.~7196, pp.~779--782,
@@ -131,6 +124,9 @@ M.~H. Wang, S.~D. Schrock, N.~{Vander Broek}, and T.~Mulinazzi, ``{Estimating
   Data},'' {\em International Journal of Intelligent Transportation Systems
   Research}, vol.~11, no.~2, pp.~76--86, 2013.
 
+\bibitem{phil_locke_2012}
+P.~Locke, ``Cell tower triangulation - how it works,'' Jun 2012.
+
 \bibitem{Wu2014}
 H.~Wu, T.~Zhang, and J.~Gong, ``{GeoComputation for Geospatial Big Data},''
   {\em Transactions in GIS}, vol.~18, no.~S1, pp.~1--2, 2014.
@@ -144,6 +140,13 @@ A.~Eldawy and M.~F. Mokbel, ``Spatialhadoop: A mapreduce framework for spatial
 L.~Alarabi, A.~Eldawy, R.~Alghamdi, and M.~F. Mokbel, ``{TAREEG : A
   MapReduce-Based Web Service for Extracting Spatial Data from OpenStreetMap
   *},'' pp.~0--3, 2014.
+
+\bibitem{Laurila2012}
+J.~K. Laurila, D.~Gatica-Perez, I.~Aad, J.~Blom, O.~Bornet, T.-M.-T. Do,
+  O.~Dousse, J.~Eberle, and M.~Miettinen, ``{The mobile data challenge: Big
+  data for mobile computing research},'' {\em Proceedings of the Workshop on
+  the Nokia Mobile Data Challenge, in Conjunction with the 10th International
+  Conference on Pervasive Computing}, pp.~1--8, 2012.
 
 \bibitem{Shin}
 H.~Shin, J.~Vaidya, V.~Atluri, and S.~Choi, ``{Ensuring Privacy and Security
