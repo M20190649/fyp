@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  6 MAR 2019 23:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.25)  7 MAR 2019 00:27
 entering extended mode
 **./fyp.tex
 (fyp.tex
@@ -1329,7 +1329,7 @@ _flow_count_MN_Nigel_pace.jpg>] [81 <./images/traffic_flow_count_MS_MINE.jpg> <
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 1268.
 
-<images/traffic_flow_count_KN_line_plot.jpg, id=1206, 481.8pt x 244.66406pt>
+<images/traffic_flow_count_KN_line_plot.jpg, id=1209, 481.8pt x 244.66406pt>
 File: images/traffic_flow_count_KN_line_plot.jpg Graphic file (type jpg)
 
 <use images/traffic_flow_count_KN_line_plot.jpg>
@@ -1337,7 +1337,7 @@ Package pdftex.def Info: images/traffic_flow_count_KN_line_plot.jpg used on inp
 ut line 1272.
 (pdftex.def)             Requested size: 336.88199pt x 171.077pt.
 
-<images/traffic_flow_count_KS_line_plot.jpg, id=1207, 477.28313pt x 243.91125pt
+<images/traffic_flow_count_KS_line_plot.jpg, id=1210, 477.28313pt x 243.91125pt
 >
 File: images/traffic_flow_count_KS_line_plot.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_KS_line_plot.jpg>
@@ -1350,7 +1350,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 1287.
 
 
-<images/traffic_flow_count_MN_line_plot.jpg, id=1208, 472.76625pt x 243.15843pt
+<images/traffic_flow_count_MN_line_plot.jpg, id=1211, 472.76625pt x 243.15843pt
 >
 File: images/traffic_flow_count_MN_line_plot.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_MN_line_plot.jpg>
@@ -1358,22 +1358,20 @@ Package pdftex.def Info: images/traffic_flow_count_MN_line_plot.jpg used on inp
 ut line 1291.
 (pdftex.def)             Requested size: 336.88199pt x 173.27444pt.
 
-<images/traffic_flow_count_MS_line_plot.jpg, id=1209, 478.78876pt x 243.15843pt
+<images/traffic_flow_count_MS_line_plot.jpg, id=1212, 478.78876pt x 243.15843pt
 >
 File: images/traffic_flow_count_MS_line_plot.jpg Graphic file (type jpg)
  <use images/traffic_flow_count_MS_line_plot.jpg>
 Package pdftex.def Info: images/traffic_flow_count_MS_line_plot.jpg used on inp
 ut line 1298.
 (pdftex.def)             Requested size: 336.88199pt x 171.08908pt.
- [82 <./images/traffic_flow_count_KN_line_plot.jpg> <./images/traffic_flow_coun
-t_KS_line_plot.jpg>] [83 <./images/traffic_flow_count_MN_line_plot.jpg> <./imag
-es/traffic_flow_count_MS_line_plot.jpg>]
+
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 1311.
 
 
-<images/traffic_flow_counts_correlation_results.jpg, id=1220, 920.68968pt x 243
+<images/traffic_flow_counts_correlation_results.jpg, id=1214, 920.68968pt x 243
 .15843pt>
 File: images/traffic_flow_counts_correlation_results.jpg Graphic file (type jpg
 )
@@ -1381,16 +1379,19 @@ File: images/traffic_flow_counts_correlation_results.jpg Graphic file (type jpg
 Package pdftex.def Info: images/traffic_flow_counts_correlation_results.jpg use
 d on input line 1312.
 (pdftex.def)             Requested size: 368.26935pt x 97.26164pt.
- [84 <./images/traffic_flow_counts_correlation_results.jpg>] [85]
-<images/classification_metrics_result.jpg, id=1239, 511.15968pt x 454.69875pt>
+ [82 <./images/traffic_flow_counts_correlation_results.jpg>] [83 <./images/traf
+fic_flow_count_KN_line_plot.jpg> <./images/traffic_flow_count_KS_line_plot.jpg>
+] [84 <./images/traffic_flow_count_MN_line_plot.jpg> <./images/traffic_flow_cou
+nt_MS_line_plot.jpg>] [85]
+<images/classification_metrics_result.jpg, id=1242, 511.15968pt x 454.69875pt>
 File: images/classification_metrics_result.jpg Graphic file (type jpg)
 
 <use images/classification_metrics_result.jpg>
 Package pdftex.def Info: images/classification_metrics_result.jpg used on input
  line 1331.
 (pdftex.def)             Requested size: 383.3688pt x 341.02322pt.
- [86 <./images/classification_metrics_result.jpg>]
-<images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg, id=1244, 530.73282
+ [86]
+<images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg, id=1247, 530.73282
 pt x 464.4853pt>
 File: images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg Graphic file (
 type jpg)
@@ -1400,7 +1401,11 @@ Package pdftex.def Info: images/confusion_matrix_hamrun_valletta_342_4bin_15min
 .jpg used on input line 1340.
 (pdftex.def)             Requested size: 371.51044pt x 325.1375pt.
 
-<images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg, id=1245, 529.98pt 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+<images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg, id=1248, 529.98pt 
 x 436.63126pt>
 File: images/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg Graphic file (
 type jpg)
@@ -1413,8 +1418,9 @@ Package pdftex.def Info: images/confusion_matrix_marsa_aldo_moro_342_4bin_15min
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[87 <./images/confusion_matrix_hamrun_valletta_342_4bin_15min.jpg>] [88 <./imag
-es/confusion_matrix_marsa_aldo_moro_342_4bin_15min.jpg>] [89] [90]
+[87 <./images/classification_metrics_result.jpg>] [88 <./images/confusion_matri
+x_hamrun_valletta_342_4bin_15min.jpg>] [89 <./images/confusion_matrix_marsa_ald
+o_moro_342_4bin_15min.jpg>] [90]
 Chapter 5.
 
 Underfull \hbox (badness 10000) in alignment at lines 1372--1372
@@ -1476,9 +1482,9 @@ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on fyp.pdf (111 pages, 5236981 bytes).
+Output written on fyp.pdf (111 pages, 5236662 bytes).
 PDF statistics:
- 1449 PDF objects out of 1728 (max. 8388607)
+ 1452 PDF objects out of 1728 (max. 8388607)
  317 named destinations out of 1000 (max. 500000)
  676 words of extra memory for PDF output out of 10000 (max. 10000000)
 

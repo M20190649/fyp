@@ -45,8 +45,8 @@
 \contentsline {section}{\numberline {4.1}Trip counts per hour evaluation}{69}{section.4.1}
 \contentsline {section}{\numberline {4.2}Trip average delay per hour evaluation}{72}{section.4.2}
 \contentsline {section}{\numberline {4.3}Traffic flow count evaluation}{77}{section.4.3}
-\contentsline {section}{\numberline {4.4}Traffic flow count prediction for a selection of locations evaluation}{85}{section.4.4}
-\contentsline {section}{\numberline {4.5}Conclusion}{89}{section.4.5}
+\contentsline {section}{\numberline {4.4}Traffic flow count prediction for a selection of locations evaluation}{86}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion}{90}{section.4.5}
 \contentsline {chapter}{\numberline {5.}Conclusion}{91}{chapter.5}
 \contentsline {section}{\numberline {5.1}Major contributions of this dissertation}{93}{section.5.1}
 \contentsline {section}{\numberline {5.2}Discussion}{94}{section.5.2}
