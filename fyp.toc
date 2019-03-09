@@ -28,28 +28,28 @@
 \contentsline {section}{\numberline {3.2}Dataset preliminary analysis}{33}{section.3.2}
 \contentsline {section}{\numberline {3.3}Algorithm Selection}{35}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Trajectory interpolation through cell tower data}{36}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Traffic simulation from OD matrix}{38}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Traffic flow detection by trip generation assigned\\ traffic}{39}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.2}Traffic simulation from OD matrix}{37}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Traffic flow detection by trip generation assigned\\ traffic}{38}{subsection.3.3.3}
 \contentsline {section}{\numberline {3.4}Main activity hubs extraction through clustering}{39}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}K-means clustering}{40}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.1}K-means clustering}{39}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}DBSCAN clustering}{40}{subsection.3.4.2}
 \contentsline {section}{\numberline {3.5}OD Matrix trip Generation}{42}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}OD Matrix computation}{43}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Trip generation, route choice and traffic assignment}{44}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Traffic flow aggregation through spatial binning}{51}{section.3.6}
-\contentsline {section}{\numberline {3.7}Traffic flow modelling and prediction}{54}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Preprocessing data for the prediction model}{58}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Dimensionality Reduction}{61}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Prediction through Multilayer Perceptron Classifier}{64}{subsection.3.7.3}
-\contentsline {chapter}{\numberline {4.}Evaluation and Results}{68}{chapter.4}
-\contentsline {section}{\numberline {4.1}Trip counts per hour evaluation}{69}{section.4.1}
-\contentsline {section}{\numberline {4.2}Trip average delay per hour evaluation}{72}{section.4.2}
-\contentsline {section}{\numberline {4.3}Traffic flow count evaluation}{77}{section.4.3}
-\contentsline {section}{\numberline {4.4}Traffic flow count prediction for a selection of locations evaluation}{86}{section.4.4}
-\contentsline {section}{\numberline {4.5}Conclusion}{90}{section.4.5}
-\contentsline {chapter}{\numberline {5.}Conclusion}{91}{chapter.5}
-\contentsline {section}{\numberline {5.1}Major contributions of this dissertation}{93}{section.5.1}
-\contentsline {section}{\numberline {5.2}Discussion}{94}{section.5.2}
-\contentsline {chapter}{\numberline {6.}Future Works}{96}{chapter.6}
-\contentsline {section}{\numberline {6.1}Future improvements}{96}{section.6.1}
-\contentsline {chapter}{References}{99}{section.6.1}
+\contentsline {subsection}{\numberline {3.5.1}OD Matrix computation}{42}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Trip generation, route choice and traffic assignment}{43}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Traffic flow aggregation through spatial binning}{48}{section.3.6}
+\contentsline {section}{\numberline {3.7}Traffic flow modelling and prediction}{53}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Preprocessing data for the prediction model}{57}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Dimensionality Reduction}{60}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Prediction through Multilayer Perceptron Classifier}{63}{subsection.3.7.3}
+\contentsline {chapter}{\numberline {4.}Evaluation and Results}{67}{chapter.4}
+\contentsline {section}{\numberline {4.1}Trip counts per hour evaluation}{68}{section.4.1}
+\contentsline {section}{\numberline {4.2}Trip average delay per hour evaluation}{71}{section.4.2}
+\contentsline {section}{\numberline {4.3}Traffic flow count evaluation}{76}{section.4.3}
+\contentsline {section}{\numberline {4.4}Traffic flow count prediction for a selection of locations evaluation}{85}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion}{89}{section.4.5}
+\contentsline {chapter}{\numberline {5.}Conclusion}{90}{chapter.5}
+\contentsline {section}{\numberline {5.1}Major contributions of this dissertation}{92}{section.5.1}
+\contentsline {section}{\numberline {5.2}Discussion}{93}{section.5.2}
+\contentsline {chapter}{\numberline {6.}Future Works}{95}{chapter.6}
+\contentsline {section}{\numberline {6.1}Future improvements}{95}{section.6.1}
+\contentsline {chapter}{References}{98}{section.6.1}

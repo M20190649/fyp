@@ -3,41 +3,41 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Triangulation concept}}{15}{figure.caption.4}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Truncated Levy Flight}}{25}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Data session duration distribution}}{35}{figure.caption.8}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Data session duration cummultive distribution}}{36}{figure.caption.10}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Data session duration distribution}}{34}{figure.caption.8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Data session duration cummultive distribution}}{35}{figure.caption.10}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Cell tower distance range}}{37}{figure.caption.11}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces DBSCAN clustering}}{41}{figure.caption.12}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Data processing pipeline}}{43}{figure.caption.13}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Trip delay cumulative distribution}}{46}{figure.caption.14}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Trip delay cumulative distribution}}{45}{figure.caption.14}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Trip delay total cumulative distribution}}{46}{figure.caption.15}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Hourly average trip delay weekdays vs weekends}}{48}{figure.caption.16}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{52}{figure.caption.17}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Traffic total flow count binning}}{53}{figure.caption.18}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{55}{figure.caption.19}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Traffic flow count at 6:00 a.m. illustrated through CartoDB temporal mapping \relax }}{56}{figure.caption.20}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping. \relax }}{56}{figure.caption.21}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping (zoomed in). \relax }}{57}{figure.caption.22}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Traffic count cumulative distribution for a chosen location. \relax }}{61}{figure.caption.25}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Traffic count logarithmic step function. \relax }}{62}{figure.caption.26}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Traffic count logarithmic step function showing the lower traffic counts mapping. \relax }}{62}{figure.caption.27}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces PCA first k components cumulative variance}}{63}{figure.caption.28}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Multilayer Perceptron Classifier topology}}{66}{figure.caption.29}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Hourly average trip delay weekdays vs weekends}}{47}{figure.caption.16}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{51}{figure.caption.17}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Traffic total flow count binning}}{52}{figure.caption.18}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{54}{figure.caption.19}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Traffic flow count at 6:00 a.m. illustrated through CartoDB temporal mapping \relax }}{55}{figure.caption.20}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping. \relax }}{55}{figure.caption.21}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping (zoomed in). \relax }}{56}{figure.caption.22}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Traffic count cumulative distribution for a chosen location. \relax }}{60}{figure.caption.25}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Traffic count logarithmic step function. \relax }}{61}{figure.caption.26}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Traffic count logarithmic step function showing the lower traffic counts mapping. \relax }}{61}{figure.caption.27}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces PCA first k components cumulative variance}}{62}{figure.caption.28}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Multilayer Perceptron Classifier topology}}{65}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces OD matrix generated trip count}}{69}{figure.caption.30}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces NHTS car trip distribution}}{70}{figure.caption.31}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison between NHTS and OD average trip distribution }}{71}{figure.caption.33}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces NHTS and OD average trip distribution linear relationship}}{71}{figure.caption.34}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Average expected trip delay - 7 day distibution}}{72}{figure.caption.35}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Trip delay line chart DMAPI vs OD-OSRM}}{73}{figure.caption.36}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces OD-OSRM traffic flow count mapping}}{74}{figure.caption.38}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Google Map Traffic delay mapping}}{75}{figure.caption.39}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Kappara North Traffic flow counts from OD-OSRM and video stream count comparison}}{78}{figure.caption.40}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Kappara South Traffic flow counts from OD-OSRM and video stream count comparison}}{79}{figure.caption.41}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Linear chart for Kappara northbound and southbound traffic flow}}{80}{figure.caption.42}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Line chart for Marsa northbound and southbound traffic flow}}{81}{figure.caption.43}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Linear plot for Kappara northbound and southbound traffic flow regression model}}{83}{figure.caption.44}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Linear plot for Marsa northbound and southbound traffic flow regression model}}{84}{figure.caption.45}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Confusion matrix Hamrun to Valletta traffic flow prediction}}{88}{figure.caption.48}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix Marsa to Aldo Moro traffic flow prediciton}}{89}{figure.caption.49}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces OD matrix generated trip count}}{68}{figure.caption.30}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces NHTS car trip distribution}}{69}{figure.caption.31}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Comparison between NHTS and OD average trip distribution }}{70}{figure.caption.33}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces NHTS and OD average trip distribution linear relationship}}{70}{figure.caption.34}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Average expected trip delay - 7 day distibution}}{71}{figure.caption.35}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Trip delay line chart DMAPI vs OD-OSRM}}{72}{figure.caption.36}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces OD-OSRM traffic flow count mapping}}{73}{figure.caption.38}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Google Map Traffic delay mapping}}{74}{figure.caption.39}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Kappara North Traffic flow counts from OD-OSRM and video stream count comparison}}{77}{figure.caption.40}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Kappara South Traffic flow counts from OD-OSRM and video stream count comparison}}{78}{figure.caption.41}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Linear chart for Kappara northbound and southbound traffic flow}}{79}{figure.caption.42}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Line chart for Marsa northbound and southbound traffic flow}}{80}{figure.caption.43}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Linear plot for Kappara northbound and southbound traffic flow regression model}}{82}{figure.caption.44}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Linear plot for Marsa northbound and southbound traffic flow regression model}}{83}{figure.caption.45}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Confusion matrix Hamrun to Valletta traffic flow prediction}}{87}{figure.caption.48}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Confusion matrix Marsa to Aldo Moro traffic flow prediciton}}{88}{figure.caption.49}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
