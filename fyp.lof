@@ -11,17 +11,17 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Trip delay cumulative distribution}}{45}{figure.caption.14}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Trip delay total cumulative distribution}}{46}{figure.caption.15}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Hourly average trip delay weekdays vs weekends}}{47}{figure.caption.16}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{51}{figure.caption.17}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Traffic total flow count binning}}{52}{figure.caption.18}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{52}{figure.caption.17}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Traffic total flow count binning}}{53}{figure.caption.18}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Traffic flow count through spatial and temporal binning. \relax }}{54}{figure.caption.19}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Traffic flow count at 6:00 a.m. illustrated through CartoDB temporal mapping \relax }}{55}{figure.caption.20}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping. \relax }}{55}{figure.caption.21}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping. \relax }}{56}{figure.caption.21}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Traffic flow count at 7:00 a.m. illustrated through CartoDB temporal mapping (zoomed in). \relax }}{56}{figure.caption.22}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Traffic count cumulative distribution for a chosen location. \relax }}{60}{figure.caption.25}
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Traffic count logarithmic step function. \relax }}{61}{figure.caption.26}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Traffic count logarithmic step function showing the lower traffic counts mapping. \relax }}{61}{figure.caption.27}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces PCA first k components cumulative variance}}{62}{figure.caption.28}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Multilayer Perceptron Classifier topology}}{65}{figure.caption.29}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Traffic count logarithmic step function showing the lower traffic counts mapping. \relax }}{62}{figure.caption.27}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces PCA first k components cumulative variance}}{63}{figure.caption.28}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Multilayer Perceptron Classifier topology}}{66}{figure.caption.29}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces OD matrix generated trip count}}{68}{figure.caption.30}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces NHTS car trip distribution}}{69}{figure.caption.31}
